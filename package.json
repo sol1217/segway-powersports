@@ -1,0 +1,36 @@
+{
+  "name": "next-startup-project-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "g": "plop",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
+    "styled-components": "^6.0.5",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "plop": "^3.1.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-sort-react-imports": "^0.3.0"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@features": ["./src/components/features"],
+      "@features/*": ["./src/components/features/*"],
+
+      "@types": ["./src/types"],
+      "@types/*": ["./src/types/*"],
+
+      "@styles": ["./src/styles"],
+      "@styles/*": ["./src/styles/*"],
+
+      "@lib": ["./src/lib"],
+      "@lib/*": ["./src/lib/*"],
+
+      "@core": ["./src/components/core"],
+      "@core/*": ["./src/components/core/*"],
+
+      "@providers": ["./src/providers"],
+      "@providers/*": ["./src/providers/*"],
+
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"],
+
+      "@queries": ["./src/queries"],
+      "@queries/*": ["./src/queries/*"],
+
+      "@assets": ["./src/assets"],
+      "@assets/*": ["./src/assets/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
