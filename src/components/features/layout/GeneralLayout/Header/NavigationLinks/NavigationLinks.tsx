@@ -6,7 +6,7 @@ export const NavigationLinks = () => {
       <Link href="/">Inicio</Link>
       <Link href="/about">Sobre nosotros</Link>
       <Link href="/products">Productos</Link>
-      <Link href="/contacts">Contactos</Link>
+      <Link href="/contacts">Contacto</Link>
     </>
   )
 }
