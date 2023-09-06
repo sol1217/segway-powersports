@@ -21,4 +21,10 @@ export const textVariants: Record<string, TextVariant> = {
     lineHeight: '24px',
     fontWeight: '700',
   },
+  information: {
+    ...commonVariantStyles,
+    fontSize: '20px',
+    lineHeight: '24px',
+    fontWeight: '700',
+  },
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FooterWrap = styled.footer`
+export const FooterContainer = styled.footer`
   background: #16242a;
   display: flex;
   justify-content: center;
@@ -10,35 +10,34 @@ export const FooterWrap = styled.footer`
   overflow: hidden;
 `
 
-export const InformationWrap = styled.div`
+export const TopFooterSectionContainer = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 60%;
-  max-width: 60%;
+  justify-content: center;
+  width: 65%;
+  max-width: 65%;
   height: inherit;
   gap: 30px;
 
   @media (min-width: 1300px) {
     justify-content: space-evenly;
-    gap: 0;
   }
 `
 
-export const TextFooter = styled.h5`
+export const TitleText = styled.h5`
   color: red;
 `
 
-export const ContentListWrap = styled.ul`
+export const InformationContainer = styled.nav`
   padding: 10px;
-  width: 320px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 10px;
   list-style: none;
 
   @media (min-width: 1300px) {
-    gap: 5px;
+    gap: 0px;
   }
 
   @media (max-width: 700px) {
@@ -46,45 +45,31 @@ export const ContentListWrap = styled.ul`
   }
 
   &:first-child {
-    @media (max-width: 780px) {
+    @media (max-width: 790px) {
       display: none;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (max-width: 780px) {
+      display: block;
+      margin-left: 30px;
     }
   }
 `
 
-export const ContactDisplayWrap = styled.ul`
-  padding: 10px;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-
-  @media (min-width: 1300px) {
-    gap: 5px;
-  }
-
-  @media (max-width: 550px) {
-    margin-left: 30px;
-  }
-`
-
-export const ButtonsWrap = styled.div`
+export const LinkSectionWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 10px;
 
-  @media (min-width: 2100px) {
-    flex-direction: row;
-  }
-
-  @media (max-width: 400px) {
+  @media (max-width: 417px) {
     display: none;
   }
 `
 
-export const LinksButton = styled.button`
+export const LinkSections = styled.button`
   border-radius: 20px;
   width: 130px;
   height: 30px;

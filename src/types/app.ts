@@ -27,3 +27,8 @@ export type ButtonVariant = (disabled: boolean) => {
     color?: string
   }
 }
+
+export enum ProductEnum {
+  BICI = 'bici',
+  MOTO = 'moto',
+}
