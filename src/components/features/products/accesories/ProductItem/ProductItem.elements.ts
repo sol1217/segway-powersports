@@ -7,9 +7,12 @@ export const ButtonInformation = styled.div`
   align-items: center;
 `
 
-export const CarouselImage = styled.img`
-  transform: translateY(0);
-  transition: opacity 0.5s ease-in-out, height 0.5s ease, transform 0.5s ease;
+export const ChangeImage = styled.img`
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `
 
 export const PrevButton = styled.button`

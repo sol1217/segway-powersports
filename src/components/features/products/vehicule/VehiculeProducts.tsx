@@ -56,9 +56,9 @@ const products: IProduct[] = [
   },
   {
     images: [
+      { color: EColors.Blue, url: glblue.src },
       { color: EColors.Greeen, url: glgreen.src },
       { color: EColors.Red, url: glgred.src },
-      { color: EColors.Blue, url: glblue.src },
       { color: EColors.Camouflaged, url: glcamo.src },
     ],
     name: 'SNARLER 600GL',

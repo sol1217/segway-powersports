@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import {
   NextButton,
   PrevButton,
-  CarouselImage,
+  ChangeImage,
   ButtonInformation,
   SecondProductSection,
   SeeInformationProduct,
@@ -37,15 +37,7 @@ export const ProductItem: React.FC<Product> = ({ images, name }) => {
         <h4>{name}</h4>
         <div>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
-          <img
-            style={{
-              transform: 'translateY(0)',
-              transition:
-                'opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;}} src={images[currentImage].src} width={images[currentImage].width}',
-            }}
-            src={images[currentImage].src}
-            width={images[currentImage].width}
-          />
+          <ChangeImage src={images[currentImage].src} width={images[currentImage].width} />
           <NextButton onClick={nextImage}>&gt;</NextButton>
         </div>
         <ButtonInformation>
