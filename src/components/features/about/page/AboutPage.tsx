@@ -45,7 +45,7 @@ export default function AboutUsPage() {
       <video
         style={{ marginTop: '-8%', marginBottom: '-8%' }}
         width="100%"
-        src="/videos/1.mp4"
+        src="/videos/ATV%20(online-video-cutter.com).mp4"
         controls={false}
         autoPlay
         muted

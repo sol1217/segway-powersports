@@ -50,6 +50,7 @@ export const FoundationContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-top: 100px;
 `
 
 export const SegwayImage = styled(Image)`
