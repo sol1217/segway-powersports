@@ -6,6 +6,22 @@ export const CarouselContainer = styled.div`
   position: relative;
   height: 600px;
   width: 100%;
+
+  @media (min-width: 1800px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 900px) {
+    height: 400px;
+  }
+
+  @media (max-width: 570px) {
+    height: 300px;
+  }
+
+  @media (max-width: 400px) {
+    height: 230px;
+  }
 `
 
 export const CarouselItemContainer = styled.div`
@@ -19,6 +35,10 @@ export const CarouselNextButton = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (max-width: 570px) {
+    right: 20px;
+  }
 `
 
 export const CarouselPrevButton = styled.button`
@@ -28,4 +48,8 @@ export const CarouselPrevButton = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (max-width: 570px) {
+    left: 20px;
+  }
 `

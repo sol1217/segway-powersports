@@ -9,7 +9,7 @@ import whatsapp from '@assets/png/icons8-whatsapp-30.png'
 import youtube from '@assets/png/icons8-youtube-30.png'
 import {
   TitleText,
-  LinkSections,
+  LinkSection,
   FooterContainer,
   LinkSectionWrap,
   InformationContainer,
@@ -23,39 +23,45 @@ export default function Footer() {
         <InformationContainer>
           <TitleText>SERVICIOS</TitleText>
           <p>Segway Power Sports Costa Rica</p>
-          <Link href="./app/products">Productos</Link>
+          <Link href="/products">Productos</Link>
         </InformationContainer>
+
         <InformationContainer>
           <TitleText>MENU</TitleText>
           <Link href="/">Inicio</Link>
-          <Link href="../../../../../app/about">Sobre Nosotros</Link>
-          <Link href="/app/contacts">Contactenos</Link>
+          <Link href="/about">Sobre Nosotros</Link>
+          <Link href="/contacts">Contactenos</Link>
         </InformationContainer>
+
         <InformationContainer>
           <TitleText>CONTACTO</TitleText>
           <p>infoventasegwaycr@gmail.com</p>
           <p>Atendimento: (506) 8846-6680 </p>
           <p>Atendimento: (506) 83168462</p>
         </InformationContainer>
+
         <InformationContainer>
           <TitleText>INFORMACION</TitleText>
           <p>Parque Empresarial Lindora, Local G2</p>
         </InformationContainer>
+
         <LinkSectionWrap>
-          <LinkSections>
+          <LinkSection>
             <Image src={facebook.src} width={15} height={15} alt="" />
             <a href="https://www.facebook.com/Segway506?mibextid=LQQJ4d">FACEBOOK</a>
-          </LinkSections>
-          <LinkSections>
+          </LinkSection>
+
+          <LinkSection>
             <Image src={instagram.src} width={20} height={20} alt="" />
             <a href="https://instagram.com/segwaypowersports_cr?igshid=OGQ5ZDc2ODk2ZA==">
               INSTAGRAM
             </a>
-          </LinkSections>
-          <LinkSections>
+          </LinkSection>
+
+          <LinkSection>
             <Image src={whatsapp.src} width={20} height={20} alt="" />
             <a href="https://wa.link/u2iq52">WHATSAPP</a>
-          </LinkSections>
+          </LinkSection>
         </LinkSectionWrap>
       </TopFooterSectionContainer>
     </FooterContainer>

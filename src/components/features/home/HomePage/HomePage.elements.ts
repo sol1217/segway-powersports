@@ -7,10 +7,18 @@ export const HomePageContainer = styled.div`
   margin-bottom: 30px;
 `
 
+export const CarouselImagesContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+`
+
 export const VideoContainer = styled.div`
   position: relative;
 `
-export const SnarlImg = styled.img`
+
+export const SloganImg = styled.img`
   position: absolute;
   top: 45%;
   left: 50%;
@@ -21,7 +29,7 @@ export const SnarlImg = styled.img`
   width: 65%;
 `
 
-export const SegwayCostaRica = styled.h2`
+export const SLoganText = styled.h2`
   position: absolute;
   top: 62%;
   left: 50%;
@@ -67,6 +75,7 @@ export const SeeProductsButton = styled.button`
   text-transform: uppercase;
   max-width: 260px;
   text-shadow: 0 0 3px;
+  cursor: pointer;
 
   @media (max-width: 640px) {
     width: 220px;
@@ -81,7 +90,7 @@ export const NameVehicule = styled.div`
   }
 `
 
-export const ImagesVehiculesContainer = styled.div`
+export const VehiculesContainer = styled.div`
   width: 100%;
   height: 600px;
   background-color: white;
@@ -94,7 +103,6 @@ export const ImagesVehiculesContainer = styled.div`
   text-align: center;
   padding: 20px;
   text-transform: uppercase;
-  border: 3px solid pink;
 
   @media (max-width: 1330px) {
     font-size: 17px;
@@ -109,7 +117,7 @@ export const ImagesVehiculesContainer = styled.div`
   }
 `
 
-export const ImagesVehicules = styled.div`
+export const ImagesVehiculesContainer = styled.div`
   background-color: white;
   display: flex;
   gap: 20px;
@@ -121,7 +129,7 @@ export const ImagesVehicules = styled.div`
   color: darkred;
 `
 
-export const ImagesItemsVehicules = styled.img`
+export const ImagesVehicules = styled.img`
   transition: transform 0.5s ease;
 
   &:hover {
@@ -141,49 +149,6 @@ export const ImagesItemsVehicules = styled.img`
     height: 100%;
   }
 `
-export const ScreenVehicleContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  background-color: white;
-  color: black;
-  padding: 20px;
-`
-
-export const ScreenItemContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-export const ScreenItemTwoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  text-align: center;
-  padding: 30px;
-`
-export const ImagesScreen = styled.img`
-  width: 300px;
-`
-
-export const CarItemContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-export const ProductButton = styled.button`
-  width: 160px;
-  height: 50px;
-  background-color: darkred;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-`
 
 export const TitleVideos = styled.h2`
   text-align: center;
@@ -201,9 +166,13 @@ export const VideosContainer = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
   }
+
+  @media (min-width: 1800px) {
+    padding: 30px;
+  }
 `
 
-export const VideoItemsContainer = styled.div`
+export const VideoSection = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;

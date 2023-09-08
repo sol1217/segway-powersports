@@ -8,20 +8,10 @@ export const AboutContainer = styled.div`
   padding-top: 100px;
 `
 
-export const TitleContainer = styled.div`
-  height: 100px;
-  background-color: rgba(214, 39, 27, 0.49);
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  align-items: center;
-`
-
-export const SegwayNameContainer = styled.div`
+export const LogoNameContainer = styled.div`
   border-bottom: 2px solid darkred;
   padding: 20px 20px 40px 20px;
   font-size: 18px;
-  font-family: Fjalla One;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +27,7 @@ export const SegwayNameContainer = styled.div`
   }
 `
 
-export const TextNameSegway = styled.h1`
+export const TextName = styled.h1`
   @media (max-width: 470px) {
     font-size: 25px;
   }
@@ -46,32 +36,41 @@ export const TextNameSegway = styled.h1`
 export const FoundationContainer = styled.div`
   padding: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  margin-top: 100px;
+  gap: 20px;
+  height: 800px;
+
+  @media (max-width: 540px) {
+    height: 900px;
+  }
 `
 
-export const SegwayImage = styled(Image)`
+export const LogoImage = styled(Image)`
   @media (max-width: 820px) {
     width: 85%;
   }
 `
 
-export const GeneralInformation = styled.p`
+export const InformationCompanyContainer = styled.div`
   text-align: center;
-  width: 800px;
+  width: 70%;
   font-size: 22px;
 
   @media (max-width: 820px) {
     width: 90%;
   }
+
+  @media (max-width: 540px) {
+    text-align: left;
+  }
 `
 
-export const ImageInfromationWrap = styled.div`
+export const ImageInformationWrap = styled.div`
   width: 800px;
   display: flex;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 
@@ -89,34 +88,43 @@ export const ImageInfromationWrap = styled.div`
 export const ImageInformation = styled(Image)`
   transition: transform 0.5s ease;
   border-radius: 20px;
+  width: 600px;
 
   &:hover {
     transform: scale(1.05);
   }
 
-  @media (max-width: 900px) {
-    width: 90%;
-    height: 90%;
+  @media (max-width: 995px) {
+    width: 500px;
+    height: 400px;
+  }
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+
+  @media (max-width: 540px) {
+    width: 80%;
   }
 `
 
-export const InformationCompanyWrap = styled.div<{ $background?: string; $color: string }>`
+export const InformationSection = styled.div<{ $background?: string; $color: string }>`
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: ${({ $background }) => $background || 'white'};
   color: ${({ $color }) => $color || 'black'};
   padding: 30px;
-  gap: 20px;
+  margin-bottom: 30px;
 `
 
 export const InformationCompany = styled.div`
-  max-width: 80%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -130,6 +138,7 @@ export const InformationCompanyText = styled.div`
   padding: 20px;
   box-shadow: 0 0 7px 0;
   border-radius: 10px;
+  border: 1px solid;
 
   @media (max-width: 630px) {
     height: 60%;
@@ -138,7 +147,7 @@ export const InformationCompanyText = styled.div`
   }
 `
 
-export const TitleInformationWrap = styled.div`
+export const TitleContainer = styled.div`
   border-bottom: 2px solid darkred;
   padding: 0px 0px 15px 0px;
   font-size: 18px;
@@ -157,7 +166,7 @@ export const InformationText = styled.p`
   padding-top: 20px;
 `
 
-export const FearTextWrap = styled.div`
+export const SloganContainer = styled.div`
   background-color: black;
   width: 100%;
   height: 400px;
@@ -169,27 +178,27 @@ export const FearTextWrap = styled.div`
   padding: 30px;
 `
 
-export const FearImage = styled(Image)`
+export const SloganImage = styled(Image)`
   @media (max-width: 820px) {
     width: 90%;
     height: 30%;
   }
 `
 
-export const FearText = styled.p`
+export const SloganDefinition = styled.p`
   font-size: 25px;
   text-align: center;
   color: darkgray;
 `
 
-export const ImagesSectionWrap = styled.div`
+export const ImagesSectionContainer = styled.div`
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
-export const ImagesGallerySection = styled.div`
+export const ImagesGalleryContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 300px);
   align-content: center;
@@ -245,7 +254,7 @@ export const ImagesGallery = styled(Image)`
   }
 `
 
-export const TextContactInCharge = styled.div`
+export const ContactText = styled.div`
   text-align: center;
 `
 
@@ -261,6 +270,10 @@ export const ContactSectionWrap = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 800px) {
+    gap: 20px;
   }
 `
 

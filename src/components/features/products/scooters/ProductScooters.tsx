@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 
 import { ProductItem } from '@features/products/scooters/ProductItem'
-import { SecondProductSectionWrap } from '@features/products/scooters/ProductScooters.elements'
+import { ProductScootersContainer } from '@features/products/scooters/ProductScooters.elements'
 import zinga6two from '@assets/images/SEGWAY VEHICULOS/ninebot ekickscooter zing A6/51mioMO0FNL._AC_UF894,1000_QL80_.jpg'
 import zinga6 from '@assets/images/SEGWAY VEHICULOS/ninebot ekickscooter zing A6/A6.png'
 import zingc20 from '@assets/images/SEGWAY VEHICULOS/ninebot ekickscooter zing c20/41QlRO-31LL._AC_UF1000,1000_QL80_.jpg'
@@ -71,11 +71,6 @@ export const ProductScooters = () => {
           price: '$5.595.000',
         },
         {
-          src: g1three.src,
-          width: 180,
-          price: '$5.595.000',
-        },
-        {
           src: g1two.src,
           width: 357,
           price: '$5.595.000',
@@ -136,11 +131,11 @@ export const ProductScooters = () => {
 
   return (
     <>
-      <SecondProductSectionWrap>
+      <ProductScootersContainer>
         {products.map((product, index) => (
           <ProductItem key={index} {...product} />
         ))}
-      </SecondProductSectionWrap>
+      </ProductScootersContainer>
     </>
   )
 }

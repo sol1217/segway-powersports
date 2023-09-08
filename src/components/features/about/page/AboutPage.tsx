@@ -1,31 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
-import {
-  FearText,
-  FearImage,
-  SegwayImage,
-  FearTextWrap,
-  ContactButton,
-  ImagesGallery,
-  AboutContainer,
-  TextNameSegway,
-  InformationText,
-  ImageInformation,
-  ImagesSectionWrap,
-  ContactSectionWrap,
-  GeneralInformation,
-  InformationCompany,
-  FoundationContainer,
-  SegwayNameContainer,
-  TextContactInCharge,
-  ImageInfromationWrap,
-  ImagesGallerySection,
-  TitleInformationWrap,
-  InformationCompanyText,
-  InformationCompanyWrap,
-} from '@features/about/page/About.elements'
 
 import segwaycar from '@assets/jpeg/montainsegway.jpeg'
 import segwaymula from '@assets/jpeg/mulasegway.jpeg'
@@ -38,12 +13,35 @@ import segwaycuadra from '@assets/jpeg/serwaycuadra.jpeg'
 import segwaystreet from '@assets/jpeg/streetsegway.jpeg'
 import fear from '@assets/png/fear place.png'
 import segwaylogo from '@assets/png/logo-red.png'
+import {
+  TextName,
+  LogoImage,
+  ContactText,
+  SloganImage,
+  ContactButton,
+  ImagesGallery,
+  AboutContainer,
+  TitleContainer,
+  InformationText,
+  SloganContainer,
+  ImageInformation,
+  SloganDefinition,
+  LogoNameContainer,
+  ContactSectionWrap,
+  InformationCompany,
+  InformationSection,
+  FoundationContainer,
+  ImageInformationWrap,
+  ImagesGalleryContainer,
+  ImagesSectionContainer,
+  InformationCompanyText,
+  InformationCompanyContainer,
+} from '@features/about/page/About.elements'
 
 export default function AboutUsPage() {
   return (
     <AboutContainer>
       <video
-        style={{ marginTop: '-8%', marginBottom: '-8%' }}
         width="100%"
         src="/videos/ATV%20(online-video-cutter.com).mp4"
         controls={false}
@@ -53,11 +51,11 @@ export default function AboutUsPage() {
       />
 
       <FoundationContainer>
-        <SegwayNameContainer>
-          <TextNameSegway>Segway PowerSports</TextNameSegway>
-        </SegwayNameContainer>
-        <SegwayImage src={segwaylogo.src} alt="Segway Powersports" width={500} height={200} />
-        <GeneralInformation>
+        <LogoNameContainer>
+          <TextName>Segway PowerSports</TextName>
+        </LogoNameContainer>
+        <LogoImage src={segwaylogo.src} alt="Segway Powersports" width={500} height={200} />
+        <InformationCompanyContainer>
           Segway, fundada en 1999 por el renombrado empresario Dean Kamen en los EUA. Fundada en
           Estados Unidos como una de las empresas pioneras en dispositivos VMP, Segway ha crecido
           hasta convertirse en un monstruo tecnológico que se ha ido ramificando con el paso de los
@@ -65,16 +63,16 @@ export default function AboutUsPage() {
           división SEGWAY POWERSPORTS como constatación del crecimiento de la compañía, yendo un
           paso más allá de los dispositivos de movilidad personal y las alianzas con grandes
           compañías del sector tecnológico como de la automoción.
-        </GeneralInformation>
+        </InformationCompanyContainer>
       </FoundationContainer>
 
-      <InformationCompanyWrap $background="#fff" $color="#000">
+      <InformationSection $background="#fff" $color="#000">
         <InformationCompany>
-          <ImageInfromationWrap>
+          <ImageInformationWrap>
             <ImageInformation src={segwaycar.src} width={450} height={450} alt="" />
-          </ImageInfromationWrap>
+          </ImageInformationWrap>
           <InformationCompanyText>
-            <TitleInformationWrap>Perfil de la compañia</TitleInformationWrap>
+            <TitleContainer>Perfil de la compañia</TitleContainer>
             <InformationText>
               Segway Powersports redobla su presencia y ha querido darnos a conocer su catálogo de
               productos offroad. Ellos han sido los encargados de montar un plan perfecto para
@@ -84,31 +82,31 @@ export default function AboutUsPage() {
             </InformationText>
           </InformationCompanyText>
         </InformationCompany>
-      </InformationCompanyWrap>
+      </InformationSection>
 
-      <InformationCompanyWrap $background="#000" $color="#fff">
+      <InformationSection $background="#000" $color="#fff">
         <InformationCompany>
           <InformationCompanyText>
-            <TitleInformationWrap>Filosofias</TitleInformationWrap>
+            <TitleContainer>Filosofias</TitleContainer>
             <InformationText>
               La empresa se dedica a la venta y servicio de unidades. Vela por el bienestar,
               satisfacción y diversión de sus clientes. Siempre buscando el desarrollo y la
               superación.
             </InformationText>
           </InformationCompanyText>
-          <ImageInfromationWrap>
+          <ImageInformationWrap>
             <ImageInformation src={segwayvillain.src} width={450} height={450} alt="" />
-          </ImageInfromationWrap>
+          </ImageInformationWrap>
         </InformationCompany>
-      </InformationCompanyWrap>
+      </InformationSection>
 
-      <InformationCompanyWrap $background="#fff" $color="#000">
+      <InformationSection $background="#fff" $color="#000">
         <InformationCompany>
-          <ImageInfromationWrap>
+          <ImageInformationWrap>
             <ImageInformation src={segwaymula.src} width={450} height={450} alt="" />
-          </ImageInfromationWrap>
+          </ImageInformationWrap>
           <InformationCompanyText>
-            <TitleInformationWrap>Perfil de la compañia</TitleInformationWrap>
+            <TitleContainer>Perfil de la compañia</TitleContainer>
             <InformationText>
               Segway Powersports é uma subsidiária do Segway-Ninebot Group, que é um unicórnio na
               indústria global de mobilidade inteligente. O Segway-Ninebot possui três grandes
@@ -119,31 +117,31 @@ export default function AboutUsPage() {
             </InformationText>
           </InformationCompanyText>
         </InformationCompany>
-      </InformationCompanyWrap>
+      </InformationSection>
 
-      <FearTextWrap>
-        <FearImage src={fear.src} width={800} height={150} alt="" />
-        <FearText>
+      <SloganContainer>
+        <SloganImage src={fear.src} width={800} height={150} alt="" />
+        <SloganDefinition>
           &quot;FEAR NO PLACE&quot; significa que el Segway no sólo es usado, sino que, vive, se
           esfuerza, supera sus límites cada día y es valiente para explorar cualquier terreno.
-        </FearText>
-      </FearTextWrap>
+        </SloganDefinition>
+      </SloganContainer>
 
-      <ImagesSectionWrap>
-        <ImagesGallerySection>
+      <ImagesSectionContainer>
+        <ImagesGalleryContainer>
           <ImagesGallery src={segwayblue.src} alt="" width={300} height={200} />
           <ImagesGallery src={segwaynew.src} alt="" width={300} height={200} />
           <ImagesGallery src={segwaygreen.src} alt="" width={300} height={200} />
           <ImagesGallery src={segwaystreet.src} alt="" width={300} height={200} />
           <ImagesGallery src={segwaytwo.src} alt="" width={300} height={200} />
           <ImagesGallery src={segwaycuadra.src} alt="" width={300} height={200} />
-        </ImagesGallerySection>
-      </ImagesSectionWrap>
+        </ImagesGalleryContainer>
+      </ImagesSectionContainer>
 
       <ContactSectionWrap>
-        <TextContactInCharge>
+        <ContactText>
           Segway Powersports ponte en contacto con uno de nuestros encargados.
-        </TextContactInCharge>
+        </ContactText>
         <ContactButton>
           <Link href="/contacts">Enviar Mensaje</Link>
         </ContactButton>

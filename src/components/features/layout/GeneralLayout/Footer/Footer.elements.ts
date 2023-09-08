@@ -8,19 +8,19 @@ export const FooterContainer = styled.footer`
   height: 170px;
   z-index: 99;
   overflow: hidden;
+  font-size: 18px;
 `
 
 export const TopFooterSectionContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 65%;
-  max-width: 65%;
+  justify-content: space-evenly;
+  width: 90%;
   height: inherit;
-  gap: 30px;
 
-  @media (min-width: 1300px) {
+  @media (min-width: 1600px) {
     justify-content: space-evenly;
+    width: 65%;
   }
 `
 
@@ -33,28 +33,30 @@ export const InformationContainer = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 10px;
+  gap: 9px;
   list-style: none;
-
-  @media (min-width: 1300px) {
-    gap: 0px;
-  }
-
-  @media (max-width: 700px) {
-    display: none;
-  }
+  height: 110px;
+  width: 250px;
 
   &:first-child {
-    @media (max-width: 790px) {
+    width: 160px;
+    @media (max-width: 1090px) {
       display: none;
     }
   }
 
+  &:nth-child(2) {
+    width: 140px;
+  }
+
   &:nth-child(3) {
-    @media (max-width: 780px) {
+    @media (max-width: 900px) {
       display: block;
-      margin-left: 30px;
     }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
   }
 `
 
@@ -64,12 +66,12 @@ export const LinkSectionWrap = styled.div`
   gap: 10px;
   padding: 10px;
 
-  @media (max-width: 417px) {
+  @media (max-width: 480px) {
     display: none;
   }
 `
 
-export const LinkSections = styled.button`
+export const LinkSection = styled.button`
   border-radius: 20px;
   width: 130px;
   height: 30px;

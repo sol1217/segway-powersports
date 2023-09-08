@@ -4,9 +4,9 @@ import {
   NextButton,
   PrevButton,
   ChangeImage,
-  ButtonInformation,
-  SecondProductSection,
-  SeeInformationProduct,
+  ScooterContainer,
+  SeeInformationButton,
+  SeeInformationContainer,
 } from '@features/products/scooters/ProductItem/ProductItem.elements'
 
 type Image = {
@@ -32,19 +32,18 @@ export const ProductItem: React.FC<Product> = ({ images, name }) => {
   }
   return (
     <>
-      {' '}
-      <SecondProductSection>
+      <ScooterContainer>
         <h4>{name}</h4>
         <div>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
           <ChangeImage src={images[currentImage].src} width={images[currentImage].width} />
           <NextButton onClick={nextImage}>&gt;</NextButton>
         </div>
-        <ButtonInformation>
+        <SeeInformationContainer>
           <p>{images[currentImage].price}</p>
-          <SeeInformationProduct>Ver Informacion</SeeInformationProduct>
-        </ButtonInformation>
-      </SecondProductSection>
+          <SeeInformationButton>Ver Informacion</SeeInformationButton>
+        </SeeInformationContainer>
+      </ScooterContainer>
     </>
   )
 }

@@ -10,17 +10,18 @@ import { ProductAccesories } from '@features/products/accesories/ProductAccesori
 import { VehiculeProducts } from '@features/products/vehicule/VehiculeProducts'
 
 import {
-  NameBorder,
-  ChangeLights,
-  TitleVehiculo,
+  NameVehicule,
+  VideoContainer,
   CircleContainer,
   ImagesContainer,
   SwitchContainer,
   ControlLightText,
-  DownLoadingCatalogo,
+  CatalogoContainer,
+  VehiculeContainer,
   SwitchMainContainer,
-  ProductsPageContainer,
-  DivisionSwitchContainer,
+  ChangeLightsContainer,
+  NameVehiculeContainer,
+  SwitchDivisionContainer,
 } from './ProductsPage.elements'
 
 export const ProductsPage = () => {
@@ -33,38 +34,38 @@ export const ProductsPage = () => {
   const offLightImageUrl = 'https://powersports.segway.com/resources/web/img/close_light.png'
 
   return (
-    <ProductsPageContainer>
-      {/*<video width="100%" src="/videos/segway-video.mp4" controls={false} autoPlay muted loop />*/}
+    <VehiculeContainer>
       <img src={villainimg.src} width="100%" />
-
-      <TitleVehiculo style={{ margin: '0 0 30px 0' }}>
-        <NameBorder>Utility&Recreational ATV</NameBorder>
-      </TitleVehiculo>
+      <NameVehiculeContainer style={{ margin: '0 0 30px 0' }}>
+        <NameVehicule>Utility&Recreational ATV</NameVehicule>
+      </NameVehiculeContainer>
 
       <VehiculeProducts />
 
-      <iframe
-        style={{ margin: '40px 0 0 0' }}
-        width="100%"
-        height="600"
-        src="https://www.youtube.com/embed/UbYxEFOz0pg?si=SN1LR2pct4TwnEjz"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen></iframe>
+      <VideoContainer>
+        <iframe
+          style={{ margin: '40px 0 0 0' }}
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/UbYxEFOz0pg?si=SN1LR2pct4TwnEjz"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen></iframe>
+      </VideoContainer>
 
-      <TitleVehiculo>
-        <NameBorder>NiNeBot Scooter</NameBorder>
-      </TitleVehiculo>
+      <NameVehiculeContainer>
+        <NameVehicule>NiNeBot Scooter</NameVehicule>
+      </NameVehiculeContainer>
 
       <ProductScooters />
 
-      <ChangeLights>
+      <ChangeLightsContainer>
         <SwitchMainContainer>
           <ControlLightText>Control de Luces Snarler</ControlLightText>
           <SwitchContainer className={encendido ? 'encendido' : 'apagado'} onClick={handleToggle}>
             <CircleContainer />
-            <DivisionSwitchContainer
+            <SwitchDivisionContainer
               style={{
                 backgroundImage: `url(${encendido ? onLightImageUrl : offLightImageUrl})`,
                 width: '100%',
@@ -73,23 +74,23 @@ export const ProductsPage = () => {
             />
           </SwitchContainer>
         </SwitchMainContainer>
-
         <ImagesContainer>
           <img src={onLight.src} width="100%" />
           <img src={offLight.src} width="100%" className={!encendido ? 'on' : undefined} />
         </ImagesContainer>
-      </ChangeLights>
+      </ChangeLightsContainer>
 
-      <TitleVehiculo style={{ margin: '40px 0 30px 0' }}>
-        <NameBorder>Segway Accesorios</NameBorder>
-      </TitleVehiculo>
+      <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
+        <NameVehicule>Segway Accesorios</NameVehicule>
+      </NameVehiculeContainer>
 
       <ProductAccesories />
-      <DownLoadingCatalogo>
-        <a href="../../../../assets/catalogo.pdf" download="catalogo.pdf">
+
+      <CatalogoContainer>
+        <a href="/catalogo.pdf" download>
           Descargar Catalogo
         </a>
-      </DownLoadingCatalogo>
-    </ProductsPageContainer>
+      </CatalogoContainer>
+    </VehiculeContainer>
   )
 }

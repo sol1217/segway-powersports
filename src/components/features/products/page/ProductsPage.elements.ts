@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export const ProductsPageContainer = styled.div`
+export const VehiculeContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 20px;
   background-color: white;
   color: black;
 `
 
-export const TitleVehiculo = styled.div`
+export const NameVehiculeContainer = styled.div`
   font-size: 35px;
   display: flex;
   justify-content: center;
@@ -19,13 +19,35 @@ export const TitleVehiculo = styled.div`
   margin: 50px 0 50px 0;
 `
 
-export const NameBorder = styled.div`
+export const VideoContainer = styled.div`
+  margin: 0 auto;
+  height: 600px;
+
+  @media (min-width: 1600px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1060px) {
+    width: 95%;
+  }
+
+  @media (max-width: 800px) {
+    height: 400px;
+  }
+`
+
+export const NameVehicule = styled.div`
   border-bottom: 1px solid darkred;
   padding: 10px;
   text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 25px;
+  }
 `
 
-export const ChangeLights = styled.div`
+export const ChangeLightsContainer = styled.div`
   position: relative;
 `
 
@@ -45,6 +67,20 @@ export const SwitchMainContainer = styled.div`
   align-items: center;
   color: white;
   text-transform: uppercase;
+
+  @media (max-width: 950px) {
+    top: 20%;
+  }
+
+  @media (max-width: 700px) {
+    top: 25%;
+    gap: 5px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 550px) {
+    width: 300px;
+  }
 `
 
 export const SwitchContainer = styled.div`
@@ -64,7 +100,7 @@ export const SwitchContainer = styled.div`
 
 export const ControlLightText = styled.h2``
 
-export const DivisionSwitchContainer = styled.div`
+export const SwitchDivisionContainer = styled.div`
   flex: 1;
   padding: 10px;
 `
@@ -108,7 +144,7 @@ export const ImagesContainer = styled.div`
   }
 `
 
-export const DownLoadingCatalogo = styled.button`
+export const CatalogoContainer = styled.button`
   width: 20%;
   height: 50px;
   display: flex;
@@ -120,4 +156,14 @@ export const DownLoadingCatalogo = styled.button`
   margin: 25px auto;
   color: white;
   cursor: pointer;
+  padding: 15px;
+  border-radius: 40px;
+
+  @media (min-width: 1600px) {
+    width: 260px;
+  }
+
+  @media (max-width: 970px) {
+    width: 260px;
+  }
 `

@@ -1,23 +1,7 @@
 import { useState } from 'react'
 
-import camo from '@assets/images/camuflado.webp'
-import blue from '@assets/jpeg/azul.jpeg'
-import gray from '@assets/png/gris.png'
-import red from '@assets/png/rojo.png'
-import green from '@assets/png/verde.jpeg'
-import { ProductCard } from '@features/products/vehicule/ProductCard'
 import { EColors, IProduct } from '@features/products/vehicule/types'
-import {
-  ButtonImage,
-  ProductWrap,
-  ImageProduct,
-  ButtonProduct,
-  NameOfProdyct,
-  ChangeImageColor,
-  ProductViewContainer,
-  SeeInformationProduct,
-  ProductContentContainer,
-} from '@features/products/vehicule/VehiculeProducts.elements'
+import { ProductVehiculeContainer } from '@features/products/vehicule/VehiculeProducts.elements'
 import scooterblack from '@assets/images/SEGWAY VEHICULOS/escooter e110s/E110S-GRIS-1_1100x.webp'
 import scooterred from '@assets/images/SEGWAY VEHICULOS/escooter e110s/segway-e110s-2.jpg'
 import fuglemanred from '@assets/images/SEGWAY VEHICULOS/FUGLEMAN UT10 X/blanca.png'
@@ -34,6 +18,7 @@ import at6gray from '@assets/images/SEGWAY VEHICULOS/SNARLER AT6 LE/gris.png'
 import villainred from '@assets/images/SEGWAY VEHICULOS/VILLAIN SX10/blanca.png'
 import villainblack from '@assets/images/SEGWAY VEHICULOS/VILLAIN SX10/negro.jpeg'
 import villaingreen from '@assets/images/SEGWAY VEHICULOS/VILLAIN SX10/verde.png'
+import { ProductCard } from '@features/products/vehicule/ProductCard/ProductCard'
 
 const products: IProduct[] = [
   {
@@ -93,11 +78,11 @@ const products: IProduct[] = [
 export const VehiculeProducts = () => {
   return (
     <>
-      <ProductViewContainer>
+      <ProductVehiculeContainer>
         {products.map((product, i) => (
           <ProductCard key={i} product={product} />
         ))}
-      </ProductViewContainer>
+      </ProductVehiculeContainer>
     </>
   )
 }

@@ -2,16 +2,16 @@ import { useState } from 'react'
 
 import { IProduct, colorImages } from '@features/products/vehicule/types'
 import {
-  ButtonImage,
-  ProductWrap,
+  ColorImage,
   ImageProduct,
-  ButtonProduct,
   NameOfProdyct,
-  ChangeImageColor,
-  ProductViewContainer,
-  SeeInformationProduct,
+  ColorsContainer,
+  VehiculeContainer,
+  ChangeColorContainer,
+  DescriptionContainer,
+  SeeInformationButton,
   ProductContentContainer,
-} from '@features/products/vehicule/VehiculeProducts.elements'
+} from '@features/products/vehicule/ProductCard/ProductCard.elements'
 
 export const ProductCard = ({ product }: { product: IProduct }) => {
   const { images, name, description } = product
@@ -19,7 +19,7 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
 
   return (
     <>
-      <ProductWrap>
+      <VehiculeContainer>
         {images.map(({ url, color }, i) => (
           <ImageProduct
             key={i}
@@ -34,18 +34,18 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
         ))}
 
         <ProductContentContainer>
-          <ChangeImageColor>
+          <ChangeColorContainer>
             {images.map(({ color }, i) => (
-              <ButtonProduct key={i} onClick={() => setSelectedImage(color)}>
-                <ButtonImage src={colorImages[color]} width={40} height={40} />
-              </ButtonProduct>
+              <ColorsContainer key={i} onClick={() => setSelectedImage(color)}>
+                <ColorImage src={colorImages[color]} width={40} height={40} />
+              </ColorsContainer>
             ))}
-          </ChangeImageColor>
+          </ChangeColorContainer>
           <NameOfProdyct>{name}</NameOfProdyct>
-          <p>{description}</p>
-          <SeeInformationProduct>Ver + Informacion</SeeInformationProduct>
+          <DescriptionContainer>{description}</DescriptionContainer>
+          <SeeInformationButton>Ver Informacion</SeeInformationButton>
         </ProductContentContainer>
-      </ProductWrap>
+      </VehiculeContainer>
     </>
   )
 }
