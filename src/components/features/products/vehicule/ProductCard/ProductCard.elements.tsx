@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 export const VehiculeContainer = styled.div`
@@ -42,6 +43,8 @@ export const ChangeColorContainer = styled.div`
 `
 
 export const DescriptionContainer = styled.p`
+  text-transform: uppercase;
+
   @media (max-width: 650px) {
     display: none;
   }
@@ -61,7 +64,7 @@ export const ProductContentContainer = styled.div`
   padding: 10px;
 `
 
-export const SeeInformationButton = styled.button`
+export const SeeInformationButton = styled(Link)`
   background: linear-gradient(to left, #d92a19, darkred);
   border: none;
   height: 40px;

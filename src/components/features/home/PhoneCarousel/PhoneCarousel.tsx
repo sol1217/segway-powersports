@@ -34,10 +34,10 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
       <PhoneCarouselContainer>
         <AppContainer>
           <TitleAppContainer>
-            <h2>Añade nuestro vehiculo a tu App</h2>
+            <h2>Añade nuestro vehículo a tu App</h2>
           </TitleAppContainer>
           <p>
-            Segway te brinda una interacción inteligente con tu vehículo, te llevara a lugares
+            Segway te brinda una interacción inteligente con tu vehículo, te llevará a lugares
             épicos para viajar.
           </p>
         </AppContainer>

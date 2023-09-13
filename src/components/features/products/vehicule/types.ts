@@ -16,10 +16,35 @@ export interface IProductImage {
   url: string
   color: EColors
 }
+
 export interface IProduct {
   images: IProductImage[]
   name: string
   description: string
+  alias: string
+  completeDesciprtion?: string
+  video?: string
+  features?: string[]
+  panorama?: string
+  featuresImage?: FeaturesProduct[]
+  logo?: string
+  model?: string
+  galleryImages?: GalleryImages[]
+}
+
+export interface FeaturesProduct {
+  titleFeatures: string
+  featuresDescription: string
+  src: string
+}
+
+export interface VProductImages {
+  src: string
+}
+
+export interface GalleryImages {
+  src: string
+  width: number
 }
 
 export const colorImages = {

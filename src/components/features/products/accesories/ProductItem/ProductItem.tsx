@@ -7,41 +7,36 @@ import {
   AccesoriesContainer,
   SeeInformationButton,
   SeeInformationContainer,
-} from '@features/products/accesories/ProductItem/ProductItem.elements'
+} from './ProductItem.elements'
+import { ProductItemProps } from './ProductItem.types'
 
-type Image = {
-  src: any
-  width: number
-  price: string
-}
-
-type ProductAce = {
-  name: string
-  images: Image[]
-}
-
-export const ProductItem: React.FC<ProductAce> = ({ images, name }) => {
+export const ProductItem = ({ product }: ProductItemProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
 
   const nextImage = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % images.length)
+    setCurrentImage((prevImage) => (prevImage + 1) % product.images.length)
   }
 
   const prevImage = () => {
-    setCurrentImage((prevImage) => (prevImage - 1 + images.length) % images.length)
+    setCurrentImage((prevImage) => (prevImage - 1 + product.images.length) % product.images.length)
   }
   return (
     <>
       <AccesoriesContainer>
-        <h4>{name}</h4>
+        <h4>{product.name}</h4>
         <div>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
-          <ChangeImage src={images[currentImage].src} width={images[currentImage].width} />
+          <ChangeImage
+            src={product.images[currentImage].src}
+            width={product.images[currentImage].width}
+          />
           <NextButton onClick={nextImage}>&gt;</NextButton>
         </div>
         <SeeInformationContainer>
-          <p>{images[currentImage].price}</p>
-          <SeeInformationButton>Ver Informacion</SeeInformationButton>
+          <p>{product.images[currentImage].price}</p>
+          <SeeInformationButton href={`/products/${product.alias}`}>
+            Ver Informacion
+          </SeeInformationButton>
         </SeeInformationContainer>
       </AccesoriesContainer>
     </>

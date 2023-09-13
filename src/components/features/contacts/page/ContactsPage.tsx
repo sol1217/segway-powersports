@@ -56,10 +56,10 @@ export default function ContactsPage() {
       <ContactContainer>
         <FormSectionContainer>
           <FormSection ref={form} onSubmit={sendEmail}>
-            <SendMessage>Envia un mensaje</SendMessage>
+            <SendMessage>Envía un mensaje</SendMessage>
             <ContactInput required placeholder="Nombre" type="text" name="user_name" />
             <ContactInput placeholder="Apellidos" type="text" name="user_last" />
-            <ContactInput placeholder="Telefono" type="number" name="user_phone" />
+            <ContactInput placeholder="Teléfono" type="number" name="user_phone" />
             <ContactInput required placeholder="Email" type="email" name="user_email" />
             <MessageText required placeholder="¿Como Podemos Ayudarte?" name="user_message" />
             <SendButton value="Send">
@@ -70,7 +70,7 @@ export default function ContactsPage() {
         </FormSectionContainer>
 
         <InfoMainWrap>
-          <h3>Contacto Info</h3>
+          <h3>Informacíon de Contacto </h3>
           <InfoSpan>
             <Image alt="" src={celular.src} width={50} height={50} />
             <p>+506 8846-6680 </p>

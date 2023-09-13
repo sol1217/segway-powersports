@@ -6,6 +6,7 @@ import offLight from '@assets/jpeg/lucesoff.jpeg'
 import onLight from '@assets/jpeg/lucesOn.jpeg'
 import villainimg from '@assets/jpeg/producttwo.jpeg'
 import { ProductScooters } from '@features/products/scooters'
+import { AccesoriesVehicule } from '@features/products/accesories-vehicules/AccesoriesVehicules'
 import { ProductAccesories } from '@features/products/accesories/ProductAccesories'
 import { VehiculeProducts } from '@features/products/vehicule/VehiculeProducts'
 
@@ -37,7 +38,7 @@ export const ProductsPage = () => {
     <VehiculeContainer>
       <img src={villainimg.src} width="100%" />
       <NameVehiculeContainer style={{ margin: '0 0 30px 0' }}>
-        <NameVehicule>Utility&Recreational ATV</NameVehicule>
+        <NameVehicule>Segway PowerSports Vehículos</NameVehicule>
       </NameVehiculeContainer>
 
       <VehiculeProducts />
@@ -55,7 +56,7 @@ export const ProductsPage = () => {
       </VideoContainer>
 
       <NameVehiculeContainer>
-        <NameVehicule>NiNeBot Scooter</NameVehicule>
+        <NameVehicule>NiNeBot Scooters</NameVehicule>
       </NameVehiculeContainer>
 
       <ProductScooters />
@@ -81,14 +82,20 @@ export const ProductsPage = () => {
       </ChangeLightsContainer>
 
       <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
-        <NameVehicule>Segway Accesorios</NameVehicule>
+        <NameVehicule>Segway PowerSports Accesorios</NameVehicule>
       </NameVehiculeContainer>
 
       <ProductAccesories />
 
+      <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
+        <NameVehicule>Segway PowerSports Accesorios de Vehiculos</NameVehicule>
+      </NameVehiculeContainer>
+
+      <AccesoriesVehicule />
+
       <CatalogoContainer>
         <a href="/catalogo.pdf" download>
-          Descargar Catalogo
+          Descargar Catálogo
         </a>
       </CatalogoContainer>
     </VehiculeContainer>

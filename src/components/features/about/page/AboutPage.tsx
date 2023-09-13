@@ -72,13 +72,13 @@ export default function AboutUsPage() {
             <ImageInformation src={segwaycar.src} width={450} height={450} alt="" />
           </ImageInformationWrap>
           <InformationCompanyText>
-            <TitleContainer>Perfil de la compañia</TitleContainer>
+            <TitleContainer>Perfil de la compañía</TitleContainer>
             <InformationText>
               Segway Powersports redobla su presencia y ha querido darnos a conocer su catálogo de
               productos offroad. Ellos han sido los encargados de montar un plan perfecto para
-              cualquiera al que le guste el motor y hacer gamberradas sobre ruedas poniendo a
+              cualquiera al que le guste el motor y hacer gamberradas sobre ruedas, poniendo a
               nuestra disposición el ATV Snarler AT6, el UTV Fugleman y el SXS Villain. Un trío de
-              (supuestas) herramientas de trabajo pero que dan mucho, mucho juego.
+              (supuestas) herramientas de trabajo, pero que dan mucho, mucho juego.
             </InformationText>
           </InformationCompanyText>
         </InformationCompany>
@@ -87,7 +87,7 @@ export default function AboutUsPage() {
       <InformationSection $background="#000" $color="#fff">
         <InformationCompany>
           <InformationCompanyText>
-            <TitleContainer>Filosofias</TitleContainer>
+            <TitleContainer>Filosofías</TitleContainer>
             <InformationText>
               La empresa se dedica a la venta y servicio de unidades. Vela por el bienestar,
               satisfacción y diversión de sus clientes. Siempre buscando el desarrollo y la
@@ -122,7 +122,7 @@ export default function AboutUsPage() {
       <SloganContainer>
         <SloganImage src={fear.src} width={800} height={150} alt="" />
         <SloganDefinition>
-          &quot;FEAR NO PLACE&quot; significa que el Segway no sólo es usado, sino que, vive, se
+          &quot;FEAR NO PLACE&quot; Significa que el Segway no solo es usado, sino que, vive, sé
           esfuerza, supera sus límites cada día y es valiente para explorar cualquier terreno.
         </SloganDefinition>
       </SloganContainer>

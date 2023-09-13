@@ -43,7 +43,9 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
           </ChangeColorContainer>
           <NameOfProdyct>{name}</NameOfProdyct>
           <DescriptionContainer>{description}</DescriptionContainer>
-          <SeeInformationButton>Ver Informacion</SeeInformationButton>
+          <SeeInformationButton href={`/products/${product.alias}`}>
+            Ver Informacion
+          </SeeInformationButton>
         </ProductContentContainer>
       </VehiculeContainer>
     </>

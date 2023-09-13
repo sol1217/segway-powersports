@@ -256,6 +256,8 @@ export const ImagesGallery = styled(Image)`
 
 export const ContactText = styled.div`
   text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
 `
 
 export const ContactSectionWrap = styled.div`

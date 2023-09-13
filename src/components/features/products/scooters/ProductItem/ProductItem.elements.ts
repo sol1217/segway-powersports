@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 export const SeeInformationContainer = styled.div`
@@ -67,7 +68,7 @@ export const NextButton = styled.button`
   }
 `
 
-export const SeeInformationButton = styled.button`
+export const SeeInformationButton = styled(Link)`
   background: linear-gradient(to left, #d92a19, darkred);
   border: none;
   height: 40px;

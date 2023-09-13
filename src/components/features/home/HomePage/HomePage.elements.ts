@@ -76,6 +76,8 @@ export const SeeProductsButton = styled.button`
   max-width: 260px;
   text-shadow: 0 0 3px;
   cursor: pointer;
+  border: none;
+  border-radius: 30px;
 
   @media (max-width: 640px) {
     width: 220px;
@@ -103,6 +105,7 @@ export const VehiculesContainer = styled.div`
   text-align: center;
   padding: 20px;
   text-transform: uppercase;
+  border: 1px solid red;
 
   @media (max-width: 1330px) {
     font-size: 17px;
@@ -114,6 +117,7 @@ export const VehiculesContainer = styled.div`
 
   @media (max-width: 620px) {
     height: 500px;
+    gap: 20px;
   }
 `
 
@@ -127,10 +131,30 @@ export const ImagesVehiculesContainer = styled.div`
   padding: 20px;
   text-transform: uppercase;
   color: darkred;
+  width: 100%;
+`
+
+export const ImagesSection = styled.div`
+  width: 60%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1330px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 800px;
+  }
 `
 
 export const ImagesVehicules = styled.img`
   transition: transform 0.5s ease;
+  width: 85%;
+  height: 230px;
 
   &:hover {
     transform: scale(1.05);
@@ -138,15 +162,21 @@ export const ImagesVehicules = styled.img`
 
   @media (max-width: 1330px) {
     width: 100%;
-    height: 60%;
   }
 
   @media (max-width: 1000px) {
     display: none;
+    height: 75%;
+    width: 260px;
   }
 
   @media (max-width: 620px) {
-    height: 100%;
+    width: 200px;
+  }
+
+  @media (max-width: 470px) {
+    width: 170px;
+    height: 60%;
   }
 `
 
@@ -193,6 +223,11 @@ export const VideoSection = styled.div`
   @media (min-width: 2000px) {
     width: 80%;
     height: 400px;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    height: 290px;
   }
 `
 

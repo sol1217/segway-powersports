@@ -27,10 +27,10 @@ export default function Footer() {
         </InformationContainer>
 
         <InformationContainer>
-          <TitleText>MENU</TitleText>
+          <TitleText>MENÚ</TitleText>
           <Link href="/">Inicio</Link>
           <Link href="/about">Sobre Nosotros</Link>
-          <Link href="/contacts">Contactenos</Link>
+          <Link href="/contacts">Contáctenos</Link>
         </InformationContainer>
 
         <InformationContainer>
@@ -41,7 +41,7 @@ export default function Footer() {
         </InformationContainer>
 
         <InformationContainer>
-          <TitleText>INFORMACION</TitleText>
+          <TitleText>INFORMACIÓN</TitleText>
           <p>Parque Empresarial Lindora, Local G2</p>
         </InformationContainer>
 
