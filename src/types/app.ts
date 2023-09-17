@@ -2,7 +2,6 @@ import { ReactNode, CSSProperties } from 'react'
 import { RuleSet } from 'styled-components'
 
 import { LoaderSize } from '@core/Loader/Loader.types'
-import bagtwo from '@assets/images/SEGWAY VEHICULOS/accesorios/5_e6756e81-5439-49cf-b8f2-48983c773343.webp'
 
 export type RootLayoutProps = {
   children: ReactNode
@@ -38,7 +37,26 @@ export type Product = {
   name: string
   alias: string
   images: ProductImage[]
-  description?: ''
+  completeDesciprtion?: string
+  video?: string
+  features?: string[]
+  panorama?: string
+  featuresImage?: FeaturesProduct[]
+  logo?: string
+  model?: string
+  galleryImages?: GalleryImages[]
+}
+
+export interface FeaturesProduct {
+  titleFeatures: string
+  featuresDescription: string
+  src: string
+}
+
+export interface GalleryImages {
+  src: string
+  width?: number
+  height?: number
 }
 
 export enum ProductEnum {

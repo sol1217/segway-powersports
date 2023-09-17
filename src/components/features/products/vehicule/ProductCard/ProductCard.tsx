@@ -29,7 +29,6 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
             }}
             src={url}
             alt=""
-            height={200}
           />
         ))}
 

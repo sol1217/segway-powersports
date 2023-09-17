@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react'
 
-import offLight from '@assets/jpeg/lucesoff.jpeg'
-import onLight from '@assets/jpeg/lucesOn.jpeg'
-import villainimg from '@assets/jpeg/producttwo.jpeg'
+import offLight from '@assets/jpeg/luces-off.jpeg'
+import onLight from '@assets/jpeg/luces-On.jpeg'
+import villainimg from '@assets/jpeg/product-villain-two.jpeg'
 import { ProductScooters } from '@features/products/scooters'
+import { VehiculeProducts } from '@features/products/vehicule'
 import { AccesoriesVehicule } from '@features/products/accesories-vehicules/AccesoriesVehicules'
 import { ProductAccesories } from '@features/products/accesories/ProductAccesories'
-import { VehiculeProducts } from '@features/products/vehicule/VehiculeProducts'
 
 import {
   NameVehicule,

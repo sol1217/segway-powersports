@@ -2,29 +2,13 @@
 
 import React, { useState } from 'react'
 
-import camo from '@assets/images/camuflado.webp'
-import sx from '@assets/jpeg/AT6-Sx-azul-galeria-900x600-1.jpg'
-import azul from '@assets/jpeg/azul.jpeg'
-import iluminacion from '@assets/jpeg/diseñosnarler.jpeg'
-import robusto from '@assets/jpeg/iluminacion sn.jpeg'
-import segwayblue from '@assets/jpeg/segwayblue.jpeg'
-import segwaygreen from '@assets/jpeg/segwaygreen.jpeg'
-import segwaynew from '@assets/jpeg/segwaynew.jpeg'
-import segwaytwo from '@assets/jpeg/segwaytwo.jpeg'
-import segwaycuadra from '@assets/jpeg/serwaycuadra.jpeg'
-import diseño from '@assets/jpeg/sn robusto.jpeg'
-import segwaystreet from '@assets/jpeg/streetsegway.jpeg'
-import visualizarVillain from '@assets/jpeg/visualizar.jpeg'
-import whatsapp from '@assets/png/icons8-whatsapp-30.png'
+import sx from '@assets/jpeg/AT6-Sx-azul.png'
+import visualizarVillain from '@assets/jpeg/visualize.jpeg'
+import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
-import rojo from '@assets/png/rojo.png'
-import nameSnarler from '@assets/png/snarler-at6-le-logo-cinza.png'
-import logoSnarler from '@assets/png/Snarler-Logo.png'
-import verde from '@assets/png/verde.jpeg'
 import { colorImages } from '@features/products/vehicule/types'
-import fuglemanred from '@assets/images/SEGWAY VEHICULOS/FUGLEMAN UT10 X/blanca.png'
-import snarler from '@assets/images/SEGWAY VEHICULOS/SNARLER AT6 LE/BLANCO.png'
-import villaingreen from '@assets/images/SEGWAY VEHICULOS/VILLAIN SX10/verde.png'
+import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
+import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
   DataSheet,
@@ -59,11 +43,12 @@ import { ProductPageProps } from './ProductPage.types'
 
 export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
-  const [selectedImage, setSelectedImage] = useState(productInfo?.images[0].url)
 
-  {
-    /*const { description, name, images, video, completeDesciprtion, galleryImages, featuresImage, panorama, features, alias } = productInfo*/
-  }
+  const selectedImage =
+    productInfo?.imagesInfo && Array.isArray(productInfo.imagesInfo)
+      ? productInfo.imagesInfo[0]?.url
+      : null
+
   return (
     <ProductPageContainer>
       <div>
@@ -79,7 +64,7 @@ export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
           </InformationProduct>
         </InformationProductContainer>
 
-        <ProductImage src={selectedImage} />
+        {selectedImage && <ProductImage src={selectedImage} />}
 
         <FeaturesProductContainer>
           <FeaturesProduct>
@@ -92,7 +77,7 @@ export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
           <ColorsContainer>
             <h4>Colores Disponibles</h4>
             <ColorButtonsSection>
-              {productInfo?.images.map((s, i) => (
+              {productInfo?.imagesInfo?.map((s, i) => (
                 <ColorImages src={colorImages[s.color]} key={i} />
               ))}
             </ColorButtonsSection>
@@ -151,14 +136,11 @@ export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
       </DataSheetContainer>
 
       <ImagesSectionContainer>
-        <h2>Galeria Snarler LE</h2>
+        <h2>Galeria {productInfo?.name}</h2>
         <ImagesGalleryContainer>
-          <ImagesGallery src={segwayblue.src} alt="" width={300} height={200} />
-          <ImagesGallery src={segwaynew.src} alt="" width={300} height={200} />
-          <ImagesGallery src={segwaygreen.src} alt="" width={300} height={200} />
-          <ImagesGallery src={segwaystreet.src} alt="" width={300} height={200} />
-          <ImagesGallery src={segwaytwo.src} alt="" width={300} height={200} />
-          <ImagesGallery src={segwaycuadra.src} alt="" width={300} height={200} />
+          {productInfo?.galleryImages?.map(({ src, width, height }, i) => (
+            <ImagesGallery key={i} src={src} width={width} height={height} />
+          ))}
         </ImagesGalleryContainer>
       </ImagesSectionContainer>
     </ProductPageContainer>

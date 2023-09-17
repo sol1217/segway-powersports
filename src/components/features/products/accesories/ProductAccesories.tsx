@@ -1,22 +1,20 @@
 import React from 'react'
 
 import { Product } from '@types'
-import childrenyellow from '@assets/images/yellow-protective.webp'
-import generatortwo from '@assets/jpeg/generador-2.jpeg'
-import generator from '@assets/jpeg/generador.jpeg'
-import childrenGear from '@assets/jpeg/pink-protective.jpeg'
+import { ProductItem } from '@features/products/accesories/ProductItem'
 import { ProductAccesoriesWrap } from '@features/products/accesories/ProductsAccesories.elements'
-import set from '@assets/images/SEGWAY VEHICULOS/accesorios/41Uq6vwMI6L.jpg'
-import helmettwo from '@assets/images/SEGWAY VEHICULOS/accesorios/485192-Product-0-I-637414867936343027_c0d59536-8f1d-4475-a798-1d233d2fb1c7_1024x1024.webp'
-import bagtwo from '@assets/images/SEGWAY VEHICULOS/accesorios/5_e6756e81-5439-49cf-b8f2-48983c773343.webp'
-import bag from '@assets/images/SEGWAY VEHICULOS/accesorios/bag.webp'
-import helmet from '@assets/images/SEGWAY VEHICULOS/accesorios/ninebot helmet casco.png'
-import storagetwo from '@assets/images/SEGWAY VEHICULOS/accesorios/Ninebot_Kickscooter_Max_Bag-Product_Introduction_3.webp'
-import phoneholdertwo from '@assets/images/SEGWAY VEHICULOS/accesorios/ninebot_kickscooter_phone_holder_1_.png'
-import phoneholder from '@assets/images/SEGWAY VEHICULOS/accesorios/phone holder.jpeg'
-import storage from '@assets/images/SEGWAY VEHICULOS/accesorios/scooter storage bag.webp'
-import setTwo from '@assets/images/SEGWAY VEHICULOS/accesorios/segway-ninebot-rider-protective-kit-960.jpg'
-import { ProductItem } from '@features/products/accesories/ProductItem/ProductItem'
+import bagtwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-two.jpg'
+import bag from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-two.jpg'
+import helmettwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/helmet.jpg'
+import storagetwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/Ninebot_Kickscooter-Bag.jpg'
+import helmet from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-helmet.png'
+import phoneholdertwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-phone-holder.png'
+import phoneholder from '@assets/images/SEGWAY-VEHICULOS/accesorios/phone-holder.jpeg'
+import childrenGear from '@assets/images/SEGWAY-VEHICULOS/accesorios/pink-protective.jpeg'
+import storage from '@assets/images/SEGWAY-VEHICULOS/accesorios/scooter-storage-bag.jpg'
+import setTwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/segway-ninebot-protective-kit.jpg'
+import set from '@assets/images/SEGWAY-VEHICULOS/accesorios/set.jpg'
+import childrenyellow from '@assets/images/SEGWAY-VEHICULOS/accesorios/yellow-protective.jpg'
 
 export const ProductAccesories = () => {
   const products: Product[] = [
@@ -37,7 +35,7 @@ export const ProductAccesories = () => {
       ],
     },
     {
-      name: 'NINEBOT HELMET',
+      name: 'NI NEBOT HELMET',
       alias: 'ninebot-casco',
       images: [
         {

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ProductScootersContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 380px);
   justify-content: center;
   align-items: center;
   gap: 20px;

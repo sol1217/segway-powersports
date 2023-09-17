@@ -2,16 +2,16 @@
 
 import Link from 'next/link'
 
-import segwaycar from '@assets/jpeg/montainsegway.jpeg'
-import segwaymula from '@assets/jpeg/mulasegway.jpeg'
-import segwayblue from '@assets/jpeg/segwayblue.jpeg'
-import segwayvillain from '@assets/jpeg/segwaycar.jpeg'
-import segwaygreen from '@assets/jpeg/segwaygreen.jpeg'
-import segwaynew from '@assets/jpeg/segwaynew.jpeg'
-import segwaytwo from '@assets/jpeg/segwaytwo.jpeg'
-import segwaycuadra from '@assets/jpeg/serwaycuadra.jpeg'
-import segwaystreet from '@assets/jpeg/streetsegway.jpeg'
-import fear from '@assets/png/fear place.png'
+import segwaycar from '@assets/jpeg/montain-segway.jpeg'
+import segwaymula from '@assets/jpeg/mula-segway.jpeg'
+import segwayblue from '@assets/jpeg/segway-blue.jpeg'
+import segwayvillain from '@assets/jpeg/segway-car.jpeg'
+import segwaygreen from '@assets/jpeg/segway-green.jpeg'
+import segwaynew from '@assets/jpeg/segway-new.jpeg'
+import segwaytwo from '@assets/jpeg/segway-two.jpeg'
+import segwaycuadra from '@assets/jpeg/serway-cuadra.jpeg'
+import segwaystreet from '@assets/jpeg/street-segway.jpeg'
+import fear from '@assets/png/fear-place.png'
 import segwaylogo from '@assets/png/logo-red.png'
 import {
   TextName,

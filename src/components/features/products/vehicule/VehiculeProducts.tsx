@@ -1,5 +1,5 @@
+import { ProductCard } from '@features/products/vehicule/ProductCard'
 import { ProductVehiculeContainer } from '@features/products/vehicule/VehiculeProducts.elements'
-import { ProductCard } from '@features/products/vehicule/ProductCard/ProductCard'
 
 import { products } from './constants'
 

@@ -3,10 +3,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import facebook from '@assets/png/icons8-facebook-32.png'
-import instagram from '@assets/png/icons8-instagram-viejo-50.png'
-import whatsapp from '@assets/png/icons8-whatsapp-30.png'
-import youtube from '@assets/png/icons8-youtube-30.png'
+import facebook from '@assets/png/icons-facebook.png'
+import instagram from '@assets/png/icons-instagram.png'
+import whatsapp from '@assets/png/icons-whatsapp.png'
 import {
   TitleText,
   LinkSection,

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
-import next from '@assets/png/icons8-adelante-50.png'
-import back from '@assets/png/icons8-atrás-50.png'
-import screenvillain from '@assets/png/screenvillain.png'
-import { CarouselNextButton, CarouselPrevButton } from '@features/home/Carousel/Carousel.elements'
+import next from '@assets/png/icons-adelante.png'
+import back from '@assets/png/icons-atrás.png'
+import screenvillain from '@assets/png/screen-villain.png'
 import {
   AppContainer,
   VillainImage,

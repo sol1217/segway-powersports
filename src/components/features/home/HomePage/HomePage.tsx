@@ -1,24 +1,24 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 
-import vehiculeadd from '@assets/jpeg/addvehicule.jpeg'
+import vehiculeadd from '@assets/jpeg/add-vehicule.jpeg'
 import villain from '@assets/jpeg/atv-gale-4.jpg'
 import codes from '@assets/jpeg/codes.jpeg'
 import fuglew from '@assets/jpeg/fugleman-w.jpeg'
-import smartmoving from '@assets/jpeg/novingsmart.jpeg'
-import phonesmart from '@assets/jpeg/phone smart.jpeg'
+import smartmoving from '@assets/jpeg/noving-smart.jpeg'
+import phonesmart from '@assets/jpeg/phone-smart.jpeg'
 import snarleratv from '@assets/jpeg/product.jpeg'
 import riding from '@assets/jpeg/riding.jpeg'
 import villainatv from '@assets/jpeg/vl.jpeg'
-import fearlogo from '@assets/png/fearnoplace-blanco-1024x158.png'
+import fearlogo from '@assets/png/fear-no-place-blanco.png'
 import { Carousel } from '@features/home/Carousel/Carousel'
 import { PhoneCarousel } from '@features/home/PhoneCarousel/PhoneCarousel'
-import scooterred from '@assets/images/SEGWAY VEHICULOS/escooter e110s/segway-e110s-2.jpg'
-import fuglemanred from '@assets/images/SEGWAY VEHICULOS/FUGLEMAN UT10 X/blanca.png'
-import snarler from '@assets/images/SEGWAY VEHICULOS/SNARLER AT6 LE/BLANCO.png'
-import villaingreen from '@assets/images/SEGWAY VEHICULOS/VILLAIN SX10/verde.png'
+import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s-2.png'
+import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
+import snarler from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.png'
+import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
   SloganImg,

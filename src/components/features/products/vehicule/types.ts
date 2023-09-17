@@ -1,8 +1,8 @@
-import camo from '@assets/images/camuflado.webp'
-import blue from '@assets/jpeg/azul.jpeg'
-import gray from '@assets/png/gris.png'
-import red from '@assets/png/rojo.png'
-import green from '@assets/png/verde.jpeg'
+import blue from '@assets/jpeg/blue.jpeg'
+import camo from '@assets/jpg/camouflaged.jpg'
+import gray from '@assets/png/gray.png'
+import green from '@assets/png/green.jpeg'
+import red from '@assets/png/red.png'
 
 export enum EColors {
   Greeen = 'green',
@@ -15,10 +15,13 @@ export enum EColors {
 export interface IProductImage {
   url: string
   color: EColors
+  width?: number
+  height?: number
 }
 
 export interface IProduct {
   images: IProductImage[]
+  imagesInfo?: IProductImage[]
   name: string
   description: string
   alias: string
@@ -38,13 +41,10 @@ export interface FeaturesProduct {
   src: string
 }
 
-export interface VProductImages {
-  src: string
-}
-
 export interface GalleryImages {
   src: string
-  width: number
+  width?: number
+  height?: number
 }
 
 export const colorImages = {

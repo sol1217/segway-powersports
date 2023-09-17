@@ -1,4 +1,3 @@
-import { GeneralNavigation } from '@features'
 import { RootLayoutProps } from '@types'
 import StyledComponentsRegistry from '@lib/registry'
 import Footer from '@features/layout/GeneralLayout/Footer/Footer'

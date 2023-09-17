@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import logo from '@assets/images/logo.webp'
+
+import logo from '@assets/jpg/logo.jpg'
 
 import {
   MobileMenu,

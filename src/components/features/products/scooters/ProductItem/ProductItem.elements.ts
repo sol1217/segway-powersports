@@ -95,6 +95,7 @@ export const ScooterContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100%;
   gap: 20px;
   position: relative;
   text-align: center;

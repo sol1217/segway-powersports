@@ -203,9 +203,8 @@ export const DesignFeaturesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  height: 600px;
-  border: 1px solid;
+  padding: 20px;
+  gap: 50px;
 
   @media (max-width: 765px) {
     height: 100%;
@@ -224,13 +223,15 @@ export const TitleFeaturesContainer = styled.h2`
 export const DesignFeatures = styled.div`
   display: flex;
   width: 100%;
+  height: 100%;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 
   @media (max-width: 765px) {
     flex-direction: column;
     height: 100%;
+    gap: 40px;
   }
 
   @media (max-width: 555px) {
@@ -239,10 +240,10 @@ export const DesignFeatures = styled.div`
 `
 
 export const DesignFeaturesItems = styled.div`
-  width: 380px;
-  height: 450px;
-  display: flex;
+  width: 320px;
+  height: 100%;
   text-align: center;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -335,6 +336,7 @@ export const ImagesSectionContainer = styled.div`
   padding: 20px;
   font-size: 20px;
   text-transform: uppercase;
+  text-align: center;
 `
 
 export const ImagesGalleryContainer = styled.div`
@@ -370,7 +372,7 @@ export const ImagesGalleryContainer = styled.div`
   }
 `
 
-export const ImagesGallery = styled(Image)`
+export const ImagesGallery = styled.img`
   transition: transform 0.5s ease;
 
   &:hover {

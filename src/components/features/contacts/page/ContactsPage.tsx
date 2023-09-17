@@ -4,14 +4,14 @@ import React, { useRef } from 'react'
 import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 
-import segway from '@assets/jpeg/segway-powersports-motoviedo-sl-23.jpg'
-import celular from '@assets/png/celular.png'
-import enviar from '@assets/png/enviar.png'
+import segway from '@assets/jpg/segway-powersports.jpg'
 import facebook from '@assets/png/facebook.png'
 import instagram from '@assets/png/instagram.png'
+import celular from '@assets/png/phone.png'
+import enviar from '@assets/png/send.png'
 import whatsapp from '@assets/png/whatsapp.png'
 import youtube from '@assets/png/youtube.png'
-import motorcicleta from '@assets/svg/segway-seeklogo.com.svg'
+import motorcicleta from '@assets/svg/segway-seeklogo.svg'
 
 import {
   InfoSpan,
