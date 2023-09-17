@@ -7,8 +7,8 @@ import visualizarVillain from '@assets/jpeg/visualize.jpeg'
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
 import { colorImages } from '@features/products/vehicule/types'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
-import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
+import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
+import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
 
 import {
   DataSheet,

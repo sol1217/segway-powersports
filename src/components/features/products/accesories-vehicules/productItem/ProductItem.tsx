@@ -8,7 +8,7 @@ import {
   AccesoriesContainer,
   SeeInformationButton,
   SeeInformationContainer,
-} from '@features/products/accesories-vehicules/productItem/ProductItem.elements'
+} from '@features/products/accesories/ProductItem/ProductItem.elements'
 
 export const ProductItem = ({ product }: ProductItemProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)

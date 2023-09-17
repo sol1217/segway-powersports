@@ -57,17 +57,17 @@ import logoE8 from '@assets/png/logo-e8.png'
 import logoGta1 from '@assets/png/logo-GT1.png'
 import logoGta2 from '@assets/png/logo-GT1.png'
 import zinga6two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-1.jpg'
-import zinga6 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-2.png'
+import zinga6 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-2.jpg'
 import zingc20 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-1.jpg'
-import zingc20two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-2.png'
+import zingc20two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-2.jpg'
 import zingc8 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c8/c8-1.jpg'
 import zingc8two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c8/c8-2.jpg'
 import zinge8two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-e8/e8-1.jpg'
 import zinge8three from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-e8/e8-2.jpg'
-import gt2 from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-1.png'
+import gt2 from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-1.jpg'
 import gt1two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-2.png'
 import gt1 from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-3.jpg'
-import gt2two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-1.png'
+import gt2two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-1.jpg'
 import gt2three from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-2.jpg'
 
 export const products: Product[] = [
@@ -300,13 +300,13 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: gt1.src,
-        width: 350,
+        src: gt2.src,
+        width: 300,
         price: '$3.950.000',
       },
       {
-        src: gt1two.src,
-        width: 357,
+        src: gt2two.src,
+        width: 220,
         price: '$3.950.000',
       },
     ],
@@ -381,12 +381,12 @@ export const products: Product[] = [
     images: [
       {
         src: zinge8three.src,
-        width: 170,
+        width: 190,
         price: '$395.000',
       },
       {
         src: zinge8two.src,
-        width: 196,
+        width: 190,
         price: '$395.000',
       },
     ],
@@ -461,12 +461,12 @@ export const products: Product[] = [
     images: [
       {
         src: zinga6.src,
-        width: 195,
+        width: 200,
         price: '$210.000',
       },
       {
         src: zinga6two.src,
-        width: 146,
+        width: 150,
         price: '$210.000',
       },
     ],
@@ -541,17 +541,12 @@ export const products: Product[] = [
     images: [
       {
         src: gt2.src,
-        width: 140,
-        price: '$5.595.000',
-      },
-      {
-        src: gt2two.src,
-        width: 195,
+        width: 300,
         price: '$5.595.000',
       },
       {
         src: gt2three.src,
-        width: 195,
+        width: 200,
         price: '$5.595.000',
       },
     ],

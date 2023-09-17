@@ -8,9 +8,9 @@ import bag from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-two.jpg'
 import helmettwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/helmet.jpg'
 import storagetwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/Ninebot_Kickscooter-Bag.jpg'
 import helmet from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-helmet.png'
-import phoneholdertwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-phone-holder.png'
+import phoneholdertwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-phone-holder.jpg'
 import phoneholder from '@assets/images/SEGWAY-VEHICULOS/accesorios/phone-holder.jpeg'
-import childrenGear from '@assets/images/SEGWAY-VEHICULOS/accesorios/pink-protective.jpeg'
+import childrenGear from '@assets/images/SEGWAY-VEHICULOS/accesorios/pink-protective.jpg'
 import storage from '@assets/images/SEGWAY-VEHICULOS/accesorios/scooter-storage-bag.jpg'
 import setTwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/segway-ninebot-protective-kit.jpg'
 import set from '@assets/images/SEGWAY-VEHICULOS/accesorios/set.jpg'
@@ -93,7 +93,7 @@ export const ProductAccesories = () => {
         },
         {
           src: set.src,
-          width: 170,
+          width: 220,
           price: '$45',
         },
       ],
@@ -104,7 +104,7 @@ export const ProductAccesories = () => {
       images: [
         {
           src: childrenGear.src,
-          width: 176,
+          width: 230,
           price: '$50',
         },
         {

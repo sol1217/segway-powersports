@@ -75,7 +75,7 @@ export const SeeInformationButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   color: white;
   font-size: 15px;
   border-radius: 20px;

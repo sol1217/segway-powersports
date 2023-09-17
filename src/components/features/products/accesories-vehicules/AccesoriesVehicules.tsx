@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Product } from '@types'
 import at6S from '@assets/jpeg/ate-s-skip.jpeg'
+import aluminium from '@assets/jpg/ALUMINUM-two.jpg'
 import at6STwo from '@assets/jpg/ates.jpg'
 import bumperBlack from '@assets/jpg/front-bumper-black.jpeg'
 import bumperBlue from '@assets/jpg/front-bumper-blue.jpeg'
@@ -13,10 +14,9 @@ import generatortwo from '@assets/jpg/generador-2.jpeg'
 import generator from '@assets/jpg/generador.jpeg'
 import rear from '@assets/jpg/rear-cargo-2.jpg'
 import rearTwo from '@assets/jpg/rear-cargo.jpeg'
-import aluminium from '@assets/jpg/s-kip-plates.jpg'
+import aluminiumTwo from '@assets/jpg/s-kip-plates.jpg'
 import ateL from '@assets/jpg/ship-plates-2.jpg'
 import at6LTwo from '@assets/jpg/skip-plates.jpg'
-import aluminiumTwo from '@assets/png/ALUMINUM-ARM.jpeg'
 import { ProductAccesoriesWrap } from '@features/products/accesories-vehicules/AccesoriesVehicules.elements'
 import { ProductItem } from '@features/products/accesories-vehicules/productItem/ProductItem'
 
@@ -33,7 +33,7 @@ export const AccesoriesVehicule = () => {
         },
         {
           src: frontTwo.src,
-          width: 206,
+          width: 306,
           price: '37.5 Litros',
         },
       ],
@@ -75,13 +75,13 @@ export const AccesoriesVehicule = () => {
       alias: 'aluminum-arm-guard',
       images: [
         {
-          src: aluminium.src,
+          src: aluminiumTwo.src,
           width: 260,
           price: 'Material de aluminio',
         },
         {
-          src: aluminiumTwo.src,
-          width: 200,
+          src: aluminium.src,
+          width: 300,
           price: 'Material de aluminio',
         },
       ],
@@ -92,7 +92,7 @@ export const AccesoriesVehicule = () => {
       images: [
         {
           src: rear.src,
-          width: 260,
+          width: 250,
           price: '104 Litros',
         },
         {
