@@ -3,7 +3,6 @@ import comfortVillain from '@assets/jpeg/comfort-sx10.jpeg'
 import iluminacion from '@assets/jpeg/design-snarler.jpeg'
 import bateriabike from '@assets/jpeg/dirtyebike-batery.jpeg'
 import at6Cuatro from '@assets/jpeg/gallery-at6-4.jpeg'
-import at6Seis from '@assets/jpeg/gallery-at6-6.jpeg'
 import at6Uno from '@assets/jpeg/gallery-at6.jpeg'
 import bikeUno from '@assets/jpeg/gallery-bike-1.jpeg'
 import bikeDos from '@assets/jpeg/gallery-bike-2.jpeg'
@@ -16,15 +15,13 @@ import scooterTres from '@assets/jpeg/gallery-e110s-3.jpeg'
 import scooterCuatro from '@assets/jpeg/gallery-e110s-4.jpeg'
 import scooterCinco from '@assets/jpeg/gallery-e110s-5.jpeg'
 import scooterSeis from '@assets/jpeg/gallery-e110s-6.jpeg'
-import fuglemanUno from '@assets/jpeg/gallery-fugleman-1.jpeg'
-import fuglemanDos from '@assets/jpeg/gallery-fugleman-2.jpeg'
-import fuglemanTres from '@assets/jpeg/gallery-fugleman-3.jpeg'
-import fuglemanCuatro from '@assets/jpeg/gallery-fugleman-4.jpeg'
-import fuglemanCinco from '@assets/jpeg/gallery-fugleman-5.jpeg'
-import fuglemanSeis from '@assets/jpeg/gallery-fugleman-6.jpeg'
-import glUno from '@assets/jpeg/gallery-GL-1.jpeg'
+import fuglemanUno from '@assets/jpeg/gallery-fugleman-1.jpg'
+import fuglemanDos from '@assets/jpeg/gallery-fugleman-2.jpg'
+import fuglemanTres from '@assets/jpeg/gallery-fugleman-3.jpg'
+import fuglemanCuatro from '@assets/jpeg/gallery-fugleman-4.jpg'
+import fuglemanCinco from '@assets/jpeg/gallery-fugleman-5.jpg'
+import fuglemanSeis from '@assets/jpeg/gallery-fugleman-6.jpg'
 import glDos from '@assets/jpeg/gallery-GL-2.jpeg'
-import glTres from '@assets/jpeg/gallery-GL-3.jpeg'
 import glCuatro from '@assets/jpeg/gallery-GL-4.jpeg'
 import glCinco from '@assets/jpeg/gallery-GL-5.jpeg'
 import villainUno from '@assets/jpeg/gallery-villain-1.jpeg'
@@ -34,6 +31,7 @@ import villainCuatro from '@assets/jpeg/gallery-villain-4.jpeg'
 import villainCinco from '@assets/jpeg/gallery-villain-5.jpeg'
 import terrenobike from '@assets/jpeg/land-ebike.jpeg'
 import robusto from '@assets/jpeg/light-snarler.jpeg'
+import at6Cinco from '@assets/jpeg/light-snarler.jpeg'
 import purposeFugleman from '@assets/jpeg/purpose-fugleman.jpeg'
 import diseño from '@assets/jpeg/robust-snarler.jpeg'
 import epsVillain from '@assets/jpeg/smart-villain.jpeg'
@@ -42,11 +40,14 @@ import suspnesionScooter from '@assets/jpeg/suspension-gta2.jpeg'
 import versatilFugleman from '@assets/jpeg/versatil-ut10.jpeg'
 import at6Dos from '@assets/jpg/gallery-at6-2.jpg'
 import at6Tres from '@assets/jpg/gallery-at6-3.jpg'
-import at6Cinco from '@assets/jpg/gallery-at6-3.jpg'
 import bikeTres from '@assets/jpg/gallery-bike-3.jpg'
 import panelScooter from '@assets/jpg/panel-scooter-2.jpg'
 import potenciaScooter from '@assets/jpg/potencia-scooter.jpg'
+import glUno from '@assets/jpg/segway-snarler-1-scaled.jpg'
+import at6Seis from '@assets/jpg/segway-snarler.jpg'
+import glTres from '@assets/jpg/segway-snarler.jpg'
 import engeniervillain from '@assets/jpg/villain-design2-900x579-1.jpg'
+import villainSeis from '@assets/jpg/villain-nature.jpg'
 import glSeis from '@assets/png/car.png'
 import generallogo from '@assets/png/general-logo.png'
 import modelGl from '@assets/png/logo-600gl.png'
@@ -55,7 +56,6 @@ import modelScooter from '@assets/png/model-scooter.png'
 import modelVillain from '@assets/png/model-viilain.png'
 import modelSnarler from '@assets/png/snarler-at6-le-logo.png'
 import logoVillain from '@assets/png/villain-logo.png'
-import villainSeis from '@assets/png/villiam-img.png'
 import zonabike from '@assets/png/zone-ebike.jpeg'
 import { EColors, IProduct } from '@features/products/vehicule/types'
 import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS-1_1100x.png'
@@ -73,7 +73,7 @@ import glcamo from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-camo-sn
 import glgreen from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-green-sn.jpg'
 import glgred from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-red-sn.jpg'
 import at6gray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/gray-snarler.jpg'
-import at6 from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.png'
+import at6 from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.jpg'
 import infoVillainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/black-villain.jpeg'
 import infoVillaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
 import villainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-black-villain.jpg'
@@ -135,6 +135,7 @@ export const products: IProduct[] = [
       {
         src: fuglemanUno.src,
         width: 300,
+        height: 225,
       },
       {
         src: fuglemanDos.src,
@@ -143,22 +144,23 @@ export const products: IProduct[] = [
       },
       {
         src: fuglemanTres.src,
-        width: 300,
-        height: 225,
+        width: 305,
+        height: 230,
       },
       {
         src: fuglemanCuatro.src,
         width: 300,
+        height: 218,
       },
       {
         src: fuglemanCinco.src,
         width: 300,
-        height: 200,
+        height: 218,
       },
       {
         src: fuglemanSeis.src,
-        width: 300,
-        height: 200,
+        width: 305,
+        height: 218,
       },
     ],
   },
@@ -291,32 +293,32 @@ export const products: IProduct[] = [
       {
         src: glUno.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
       {
         src: glDos.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
       {
         src: glTres.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
       {
         src: glCuatro.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
       {
         src: glCinco.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
       {
         src: glSeis.src,
         width: 300,
-        height: 210,
+        height: 220,
       },
     ],
   },

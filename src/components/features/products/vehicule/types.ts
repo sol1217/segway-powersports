@@ -20,7 +20,7 @@ export interface IProductImage {
 }
 
 export interface IProduct {
-  images: IProductImage[]
+  images?: IProductImage[]
   imagesInfo?: IProductImage[]
   name: string
   description: string

@@ -17,7 +17,7 @@ import { Carousel } from '@features/home/Carousel/Carousel'
 import { PhoneCarousel } from '@features/home/PhoneCarousel/PhoneCarousel'
 import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s-2.png'
 import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
-import snarler from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.png'
+import snarler from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.jpg'
 import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
 
 import {

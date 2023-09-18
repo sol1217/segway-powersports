@@ -13,7 +13,7 @@ import frontTwo from '@assets/jpg/front-cargo.jpg'
 import generatortwo from '@assets/jpg/generador-2.jpeg'
 import generator from '@assets/jpg/generador.jpeg'
 import rear from '@assets/jpg/rear-cargo-2.jpg'
-import rearTwo from '@assets/jpg/rear-cargo.jpeg'
+import rearTwo from '@assets/jpg/rear-cargo.jpg'
 import aluminiumTwo from '@assets/jpg/s-kip-plates.jpg'
 import ateL from '@assets/jpg/ship-plates-2.jpg'
 import at6LTwo from '@assets/jpg/skip-plates.jpg'
@@ -92,12 +92,12 @@ export const AccesoriesVehicule = () => {
       images: [
         {
           src: rear.src,
-          width: 250,
+          width: 236,
           price: '104 Litros',
         },
         {
           src: rearTwo.src,
-          width: 260,
+          width: 210,
           price: '104 Litros',
         },
       ],

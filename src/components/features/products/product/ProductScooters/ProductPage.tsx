@@ -2,18 +2,16 @@
 
 import React, { useState } from 'react'
 
-import sx from '@assets/jpeg/AT6-Sx-azul.png'
+import sx from '@assets/jpeg/sx.jpeg'
 import visualizarVillain from '@assets/jpeg/visualize.jpeg'
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
-import { colorImages } from '@features/products/vehicule/types'
 import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
 import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
 
 import {
   DataSheet,
   LogoImage,
-  ColorImages,
   TextDowload,
   ProductImage,
   DataSheetLink,
@@ -27,7 +25,6 @@ import {
   ContactContainer,
   DataSheetContainer,
   InformationProduct,
-  ColorButtonsSection,
   DesignFeaturesItems,
   ProductPageContainer,
   ViewProductContainer,
@@ -41,13 +38,11 @@ import {
 } from './ProductPage.elements'
 import { ProductPageProps } from './ProductPage.types'
 
-export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
+export const ProductPageScooter = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
 
   const selectedImage =
-    productInfo?.imagesInfo && Array.isArray(productInfo.imagesInfo)
-      ? productInfo.imagesInfo[0]?.url
-      : null
+    productInfo?.images && Array.isArray(productInfo.images) ? productInfo.images[0]?.src : null
 
   return (
     <ProductPageContainer>
@@ -75,12 +70,6 @@ export const ProductPage = ({ productName, productInfo }: ProductPageProps) => {
           </FeaturesProduct>
 
           <ColorsContainer>
-            <h4>Colores Disponibles</h4>
-            <ColorButtonsSection>
-              {productInfo?.imagesInfo?.map((s, i) => (
-                <ColorImages src={colorImages[s.color]} key={i} />
-              ))}
-            </ColorButtonsSection>
             <ContactContainer>
               <img src={whatsapp.src} width={20} />
               <a href="https://wa.link/u2iq52">Cotizar</a>

@@ -2,6 +2,7 @@ import { ReactNode, CSSProperties } from 'react'
 import { RuleSet } from 'styled-components'
 
 import { LoaderSize } from '@core/Loader/Loader.types'
+import { IProductImage } from '@features/products/vehicule/types'
 
 export type RootLayoutProps = {
   children: ReactNode

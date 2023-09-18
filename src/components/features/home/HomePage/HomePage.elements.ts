@@ -146,6 +146,10 @@ export const ImagesSection = styled.div`
     width: 100%;
   }
 
+  @media (max-width: 1070px) {
+    width: 700px;
+  }
+
   @media (max-width: 1000px) {
     width: 800px;
   }
