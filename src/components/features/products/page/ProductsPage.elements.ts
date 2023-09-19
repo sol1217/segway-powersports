@@ -20,11 +20,12 @@ export const NameVehiculeContainer = styled.div`
 `
 
 export const VideoContainer = styled.div`
-  margin: 0 auto;
+  margin: 30px auto;
   height: 600px;
+  border: 1px solid;
 
-  @media (min-width: 1600px) {
-    width: 80%;
+  @media (min-width: 1800px) {
+    height: 1000px;
   }
 
   @media (max-width: 1060px) {

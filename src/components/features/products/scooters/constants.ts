@@ -45,30 +45,34 @@ import c20Cuatro from '@assets/jpg/gallery-C20-4.jpg'
 import c8Uno from '@assets/jpg/gallery-C8-1.jpg'
 import gt1Siete from '@assets/jpg/gallery-gta2-6.jpg'
 import motorGt2 from '@assets/jpg/motor-gta2.jpg'
+import c8Product from '@assets/png/C8-Product.png'
+import e8Product from '@assets/png/e8-product.png'
 import a6Seis from '@assets/png/gallery-A6-6.png'
 import c8Tres from '@assets/png/gallery-C8-3.png'
 import c8Seis from '@assets/png/gallery-C8-6.png'
 import e8cuatro from '@assets/png/gallery-E8-4.png'
 import generalname from '@assets/png/generlalogo.png'
-import logoA6 from '@assets/png/logo-a6.png'
 import logoC20 from '@assets/png/logo-c20.png'
-import logoC8 from '@assets/png/logo-c8.png'
-import logoE8 from '@assets/png/logo-e8.png'
-import logoGta1 from '@assets/png/logo-GT1.png'
-import logoGta2 from '@assets/png/logo-GT1.png'
+import logoA6 from '@assets/png/model-a6.png'
+import logoC8 from '@assets/png/model-c8.png'
+import logoE8 from '@assets/png/model-e8.png'
+import logoGta1 from '@assets/png/model-gt1.png'
+import logoGta2 from '@assets/png/model-gt2.png'
 import zinga6two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-1.jpg'
 import zinga6 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-2.jpg'
+import a6Product from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-product.png'
 import zingc20 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-1.jpg'
 import zingc20two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-2.jpg'
+import c20Product from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c20/c20-product.png'
 import zingc8 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c8/c8-1.jpg'
 import zingc8two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-c8/c8-2.jpg'
 import zinge8two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-e8/e8-1.jpg'
 import zinge8three from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-e8/e8-2.jpg'
 import gt2 from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-1.jpg'
-import gt1two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-2.png'
-import gt1 from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/gt1-3.jpg'
-import gt2two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-1.jpg'
-import gt2three from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-2.jpg'
+import gt2Product from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT1/GT2-product.png'
+import gt1Product from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/Gt-product.png'
+import gt2two from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-1.png'
+import gt2three from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-2.png'
 
 export const products: Product[] = [
   {
@@ -77,6 +81,7 @@ export const products: Product[] = [
     completeDesciprtion:
       '3 modos de conducción para adaptarse al nivel de cada niño, una estructura ligera, pero sobre todo, ¡hasta 20 km de pura diversión!',
     video: '/videos/C20.mp4',
+    picture: c20Product.src,
     features: [
       'Con una velocidad máxima de hasta 10 km/h',
       'Freno de mano con recuperación de energía EBS',
@@ -157,6 +162,7 @@ export const products: Product[] = [
     completeDesciprtion:
       'Kickscooter eléctrico diseñado para la emoción para niños de 6 a 12 años con una altura de (115 cm –145 cm)',
     video: '/videos/C8.mp4',
+    picture: c8Product.src,
     features: [
       'Ergonómico diseñado para niños.',
       'Nuevo modo de crucero',
@@ -266,6 +272,7 @@ export const products: Product[] = [
     ],
     logo: '',
     model: logoGta1.src,
+    picture: gt1Product.src,
     galleryImages: [
       {
         src: gt1Uno.src,
@@ -317,6 +324,7 @@ export const products: Product[] = [
     completeDesciprtion:
       ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior. ¡Se esperan nuevas y emocionantes aventuras!',
     video: '/videos/E8.mp4',
+    picture: e8Product.src,
     features: [
       'Velocidad Máxima 10km/h',
       'Equipado con un amortiguador delantero',
@@ -397,6 +405,7 @@ export const products: Product[] = [
     completeDesciprtion:
       'Segway-Ninebot A6. Una estructura ligera de un llamativo color verde, 3 modos de conducción para adaptarse al nivel de cada niño, pero sobre todo, ¡hasta 5 km de autonomía!',
     video: '/videos/A6.mp4',
+    picture: a6Product.src,
     features: [
       'Diseñado para niños',
       'Ligero y fácil de montar/desmontar',
@@ -506,6 +515,7 @@ export const products: Product[] = [
     ],
     logo: '',
     model: logoGta2.src,
+    picture: gt2Product.src,
     galleryImages: [
       {
         src: gt1Uno.src,
@@ -540,13 +550,13 @@ export const products: Product[] = [
     ],
     images: [
       {
-        src: gt2.src,
-        width: 300,
+        src: gt2three.src,
+        width: 200,
         price: '$5.595.000',
       },
       {
-        src: gt2three.src,
-        width: 200,
+        src: gt2.src,
+        width: 300,
         price: '$5.595.000',
       },
     ],

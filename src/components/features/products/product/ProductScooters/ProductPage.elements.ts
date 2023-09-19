@@ -30,13 +30,21 @@ export const LogoImage = styled.img`
 export const ViewProductContainer = styled.div`
   height: 80%;
   width: 100%;
-  position: relative;
+  background: white;
+  color: black;
+`
+
+export const NameModel = styled.div`
+  background: black;
+  width: 100%;
+  text-align: center;
 `
 
 export const InformationProductContainer = styled.div`
   height: 300px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  align-items: center;
   background: black;
   width: 100%;
 `
@@ -45,6 +53,8 @@ export const InformationProduct = styled.div`
   width: 25%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 25px;
   gap: 30px;
 
@@ -67,38 +77,18 @@ export const InformationProduct = styled.div`
 `
 
 export const FeaturesProductContainer = styled.div`
-  height: 330px;
-  background: white;
-  color: black;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 280px;
-  border: 1px solid deepskyblue;
-
-  @media (max-width: 1280px) {
-    gap: 200px;
-  }
-
-  @media (max-width: 1110px) {
-    gap: 50px;
-  }
-
-  @media (max-width: 760px) {
-    gap: 20px;
-    padding: 20px;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 15px;
-  }
+  height: 350px;
+  padding: 20px;
 `
 
 export const FeaturesProduct = styled.div`
-  width: 330px;
   display: flex;
-  padding-left: 20px;
   flex-direction: column;
-  gap: 10px;
+  width: 400px;
+  gap: 20px;
 
   @media (max-width: 790px) {
     width: 400px;
@@ -108,35 +98,22 @@ export const FeaturesProduct = styled.div`
     width: 500px;
   }
 `
-export const ColorsContainer = styled.div`
+
+export const DescriptionSection = styled.p`
+  text-transform: uppercase;
+`
+
+export const ContactSection = styled.div`
+  background-color: white;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  color: darkgray;
   justify-content: center;
   align-items: center;
-  margin-top: 170px;
-`
-
-export const ColorButtonsSection = styled.div`
-  display: flex;
-  gap: 10px;
-`
-
-export const ColorImages = styled.img`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: transform 0.5s ease;
-
-  &:active {
-    transform: scale(0.01);
-  }
+  padding-bottom: 30px;
 `
 
 export const ProductImage = styled.img`
   position: absolute;
-  left: 35%;
+  left: 25%;
   top: -30px;
   width: 700px;
 
@@ -166,15 +143,16 @@ export const ProductImage = styled.img`
 
 export const ContactContainer = styled.button`
   border-radius: 30px;
-  width: 130px;
-  height: 30px;
+  width: 195px;
+  height: 40px;
+  padding: 10px;
   background: linear-gradient(darkred, red);
   color: white;
   font-size: 18px;
   display: flex;
+  gap: 5px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   cursor: pointer;
   border: none;
 `

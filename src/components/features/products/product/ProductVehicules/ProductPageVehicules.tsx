@@ -7,8 +7,8 @@ import visualizarVillain from '@assets/jpeg/visualize.jpeg'
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
 import { colorImages } from '@features/products/vehicule/types'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
-import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
+import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
+import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
   DataSheet,
@@ -38,7 +38,7 @@ import {
   DisplayProductContainer,
   FeaturesProductContainer,
   InformationProductContainer,
-} from './ProductPage.elementsVehicules.elements'
+} from './ProductPageVehicules.elements'
 import { ProductPageProps } from './ProductPageVehicules.types'
 
 export const ProductPageVehicules = ({ productName, productInfo }: ProductPageProps) => {

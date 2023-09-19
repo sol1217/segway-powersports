@@ -45,7 +45,6 @@ export const ProductsPage = () => {
 
       <VideoContainer>
         <iframe
-          style={{ margin: '40px 0 0 0' }}
           width="100%"
           height="100%"
           src="https://www.youtube.com/embed/UbYxEFOz0pg?si=SN1LR2pct4TwnEjz"

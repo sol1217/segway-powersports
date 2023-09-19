@@ -6,24 +6,26 @@ import sx from '@assets/jpeg/sx.jpeg'
 import visualizarVillain from '@assets/jpeg/visualize.jpeg'
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
-import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
+import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
+import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
   DataSheet,
   LogoImage,
+  NameModel,
   TextDowload,
   ProductImage,
   DataSheetLink,
   ImagesGallery,
   TitleFeatures,
+  ContactSection,
   DesignFeatures,
   DisplayProduct,
-  ColorsContainer,
   FeaturesProduct,
   TextInformation,
   ContactContainer,
   DataSheetContainer,
+  DescriptionSection,
   InformationProduct,
   DesignFeaturesItems,
   ProductPageContainer,
@@ -41,9 +43,6 @@ import { ProductPageProps } from './ProductPage.types'
 export const ProductPageScooter = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
 
-  const selectedImage =
-    productInfo?.images && Array.isArray(productInfo.images) ? productInfo.images[0]?.src : null
-
   return (
     <ProductPageContainer>
       <div>
@@ -52,37 +51,29 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
       </div>
 
       <ViewProductContainer>
-        <InformationProductContainer>
-          <InformationProduct>
-            <img src={productInfo?.model} />
-            <p>{productInfo?.completeDesciprtion}</p>
-          </InformationProduct>
-        </InformationProductContainer>
-
-        {selectedImage && <ProductImage src={selectedImage} />}
+        <NameModel>
+          <img src={productInfo?.model} />
+        </NameModel>
 
         <FeaturesProductContainer>
+          <img src={productInfo?.picture} />
           <FeaturesProduct>
-            <h2>Caracteristicas</h2>
-            {productInfo?.features?.map((s, i) => (
-              <p key={i}>{s}</p>
-            ))}
+            <DescriptionSection>{productInfo?.completeDesciprtion}</DescriptionSection>
+            <div>
+              <h2>Caracteristicas</h2>
+              {productInfo?.features?.map((s, i) => (
+                <p key={i}>{s}</p>
+              ))}
+            </div>
           </FeaturesProduct>
-
-          <ColorsContainer>
-            <ContactContainer>
-              <img src={whatsapp.src} width={20} />
-              <a href="https://wa.link/u2iq52">Cotizar</a>
-            </ContactContainer>
-          </ColorsContainer>
-          <DisplayProductContainer>
-            <DisplayProduct>
-              <a href={productInfo?.panorama}>
-                <img src={visualizarVillain.src} width="100%" />
-              </a>
-            </DisplayProduct>
-          </DisplayProductContainer>
         </FeaturesProductContainer>
+
+        <ContactSection>
+          <ContactContainer>
+            <img src={whatsapp.src} width={30} />
+            <a href="https://wa.link/u2iq52">Cotizar Producto</a>
+          </ContactContainer>
+        </ContactSection>
       </ViewProductContainer>
 
       <DesignFeaturesContainer>

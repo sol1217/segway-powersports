@@ -38,6 +38,7 @@ export type Product = {
   name: string
   alias: string
   images: ProductImage[]
+  picture?: string
   completeDesciprtion?: string
   video?: string
   features?: string[]

@@ -51,35 +51,46 @@ import villainSeis from '@assets/jpg/villain-nature.jpg'
 import glSeis from '@assets/png/car.png'
 import generallogo from '@assets/png/general-logo.png'
 import modelGl from '@assets/png/logo-600gl.png'
+import logoBike from '@assets/png/logo-bike.png'
+import logoE110s from '@assets/png/logo-e110s.png'
 import modelfugleman from '@assets/png/model-fugleman.png'
-import modelScooter from '@assets/png/model-scooter.png'
 import modelVillain from '@assets/png/model-viilain.png'
 import modelSnarler from '@assets/png/snarler-at6-le-logo.png'
 import logoVillain from '@assets/png/villain-logo.png'
 import zonabike from '@assets/png/zone-ebike.jpeg'
 import { EColors, IProduct } from '@features/products/vehicule/types'
-import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS-1_1100x.png'
-import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s-2.png'
-import infoFuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-fugleman.jpg'
+import infoEscooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS-1_1100x.png'
+import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS.jpg'
+import infoEscooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-roja-1_1100x.png'
+import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s.jpg'
+import infoFuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-fugleman.png'
 import fuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-small.jpg'
-import infoFuglemanGreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-fugleman.jpg'
+import infoFuglemanGreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-fugleman.png'
 import fuglemangreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-small.jpg'
-import infoFuglemanRed from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.jpg'
+import infoFuglemanRed from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
 import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-small.jpg'
-import bikeblack from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/black-bike.png'
-import bikered from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/segway-ebike-x160.png'
+import bikeblack from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/black-bike.jpg'
+import infoBikeGray from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/black-bike.png'
+import infoBikeRed from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/segway-ebike-x160.png'
+import bikered from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/segway-ebike.jpg'
+import infoGlBlue from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/600-blue.png'
+import infoGlCamo from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/600-camo.png'
+import infoGlgreen from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/600-green.png'
+import infoGlRed from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/600-red.png'
 import glblue from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-blue-sn.jpg'
 import glcamo from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-camo-sn.jpg'
 import glgreen from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-green-sn.jpg'
 import glgred from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-red-sn.jpg'
 import at6gray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/gray-snarler.jpg'
+import infoSnarlerGray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-gray.png'
+import infoSnarlerRed from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-red.png'
 import at6 from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.jpg'
-import infoVillainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/black-villain.jpeg'
-import infoVillaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.jpg'
+import infoVillainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/black-villain.png'
+import infoVillaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 import villainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-black-villain.jpg'
 import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-green-villain.jpg'
 import villainred from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-white-villain.jpg'
-import infoVillainred from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/white-villain copia.jpg'
+import infoVillainred from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/white-villain.png'
 
 export const products: IProduct[] = [
   {
@@ -252,6 +263,12 @@ export const products: IProduct[] = [
       { color: EColors.Red, url: glgred.src },
       { color: EColors.Camouflaged, url: glcamo.src },
     ],
+    imagesInfo: [
+      { color: EColors.Greeen, url: infoGlgreen.src },
+      { color: EColors.Blue, url: infoGlBlue.src },
+      { color: EColors.Red, url: infoGlRed.src },
+      { color: EColors.Camouflaged, url: infoGlCamo.src },
+    ],
     name: 'SNARLER 600GL',
     description:
       'Con una apariencia atrayente, su chasis largo es muy confortable tanto para ocio o trabajo. ',
@@ -326,6 +343,10 @@ export const products: IProduct[] = [
     images: [
       { color: EColors.Red, url: at6.src },
       { color: EColors.Gray, url: at6gray.src },
+    ],
+    imagesInfo: [
+      { color: EColors.Gray, url: infoSnarlerGray.src },
+      { color: EColors.Red, url: infoSnarlerRed.src },
     ],
     name: 'SNARLER AT6 LE',
     description:
@@ -402,6 +423,10 @@ export const products: IProduct[] = [
       { color: EColors.Red, url: scooterred.src },
       { color: EColors.Gray, url: scooterblack.src },
     ],
+    imagesInfo: [
+      { color: EColors.Gray, url: infoEscooterblack.src },
+      { color: EColors.Red, url: infoEscooterred.src },
+    ],
     name: 'NINEBOT SCOOTER E110S',
     description:
       'una de las mejores alternativas para la movilidad urbana recorriendo la ciudad de una manera fácil y segura.',
@@ -410,7 +435,7 @@ export const products: IProduct[] = [
       'SEGWAY E110S es una de las mejores alternativas para la movilidad urbana recorriendo la ciudad de una manera fácil y segura, con una autonomía promedio de 75 km y una velocidad máxima de 57km/h, además de una potencia máxima de 1500W.',
     video: '/videos/E110S.mp4',
     logo: '',
-    model: modelScooter.src,
+    model: logoE110s.src,
     features: [
       '75 KM A 45 KM EN TERRENO PLANO',
       '3 MODOS DE MANEJO',
@@ -476,6 +501,10 @@ export const products: IProduct[] = [
       { color: EColors.Red, url: bikered.src },
       { color: EColors.Gray, url: bikeblack.src },
     ],
+    imagesInfo: [
+      { color: EColors.Gray, url: infoBikeRed.src },
+      { color: EColors.Red, url: infoBikeGray.src },
+    ],
     name: 'DIRT EBIKE X160',
     description:
       'Ofrece un rendimiento todoterreno superior para todo tipo de usuarios. Es compacto, liviano, fácil de mantener y económico.',
@@ -492,7 +521,7 @@ export const products: IProduct[] = [
     ],
     panorama: '',
     logo: '',
-    model: generallogo.src,
+    model: logoBike.src,
     featuresImage: [
       {
         src: terrenobike.src,
