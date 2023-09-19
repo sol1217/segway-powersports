@@ -17,8 +17,8 @@ import {
   ImagesContainer,
   SwitchContainer,
   ControlLightText,
-  CatalogoContainer,
   VehiculeContainer,
+  CatalogueContainer,
   SwitchMainContainer,
   ChangeLightsContainer,
   NameVehiculeContainer,
@@ -92,11 +92,11 @@ export const ProductsPage = () => {
 
       <AccesoriesVehicule />
 
-      <CatalogoContainer>
+      <CatalogueContainer>
         <a href="/catalogo.pdf" download>
           Descargar Catálogo
         </a>
-      </CatalogoContainer>
+      </CatalogueContainer>
     </VehiculeContainer>
   )
 }

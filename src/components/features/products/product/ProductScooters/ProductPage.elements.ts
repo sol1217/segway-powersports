@@ -82,25 +82,61 @@ export const FeaturesProductContainer = styled.div`
   align-items: center;
   height: 350px;
   padding: 20px;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (max-width: 695px) {
+    height: 100%;
+  }
+`
+
+export const ImageProduct = styled.img`
+  @media (max-width: 560px) {
+    width: 70%;
+  }
 `
 
 export const FeaturesProduct = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   gap: 20px;
 
-  @media (max-width: 790px) {
+  @media (max-width: 760px) {
     width: 400px;
   }
 
-  @media (max-width: 550px) {
-    width: 500px;
+  @media (max-width: 610px) {
+    height: 100%;
+  }
+
+  @media (max-width: 440px) {
+    width: 100%;
+  }
+`
+
+export const FeaturesTextContainer = styled.div`
+  @media (max-width: 695px) {
+    width: 70%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
   }
 `
 
 export const DescriptionSection = styled.p`
   text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: 790px) {
+    font-weight: bold;
+  }
 `
 
 export const ContactSection = styled.div`
@@ -109,36 +145,6 @@ export const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
-`
-
-export const ProductImage = styled.img`
-  position: absolute;
-  left: 25%;
-  top: -30px;
-  width: 700px;
-
-  @media (max-width: 1070px) {
-    width: 65%;
-  }
-
-  @media (max-width: 865px) {
-    top: 70px;
-  }
-
-  @media (max-width: 670px) {
-    top: 120px;
-  }
-
-  @media (max-width: 550px) {
-    width: 50%;
-    top: 35%;
-    left: 46%;
-  }
-
-  @media (max-width: 470px) {
-    top: 49%;
-    left: 46%;
-  }
 `
 
 export const ContactContainer = styled.button`
@@ -155,23 +161,6 @@ export const ContactContainer = styled.button`
   align-items: center;
   cursor: pointer;
   border: none;
-`
-
-export const DisplayProductContainer = styled.div`
-  width: 100px;
-  height: 80px;
-  margin-top: 180px;
-`
-
-export const DisplayProduct = styled.button`
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: transparent;
-
-  @media (max-width: 550px) {
-    display: none;
-  }
 `
 
 /*Caracteristicas*/
@@ -192,6 +181,7 @@ export const DesignFeaturesContainer = styled.div`
 
 export const TitleFeaturesContainer = styled.h2`
   text-transform: uppercase;
+  text-align: center;
 
   @media (max-width: 765px) {
     margin: 27px 0 0px 0;
@@ -205,6 +195,7 @@ export const DesignFeatures = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 10px;
+  border: 1px solid;
 
   @media (max-width: 765px) {
     flex-direction: column;
@@ -228,14 +219,34 @@ export const DesignFeaturesItems = styled.div`
   gap: 15px;
   padding: 20px;
 
-  @media (max-width: 895px) {
+  @media (max-width: 1020px) {
     width: 50%;
   }
 
-  @media (max-width: 550px) {
-    width: 70%;
-    height: 400px;
+  @media (max-width: 765px) {
+    width: 60%;
+    box-shadow: 0 0 10px 0;
+    border-radius: 20px;
   }
+
+  @media (max-width: 550px) {
+    width: 75%;
+  }
+
+  @media (max-width: 455px) {
+    width: 90%;
+    height: 500px;
+  }
+`
+
+export const ImagesFeatures = styled.img`
+  @media (max-width: 550px) {
+    height: 250px;
+  }
+`
+
+export const NameFeatures = styled.h2`
+  text-align: center;
 `
 
 export const TextInformation = styled.p`
@@ -249,61 +260,40 @@ export const TitleFeatures = styled.h2`
   color: darkred;
 `
 
-/*ficha tecnica*/
-
-export const DataSheetContainer = styled.div`
+/*catalogo*/
+export const CatalogueContainer = styled.div`
   width: 100%;
+  background-color: white;
+  height: 150px;
   display: flex;
-  gap: 20px;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  padding: 60px 0 100px 0;
-  background: white;
-  color: black;
-  font-size: 20px;
+`
+
+export const CatalogueSection = styled.button`
+  width: 20%;
+  height: 50px;
+  display: flex;
+  border: none;
   text-transform: uppercase;
-`
-
-export const DataSheet = styled.div`
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-
-  @media (max-width: 940px) {
-    flex-direction: column;
-    gap: 20px;
-  }
-`
-
-export const TextDowload = styled.p`
-  font-size: 14px;
-  color: darkgray;
-`
-
-export const DataSheetLink = styled.a`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(to left, #d92a19, darkred);
+  margin: 25px auto;
+  color: white;
   cursor: pointer;
+  padding: 15px;
+  border-radius: 40px;
 
-  @media (max-width: 1040px) {
-    width: 230px;
+  @media (min-width: 1600px) {
+    width: 260px;
   }
 
-  @media (max-width: 940px) {
-    box-shadow: 0 0 10px 0;
-    width: 48%;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  @media (max-width: 550px) {
-    width: 70%;
+  @media (max-width: 970px) {
+    width: 260px;
   }
 `
+
 /*images*/
 
 export const ImagesSectionContainer = styled.div`

@@ -1,5 +1,6 @@
 import { Product } from '@types'
 import bateriaA6 from '@assets/jpeg/batery-a6.jpeg'
+import bateriaC20 from '@assets/jpeg/batery-c20.jpeg'
 import bateriaGt1 from '@assets/jpeg/batery-gta1.jpeg'
 import acelerarE8 from '@assets/jpeg/comfort-gta1.jpeg'
 import comodidaGt1 from '@assets/jpeg/comfort-gta1.jpeg'
@@ -36,7 +37,6 @@ import estructuraC8 from '@assets/jpeg/structure-c8.jpeg'
 import suspensionGt2 from '@assets/jpeg/suspension-gta2.jpeg'
 import aspectoC8 from '@assets/jpg/aspect-c8.jpg'
 import palancaC20 from '@assets/jpg/c20- lever.jpg'
-import bateriaC20 from '@assets/jpg/c20-batery.jpg'
 import neumaticosC20 from '@assets/jpg/c20-tires.jpg'
 import frenadoC8 from '@assets/jpg/c8-braking.jpg'
 import a6Uno from '@assets/jpg/gallery-A6-1.jpg'
@@ -83,8 +83,8 @@ export const products: Product[] = [
     video: '/videos/C20.mp4',
     picture: c20Product.src,
     features: [
-      'Con una velocidad máxima de hasta 10 km/h',
-      'Freno de mano con recuperación de energía EBS',
+      'velocidad máxima de hasta 10 km/h',
+      'Freno de mano con energía EBS',
       'Ligero y fácil de transportar',
       'Diseñado para adolescentes',
       'eKickScooter plegable en 2 pasos',
@@ -100,7 +100,7 @@ export const products: Product[] = [
         src: neumaticosC20.src,
         titleFeatures: 'Neumáticos de caucho macizo ',
         featuresDescription:
-          'Los neumáticos de goma maciza de alta elasticidad están diseñados para ser resistentes al desgaste, la banda de rodadura ha sido rediseñada para mejorar el agarre.',
+          'Los neumáticos de goma de alta elasticidad están diseñados para ser resistentes al desgaste y la banda de rodadura para mejorar el agarre.',
       },
       {
         src: palancaC20.src,
@@ -168,7 +168,7 @@ export const products: Product[] = [
       'Nuevo modo de crucero',
       'Marco de doble tubo',
       'Diseño de liberación rápida',
-      'Motor de cubo sin escobillas y sin sensores',
+      'Motor de cubo sin escobillas ',
     ],
     featuresImage: [
       {
@@ -179,15 +179,15 @@ export const products: Product[] = [
       },
       {
         src: aspectoC8.src,
-        titleFeatures: 'Aspecto impresionante ',
+        titleFeatures: 'Aspecto impresionante y ligero',
         featuresDescription:
-          'Carrocería ligera, combinaciones de colores modernas y vivaces y un diseño de manillar dinámico.',
+          'Carrocería ligera, combinaciones de colores moderna y un diseño dinámico. los niños de 6 a 12 años con una altura de entre 115-145 cm pueden montar la C8, (resistencia al agua).',
       },
       {
         src: estructuraC8.src,
-        titleFeatures: 'Una estructura triangular, sencilla y estable',
+        titleFeatures: 'Una estructura triangular y estable',
         featuresDescription:
-          'Hecho de acero de alta resistencia, el marco es estable y duradero con una carga estática de hasta 661,4 libras (300 kg). El cuadro ha superado una rigurosa prueba de durabilidad',
+          'Hecho de acero de alta resistencia, el marco es estable y duradero con una carga estática de hasta 661, 4 libras (300 kg). El cuadro ha superado una rigurosa prueba de durabilidad.',
       },
     ],
     logo: '',
@@ -322,7 +322,7 @@ export const products: Product[] = [
     name: 'Ninebot EkickScooter Zing E8',
     alias: 'zing-e8',
     completeDesciprtion:
-      ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior. ¡Se esperan nuevas y emocionantes aventuras!',
+      ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior.',
     video: '/videos/E8.mp4',
     picture: e8Product.src,
     features: [

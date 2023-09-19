@@ -10,33 +10,29 @@ import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-f
 import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
-  DataSheet,
   LogoImage,
   NameModel,
-  TextDowload,
-  ProductImage,
-  DataSheetLink,
+  ImageProduct,
   ImagesGallery,
   TitleFeatures,
   ContactSection,
   DesignFeatures,
-  DisplayProduct,
+  ImagesFeatures,
   FeaturesProduct,
   TextInformation,
+  CatalogueSection,
   ContactContainer,
-  DataSheetContainer,
+  CatalogueContainer,
   DescriptionSection,
-  InformationProduct,
   DesignFeaturesItems,
   ProductPageContainer,
   ViewProductContainer,
+  FeaturesTextContainer,
   ImagesGalleryContainer,
   ImagesSectionContainer,
   TitleFeaturesContainer,
   DesignFeaturesContainer,
-  DisplayProductContainer,
   FeaturesProductContainer,
-  InformationProductContainer,
 } from './ProductPage.elements'
 import { ProductPageProps } from './ProductPage.types'
 
@@ -56,15 +52,15 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         </NameModel>
 
         <FeaturesProductContainer>
-          <img src={productInfo?.picture} />
+          <ImageProduct src={productInfo?.picture} />
           <FeaturesProduct>
             <DescriptionSection>{productInfo?.completeDesciprtion}</DescriptionSection>
-            <div>
-              <h2>Caracteristicas</h2>
+            <h2>Caracteristicas</h2>
+            <FeaturesTextContainer>
               {productInfo?.features?.map((s, i) => (
                 <p key={i}>{s}</p>
               ))}
-            </div>
+            </FeaturesTextContainer>
           </FeaturesProduct>
         </FeaturesProductContainer>
 
@@ -81,7 +77,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>
-              <img src={src} width="100%" />
+              <ImagesFeatures src={src} width="100%" />
               <TitleFeatures>{titleFeatures}</TitleFeatures>
               <TextInformation>{featuresDescription}</TextInformation>
             </DesignFeaturesItems>
@@ -89,31 +85,13 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         </DesignFeatures>
       </DesignFeaturesContainer>
 
-      <DataSheetContainer>
-        <h2>Fichas Tecnicas</h2>
-        <DataSheet>
-          <DataSheetLink href="/Snarler%20S.pdf" download>
-            <img src={sx.src} width={280} />
-            <p>SNARLER SX</p>
-            <TextDowload>Descargar</TextDowload>
-          </DataSheetLink>
-          <DataSheetLink href="/fugleman.pdf" download>
-            <img src={fuglemanred.src} width={230} />
-            <p>Fugleman UT10</p>
-            <TextDowload>Descargar</TextDowload>
-          </DataSheetLink>
-          <DataSheetLink href="/Snarler%20LX.pdf" download>
-            <img src={lx.src} width={210} />
-            <p>SNARLER LX</p>
-            <TextDowload>Descargar</TextDowload>
-          </DataSheetLink>
-          <DataSheetLink href="/Villain.pdf" download>
-            <img src={villaingreen.src} width={230} />
-            <p>Villain SX10</p>
-            <TextDowload>Descargar</TextDowload>
-          </DataSheetLink>
-        </DataSheet>
-      </DataSheetContainer>
+      <CatalogueContainer>
+        <CatalogueSection>
+          <a href="/catalogo.pdf" download>
+            Descargar Catálogo
+          </a>
+        </CatalogueSection>
+      </CatalogueContainer>
 
       <ImagesSectionContainer>
         <h2>Galeria {productInfo?.name}</h2>

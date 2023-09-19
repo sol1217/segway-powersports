@@ -145,7 +145,7 @@ export const ImagesContainer = styled.div`
   }
 `
 
-export const CatalogoContainer = styled.button`
+export const CatalogueContainer = styled.button`
   width: 20%;
   height: 50px;
   display: flex;
