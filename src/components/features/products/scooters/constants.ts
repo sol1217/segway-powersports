@@ -1,21 +1,18 @@
 import { Product } from '@types'
-import bateriaA6 from '@assets/jpeg/batery-a6.jpeg'
 import bateriaC20 from '@assets/jpeg/batery-c20.jpeg'
 import bateriaGt1 from '@assets/jpeg/batery-gta1.jpeg'
-import acelerarE8 from '@assets/jpeg/comfort-gta1.jpeg'
-import comodidaGt1 from '@assets/jpeg/comfort-gta1.jpeg'
-import funcionGt2 from '@assets/jpeg/function-gta2.jpeg'
+import a6Uno from '@assets/jpeg/gallery-A6-1.jpeg'
 import a6Dos from '@assets/jpeg/gallery-A6-2.jpeg'
 import sensorA6 from '@assets/jpeg/gallery-A6-2.jpeg'
 import a6Tres from '@assets/jpeg/gallery-A6-3.jpeg'
 import a6Cuatro from '@assets/jpeg/gallery-A6-4.jpeg'
 import a6Cinco from '@assets/jpeg/gallery-A6-5.jpeg'
+import a6Seis from '@assets/jpeg/gallery-A6-6.jpeg'
 import c20Uno from '@assets/jpeg/gallery-C20-1.jpeg'
 import c20Dos from '@assets/jpeg/gallery-C20-2.jpeg'
 import c20Cinco from '@assets/jpeg/gallery-C20-5.jpeg'
 import c20Seis from '@assets/jpeg/gallery-C20-6.jpeg'
 import c8Dos from '@assets/jpeg/gallery-C8-2.jpeg'
-import c8Cuatro from '@assets/jpeg/gallery-C8-4.jpeg'
 import c8Cinco from '@assets/jpeg/gallery-C8-5.jpeg'
 import e8Uno from '@assets/jpeg/gallery-E8-1.jpeg'
 import e8Dos from '@assets/jpeg/gallery-E8-2.jpeg'
@@ -25,29 +22,32 @@ import e8Seis from '@assets/jpeg/gallery-E8-6.jpeg'
 import gt1Uno from '@assets/jpeg/gallery-gta1-1.jpeg'
 import gtTres from '@assets/jpeg/gallery-gta1-3.jpeg'
 import gt1Dos from '@assets/jpeg/gallery-gta2-2.jpeg'
-import gt1Cuatro from '@assets/jpeg/gallery-gta2-2.jpeg'
 import gt1Seis from '@assets/jpeg/gallery-gta2-3.jpeg'
 import gt1Cinco from '@assets/jpeg/gallery-gta2-4.jpeg'
 import gt1Ocho from '@assets/jpeg/gallery-gta2-5.jpeg'
+import gt1Cuatro from '@assets/jpeg/gallery-gta2-5.jpeg'
 import modosE8 from '@assets/jpeg/mode-e8.jpeg'
-import neumaticosA6 from '@assets/jpeg/pneumatic-a6.jpeg'
-import seguridadE8 from '@assets/jpeg/safety-e8.jpeg'
-import seguridadGt1 from '@assets/jpeg/safety-gta1.jpeg'
 import estructuraC8 from '@assets/jpeg/structure-c8.jpeg'
-import suspensionGt2 from '@assets/jpeg/suspension-gta2.jpeg'
 import aspectoC8 from '@assets/jpg/aspect-c8.jpg'
+import bateriaA6 from '@assets/jpg/batery-a6.jpg'
 import palancaC20 from '@assets/jpg/c20- lever.jpg'
 import neumaticosC20 from '@assets/jpg/c20-tires.jpg'
 import frenadoC8 from '@assets/jpg/c8-braking.jpg'
-import a6Uno from '@assets/jpg/gallery-A6-1.jpg'
+import comodidaGt1 from '@assets/jpg/comfort-gta1.jpg'
+import funcionGt2 from '@assets/jpg/function-gta2.jpg'
 import c20Tres from '@assets/jpg/gallery-C20-3.jpg'
 import c20Cuatro from '@assets/jpg/gallery-C20-4.jpg'
 import c8Uno from '@assets/jpg/gallery-C8-1.jpg'
-import gt1Siete from '@assets/jpg/gallery-gta2-6.jpg'
+import c8Cuatro from '@assets/jpg/gallery-C8-4.jpg'
+import gt1Siete from '@assets/jpg/gallery-gt2-6.jpg'
 import motorGt2 from '@assets/jpg/motor-gta2.jpg'
+import neumaticosA6 from '@assets/jpg/pneumatic-a6.jpg'
+import seguridadE8 from '@assets/jpg/safety-e8.jpg'
+import seguridadGt1 from '@assets/jpg/safety-gta1.jpg'
+import acelerarE8 from '@assets/jpg/speed-up-e8.jpg'
+import suspensionGt2 from '@assets/jpg/suspension-gt2.jpg'
 import c8Product from '@assets/png/C8-Product.png'
 import e8Product from '@assets/png/e8-product.png'
-import a6Seis from '@assets/png/gallery-A6-6.png'
 import c8Tres from '@assets/png/gallery-C8-3.png'
 import c8Seis from '@assets/png/gallery-C8-6.png'
 import e8cuatro from '@assets/png/gallery-E8-4.png'
@@ -275,6 +275,11 @@ export const products: Product[] = [
     picture: gt1Product.src,
     galleryImages: [
       {
+        src: gt1Siete.src,
+        width: 300,
+        height: 200,
+      },
+      {
         src: gt1Uno.src,
         width: 300,
         height: 200,
@@ -291,11 +296,6 @@ export const products: Product[] = [
       },
       {
         src: gt1Cinco.src,
-        width: 300,
-        height: 200,
-      },
-      {
-        src: gt1Siete.src,
         width: 300,
         height: 200,
       },
@@ -428,9 +428,9 @@ export const products: Product[] = [
       },
       {
         src: sensorA6.src,
-        titleFeatures: 'Sensor de encendido/apagado automático',
+        titleFeatures: 'Sensor de encendido/apagado',
         featuresDescription:
-          'Segway-Ninebot A6 tiene un sensor incorporado en su chasis que tiene como función reconocer cuando un pie está encima del patinete. La duración de la batería no es un problema para el modelo ZING A6.',
+          'Segway-Ninebot A6 tiene un sensor incorporado en su chasis que tiene como función reconocer cuando un pie está encima del patinete.Cuanto detecta un pie en el patinete, se enciende',
       },
     ],
     logo: '',
@@ -538,7 +538,7 @@ export const products: Product[] = [
         height: 200,
       },
       {
-        src: gt1Siete.src,
+        src: gt1Dos.src,
         width: 300,
         height: 200,
       },

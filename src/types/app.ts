@@ -42,7 +42,6 @@ export type Product = {
   completeDesciprtion?: string
   video?: string
   features?: string[]
-  panorama?: string
   featuresImage?: FeaturesProduct[]
   logo?: string
   model?: string

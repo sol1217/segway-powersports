@@ -23,7 +23,6 @@ import fuglemanCinco from '@assets/jpeg/gallery-fugleman-5.jpg'
 import fuglemanSeis from '@assets/jpeg/gallery-fugleman-6.jpg'
 import glDos from '@assets/jpeg/gallery-GL-2.jpeg'
 import glCuatro from '@assets/jpeg/gallery-GL-4.jpeg'
-import glCinco from '@assets/jpeg/gallery-GL-5.jpeg'
 import villainUno from '@assets/jpeg/gallery-villain-1.jpeg'
 import villainDos from '@assets/jpeg/gallery-villain-2.jpeg'
 import villainTres from '@assets/jpeg/gallery-villain-3.jpeg'
@@ -35,17 +34,18 @@ import at6Cinco from '@assets/jpeg/light-snarler.jpeg'
 import purposeFugleman from '@assets/jpeg/purpose-fugleman.jpeg'
 import diseño from '@assets/jpeg/robust-snarler.jpeg'
 import epsVillain from '@assets/jpeg/smart-villain.jpeg'
+import glCinco from '@assets/jpeg/snarler-600gl.jpeg'
 import logoSnarler from '@assets/jpeg/snarler-logo.png'
-import suspnesionScooter from '@assets/jpeg/suspension-gta2.jpeg'
 import versatilFugleman from '@assets/jpeg/versatil-ut10.jpeg'
 import at6Dos from '@assets/jpg/gallery-at6-2.jpg'
 import at6Tres from '@assets/jpg/gallery-at6-3.jpg'
 import bikeTres from '@assets/jpg/gallery-bike-3.jpg'
 import panelScooter from '@assets/jpg/panel-scooter-2.jpg'
 import potenciaScooter from '@assets/jpg/potencia-scooter.jpg'
-import glUno from '@assets/jpg/segway-snarler-1-scaled.jpg'
 import at6Seis from '@assets/jpg/segway-snarler.jpg'
 import glTres from '@assets/jpg/segway-snarler.jpg'
+import glUno from '@assets/jpg/snarler-600gl-2.jpg'
+import suspnesionScooter from '@assets/jpg/suspension-e110s.jpg'
 import engeniervillain from '@assets/jpg/villain-design2-900x579-1.jpg'
 import villainSeis from '@assets/jpg/villain-nature.jpg'
 import glSeis from '@assets/png/car.png'
@@ -139,7 +139,7 @@ export const products: IProduct[] = [
         src: versatilFugleman.src,
         titleFeatures: 'VERSATILIDAD',
         featuresDescription:
-          'La capacidad de almacenamiento y transporte del Fugleman se ve facilitada gracias a la caja de carga trasera y su sistema basculante. La dimensión interior es de 93,5 x 135 x 30 cm con un peso máximo de 350kgs.',
+          'La capacidad de almacenamiento y transporte del Fugleman se ve facilitada gracias a la caja de carga trasera y su sistema basculante. Con un peso máximo de 350kgs.',
       },
     ],
     galleryImages: [
@@ -364,7 +364,7 @@ export const products: IProduct[] = [
       'PARRILLA DELANTERA Y TRASERA',
       'APLICACIÓN PARA SMARTPHONE «SMART MOVING»',
     ],
-    panorama: '',
+    panorama: 'https://powersports.segway.com/720/AT6S-720/ATV_S_WHITE_XR/index.html',
     featuresImage: [
       {
         src: iluminacion.src,
@@ -402,7 +402,7 @@ export const products: IProduct[] = [
         height: 200,
       },
       {
-        src: at6Cuatro.src,
+        src: glUno.src,
         width: 304,
         height: 200,
       },
@@ -460,7 +460,7 @@ export const products: IProduct[] = [
         src: panelScooter.src,
         titleFeatures: 'PANEL DE CONTROL ',
         featuresDescription:
-          'Gracias a los colores que brinda el panel podrás saber el nivel de batería y códigos de error.',
+          'Con los colores que brinda el panel podrás saber el nivel de batería y códigos de error.',
       },
     ],
     galleryImages: [
@@ -533,7 +533,7 @@ export const products: IProduct[] = [
         src: bateriabike.src,
         titleFeatures: 'BATERÍA DE CARGA RÁPIDA',
         featuresDescription:
-          'La batería de carga rápida tarda solo 4 horas en cargarse por completo y ofrece un alcance de 74,6 millas con una sola carga (modelo X260). Las baterías llevarán tu aventura aún más lejos.',
+          'La batería de carga rápida tarda solo 4 horas en cargarse por completo y ofrece un alcance de 74,6 millas con una sola carga. Las baterías llevarán tu aventura aún más lejos.',
       },
       {
         src: zonabike.src,

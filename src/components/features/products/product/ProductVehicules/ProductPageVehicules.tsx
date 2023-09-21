@@ -2,15 +2,16 @@
 
 import React, { useState } from 'react'
 
-import sx from '@assets/jpeg/sx.jpeg'
 import visualizarVillain from '@assets/jpeg/visualize.jpeg'
+import fuglemanred from '@assets/jpg/fugleman-data.jpg'
+import sx from '@assets/jpg/sx.jpg'
+import villaingreen from '@assets/jpg/villain-data.jpg'
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import lx from '@assets/png/lx.png'
 import { colorImages } from '@features/products/vehicule/types'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
-import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
 
 import {
+  DataImage,
   DataSheet,
   LogoImage,
   ColorImages,
@@ -113,22 +114,22 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
         <h2>Fichas Tecnicas</h2>
         <DataSheet>
           <DataSheetLink href="/Snarler%20S.pdf" download>
-            <img src={sx.src} width={280} />
+            <DataImage src={sx.src} width={250} />
             <p>SNARLER SX</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
           <DataSheetLink href="/fugleman.pdf" download>
-            <img src={fuglemanred.src} width={230} />
+            <DataImage src={fuglemanred.src} width={220} />
             <p>Fugleman UT10</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
           <DataSheetLink href="/Snarler%20LX.pdf" download>
-            <img src={lx.src} width={210} />
+            <DataImage src={lx.src} width={230} />
             <p>SNARLER LX</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
           <DataSheetLink href="/Villain.pdf" download>
-            <img src={villaingreen.src} width={230} />
+            <DataImage src={villaingreen.src} width={250} />
             <p>Villain SX10</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>

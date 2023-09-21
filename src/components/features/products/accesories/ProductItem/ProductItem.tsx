@@ -34,7 +34,7 @@ export const ProductItem = ({ product }: ProductItemProps) => {
         </div>
         <SeeInformationContainer>
           <p>{product.images[currentImage].price}</p>
-          <SeeInformationButton href={`/products/${product.alias}`}>
+          <SeeInformationButton href={`/products/accesories/${product.alias}`}>
             Ver Informacion
           </SeeInformationButton>
         </SeeInformationContainer>

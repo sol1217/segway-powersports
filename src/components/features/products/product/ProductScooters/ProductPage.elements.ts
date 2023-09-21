@@ -195,7 +195,6 @@ export const DesignFeatures = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 10px;
-  border: 1px solid;
 
   @media (max-width: 765px) {
     flex-direction: column;

@@ -145,7 +145,7 @@ export const ColorImages = styled.img`
 export const ProductImage = styled.img`
   position: absolute;
   left: 35%;
-  top: -30px;
+  bottom: 110px;
   width: 700px;
 
   @media (min-width: 1800px) {
@@ -307,10 +307,18 @@ export const DataSheet = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 20px;
 
-  @media (max-width: 940px) {
-    flex-direction: column;
+  @media (max-width: 1030px) {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    justify-content: center;
+    align-content: center;
     gap: 20px;
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: repeat(2, 45%);
   }
 `
 
@@ -319,26 +327,29 @@ export const TextDowload = styled.p`
   color: darkgray;
 `
 
+export const DataImage = styled.img`
+  @media (max-width: 1030px) {
+    width: 100%;
+  }
+`
+
 export const DataSheetLink = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-align: center;
 
-  @media (max-width: 1040px) {
-    width: 230px;
-  }
-
-  @media (max-width: 940px) {
-    box-shadow: 0 0 10px 0;
-    width: 48%;
+  @media (max-width: 1030px) {
+    width: 100%;
     gap: 10px;
     padding: 10px;
   }
 
   @media (max-width: 550px) {
-    width: 70%;
+    width: 100%;
+    padding: 20px;
   }
 `
 /*images*/
