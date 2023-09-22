@@ -75,7 +75,7 @@ export const SeeInformationButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   color: white;
   font-size: 15px;
   border-radius: 20px;
@@ -87,6 +87,11 @@ export const SeeInformationButton = styled(Link)`
   @media (max-width: 530px) {
     width: 48%;
   }
+`
+
+export const ImagesContainer = styled.div`
+  border: 1px solid;
+  height: 250px;
 `
 
 export const ScooterContainer = styled.div`

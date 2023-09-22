@@ -17,7 +17,7 @@ import {
   ImagesContainer,
   SwitchContainer,
   ControlLightText,
-  VehiculeContainer,
+  ProductContainer,
   CatalogueContainer,
   SwitchMainContainer,
   ChangeLightsContainer,
@@ -35,7 +35,7 @@ export const ProductsPage = () => {
   const offLightImageUrl = 'https://powersports.segway.com/resources/web/img/close_light.png'
 
   return (
-    <VehiculeContainer>
+    <ProductContainer>
       <img src={villainimg.src} width="100%" />
       <NameVehiculeContainer style={{ margin: '0 0 30px 0' }}>
         <NameVehicule>Segway PowerSports Vehículos</NameVehicule>
@@ -44,14 +44,7 @@ export const ProductsPage = () => {
       <VehiculeProducts />
 
       <VideoContainer>
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/UbYxEFOz0pg?si=SN1LR2pct4TwnEjz"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen></iframe>
+        <video width="100%" src="/videos/ATV.mp4" controls={false} autoPlay muted loop />
       </VideoContainer>
 
       <NameVehiculeContainer>
@@ -97,6 +90,6 @@ export const ProductsPage = () => {
           Descargar Catálogo
         </a>
       </CatalogueContainer>
-    </VehiculeContainer>
+    </ProductContainer>
   )
 }

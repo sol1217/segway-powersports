@@ -83,11 +83,11 @@ export const products: Product[] = [
     video: '/videos/C20.mp4',
     picture: c20Product.src,
     features: [
-      'velocidad máxima de hasta 10 km/h',
+      'Velocidad máxima de hasta 10 km/h',
       'Freno de mano con energía EBS',
       'Ligero y fácil de transportar',
       'Diseñado para adolescentes',
-      'eKickScooter plegable en 2 pasos',
+      'Precio: $425',
     ],
     featuresImage: [
       {
@@ -147,12 +147,12 @@ export const products: Product[] = [
       {
         src: zingc20.src,
         width: 185,
-        price: '$425.000',
+        price: '$425',
       },
       {
         src: zingc20two.src,
         width: 220,
-        price: '$425.000',
+        price: '$425',
       },
     ],
   },
@@ -168,7 +168,7 @@ export const products: Product[] = [
       'Nuevo modo de crucero',
       'Marco de doble tubo',
       'Diseño de liberación rápida',
-      'Motor de cubo sin escobillas ',
+      'Precio: $325 ',
     ],
     featuresImage: [
       {
@@ -228,12 +228,12 @@ export const products: Product[] = [
       {
         src: zingc8.src,
         width: 215,
-        price: '$325.000',
+        price: '$325',
       },
       {
         src: zingc8two.src,
         width: 225,
-        price: '$325.000',
+        price: '$325',
       },
     ],
   },
@@ -248,20 +248,20 @@ export const products: Product[] = [
       'Autonomía 70Km',
       'Batería alto rendimiento',
       'Suspensión trasera de brazo',
-      'Discos de freno del y tras',
+      'Precio: $3.950',
     ],
     featuresImage: [
       {
-        src: bateriaGt1.src,
+        src: seguridadGt1.src,
         titleFeatures: 'Bateria',
         featuresDescription:
-          'Segway diseñó una batería de alto rendimiento de 1008 Wh con un sistema de enfriamiento multicapa Heat Flux para equilibrar el calor',
+          'Segway diseñó una batería de alto rendimiento de 1008 Wh con un sistema de enfriamiento multicapa Heat Flux para equilibrar el calor.',
       },
       {
-        src: seguridadGt1.src,
+        src: bateriaGt1.src,
         titleFeatures: 'Seguridad',
         featuresDescription:
-          'Equipado con un faro LED de 900 lúmenes, luz diurna LED, luz de giro delantera y trasera y luces ambientales traseras. Los conductores pueden elegir entre 11 modos de iluminación ',
+          'Equipado con un faro LED de 900 lúmenes, luz diurna LED, luz de giro delantera y trasera y luces ambientales traseras. Los conductores pueden elegir entre 11 modos de iluminación. ',
       },
       {
         src: comodidaGt1.src,
@@ -309,12 +309,12 @@ export const products: Product[] = [
       {
         src: gt2.src,
         width: 300,
-        price: '$3.950.000',
+        price: '$3.950',
       },
       {
         src: gt2two.src,
         width: 220,
-        price: '$3.950.000',
+        price: '$3.950',
       },
     ],
   },
@@ -330,7 +330,7 @@ export const products: Product[] = [
       'Equipado con un amortiguador delantero',
       'Ligero y plegable',
       'Altura de 10 cm (3,9 pulgadas)',
-      'Diseñado para Jóvenes',
+      'Precio: $395',
     ],
     featuresImage: [
       {
@@ -390,12 +390,12 @@ export const products: Product[] = [
       {
         src: zinge8three.src,
         width: 190,
-        price: '$395.000',
+        price: '$395',
       },
       {
         src: zinge8two.src,
         width: 190,
-        price: '$395.000',
+        price: '$395',
       },
     ],
   },
@@ -411,7 +411,7 @@ export const products: Product[] = [
       'Ligero y fácil de montar/desmontar',
       '2 tipos diferentes de neumáticos',
       'Velocidad máxima de hasta 12km/h',
-      '3 modos de conducción',
+      'Precio: $210',
     ],
     featuresImage: [
       {
@@ -471,12 +471,12 @@ export const products: Product[] = [
       {
         src: zinga6.src,
         width: 200,
-        price: '$210.000',
+        price: '$210',
       },
       {
         src: zinga6two.src,
         width: 150,
-        price: '$210.000',
+        price: '$210',
       },
     ],
   },
@@ -491,7 +491,7 @@ export const products: Product[] = [
       'Neumáticos de 11 pulgadas',
       '4 modos de velocidad',
       'Motor de potencia de 3000 W',
-      '55.9 millas de largo alcance',
+      'Precio: $5.595',
     ],
     featuresImage: [
       {
@@ -552,12 +552,12 @@ export const products: Product[] = [
       {
         src: gt2three.src,
         width: 200,
-        price: '$5.595.000',
+        price: '$5.595',
       },
       {
         src: gt2.src,
         width: 300,
-        price: '$5.595.000',
+        price: '$5.595',
       },
     ],
   },

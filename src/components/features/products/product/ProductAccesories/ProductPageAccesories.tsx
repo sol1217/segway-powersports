@@ -6,8 +6,8 @@ import whatsapp from '@assets/png/icons-whatsapp.png'
 
 import { ProductPageProps } from './ProductPageAccesorie.types'
 import {
-  LogoImage,
   NameModel,
+  NameProduct,
   ImageProduct,
   ImagesGallery,
   TitleFeatures,
@@ -37,7 +37,7 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
   return (
     <ProductPageContainer>
       <div>
-        <LogoImage src={productInfo?.model} />
+        <NameProduct>Segway Powersports Accesorios</NameProduct>
         <video width="100%" src={productInfo?.video} controls={false} autoPlay muted loop />
       </div>
 
@@ -68,7 +68,7 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
       </ViewProductContainer>
 
       <DesignFeaturesContainer>
-        <TitleFeaturesContainer>Caracteristicas Diseño</TitleFeaturesContainer>
+        <TitleFeaturesContainer>Caracteristicas de Diseño</TitleFeaturesContainer>
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>

@@ -41,14 +41,7 @@ import {
 export default function AboutUsPage() {
   return (
     <AboutContainer>
-      <video
-        width="100%"
-        src="/videos/ATV%20(online-video-cutter.com).mp4"
-        controls={false}
-        autoPlay
-        muted
-        loop
-      />
+      <video width="100%" src="/videos/segwayTiger.mp4" controls={false} autoPlay muted loop />
 
       <FoundationContainer>
         <LogoNameContainer>

@@ -7,6 +7,10 @@ export const VehiculeContainer = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px 5px #d3c8c8;
+
+  @media (max-width: 440px) {
+    width: 100%;
+  }
 `
 
 export const ImageProduct = styled.img`
@@ -19,6 +23,10 @@ export const ImageProduct = styled.img`
 
   @media (max-width: 530px) {
     width: 70%;
+  }
+
+  @media (max-width: 430px) {
+    width: 90%;
   }
 `
 
@@ -49,7 +57,7 @@ export const DescriptionContainer = styled.p`
     display: none;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 530px) {
     display: block;
   }
 `

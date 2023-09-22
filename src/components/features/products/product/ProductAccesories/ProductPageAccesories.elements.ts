@@ -5,11 +5,12 @@ export const ProductPageContainer = styled.div`
   position: relative;
 `
 
-export const LogoImage = styled.img`
+export const NameProduct = styled.h1`
   position: absolute;
-  left: 30%;
-  top: 10%;
-  width: 50%;
+  top: 16%;
+  text-align: center;
+  font-size: 40px;
+  font-family: fantasy;
 
   @media (max-width: 870px) {
     top: 8%;
@@ -21,6 +22,10 @@ export const LogoImage = styled.img`
 
   @media (max-width: 500px) {
     top: 5%;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 30px;
   }
 `
 

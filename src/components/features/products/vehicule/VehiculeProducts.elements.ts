@@ -10,7 +10,7 @@ export const ProductVehiculeContainer = styled.div`
   width: 100%;
   padding: 30px;
 
-  @media (max-width: 1230px) {
+  @media (max-width: 1270px) {
     grid-template-columns: repeat(2, 400px);
   }
 

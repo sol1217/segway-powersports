@@ -73,7 +73,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
       </ViewProductContainer>
 
       <DesignFeaturesContainer>
-        <TitleFeaturesContainer>Caracteristicas Diseño</TitleFeaturesContainer>
+        <TitleFeaturesContainer>Caracteristicas de Diseño</TitleFeaturesContainer>
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>

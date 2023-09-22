@@ -1,5 +1,4 @@
 import { Product } from '@types'
-import coverHelmet from '@assets/jpeg/cover-helmet.jpeg'
 import designChildren from '@assets/jpeg/design-children.jpeg'
 import designProtective from '@assets/jpeg/design-protective.jpeg'
 import detailProtective from '@assets/jpeg/detail-protective.jpeg'
@@ -31,14 +30,10 @@ import storageCinco from '@assets/jpeg/gallery-storage-5.jpeg'
 import storageSeis from '@assets/jpeg/gallery-storage-6.jpeg'
 import resistantProtective from '@assets/jpeg/resistant-protective.jpeg'
 import resistantStorage from '@assets/jpeg/resistant-storage.jpeg'
-import adaptableStorage from '@assets/jpg/adaptable-storage.jpg'
-import layerBag from '@assets/jpg/bag-1.jpeg'
-import layoutBag from '@assets/jpg/bag-2.jpeg'
-import spaceBag from '@assets/jpg/bag-3.jpeg'
-import comfortHelmet from '@assets/jpg/comfort-helmet.jpg'
 import deportStorage from '@assets/jpg/deport-storage.jpg'
 import designPhoneHolder from '@assets/jpg/desing-phone-holder.jpg'
 import ergonomicsProtective from '@assets/jpg/ergonomics-protective.jpg'
+import bagDos from '@assets/jpg/gallery-bag-2.jpg'
 import childrenSeis from '@assets/jpg/gallery-children-6.jpg'
 import helmetUno from '@assets/jpg/gallery-helmet-1.jpg'
 import helmetTres from '@assets/jpg/gallery-helmet-3.jpg'
@@ -46,10 +41,16 @@ import phoneHolderUno from '@assets/jpg/gallery-phone-1.jpg'
 import phoneHolderDos from '@assets/jpg/gallery-phone-2.jpg'
 import phoneHolderTres from '@assets/jpg/gallery-phone-3.jpg'
 import phoneHolderCinco from '@assets/jpg/gallery-phone-5.jpg'
+import layerBag from '@assets/jpg/layer-bag.jpg'
+import layoutBag from '@assets/jpg/layout-bag.jpg'
 import sizePhoneHolder from '@assets/jpg/size-phone-holder.jpg'
 import useProtective from '@assets/jpg/use-children.jpg'
 import vehiculePhoneHolder from '@assets/jpg/vehicules-phone-holder.jpg'
+import adaptableStorage from '@assets/png/adaptable-storage.png'
+import bagImageDos from '@assets/png/bag-image-two.png'
 import childrenProtectiveImage from '@assets/png/children-protective-image.png'
+import comfortHelmet from '@assets/png/comfort-helmet.png'
+import coverHelmet from '@assets/png/cover-helmet.png'
 import fabricHelmet from '@assets/png/fabric-helmet.png'
 import phoneHolderCuatro from '@assets/png/gallery-phone-4.png'
 import helmetImage from '@assets/png/helmet-image.png'
@@ -61,9 +62,10 @@ import protectiveLogo from '@assets/png/logo-PROTECTIVE-GEAR-SET.png'
 import storageLogo from '@assets/png/logo-storage-bag.png'
 import phoneHolderImage from '@assets/png/phone-holder.png'
 import protectiveImage from '@assets/png/protective-image.png'
+import spaceBag from '@assets/png/space-bag.png'
 import storageImage from '@assets/png/storage-image.png'
-import bag from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-two.jpg'
-import bagtwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-two.jpg'
+import bagImage from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-image.jpeg'
+import bag from '@assets/images/SEGWAY-VEHICULOS/accesorios/bag-logo.png'
 import helmettwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/helmet.jpg'
 import storagetwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/Ninebot_Kickscooter-Bag.jpg'
 import helmet from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-helmet.png'
@@ -82,12 +84,12 @@ export const products: Product[] = [
     picture: bag.src,
     images: [
       {
-        src: bag.src,
+        src: bagImageDos.src,
         width: 200,
         price: '$50',
       },
       {
-        src: bagtwo.src,
+        src: bagImage.src,
         width: 195,
         price: '$50',
       },
@@ -101,7 +103,7 @@ export const products: Product[] = [
       '3 litros Almacenamiento portátil',
       'Diseño minimalista de carcasa dura',
       'Fácil de abrir',
-      'price: $50',
+      'Precio: $50',
     ],
     featuresImage: [
       {
@@ -120,22 +122,12 @@ export const products: Product[] = [
         src: layoutBag.src,
         titleFeatures: 'Diseño interior amplio',
         featuresDescription:
-          'El diseño del bolsillo interior de red permite guardar de forma fácil y cómoda su teléfono u otros objetos personales pequeños.',
+          'El diseño del bolsillo interior de red permite guardar de forma fácil y cómoda su teléfono u otros objetos personales pequeños, Un bolso para cualquier ocasión.',
       },
     ],
     galleryImages: [
       {
-        src: bagUno.src,
-        height: 200,
-        width: 300,
-      },
-      {
-        src: bagtwo.src,
-        height: 200,
-        width: 300,
-      },
-      {
-        src: bagTres.src,
+        src: bagDos.src,
         height: 200,
         width: 300,
       },
@@ -145,12 +137,22 @@ export const products: Product[] = [
         width: 300,
       },
       {
-        src: bagCinco.src,
+        src: bagTres.src,
+        height: 200,
+        width: 300,
+      },
+      {
+        src: bagUno.src,
         height: 200,
         width: 300,
       },
       {
         src: bagSeis.src,
+        height: 200,
+        width: 300,
+      },
+      {
+        src: bagCinco.src,
         height: 200,
         width: 300,
       },
@@ -176,11 +178,11 @@ export const products: Product[] = [
       'La unión manual del casco y un proceso de moldeado integrado crean un casco cómodo y liviano que absorberá cualquier impacto que la carretera pueda presentarle mientras conduce su scooter eléctrico',
     video: '/videos/accesories.mp4',
     features: [
-      'se adapta a una cabeza de 58 a 63 cm',
-      'desmontable y lavable',
+      'Se adapta a una cabeza de 58 a 63 cm',
+      'Desmontable y lavable',
       'Peso ligero para mayor comodidad',
       'Colores: negro, amarillo, naranja',
-      'price: $45',
+      'Precio: $45',
     ],
     featuresImage: [
       {
@@ -190,16 +192,16 @@ export const products: Product[] = [
           'Cuenta con un forro de tela suave y transpirable que te mantiene cómodo sin importar cuánto tiempo lo uses.',
       },
       {
-        src: coverHelmet.src,
+        src: fabricHelmet.src,
         titleFeatures: 'Diseño versátil y ajustable',
         featuresDescription:
           'Diseñado teniendo en cuenta la versatilidad y se puede ajustar para satisfacer las necesidades de cualquier ciclista adulto',
       },
       {
-        src: fabricHelmet.src,
+        src: coverHelmet.src,
         titleFeatures: 'Tela suave y transpirable',
         featuresDescription:
-          'Cuenta con un forro de tela suave y transpirable que te mantiene cómodo sin importar cuánto tiempo lo uses.',
+          'Estructura transpirable: orificios de aire para ventilación y disipación de calor, esfera giratoria de ajuste.',
       },
     ],
     logo: helmetLogo.src,
@@ -210,12 +212,12 @@ export const products: Product[] = [
         height: 200,
       },
       {
-        src: helmetDos.src,
+        src: helmetTres.src,
         width: 300,
         height: 200,
       },
       {
-        src: helmetTres.src,
+        src: helmetDos.src,
         width: 300,
         height: 200,
       },
@@ -240,7 +242,7 @@ export const products: Product[] = [
     name: 'NINEBOT PHONE HOLDER',
     alias: 'phone-holder',
     completeDesciprtion:
-      'Mantenga el mundo a su alcance, incluso cuando esté en movimiento, con nuestro elegante y elegante soporte para teléfono.',
+      'Mantenga el mundo a su alcance, incluso cuando esté en movimiento, con nuestro elegante soporte para teléfono.',
     images: [
       {
         src: phoneholder.src,
@@ -261,7 +263,7 @@ export const products: Product[] = [
       'Dimensiones: 134 x 54 x 102 mm',
       'Resistencia a los arañazos',
       'Fácil instalación',
-      'price: $30',
+      'Precio: $30',
     ],
     featuresImage: [
       {
@@ -339,9 +341,9 @@ export const products: Product[] = [
     features: [
       'Ergonómica, fácil de cerrar.',
       'Resistente al agua',
-      'Color: Gris musgo',
+      'Fácil de almacenar',
       'Dimensiones: 108 x 16 x 44 cm',
-      'price: $45',
+      'Precio: $45',
     ],
     featuresImage: [
       {
@@ -351,13 +353,13 @@ export const products: Product[] = [
           'Este bolso presenta un elegante diseño de doble cremallera, es resistente al desgaste y repelente al agua de nivel 4. ',
       },
       {
-        src: deportStorage.src,
+        src: adaptableStorage.src,
         titleFeatures: 'Cremallera Deportiva',
         featuresDescription:
           'Es ergonómica de sostener, conveniente para arrastre, reduce mucho la presión para llevar el scooter.',
       },
       {
-        src: adaptableStorage.src,
+        src: deportStorage.src,
         titleFeatures: 'Varias adaptabilidades',
         featuresDescription:
           'Compatible con casi todas las series Ninebot de Segway Electric Kickscooter. El tamaño es de 42.5 x 6.3 pulgadas.',
@@ -397,7 +399,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: 'NINEBOT PROTECTIVE GEAR SET',
+    name: 'PROTECTIVE GEAR SET',
     alias: 'gear-set',
     images: [
       {
@@ -422,6 +424,7 @@ export const products: Product[] = [
       'Diseño de tapa plana',
       'Protector y cómodo de llevar',
       'Seguridad integral.',
+      'Precio: $45',
     ],
     featuresImage: [
       {
@@ -431,16 +434,16 @@ export const products: Product[] = [
           'Un casco, dos muñequeras, dos rodilleras y coderas, Botón de acero inoxidable simple y suave.',
       },
       {
-        src: resistantProtective.src,
+        src: designProtective.src,
         titleFeatures: 'Resistente a los golpes',
         featuresDescription:
           'El material PE resistente al frío, como un cuenco, resistente a los golpes, reduce el daño a las rodillas.',
       },
       {
-        src: designProtective.src,
+        src: resistantProtective.src,
         titleFeatures: 'Diseño estable',
         featuresDescription:
-          'Diseño de tapa plana para mayor longevidad y estabilidad. Peso del paquete: Aprox. 1620 g/7,7 oz.',
+          'Diseño de tapa plana para mayor estabilidad, las mangas elásticas aseguran que las almohadillas se ajusten.',
       },
     ],
     galleryImages: [
@@ -477,7 +480,7 @@ export const products: Product[] = [
     ],
   },
   {
-    name: 'NINEBOT CHILDREN PROTECTIVE GEAR SET',
+    name: 'CHILDREN PROTECTIVE SET',
     alias: 'generatot-sgw2700i',
     images: [
       {
@@ -491,7 +494,8 @@ export const products: Product[] = [
         price: '$50',
       },
     ],
-    completeDesciprtion: 'Protección personal Set de equipo de protección Segway-Ninebot (S)',
+    completeDesciprtion:
+      'Protección personal para niños, Set de equipo de protección Segway-Ninebot (S)',
     picture: childrenProtectiveImage.src,
     logo: childrenLogo.src,
     video: '/videos/accesories.mp4',
@@ -500,7 +504,7 @@ export const products: Product[] = [
       'Color del producto: amarillo/rosa',
       'Circunferencia de la rodilla: 25-34 CM',
       'Circunferencia del codo: 17-22 CM',
-      'precio: $50',
+      'Precio: $50',
     ],
     featuresImage: [
       {

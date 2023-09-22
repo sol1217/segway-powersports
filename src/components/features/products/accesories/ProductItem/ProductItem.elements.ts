@@ -58,7 +58,7 @@ export const AccesoriesContainer = styled.div`
   }
 
   @media (max-width: 530px) {
-    height: 300px;
+    height: 330px;
   }
 `
 

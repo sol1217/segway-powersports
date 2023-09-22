@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const VehiculeContainer = styled.div`
+export const ProductContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 20px;
   background-color: white;
@@ -16,25 +16,11 @@ export const NameVehiculeContainer = styled.div`
   background-color: black;
   color: white;
   height: 150px;
-  margin: 50px 0 50px 0;
+  margin: 40px 0 50px 0;
 `
 
 export const VideoContainer = styled.div`
-  margin: 30px auto;
-  height: 600px;
-  border: 1px solid;
-
-  @media (min-width: 1800px) {
-    height: 1000px;
-  }
-
-  @media (max-width: 1060px) {
-    width: 95%;
-  }
-
-  @media (max-width: 800px) {
-    height: 400px;
-  }
+  margin-top: 40px;
 `
 
 export const NameVehicule = styled.div`
@@ -99,7 +85,11 @@ export const SwitchContainer = styled.div`
   height: 38px;
 `
 
-export const ControlLightText = styled.h2``
+export const ControlLightText = styled.h2`
+  @media (max-width: 500px) {
+    font-size: 15px;
+  }
+`
 
 export const SwitchDivisionContainer = styled.div`
   flex: 1;

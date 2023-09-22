@@ -14,13 +14,12 @@ import {
 } from '@features/products/vehicule/ProductCard/ProductCard.elements'
 
 export const ProductCard = ({ product }: { product: IProduct }) => {
-  const { images, name, description } = product
-  const [selectedImage, setSelectedImage] = useState(images[0].color)
+  const [selectedImage, setSelectedImage] = useState(product.images[0].color)
 
   return (
     <>
       <VehiculeContainer>
-        {images.map(({ url, color }, i) => (
+        {product.images.map(({ url, color }, i) => (
           <ImageProduct
             key={i}
             style={{
@@ -34,14 +33,14 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
 
         <ProductContentContainer>
           <ChangeColorContainer>
-            {images.map(({ color }, i) => (
+            {product.images.map(({ color }, i) => (
               <ColorsContainer key={i} onClick={() => setSelectedImage(color)}>
                 <ColorImage src={colorImages[color]} width={40} height={40} />
               </ColorsContainer>
             ))}
           </ChangeColorContainer>
-          <NameOfProdyct>{name}</NameOfProdyct>
-          <DescriptionContainer>{description}</DescriptionContainer>
+          <NameOfProdyct>{product.name}</NameOfProdyct>
+          <DescriptionContainer>{product.description}</DescriptionContainer>
           <SeeInformationButton href={`/products/${product.alias}`}>
             Ver Informacion
           </SeeInformationButton>
