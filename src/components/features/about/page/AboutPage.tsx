@@ -99,14 +99,13 @@ export default function AboutUsPage() {
             <ImageInformation src={segwaymula.src} width={450} height={450} alt="" />
           </ImageInformationWrap>
           <InformationCompanyText>
-            <TitleContainer>Perfil de la compañia</TitleContainer>
+            <TitleContainer>Generación</TitleContainer>
             <InformationText>
-              Segway Powersports é uma subsidiária do Segway-Ninebot Group, que é um unicórnio na
-              indústria global de mobilidade inteligente. O Segway-Ninebot possui três grandes
-              regiões de negócios, incluindo Ásia-Pacífico, Europa e América, e seus produtos são
-              vendidos em mais de 100 países e regiões ao redor do mundo. Possui mais de 1.000
-              patentes de núcleo global. Seus produtos incluem veículos todo-o-terreno, robótica,
-              go-karts, patinetes com balanceamento automático.
+              En 2018 fue creada Segway Tecnology Co, LTD para la búsqueda, desarrollo, producción y
+              comercialización de vehículos Off-Road – ATV, SSV y UTV. Con el principal centro de
+              desarrollo asentado en EUA, La segunda generación del modelo Segway PT trae el control
+              sin cables y la revolucionaria tecnología LeanSteeer – girando el manillar para los
+              lados.
             </InformationText>
           </InformationCompanyText>
         </InformationCompany>

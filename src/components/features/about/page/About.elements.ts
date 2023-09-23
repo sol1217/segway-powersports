@@ -54,9 +54,9 @@ export const LogoImage = styled(Image)`
 `
 
 export const InformationCompanyContainer = styled.div`
-  text-align: center;
   width: 70%;
   font-size: 22px;
+  text-align: center;
 
   @media (max-width: 820px) {
     width: 90%;
@@ -81,7 +81,15 @@ export const ImageInformationWrap = styled.div`
 
   @media (max-width: 630px) {
     height: 500px;
-    width: 400px;
+    width: 100%;
+  }
+
+  @media (max-width: 530px) {
+    height: 40%;
+  }
+
+  @media (max-width: 400px) {
+    height: 60%;
   }
 `
 
@@ -100,11 +108,12 @@ export const ImageInformation = styled(Image)`
   }
 
   @media (max-width: 540px) {
+    height: 300px;
     width: 100%;
   }
 
-  @media (max-width: 540px) {
-    width: 80%;
+  @media (max-width: 400px) {
+    height: 220px;
   }
 `
 
@@ -183,6 +192,10 @@ export const SloganImage = styled(Image)`
     width: 90%;
     height: 30%;
   }
+
+  @media (max-width: 550px) {
+    width: 100%;
+  }
 `
 
 export const SloganDefinition = styled.p`
@@ -213,20 +226,14 @@ export const ImagesGalleryContainer = styled.div`
   }
 
   @media (max-width: 800px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(3, 200px);
   }
 
   @media (max-width: 690px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(2, 200px);
   }
 
   @media (max-width: 450px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(2, 160px);
   }
 `
@@ -245,7 +252,7 @@ export const ImagesGallery = styled(Image)`
 
   @media (max-width: 800px) {
     width: 200px;
-    height: 180px;
+    height: 160px;
   }
 
   @media (max-width: 450px) {
@@ -258,6 +265,10 @@ export const ContactText = styled.div`
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
 `
 
 export const ContactSectionWrap = styled.div`
@@ -281,7 +292,6 @@ export const ContactSectionWrap = styled.div`
 
 export const ContactButton = styled.button`
   background-color: transparent;
-  border: 1px solid white;
   height: 60px;
   width: 230px;
   color: white;

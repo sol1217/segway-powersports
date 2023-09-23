@@ -17,6 +17,10 @@ export const SeeInformationContainer = styled.div`
   }
 `
 
+export const ImagesContainer = styled.div`
+  height: 200px;
+`
+
 export const SeeInformationButton = styled(Link)`
   background: linear-gradient(to left, #d92a19, darkred);
   border: none;

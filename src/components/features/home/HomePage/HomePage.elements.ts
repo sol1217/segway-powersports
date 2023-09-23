@@ -78,6 +78,7 @@ export const SeeProductsButton = styled.button`
   cursor: pointer;
   border: none;
   border-radius: 30px;
+  padding: 10px;
 
   @media (max-width: 640px) {
     width: 220px;

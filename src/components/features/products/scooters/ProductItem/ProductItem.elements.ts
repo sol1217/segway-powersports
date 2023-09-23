@@ -90,7 +90,6 @@ export const SeeInformationButton = styled(Link)`
 `
 
 export const ImagesContainer = styled.div`
-  border: 1px solid;
   height: 250px;
 `
 

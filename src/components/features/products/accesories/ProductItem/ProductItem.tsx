@@ -4,6 +4,7 @@ import {
   NextButton,
   PrevButton,
   ChangeImage,
+  ImagesContainer,
   AccesoriesContainer,
   SeeInformationButton,
   SeeInformationContainer,
@@ -24,14 +25,14 @@ export const ProductItem = ({ product }: ProductItemProps) => {
     <>
       <AccesoriesContainer>
         <h4>{product.name}</h4>
-        <div>
+        <ImagesContainer>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
           <ChangeImage
             src={product.images[currentImage].src}
             width={product.images[currentImage].width}
           />
           <NextButton onClick={nextImage}>&gt;</NextButton>
-        </div>
+        </ImagesContainer>
         <SeeInformationContainer>
           <p>{product.images[currentImage].price}</p>
           <SeeInformationButton href={`/products/accesories/${product.alias}`}>

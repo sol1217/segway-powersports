@@ -41,7 +41,7 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
           </p>
         </AppContainer>
         <PhoneItemCarousel>
-          <VillainImage src={screenvillain.src} width={360} height={300} />
+          <VillainImage src={screenvillain.src} width={400} height={300} />
           <PhoneItemsContainer>
             <NextPhoneButton onClick={nextSlide}>
               <img src={back.src} />
