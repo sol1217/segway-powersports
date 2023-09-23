@@ -18,7 +18,6 @@ export const LogoNameContainer = styled.div`
   text-align: center;
   line-height: 35px;
   letter-spacing: 15px;
-  font-weight: 500 !important;
   font-style: normal;
   text-transform: uppercase;
 
@@ -60,10 +59,6 @@ export const InformationCompanyContainer = styled.div`
 
   @media (max-width: 820px) {
     width: 90%;
-  }
-
-  @media (max-width: 540px) {
-    text-align: left;
   }
 `
 

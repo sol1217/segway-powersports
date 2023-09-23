@@ -18,7 +18,7 @@ export const ImageProduct = styled.img`
   transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
 
   @media (max-width: 780px) {
-    width: 100%;
+    width: 80%;
   }
 
   @media (max-width: 530px) {
@@ -26,7 +26,7 @@ export const ImageProduct = styled.img`
   }
 
   @media (max-width: 430px) {
-    width: 90%;
+    width: 88%;
   }
 `
 

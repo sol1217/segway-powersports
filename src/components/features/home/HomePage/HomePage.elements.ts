@@ -187,7 +187,7 @@ export const ImagesVehicules = styled.img`
 
 export const TitleVideos = styled.h2`
   text-align: center;
-  margin: 10px;
+  margin: 30px 0;
   font-size: 35px;
 `
 
@@ -204,6 +204,14 @@ export const VideosContainer = styled.div`
 
   @media (min-width: 1800px) {
     padding: 30px;
+  }
+
+  @media (max-width: 750px) {
+    gap: 25px;
+  }
+
+  @media (max-width: 450px) {
+    gap: 0px;
   }
 `
 
@@ -230,9 +238,14 @@ export const VideoSection = styled.div`
     height: 400px;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 750px) {
     width: 100%;
     height: 290px;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    height: 220px;
   }
 `
 
