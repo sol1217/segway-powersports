@@ -1,35 +1,35 @@
 import { Product } from '@types'
-import bateriaC20 from '@assets/jpeg/batery-c20.jpeg'
 import bateriaGt1 from '@assets/jpeg/batery-gta1.jpeg'
 import a6Uno from '@assets/jpeg/gallery-A6-1.jpeg'
 import a6Dos from '@assets/jpeg/gallery-A6-2.jpeg'
-import sensorA6 from '@assets/jpeg/gallery-A6-2.jpeg'
-import a6Tres from '@assets/jpeg/gallery-A6-3.jpeg'
+import sensorA6 from '@assets/jpeg/gallery-A6-3.jpeg'
 import a6Cuatro from '@assets/jpeg/gallery-A6-4.jpeg'
 import a6Cinco from '@assets/jpeg/gallery-A6-5.jpeg'
 import a6Seis from '@assets/jpeg/gallery-A6-6.jpeg'
 import c20Uno from '@assets/jpeg/gallery-C20-1.jpeg'
 import c20Dos from '@assets/jpeg/gallery-C20-2.jpeg'
 import c20Cinco from '@assets/jpeg/gallery-C20-5.jpeg'
-import c20Seis from '@assets/jpeg/gallery-C20-6.jpeg'
 import c8Dos from '@assets/jpeg/gallery-C8-2.jpeg'
+import c8Cuatro from '@assets/jpeg/gallery-C8-4.jpeg'
 import c8Cinco from '@assets/jpeg/gallery-C8-5.jpeg'
 import e8Uno from '@assets/jpeg/gallery-E8-1.jpeg'
 import e8Dos from '@assets/jpeg/gallery-E8-2.jpeg'
 import e8Tres from '@assets/jpeg/gallery-E8-3.jpeg'
 import e8cino from '@assets/jpeg/gallery-E8-5.jpeg'
 import e8Seis from '@assets/jpeg/gallery-E8-6.jpeg'
+import gt1Dos from '@assets/jpeg/gallery-gt2-2.jpeg'
+import gt1Ocho from '@assets/jpeg/gallery-gt2-5.jpeg'
+import gt1Cuatro from '@assets/jpeg/gallery-gt2-6.jpeg'
+import gt2Siete from '@assets/jpeg/gallery-gt2-7.jpeg'
 import gt1Uno from '@assets/jpeg/gallery-gta1-1.jpeg'
 import gtTres from '@assets/jpeg/gallery-gta1-3.jpeg'
-import gt1Dos from '@assets/jpeg/gallery-gta2-2.jpeg'
 import gt1Seis from '@assets/jpeg/gallery-gta2-3.jpeg'
 import gt1Cinco from '@assets/jpeg/gallery-gta2-4.jpeg'
-import gt1Ocho from '@assets/jpeg/gallery-gta2-5.jpeg'
-import gt1Cuatro from '@assets/jpeg/gallery-gta2-5.jpeg'
 import modosE8 from '@assets/jpeg/mode-e8.jpeg'
 import estructuraC8 from '@assets/jpeg/structure-c8.jpeg'
 import aspectoC8 from '@assets/jpg/aspect-c8.jpg'
 import bateriaA6 from '@assets/jpg/batery-a6.jpg'
+import bateriaC20 from '@assets/jpg/batery-c20.jpg'
 import palancaC20 from '@assets/jpg/c20- lever.jpg'
 import neumaticosC20 from '@assets/jpg/c20-tires.jpg'
 import frenadoC8 from '@assets/jpg/c8-braking.jpg'
@@ -37,8 +37,8 @@ import comodidaGt1 from '@assets/jpg/comfort-gta1.jpg'
 import funcionGt2 from '@assets/jpg/function-gta2.jpg'
 import c20Tres from '@assets/jpg/gallery-C20-3.jpg'
 import c20Cuatro from '@assets/jpg/gallery-C20-4.jpg'
+import c20Seis from '@assets/jpg/gallery-C20-6.jpg'
 import c8Uno from '@assets/jpg/gallery-C8-1.jpg'
-import c8Cuatro from '@assets/jpg/gallery-C8-4.jpg'
 import gt1Siete from '@assets/jpg/gallery-gt2-6.jpg'
 import motorGt2 from '@assets/jpg/motor-gta2.jpg'
 import neumaticosA6 from '@assets/jpg/pneumatic-a6.jpg'
@@ -48,6 +48,7 @@ import acelerarE8 from '@assets/jpg/speed-up-e8.jpg'
 import suspensionGt2 from '@assets/jpg/suspension-gt2.jpg'
 import c8Product from '@assets/png/C8-Product.png'
 import e8Product from '@assets/png/e8-product.png'
+import a6Tres from '@assets/png/gallery-A6-new-3.png'
 import c8Tres from '@assets/png/gallery-C8-3.png'
 import c8Seis from '@assets/png/gallery-C8-6.png'
 import e8cuatro from '@assets/png/gallery-E8-4.png'
@@ -242,7 +243,7 @@ export const products: Product[] = [
     alias: 'superscooter-gt1',
     completeDesciprtion:
       'El scooter eléctrico de largo alcance Segway SuperScooter GT1 Electric Scooter te lleva a donde quieras con estilo y más rápido que nunca.',
-    video: '/videos/GTA1.mp4',
+    video: '/videos/gt1.mp4',
     features: [
       'Velocidad Máxima 60km/h',
       'Autonomía 70Km',
@@ -371,12 +372,12 @@ export const products: Product[] = [
         width: 300,
       },
       {
-        src: e8cuatro.src,
+        src: e8Seis.src,
         height: 200,
         width: 300,
       },
       {
-        src: e8Seis.src,
+        src: e8cuatro.src,
         height: 200,
         width: 300,
       },
@@ -485,7 +486,7 @@ export const products: Product[] = [
     alias: 'superscooter-gt2',
     completeDesciprtion:
       'Segway SuperScooter GT, Patinete eléctrico GT2 6000 W (Ver.GT1 3000W), 55.9 millas de largo alcance y 43.5 MPH, suspensión doble, neumáticos de 11 pulgadas.',
-    video: '/videos/GTA 2.mp4',
+    video: '/videos/gt2.mp4',
     features: [
       'Frenos de disco delanteros y traseros',
       'Neumáticos de 11 pulgadas',
@@ -533,7 +534,7 @@ export const products: Product[] = [
         height: 200,
       },
       {
-        src: gt1Cinco.src,
+        src: gt2Siete.src,
         width: 300,
         height: 200,
       },

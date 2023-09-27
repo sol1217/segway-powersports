@@ -7,13 +7,6 @@ export const HomePageContainer = styled.div`
   margin-bottom: 30px;
 `
 
-export const CarouselImagesContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  align-items: center;
-`
-
 export const VideoContainer = styled.div`
   position: relative;
 `
@@ -106,7 +99,6 @@ export const VehiculesContainer = styled.div`
   text-align: center;
   padding: 20px;
   text-transform: uppercase;
-  border: 1px solid red;
 
   @media (max-width: 1330px) {
     font-size: 17px;

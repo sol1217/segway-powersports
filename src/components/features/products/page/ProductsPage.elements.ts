@@ -20,7 +20,7 @@ export const NameVehiculeContainer = styled.div`
 `
 
 export const VideoContainer = styled.div`
-  margin-top: 40px;
+  margin-top: 20px;
 `
 
 export const NameVehicule = styled.div`

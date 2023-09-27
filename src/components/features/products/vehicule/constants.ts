@@ -3,11 +3,12 @@ import comfortVillain from '@assets/jpeg/comfort-sx10.jpeg'
 import iluminacion from '@assets/jpeg/design-snarler.jpeg'
 import bateriabike from '@assets/jpeg/dirtyebike-batery.jpeg'
 import at6Cuatro from '@assets/jpeg/gallery-at6-4.jpeg'
+import at6Cinco from '@assets/jpeg/gallery-at6-5.jpeg'
+import at6Seis from '@assets/jpeg/gallery-at6-6.jpeg'
 import at6Uno from '@assets/jpeg/gallery-at6.jpeg'
 import bikeUno from '@assets/jpeg/gallery-bike-1.jpeg'
 import bikeDos from '@assets/jpeg/gallery-bike-2.jpeg'
 import bikeCuatro from '@assets/jpeg/gallery-bike-4.jpeg'
-import bikeCinco from '@assets/jpeg/gallery-bike-5.jpeg'
 import bikeSeis from '@assets/jpeg/gallery-bike-6.jpeg'
 import scooterUno from '@assets/jpeg/gallery-e110s-1.jpeg'
 import scooterDos from '@assets/jpeg/gallery-e110s-2.jpeg'
@@ -20,7 +21,7 @@ import fuglemanDos from '@assets/jpeg/gallery-fugleman-2.jpg'
 import fuglemanTres from '@assets/jpeg/gallery-fugleman-3.jpg'
 import fuglemanCuatro from '@assets/jpeg/gallery-fugleman-4.jpg'
 import fuglemanCinco from '@assets/jpeg/gallery-fugleman-5.jpg'
-import fuglemanSeis from '@assets/jpeg/gallery-fugleman-6.jpg'
+import fuglemanSeis from '@assets/jpeg/gallery-fugleman-6.jpeg'
 import glDos from '@assets/jpeg/gallery-GL-2.jpeg'
 import glCuatro from '@assets/jpeg/gallery-GL-4.jpeg'
 import villainUno from '@assets/jpeg/gallery-villain-1.jpeg'
@@ -30,7 +31,6 @@ import villainCuatro from '@assets/jpeg/gallery-villain-4.jpeg'
 import villainCinco from '@assets/jpeg/gallery-villain-5.jpeg'
 import terrenobike from '@assets/jpeg/land-ebike.jpeg'
 import robusto from '@assets/jpeg/light-snarler.jpeg'
-import at6Cinco from '@assets/jpeg/light-snarler.jpeg'
 import purposeFugleman from '@assets/jpeg/purpose-fugleman.jpeg'
 import diseño from '@assets/jpeg/robust-snarler.jpeg'
 import epsVillain from '@assets/jpeg/smart-villain.jpeg'
@@ -40,9 +40,9 @@ import versatilFugleman from '@assets/jpeg/versatil-ut10.jpeg'
 import at6Dos from '@assets/jpg/gallery-at6-2.jpg'
 import at6Tres from '@assets/jpg/gallery-at6-3.jpg'
 import bikeTres from '@assets/jpg/gallery-bike-3.jpg'
+import bikeCinco from '@assets/jpg/gallery-bike-5.jpg'
 import panelScooter from '@assets/jpg/panel-scooter-2.jpg'
 import potenciaScooter from '@assets/jpg/potencia-scooter.jpg'
-import at6Seis from '@assets/jpg/segway-snarler.jpg'
 import glTres from '@assets/jpg/segway-snarler.jpg'
 import glUno from '@assets/jpg/snarler-600gl-2.jpg'
 import suspnesionScooter from '@assets/jpg/suspension-e110s.jpg'
@@ -370,7 +370,7 @@ export const products: IProduct[] = [
         src: iluminacion.src,
         titleFeatures: 'ILUMINACIÓN LED',
         featuresDescription:
-          'Con un diseño osado y radicalmente diferente, el Snarler 600GL es una verdadera fiera preparada para dominar la oscuridad de los bosques.',
+          'Con un diseño osado y radicalmente diferente, el Snarler AT6 LE es una verdadera fiera preparada para dominar la oscuridad de los bosques.',
       },
       {
         src: robusto.src,
@@ -511,7 +511,7 @@ export const products: IProduct[] = [
     alias: 'ebike-x160',
     completeDesciprtion:
       'SEGWAY DIRT EBIKE es una moto de cross con motor eléctrico que ofrece un rendimiento todoterreno superior para todo tipo de usuarios.Es compacto, liviano, fácil de mantener y económico.',
-    video: '/videos/dirty bike.mp4',
+    video: '/videos/dirty-bike.mp4',
     features: [
       'ACELERACION DE 0 A 31 MPH EN SOLO 4.02 SEGUNDOS',
       'SUBE PENDIENTES DE HASTA 45 GRADOS',

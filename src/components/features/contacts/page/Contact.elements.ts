@@ -14,6 +14,12 @@ export const ContactMainContainer = styled.div`
   }
 `
 
+export const InformationContact = styled.h3`
+  @media (max-width: 445px) {
+    font-size: ;
+  }
+`
+
 export const ContactContainer = styled.div`
   display: flex;
   align-items: center;

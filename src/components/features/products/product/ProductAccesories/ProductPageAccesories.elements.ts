@@ -10,7 +10,8 @@ export const NameProduct = styled.h1`
   top: 16%;
   text-align: center;
   font-size: 40px;
-  font-family: fantasy;
+  color: #ffffff;
+  font-family: cursive;
 
   @media (max-width: 870px) {
     top: 8%;
@@ -241,6 +242,7 @@ export const DesignFeaturesItems = styled.div`
 `
 
 export const ImagesFeatures = styled.img`
+  border-radius: 20px;
   @media (max-width: 550px) {
     height: 250px;
   }

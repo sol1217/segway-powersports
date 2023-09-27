@@ -44,7 +44,7 @@ export const ProductsPage = () => {
       <VehiculeProducts />
 
       <VideoContainer>
-        <video width="100%" src="/videos/ATV.mp4" controls={false} autoPlay muted loop />
+        <video width="100%" src="/videos/segway-villian.mp4" controls={false} autoPlay muted loop />
       </VideoContainer>
 
       <NameVehiculeContainer>

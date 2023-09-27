@@ -38,7 +38,15 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
     <ProductPageContainer>
       <div>
         <NameProduct>Segway Powersports Accesorios</NameProduct>
-        <video width="100%" src={productInfo?.video} controls={false} autoPlay muted loop />
+        <video
+          style={{ opacity: 0.6 }}
+          width="100%"
+          src={productInfo?.video}
+          controls={false}
+          autoPlay
+          muted
+          loop
+        />
       </div>
 
       <ViewProductContainer>

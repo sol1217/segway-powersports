@@ -35,7 +35,6 @@ import {
   SeeProductsButton,
   TitleSomeProducts,
   VehiculesContainer,
-  CarouselImagesContainer,
   ImagesVehiculesContainer,
 } from './HomePage.elements'
 
@@ -52,7 +51,7 @@ export const HomePage = () => {
         <video
           style={{ opacity: '.6 ' }}
           width="100%"
-          src="/videos/VILLAIN%20SX10%20-%20A%20new%20feeling%20of%20power%20and%20control%20(1).mp4"
+          src="/videos/segway-feeling.mp4"
           controls={false}
           autoPlay
           muted
@@ -85,9 +84,7 @@ export const HomePage = () => {
         </SeeProductsButton>
       </VehiculesContainer>
 
-      <CarouselImagesContainer>
-        <Carousel images={carouselImages} />
-      </CarouselImagesContainer>
+      <video src="/videos/segway-general.mp4" muted autoPlay />
 
       <PhoneCarousel imagesPhone={PhoneImages} />
 

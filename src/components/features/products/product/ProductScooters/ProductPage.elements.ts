@@ -239,13 +239,10 @@ export const DesignFeaturesItems = styled.div`
 `
 
 export const ImagesFeatures = styled.img`
+  border-radius: 20px;
   @media (max-width: 550px) {
     height: 250px;
   }
-`
-
-export const NameFeatures = styled.h2`
-  text-align: center;
 `
 
 export const TextInformation = styled.p`

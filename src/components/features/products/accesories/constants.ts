@@ -181,7 +181,7 @@ export const products: Product[] = [
       'Se adapta a una cabeza de 58 a 63 cm',
       'Desmontable y lavable',
       'Peso ligero para mayor comodidad',
-      'Colores: negro, amarillo, naranja',
+      'Colores: Negro, Amarillo, Naranja',
       'Precio: $45',
     ],
     featuresImage: [

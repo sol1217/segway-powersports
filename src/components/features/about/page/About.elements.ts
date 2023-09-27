@@ -8,6 +8,21 @@ export const AboutContainer = styled.div`
   padding-top: 100px;
 `
 
+export const VideoContainer = styled.div`
+  position: relative;
+`
+
+export const MadeLogoImg = styled.img`
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  text-align: center;
+  font-weight: 200;
+  width: 65%;
+`
+
 export const LogoNameContainer = styled.div`
   border-bottom: 2px solid darkred;
   padding: 20px 20px 40px 20px;

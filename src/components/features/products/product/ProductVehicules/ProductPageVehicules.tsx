@@ -113,24 +113,24 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
       <DataSheetContainer>
         <h2>Fichas Tecnicas</h2>
         <DataSheet>
-          <DataSheetLink href="/Snarler%20S.pdf" download>
+          <DataSheetLink href="/ technical-sheets/snarler-at6-sx.pdf" download>
             <DataImage src={sx.src} width={250} />
-            <p>SNARLER SX</p>
+            <p>SNARLER AT6 SX</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
-          <DataSheetLink href="/fugleman.pdf" download>
+          <DataSheetLink href="/ technical-sheets/fugleman-u10x.pdf" download>
             <DataImage src={fuglemanred.src} width={220} />
-            <p>Fugleman UT10</p>
+            <p>Fugleman UT10 </p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
-          <DataSheetLink href="/Snarler%20LX.pdf" download>
+          <DataSheetLink href="/ technical-sheets/snaler-at6-lx.pdf" download>
             <DataImage src={lx.src} width={230} />
-            <p>SNARLER LX</p>
+            <p>SNARLER AT6 LX</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
-          <DataSheetLink href="/Villain.pdf" download>
+          <DataSheetLink href="/ technical-sheets/villain.pdf" download>
             <DataImage src={villaingreen.src} width={250} />
-            <p>Villain SX10</p>
+            <p>Villain SX10 X</p>
             <TextDowload>Descargar</TextDowload>
           </DataSheetLink>
         </DataSheet>

@@ -11,17 +11,20 @@ import segwaynew from '@assets/jpeg/segway-new.jpeg'
 import segwaytwo from '@assets/jpeg/segway-two.jpeg'
 import segwaycuadra from '@assets/jpeg/serway-cuadra.jpeg'
 import segwaystreet from '@assets/jpeg/street-segway.jpeg'
+import madeLogo from '@assets/png/about-logo.png'
 import fear from '@assets/png/fear-place.png'
 import segwaylogo from '@assets/png/logo-red.png'
 import {
   TextName,
   LogoImage,
   ContactText,
+  MadeLogoImg,
   SloganImage,
   ContactButton,
   ImagesGallery,
   AboutContainer,
   TitleContainer,
+  VideoContainer,
   InformationText,
   SloganContainer,
   ImageInformation,
@@ -41,8 +44,18 @@ import {
 export default function AboutUsPage() {
   return (
     <AboutContainer>
-      <video width="100%" src="/videos/segwayTiger.mp4" controls={false} autoPlay muted loop />
-
+      <VideoContainer>
+        <MadeLogoImg src={madeLogo.src} />
+        <video
+          style={{ opacity: '.6 ' }}
+          width="100%"
+          src="/videos/segway-tiger.mp4"
+          controls={false}
+          autoPlay
+          muted
+          loop
+        />
+      </VideoContainer>
       <FoundationContainer>
         <LogoNameContainer>
           <TextName>Segway PowerSports</TextName>

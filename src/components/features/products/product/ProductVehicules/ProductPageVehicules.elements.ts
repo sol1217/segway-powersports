@@ -10,8 +10,8 @@ export const ProductPageContainer = styled.div`
 
 export const LogoImage = styled.img`
   position: absolute;
-  left: 30%;
-  top: 10%;
+  left: 27%;
+  top: 12%;
   width: 50%;
 
   @media (max-width: 870px) {
@@ -252,6 +252,10 @@ export const DesignFeatures = styled.div`
   @media (max-width: 555px) {
     justify-content: space-evenly;
   }
+`
+
+export const ImageFeatures = styled.img`
+  border-radius: 20px;
 `
 
 export const DesignFeaturesItems = styled.div`
