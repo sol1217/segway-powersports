@@ -43,16 +43,6 @@ export const ProductsPage = () => {
 
       <VehiculeProducts />
 
-      <VideoContainer>
-        <video width="100%" src="/videos/segway-villian.mp4" controls={false} autoPlay muted loop />
-      </VideoContainer>
-
-      <NameVehiculeContainer>
-        <NameVehicule>NiNeBot Scooters</NameVehicule>
-      </NameVehiculeContainer>
-
-      <ProductScooters />
-
       <ChangeLightsContainer>
         <SwitchMainContainer>
           <ControlLightText>Control de Luces Snarler</ControlLightText>
@@ -72,6 +62,16 @@ export const ProductsPage = () => {
           <img src={offLight.src} width="100%" className={!encendido ? 'on' : undefined} />
         </ImagesContainer>
       </ChangeLightsContainer>
+
+      <NameVehiculeContainer>
+        <NameVehicule>NiNeBot Scooters</NameVehicule>
+      </NameVehiculeContainer>
+
+      <ProductScooters />
+
+      <VideoContainer>
+        <video width="100%" src="/videos/segway-villian.mp4" controls={false} autoPlay muted loop />
+      </VideoContainer>
 
       <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
         <NameVehicule>Segway PowerSports Accesorios</NameVehicule>

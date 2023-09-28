@@ -86,12 +86,12 @@ export const products: Product[] = [
       {
         src: bagImageDos.src,
         width: 200,
-        price: '$50',
+        price: '$55',
       },
       {
         src: bagImage.src,
         width: 195,
-        price: '$50',
+        price: '$55',
       },
     ],
     video: '/videos/accesories.mp4',
@@ -103,7 +103,7 @@ export const products: Product[] = [
       '3 litros Almacenamiento portátil',
       'Diseño minimalista de carcasa dura',
       'Fácil de abrir',
-      'Precio: $50',
+      'Precio: $55',
     ],
     featuresImage: [
       {
@@ -166,12 +166,12 @@ export const products: Product[] = [
       {
         src: helmet.src,
         width: 240,
-        price: '$45',
+        price: '$60',
       },
       {
         src: helmettwo.src,
         width: 195,
-        price: '$45',
+        price: '$60',
       },
     ],
     completeDesciprtion:
@@ -182,7 +182,7 @@ export const products: Product[] = [
       'Desmontable y lavable',
       'Peso ligero para mayor comodidad',
       'Colores: Negro, Amarillo, Naranja',
-      'Precio: $45',
+      'Precio: $60',
     ],
     featuresImage: [
       {
@@ -486,12 +486,12 @@ export const products: Product[] = [
       {
         src: childrenGear.src,
         width: 230,
-        price: '$50',
+        price: '$45',
       },
       {
         src: childrenyellow.src,
         width: 220,
-        price: '$50',
+        price: '$45',
       },
     ],
     completeDesciprtion:
@@ -504,7 +504,7 @@ export const products: Product[] = [
       'Color del producto: amarillo/rosa',
       'Circunferencia de la rodilla: 25-34 CM',
       'Circunferencia del codo: 17-22 CM',
-      'Precio: $50',
+      'Precio: $45',
     ],
     featuresImage: [
       {

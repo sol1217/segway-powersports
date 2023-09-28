@@ -32,7 +32,7 @@ import {
 export default function ContactsPage() {
   const form = useRef<HTMLFormElement | null>(null)
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!form.current) {
@@ -40,14 +40,17 @@ export default function ContactsPage() {
       return
     }
 
-    emailjs.sendForm('service_et7hfpy', 'template_97zjhuj', form.current, 'eVV5LaeW7q_SV6WCE').then(
-      (result) => {
-        console.log(result.text)
-      },
-      (error) => {
-        console.log(error.text)
-      },
-    )
+    await emailjs
+      .sendForm('service_et7hfpy', 'template_97zjhuj', form.current, 'eVV5LaeW7q_SV6WCE')
+      .then(
+        (result) => {
+          console.log(result.text)
+          location.reload()
+        },
+        (error) => {
+          console.log(error.text)
+        },
+      )
   }
 
   return (
@@ -61,7 +64,12 @@ export default function ContactsPage() {
             <ContactInput placeholder="Apellidos" type="text" name="user_last" />
             <ContactInput placeholder="Teléfono" type="number" name="user_phone" />
             <ContactInput required placeholder="Email" type="email" name="user_email" />
-            <MessageText required placeholder="¿Como Podemos Ayudarte?" name="user_message" />
+            <MessageText
+              minLength={30}
+              required
+              placeholder="¿Como Podemos Ayudarte?"
+              name="user_message"
+            />
             <SendButton value="Send">
               <Image src={enviar.src} width={20} height={20} alt="" />
               Enviar

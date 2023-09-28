@@ -59,13 +59,13 @@ import modelSnarler from '@assets/png/snarler-at6-le-logo.png'
 import logoVillain from '@assets/png/villain-logo.png'
 import zonabike from '@assets/png/zone-ebike.jpeg'
 import { EColors, IProduct } from '@features/products/vehicule/types'
-import infoEscooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS-1_1100x.png'
 import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS.jpg'
-import infoEscooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-roja-1_1100x.png'
+import infoEscooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-gris.png'
+import infoEscooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-roja.png'
 import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s.jpg'
 import infoFuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-fugleman.png'
 import fuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-small.jpg'
-import infoFuglemanGreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-fugleman.png'
+import infoFuglemanGreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/fugleman-green.png'
 import fuglemangreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-small.jpg'
 import infoFuglemanRed from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
 import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-small.jpg'
@@ -97,12 +97,10 @@ export const products: IProduct[] = [
     images: [
       { color: EColors.Greeen, url: fuglemangreen.src },
       { color: EColors.Gray, url: fuglemanblack.src },
-      { color: EColors.Red, url: fuglemanred.src },
     ],
     imagesInfo: [
       { color: EColors.Greeen, url: infoFuglemanGreen.src },
       { color: EColors.Gray, url: infoFuglemanblack.src },
-      { color: EColors.Red, url: infoFuglemanRed.src },
     ],
     name: 'FUGLEMAN UT10 X',
     description:
@@ -178,17 +176,15 @@ export const products: IProduct[] = [
   {
     images: [
       { color: EColors.Red, url: villainred.src },
-      { color: EColors.Gray, url: villainblack.src },
       { color: EColors.Greeen, url: villaingreen.src },
     ],
     imagesInfo: [
       { color: EColors.Greeen, url: infoVillaingreen.src },
-      { color: EColors.Gray, url: infoVillainblack.src },
       { color: EColors.Red, url: infoVillainred.src },
     ],
     name: 'VILLAIN SX10 W',
     description:
-      'Una postura de conducción y diseño deportivos, le convierten en un SSV de primer nivel.',
+      'Una postura de conducción y diseño deportivos, le convierten en un SXS de primer nivel.',
     alias: 'villain-sx10',
     completeDesciprtion:
       'El Villain SX10 W se presenta como la referencia del concepto Powersports de Segway. Su potente motor junto con las características premium y una postura de conducción y diseño deportivos, le convierten en un SSV de primer nivel. ',
@@ -345,8 +341,8 @@ export const products: IProduct[] = [
       { color: EColors.Gray, url: at6gray.src },
     ],
     imagesInfo: [
-      { color: EColors.Gray, url: infoSnarlerGray.src },
       { color: EColors.Red, url: infoSnarlerRed.src },
+      { color: EColors.Gray, url: infoSnarlerGray.src },
     ],
     name: 'SNARLER AT6 LE',
     description:

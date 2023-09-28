@@ -126,9 +126,14 @@ export const ColorsContainer = styled.div`
   margin-top: 170px;
 `
 
-export const ColorButtonsSection = styled.div`
+export const ColorSection = styled.div`
   display: flex;
   gap: 10px;
+`
+
+export const ColorButton = styled.button`
+  border: none;
+  background-color: transparent;
 `
 
 export const ColorImages = styled.img`
@@ -145,7 +150,7 @@ export const ColorImages = styled.img`
 export const ProductImage = styled.img`
   position: absolute;
   left: 35%;
-  bottom: 110px;
+  bottom: 130px;
   width: 700px;
 
   @media (min-width: 1800px) {

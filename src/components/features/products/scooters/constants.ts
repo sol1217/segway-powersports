@@ -505,7 +505,7 @@ export const products: Product[] = [
         src: motorGt2.src,
         titleFeatures: 'Nuevos GT Super Scooters',
         featuresDescription:
-          'Motor de potencia de 3000 W puede alcanzar una velocidad máxima de 37.3 mph y acelerar de 0 a 30 mph en 7.5 segundos alcance de hasta 43.5 millas carga máxima de 331 libras.',
+          'Motor de potencia de 3000 y 6000 W puede alcanzar una velocidad máxima de 37.3 mph y acelerar de 0 a 30 mph en 7.5 segundos alcance de hasta 43.5 millas carga máxima de 331 libras.',
       },
       {
         src: suspensionGt2.src,

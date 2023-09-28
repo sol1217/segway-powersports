@@ -14,8 +14,10 @@ import {
   DataImage,
   DataSheet,
   LogoImage,
+  ColorButton,
   ColorImages,
   TextDowload,
+  ColorSection,
   ProductImage,
   DataSheetLink,
   ImagesGallery,
@@ -28,7 +30,6 @@ import {
   ContactContainer,
   DataSheetContainer,
   InformationProduct,
-  ColorButtonsSection,
   DesignFeaturesItems,
   ProductPageContainer,
   ViewProductContainer,
@@ -44,11 +45,15 @@ import { ProductPageProps } from './ProductPageVehicules.types'
 
 export const ProductPageVehicules = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
-
-  const selectedImage =
+  const [selectedImage, setSelectedImage] = useState<string | null>(
     productInfo?.imagesInfo && Array.isArray(productInfo.imagesInfo)
       ? productInfo.imagesInfo[0]?.url
-      : null
+      : null,
+  )
+
+  const handleImageClick = (imageUrl: string) => {
+    setSelectedImage(imageUrl)
+  }
 
   return (
     <ProductPageContainer>
@@ -77,11 +82,13 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
 
           <ColorsContainer>
             <h4>Colores Disponibles</h4>
-            <ColorButtonsSection>
+            <ColorSection>
               {productInfo?.imagesInfo?.map((s, i) => (
-                <ColorImages src={colorImages[s.color]} key={i} />
+                <ColorButton key={i} onClick={() => handleImageClick(s.url)}>
+                  <ColorImages src={colorImages[s.color]} />
+                </ColorButton>
               ))}
-            </ColorButtonsSection>
+            </ColorSection>
             <ContactContainer>
               <img src={whatsapp.src} width={20} />
               <a href="https://wa.link/u2iq52">Cotizar</a>

@@ -97,7 +97,7 @@ export const products: Product[] = [
       '37.5 Litros.',
       'Extra grande sellada al agua.',
       'Fuerte y duradero.',
-      'Color: negro.',
+      'Color: Negro y Gris.',
       'Material: plástico.',
     ],
     galleryImages: [
