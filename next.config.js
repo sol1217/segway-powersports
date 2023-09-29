@@ -8,6 +8,7 @@
 
 
 
+
 import('next').NextConfig} */
 
 const nextConfig = {
@@ -15,7 +16,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  distDir: 'build',
+  distDir: 'out',
   images: { unoptimized: true },
 }
 
