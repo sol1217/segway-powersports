@@ -5,6 +5,9 @@
 
 
 
+
+
+
 import('next').NextConfig} */
 
 const nextConfig = {
@@ -13,6 +16,7 @@ const nextConfig = {
     styledComponents: true,
   },
   distDir: 'build',
+  images: { unoptimized: true },
 }
 
 module.exports = nextConfig
