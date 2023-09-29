@@ -75,6 +75,10 @@ export const InformationCompanyContainer = styled.div`
   @media (max-width: 820px) {
     width: 90%;
   }
+
+  @media (min-width: 1800px) {
+    width: 50%;
+  }
 `
 
 export const ImageInformationWrap = styled.div`
@@ -212,6 +216,10 @@ export const SloganDefinition = styled.p`
   font-size: 25px;
   text-align: center;
   color: darkgray;
+
+  @media (min-width: 1800px) {
+    width: 60%;
+  }
 `
 
 export const ImagesSectionContainer = styled.div`

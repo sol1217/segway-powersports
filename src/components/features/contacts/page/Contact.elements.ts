@@ -3,79 +3,51 @@ import styled from 'styled-components'
 /*message*/
 
 export const ContactMainContainer = styled.div`
-  margin-top: 120px;
-  height: 700px;
+  margin-top: 100px;
   display: flex;
-  flex-direction: column;
-  position: relative;
-
-  @media (max-width: 1260px) {
-    height: 100vh;
-  }
-`
-
-export const InformationContact = styled.h3`
-  @media (max-width: 445px) {
-    font-size: ;
-  }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  padding: 0 20px;
+  background: url('https://powersports.segway.com/upload/images/2021/06/18/095fa489df9b4823b8ea7e296bc70ab2.jpg');
 `
 
 export const ContactContainer = styled.div`
   display: flex;
-  align-items: center;
-  height: 700px;
-  width: 1200px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  overflow: hidden;
 
-  @media (max-width: 1260px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column;
-    top: 50%;
-  }
-
-  @media (max-width: 550px) {
-    width: 270px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 `
 
 export const FormSectionContainer = styled.div`
-  background-color: white;
-  color: black;
-  display: flex;
-  width: 900px;
-  max-width: 1100px;
-  height: 80%;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid;
+  flex: 1 1 0;
   border-radius: 20px 0 0 20px;
-
-  @media (max-width: 1260px) {
-    width: 500px;
-    border-radius: 20px 20px 0 0;
-  }
-
-  @media (max-width: 570px) {
-    width: 80vw;
-  }
-
-  @media (max-width: 375px) {
-    width: 300px;
-  }
 `
 
 export const FormSection = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  background: white;
+  color: black;
   gap: 20px;
-  padding: 20px;
   font-size: 25px;
+  flex: 1 1 0;
+  padding: 10px 30px;
 
-  @media (max-width: 1260px) {
-    border-radius: 0 0 20px 20px;
+  @media screen and (max-width: 800px) {
+    padding: 30px;
   }
 `
 
@@ -100,7 +72,7 @@ export const MessageText = styled.textarea`
   border: none;
   border-bottom: 2px solid rgba(169, 169, 169, 0.71);
   height: 40px;
-  font-family: Arial;
+  font-family: Arial, serif;
   font-size: 16px;
 
   &:focus {
@@ -116,8 +88,10 @@ export const MessageText = styled.textarea`
 `
 
 export const SendMessage = styled.h2`
-  @media (max-width: 460px) {
-    font-size: 30px;
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 26px;
   }
 `
 
@@ -140,28 +114,16 @@ export const SendButton = styled.button`
   text-transform: uppercase;
 `
 
-/*contact info*/
-
-export const InfoMainWrap = styled.div`
-  padding: 20px;
+export const InfoSection = styled.div`
+  padding: 30px 20px;
   background-color: #16242a;
   font-size: 25px;
-  border-radius: 0 20px 20px 0;
-  width: 60%;
-  height: 80%;
-
-  @media (max-width: 1260px) {
-    width: 500px;
-    border-radius: 0 0 20px 20px;
-  }
-
-  @media (max-width: 570px) {
-    width: 80vw;
-  }
-
-  @media (max-width: 375px) {
-    width: 300px;
-  }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `
 
 export const InfoSpan = styled.div`
@@ -169,25 +131,10 @@ export const InfoSpan = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
-  align-items: center;
   margin: 10px;
 
   @media (max-width: 430px) {
     font-size: 20px;
-  }
-`
-
-export const SocialMediasWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 30px auto;
-
-  position: relative;
-
-  @media (max-width: 1150px) {
-    justify-content: center;
   }
 `
 
@@ -198,14 +145,7 @@ export const SocialMedias = styled.button`
 `
 
 export const IconMotorcicle = styled.img`
-  position: absolute;
-  left: 90px;
-  top: 80px;
   transform: rotate(10deg);
-  opacity: 20%;
-  width: 300px;
-
-  @media (max-width: 1260px) {
-    display: none;
-  }
+  opacity: 15%;
+  width: 220px;
 `

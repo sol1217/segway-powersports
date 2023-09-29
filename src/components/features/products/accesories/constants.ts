@@ -501,7 +501,7 @@ export const products: Product[] = [
     video: '/videos/accesories.mp4',
     features: [
       'Incluyen: rodilleras * 2 coderas * 2 palmas',
-      'Color del producto: amarillo/rosa',
+      'Color del producto: Amarillo y Rosa',
       'Circunferencia de la rodilla: 25-34 CM',
       'Circunferencia del codo: 17-22 CM',
       'Precio: $45',

@@ -125,6 +125,14 @@ export const ImagesVehiculesContainer = styled.div`
   text-transform: uppercase;
   color: darkred;
   width: 100%;
+
+  @media (min-width: 1500px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1700px) {
+    width: 70%;
+  }
 `
 
 export const ImagesSection = styled.div`
@@ -220,12 +228,12 @@ export const VideoSection = styled.div`
   position: relative;
   max-width: 85%;
 
-  @media (max-width: 1000px) {
-    width: 80%;
+  @media (min-width: 1600px) {
+    width: 600px;
     height: 400px;
   }
 
-  @media (min-width: 2000px) {
+  @media (max-width: 1000px) {
     width: 80%;
     height: 400px;
   }
@@ -246,3 +254,5 @@ export const Namevideos = styled.h2`
     display: none;
   }
 `
+
+export const Cari = styled.div``

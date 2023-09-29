@@ -187,7 +187,7 @@ export const products: IProduct[] = [
       'Una postura de conducción y diseño deportivos, le convierten en un SXS de primer nivel.',
     alias: 'villain-sx10',
     completeDesciprtion:
-      'El Villain SX10 W se presenta como la referencia del concepto Powersports de Segway. Su potente motor junto con las características premium y una postura de conducción y diseño deportivos, le convierten en un SSV de primer nivel. ',
+      'El Villain SX10 W se presenta como la referencia del concepto Powersports de Segway. Su potente motor junto con las características premium y una postura de conducción y diseño deportivos, le convierten en un SXS de primer nivel. ',
     video: '/videos/villain.mp4',
     features: [
       'DIRECCIÓN ASISTIDA (EPS)',

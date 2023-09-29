@@ -84,9 +84,13 @@ export const HomePage = () => {
         </SeeProductsButton>
       </VehiculesContainer>
 
-      <video src="/videos/segway-general.mp4" muted autoPlay />
+      <div>
+        <Carousel images={carouselImages} />
+      </div>
 
       <PhoneCarousel imagesPhone={PhoneImages} />
+
+      <video style={{ width: '100%' }} src="/videos/segway-general.mp4" muted autoPlay />
 
       <TitleVideos>Videos Segway Powersports</TitleVideos>
 
