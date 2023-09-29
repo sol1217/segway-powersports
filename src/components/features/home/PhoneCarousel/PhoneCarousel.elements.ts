@@ -41,7 +41,6 @@ export const VillainImage = styled.img`
 `
 
 export const AppContainer = styled.div`
-  text-align: center;
   font-size: 25px;
   width: 40%;
   display: flex;
@@ -49,6 +48,10 @@ export const AppContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 1060px) {
+    text-align: center;
+  }
 
   @media (max-width: 1060px) {
     width: 75%;

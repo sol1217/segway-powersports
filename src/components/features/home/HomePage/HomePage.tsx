@@ -24,17 +24,25 @@ import {
   SloganImg,
   Namevideos,
   SLoganText,
+  VisionItem,
   TitleVideos,
   NameVehicule,
   VideoSection,
   ImagesSection,
+  VisionSection,
+  TitleContainer,
   VideoContainer,
   ImagesVehicules,
   VideosContainer,
+  VisionContainer,
   HomePageContainer,
   SeeProductsButton,
   TitleSomeProducts,
+  MechanicsContainer,
   VehiculesContainer,
+  InformationMechanics,
+  MechanicsMainConatiner,
+  TitleMechanicsContainer,
   ImagesVehiculesContainer,
 } from './HomePage.elements'
 
@@ -84,13 +92,26 @@ export const HomePage = () => {
         </SeeProductsButton>
       </VehiculesContainer>
 
-      <div>
-        <Carousel images={carouselImages} />
-      </div>
+      <MechanicsMainConatiner>
+        <MechanicsContainer>
+          <TitleMechanicsContainer>
+            <TitleContainer>SON BESTIAS MECÁNICAS INDOMABLES.</TitleContainer>
+            <InformationMechanics>
+              POTENTE CONFIGURACIÓN, RENDIMIENTO EXTRAORDINARIO
+            </InformationMechanics>
+          </TitleMechanicsContainer>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Uu8YE9uO7bE?si=bsAoF2vhSyooYFop"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen></iframe>
+        </MechanicsContainer>
+      </MechanicsMainConatiner>
 
       <PhoneCarousel imagesPhone={PhoneImages} />
-
-      <video style={{ width: '100%' }} src="/videos/segway-general.mp4" muted autoPlay />
 
       <TitleVideos>Videos Segway Powersports</TitleVideos>
 

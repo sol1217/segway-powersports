@@ -33,11 +33,14 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
       <PhoneCarouselContainer>
         <AppContainer>
           <TitleAppContainer>
-            <h2>Añade nuestro vehículo a tu App</h2>
+            <h4>
+              POR MEDIO DE LA APLICACIÓN PODRÁS ACTIVAR Y DESBLOQUEAR EL VEHÍCULO DE FORMA REMOTA.
+            </h4>
           </TitleAppContainer>
           <p>
-            Segway te brinda una interacción inteligente con tu vehículo, te llevará a lugares
-            épicos para viajar.
+            Revisa en tiempo real todos los datos del vehículo como la ubicación, kilometraje,
+            caballos de fuerza, curva de velocidad, estado de viaje, codigos de funcionamiento. con
+            la conectivad a redes 4G integradas*.
           </p>
         </AppContainer>
         <PhoneItemCarousel>

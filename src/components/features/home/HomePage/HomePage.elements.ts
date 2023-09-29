@@ -4,11 +4,65 @@ import styled from 'styled-components'
 
 export const HomePageContainer = styled.div`
   margin-top: 90px;
-  margin-bottom: 30px;
 `
 
 export const VideoContainer = styled.div`
   position: relative;
+`
+
+export const MechanicsMainConatiner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const MechanicsContainer = styled.div`
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  padding: 30px;
+  gap: 30px;
+
+  @media (min-width: 1800px) {
+    max-width: 55%;
+    padding: 10px;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    height: 800px;
+  }
+`
+
+export const TitleMechanicsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 70%;
+  width: 30%;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+    text-align: center;
+  }
+`
+
+export const TitleContainer = styled.div`
+  border-bottom: 1px solid #bb0a0a;
+  padding: 10px;
+  text-align: start;
+
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
+`
+
+export const InformationMechanics = styled.h2`
+  font-size: 30px;
 `
 
 export const SloganImg = styled.img`
@@ -83,6 +137,10 @@ export const SeeProductsButton = styled.button`
 export const NameVehicule = styled.div`
   @media (max-width: 1000px) {
     display: none;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 17px;
   }
 `
 
@@ -187,8 +245,8 @@ export const ImagesVehicules = styled.img`
 
 export const TitleVideos = styled.h2`
   text-align: center;
-  margin: 30px 0;
   font-size: 35px;
+  padding: 20px;
 `
 
 export const VideosContainer = styled.div`
@@ -255,4 +313,33 @@ export const Namevideos = styled.h2`
   }
 `
 
-export const Cari = styled.div``
+export const VisionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  margin: 40px 0;
+`
+
+export const VisionSection = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`
+
+export const VisionItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 360px;
+  height: 160px;
+  font-size: 20px;
+  background-color: rgba(139, 0, 0, 0.42);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 0;
+`

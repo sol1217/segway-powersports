@@ -59,11 +59,10 @@ export const ContactInput = styled.input`
 
   &:focus {
     outline: none;
-    border-bottom: 3px solid rgba(139, 0, 0, 0.7);
   }
 
   &:hover::placeholder {
-    color: #c51d1d;
+    color: #540808;
     font-weight: bold;
   }
 `
@@ -77,12 +76,11 @@ export const MessageText = styled.textarea`
 
   &:focus {
     outline: none;
-    border-bottom: 3px solid rgba(139, 0, 0, 0.7);
     color: black;
   }
 
   &:hover::placeholder {
-    color: #c51d1d;
+    color: #540808;
     font-weight: bold;
   }
 `
@@ -124,6 +122,14 @@ export const InfoSection = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+`
+
+export const InfoName = styled.h3`
+  text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 26px;
+  }
 `
 
 export const InfoSpan = styled.div`

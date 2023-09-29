@@ -15,6 +15,7 @@ import youtube from '@assets/png/youtube.png'
 import motorcicleta from '@assets/svg/segway-seeklogo.svg'
 
 import {
+  InfoName,
   InfoSpan,
   SendButton,
   FormSection,
@@ -80,7 +81,7 @@ export default function ContactsPage() {
         <Box>
           <InfoSection>
             <Box flexDirection="column" gap={8}>
-              <h3 style={{ textAlign: 'center' }}>Informacíon de Contacto</h3>
+              <InfoName>Informacíon de Contacto</InfoName>
 
               <InfoSpan>
                 <Image alt="" src={celular.src} width={50} height={50} />
