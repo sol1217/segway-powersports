@@ -3,9 +3,11 @@
 
 
 
+
 import('next').NextConfig} */
 
 const nextConfig = {
+  output: 'export',
   compiler: {
     styledComponents: true,
   },
