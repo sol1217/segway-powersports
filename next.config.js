@@ -1,22 +1,8 @@
-/** @type {
-
-
-
-
-
-
-
-
-
-
-import('next').NextConfig} */
-
+/** @type { import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   compiler: {
     styledComponents: true,
   },
-  distDir: 'out',
   images: { unoptimized: true },
 }
 

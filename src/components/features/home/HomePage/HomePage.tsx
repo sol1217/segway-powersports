@@ -5,15 +5,14 @@ import Link from 'next/link'
 
 import vehiculeadd from '@assets/jpeg/add-vehicule.jpeg'
 import villain from '@assets/jpeg/atv-gale-4.jpg'
-import codes from '@assets/jpeg/codes.jpeg'
 import fuglew from '@assets/jpeg/fugleman-w.jpeg'
 import smartmoving from '@assets/jpeg/noving-smart.jpeg'
 import phonesmart from '@assets/jpeg/phone-smart.jpeg'
 import snarleratv from '@assets/jpeg/product.jpeg'
 import riding from '@assets/jpeg/riding.jpeg'
 import villainatv from '@assets/jpeg/vl.jpeg'
+import codes from '@assets/jpg/codes.jpg'
 import fearlogo from '@assets/png/fear-no-place-blanco.png'
-import { Carousel } from '@features/home/Carousel/Carousel'
 import { PhoneCarousel } from '@features/home/PhoneCarousel/PhoneCarousel'
 import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s.jpg'
 import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
@@ -70,22 +69,30 @@ export const HomePage = () => {
       <VehiculesContainer>
         <TitleSomeProducts>Algunos de nuestros productos</TitleSomeProducts>
         <ImagesVehiculesContainer>
-          <ImagesSection>
-            <ImagesVehicules src={snarler.src} height={240} />
-            <NameVehicule>Snarler at6</NameVehicule>
-          </ImagesSection>
-          <ImagesSection>
-            <ImagesVehicules style={{ display: 'block' }} src={villaingreen.src} />
-            <NameVehicule style={{ display: 'block' }}>Villain sx10</NameVehicule>
-          </ImagesSection>
-          <ImagesSection>
-            <ImagesVehicules style={{ display: 'block' }} src={fuglemanred.src} />
-            <NameVehicule style={{ display: 'block' }}>Fugleman ut10</NameVehicule>
-          </ImagesSection>
-          <ImagesSection>
-            <ImagesVehicules src={scooterred.src} height={240} />
-            <NameVehicule>Scooter e110s</NameVehicule>
-          </ImagesSection>
+          <Link href="/products/vehicules/snarler-at6">
+            <ImagesSection>
+              <ImagesVehicules src={snarler.src} height={240} />
+              <NameVehicule>Snarler at6</NameVehicule>
+            </ImagesSection>
+          </Link>
+          <Link href="/products/vehicules/villain-sx10">
+            <ImagesSection>
+              <ImagesVehicules style={{ display: 'block' }} src={villaingreen.src} />
+              <NameVehicule style={{ display: 'block' }}>Villain sx10</NameVehicule>
+            </ImagesSection>
+          </Link>
+          <Link href="/products/vehicules/fugleman-ut10">
+            <ImagesSection>
+              <ImagesVehicules style={{ display: 'block' }} src={fuglemanred.src} />
+              <NameVehicule style={{ display: 'block' }}>Fugleman ut10</NameVehicule>
+            </ImagesSection>
+          </Link>
+          <Link href="/products/vehicules/scooter-e110s">
+            <ImagesSection>
+              <ImagesVehicules src={scooterred.src} height={240} />
+              <NameVehicule>Scooter e110s</NameVehicule>
+            </ImagesSection>
+          </Link>
         </ImagesVehiculesContainer>
         <SeeProductsButton>
           <Link href="/products">Ver en la seccíon de productos</Link>

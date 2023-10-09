@@ -70,7 +70,6 @@ export const LogoImage = styled(Image)`
 export const InformationCompanyContainer = styled.div`
   width: 70%;
   font-size: 22px;
-  text-align: center;
 
   @media (max-width: 820px) {
     width: 90%;

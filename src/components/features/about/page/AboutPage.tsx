@@ -65,7 +65,7 @@ export default function AboutUsPage() {
           Segway, fundada en 1999 por el renombrado empresario Dean Kamen en los EUA. Fundada en
           Estados Unidos como una de las empresas pioneras en dispositivos VMP, Segway ha crecido
           hasta convertirse en un monstruo tecnológico que se ha ido ramificando con el paso de los
-          años y la evolución del sector. Fue en 2019 cuando segway presentó en el salón de Milán su
+          años y la evolución del sector. Fue en 2019 cuando Segway presentó en el salón de Milán su
           división SEGWAY POWERSPORTS como constatación del crecimiento de la compañía, yendo un
           paso más allá de los dispositivos de movilidad personal y las alianzas con grandes
           compañías del sector tecnológico como de la automoción.
@@ -116,7 +116,7 @@ export default function AboutUsPage() {
             <InformationText>
               En 2018 fue creada Segway Tecnology Co, LTD para la búsqueda, desarrollo, producción y
               comercialización de vehículos Off-Road – ATV, SSV y UTV. Con el principal centro de
-              desarrollo asentado en EUA, La segunda generación del modelo Segway PT trae el control
+              desarrollo asentado en EUA, la segunda generación del modelo Segway PT trae el control
               sin cables y la revolucionaria tecnología LeanSteeer – girando el manillar para los
               lados.
             </InformationText>
@@ -127,7 +127,7 @@ export default function AboutUsPage() {
       <SloganContainer>
         <SloganImage src={fear.src} width={800} height={150} alt="" />
         <SloganDefinition>
-          &quot;FEAR NO PLACE&quot; Significa que el Segway no solo es usado, sino que, vive, sé
+          &quot;FEAR NO PLACE&quot; Significa que el Segway no sólo es usado, sino que, vive, se
           esfuerza, supera sus límites cada día y es valiente para explorar cualquier terreno.
         </SloganDefinition>
       </SloganContainer>

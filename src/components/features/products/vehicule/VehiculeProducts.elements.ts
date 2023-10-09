@@ -9,6 +9,7 @@ export const ProductVehiculeContainer = styled.div`
   transition: transform 0.5s ease;
   width: 100%;
   padding: 30px;
+  margin-bottom: 20px;
 
   @media (max-width: 1270px) {
     grid-template-columns: repeat(2, 400px);

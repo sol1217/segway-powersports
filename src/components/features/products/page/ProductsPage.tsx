@@ -12,6 +12,7 @@ import { ProductAccesories } from '@features/products/accesories/ProductAccesori
 
 import {
   NameVehicule,
+  SwitchImages,
   VideoContainer,
   CircleContainer,
   ImagesContainer,
@@ -58,8 +59,8 @@ export const ProductsPage = () => {
           </SwitchContainer>
         </SwitchMainContainer>
         <ImagesContainer>
-          <img src={onLight.src} width="100%" />
-          <img src={offLight.src} width="100%" className={!encendido ? 'on' : undefined} />
+          <SwitchImages src={onLight.src} width="100%" />
+          <SwitchImages src={offLight.src} width="100%" className={!encendido ? 'on' : undefined} />
         </ImagesContainer>
       </ChangeLightsContainer>
 
@@ -73,13 +74,13 @@ export const ProductsPage = () => {
         <video width="100%" src="/videos/segway-villian.mp4" controls={false} autoPlay muted loop />
       </VideoContainer>
 
-      <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
+      <NameVehiculeContainer>
         <NameVehicule>Segway PowerSports Accesorios</NameVehicule>
       </NameVehiculeContainer>
 
       <ProductAccesories />
 
-      <NameVehiculeContainer style={{ margin: '40px 0 30px 0' }}>
+      <NameVehiculeContainer>
         <NameVehicule>Segway PowerSports Accesorios de Vehiculos</NameVehicule>
       </NameVehiculeContainer>
 

@@ -194,7 +194,6 @@ export const ImagesVehiculesContainer = styled.div`
 `
 
 export const ImagesSection = styled.div`
-  width: 60%;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -255,6 +254,7 @@ export const VideosContainer = styled.div`
   gap: 20px;
   align-items: center;
   padding: 10px;
+  margin-bottom: 40px;
 
   @media (max-width: 1000px) {
     flex-direction: column;

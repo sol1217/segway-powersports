@@ -68,7 +68,7 @@ export default function ContactsPage() {
           <MessageText
             minLength={30}
             required
-            placeholder="¿Como Podemos Ayudarte?"
+            placeholder="¿Cómo Podemos Ayudarte?"
             name="user_message"
           />
 
@@ -81,7 +81,7 @@ export default function ContactsPage() {
         <Box>
           <InfoSection>
             <Box flexDirection="column" gap={8}>
-              <InfoName>Informacíon de Contacto</InfoName>
+              <InfoName>Información de Contacto</InfoName>
 
               <InfoSpan>
                 <Image alt="" src={celular.src} width={50} height={50} />

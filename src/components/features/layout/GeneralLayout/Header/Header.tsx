@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import logo from '@assets/jpg/logo.jpg'
 
@@ -23,7 +24,9 @@ export default function Header() {
     <HeaderContainer>
       <TopHeaderSectionContainer>
         <TopHeaderSection>
-          <Image src={logo.src} width={244} height={70} alt="logo" />
+          <Link href="/">
+            <Image src={logo.src} width={244} height={70} alt="logo" />
+          </Link>
           <DesctopNavigation>
             <NavigationLinks />
           </DesctopNavigation>

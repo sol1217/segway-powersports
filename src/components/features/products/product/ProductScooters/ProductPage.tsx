@@ -1,13 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
+import { PiShoppingCartBold } from 'react-icons/pi'
 
-import sx from '@assets/jpeg/sx.jpeg'
-import visualizarVillain from '@assets/jpeg/visualize.jpeg'
-import whatsapp from '@assets/png/icons-whatsapp.png'
-import lx from '@assets/png/lx.png'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
-import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
+import useCart from '@hooks/useCart/useCart'
 
 import {
   LogoImage,
@@ -38,6 +34,21 @@ import { ProductPageProps } from './ProductPage.types'
 
 export const ProductPageScooter = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
+  const { cart, addToCart } = useCart()
+
+  const handleAddToCart = () => {
+    const firstImage = productInfo?.picture || ''
+    const productName = productInfo?.name || 'Product Name'
+    const productPrice = productInfo?.price || 0
+
+    const productData = {
+      picture: firstImage,
+      name: productName,
+      price: productPrice,
+    }
+
+    addToCart(productData)
+  }
 
   return (
     <ProductPageContainer>
@@ -55,7 +66,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
           <ImageProduct src={productInfo?.picture} />
           <FeaturesProduct>
             <DescriptionSection>{productInfo?.completeDesciprtion}</DescriptionSection>
-            <h2>Caracteristicas</h2>
+            <h2>Características</h2>
             <FeaturesTextContainer>
               {productInfo?.features?.map((s, i) => (
                 <p key={i}>{s}</p>
@@ -65,15 +76,15 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         </FeaturesProductContainer>
 
         <ContactSection>
-          <ContactContainer>
-            <img src={whatsapp.src} width={30} />
-            <a href="https://wa.link/u2iq52">Cotizar Producto</a>
+          <ContactContainer onClick={handleAddToCart}>
+            <PiShoppingCartBold style={{ fontSize: '24px' }} />
+            Añadir al Carrito
           </ContactContainer>
         </ContactSection>
       </ViewProductContainer>
 
       <DesignFeaturesContainer>
-        <TitleFeaturesContainer>Caracteristicas de Diseño</TitleFeaturesContainer>
+        <TitleFeaturesContainer>Características de Diseño</TitleFeaturesContainer>
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>
@@ -94,7 +105,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
       </CatalogueContainer>
 
       <ImagesSectionContainer>
-        <h2>Galeria {productInfo?.name}</h2>
+        <h2>Galería {productInfo?.name}</h2>
         <ImagesGalleryContainer>
           {productInfo?.galleryImages?.map(({ src, width, height }, i) => (
             <ImagesGallery key={i} src={src} width={width} height={height} />

@@ -82,16 +82,15 @@ export const products: Product[] = [
     name: 'SCOOTER BAG',
     alias: 'scooter-bag',
     picture: bag.src,
+    price: 55,
     images: [
       {
         src: bagImageDos.src,
         width: 200,
-        price: '$55',
       },
       {
         src: bagImage.src,
         width: 195,
-        price: '$55',
       },
     ],
     video: '/videos/accesories.mp4',
@@ -162,16 +161,15 @@ export const products: Product[] = [
     name: 'NINEBOT HELMET',
     alias: 'ninebot-casco',
     picture: helmetImage.src,
+    price: 60,
     images: [
       {
         src: helmet.src,
         width: 240,
-        price: '$60',
       },
       {
         src: helmettwo.src,
         width: 195,
-        price: '$60',
       },
     ],
     completeDesciprtion:
@@ -241,18 +239,17 @@ export const products: Product[] = [
   {
     name: 'NINEBOT PHONE HOLDER',
     alias: 'phone-holder',
+    price: 30,
     completeDesciprtion:
       'Mantenga el mundo a su alcance, incluso cuando esté en movimiento, con nuestro elegante soporte para teléfono.',
     images: [
       {
         src: phoneholder.src,
         width: 155,
-        price: '$30',
       },
       {
         src: phoneholdertwo.src,
         width: 200,
-        price: '$30',
       },
     ],
     picture: phoneHolderImage.src,
@@ -321,16 +318,15 @@ export const products: Product[] = [
   {
     name: 'SCOOTER STORAGE BAG',
     alias: 'storage-bag',
+    price: 45,
     images: [
       {
         src: storage.src,
         width: 300,
-        price: '$45',
       },
       {
         src: storagetwo.src,
         width: 300,
-        price: '$45',
       },
     ],
     completeDesciprtion:
@@ -401,16 +397,15 @@ export const products: Product[] = [
   {
     name: 'PROTECTIVE GEAR SET',
     alias: 'gear-set',
+    price: 45,
     images: [
       {
         src: setTwo.src,
         width: 260,
-        price: '$45',
       },
       {
         src: set.src,
         width: 220,
-        price: '$45',
       },
     ],
     completeDesciprtion:
@@ -482,16 +477,15 @@ export const products: Product[] = [
   {
     name: 'CHILDREN PROTECTIVE SET',
     alias: 'generatot-sgw2700i',
+    price: 45,
     images: [
       {
         src: childrenGear.src,
         width: 230,
-        price: '$45',
       },
       {
         src: childrenyellow.src,
         width: 220,
-        price: '$45',
       },
     ],
     completeDesciprtion:

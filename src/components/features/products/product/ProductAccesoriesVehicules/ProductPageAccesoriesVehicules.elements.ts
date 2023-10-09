@@ -178,6 +178,10 @@ export const ContactContainer = styled.button`
   align-items: center;
   cursor: pointer;
   border: none;
+
+  &:active {
+    transform: scale(90%);
+  }
 `
 
 /*Caracteristicas*/

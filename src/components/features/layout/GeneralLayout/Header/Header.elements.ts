@@ -30,7 +30,9 @@ export const TopHeaderSection = styled.div`
 
 export const DesctopNavigation = styled.nav`
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 
   & > a {
     text-transform: uppercase;

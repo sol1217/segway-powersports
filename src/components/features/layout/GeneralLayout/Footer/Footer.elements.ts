@@ -1,11 +1,13 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
   background: #16242a;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 170px;
+  min-height: 180px;
   z-index: 99;
   overflow: hidden;
   font-size: 18px;
@@ -22,6 +24,13 @@ export const TopFooterSectionContainer = styled.div`
     justify-content: space-evenly;
     width: 65%;
   }
+`
+
+export const CreatorContainer = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 `
 
 export const TitleText = styled.h5`
@@ -83,4 +92,10 @@ export const LinkSection = styled.button`
   justify-content: center;
   gap: 10px;
   cursor: pointer;
+`
+
+export const InformationFooterContainer = styled(Link)`
+  display: flex;
+  gap: 10px;
+  align-items: center;
 `

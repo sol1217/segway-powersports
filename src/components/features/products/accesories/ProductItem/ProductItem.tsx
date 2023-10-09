@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import {
   NextButton,
@@ -27,16 +28,18 @@ export const ProductItem = ({ product }: ProductItemProps) => {
         <h4>{product.name}</h4>
         <ImagesContainer>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
-          <ChangeImage
-            src={product.images[currentImage].src}
-            width={product.images[currentImage].width}
-          />
+          <Link href={`/products/accesories/${product.alias}`}>
+            <ChangeImage
+              src={product.images[currentImage].src}
+              width={product.images[currentImage].width}
+            />
+          </Link>
           <NextButton onClick={nextImage}>&gt;</NextButton>
         </ImagesContainer>
         <SeeInformationContainer>
-          <p>{product.images[currentImage].price}</p>
+          <p>${product.price}</p>
           <SeeInformationButton href={`/products/accesories/${product.alias}`}>
-            Ver Informacion
+            Ver Información
           </SeeInformationButton>
         </SeeInformationContainer>
       </AccesoriesContainer>

@@ -74,7 +74,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
 
         <FeaturesProductContainer>
           <FeaturesProduct>
-            <h2>Caracteristicas</h2>
+            <h2>Características</h2>
             {productInfo?.features?.map((s, i) => (
               <p key={i}>{s}</p>
             ))}
@@ -105,7 +105,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
       </ViewProductContainer>
 
       <DesignFeaturesContainer>
-        <TitleFeaturesContainer>Caracteristicas Diseño</TitleFeaturesContainer>
+        <TitleFeaturesContainer>Características Diseño</TitleFeaturesContainer>
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>
@@ -118,7 +118,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
       </DesignFeaturesContainer>
 
       <DataSheetContainer>
-        <h2>Fichas Tecnicas</h2>
+        <h2>Fichas Técnicas</h2>
         <DataSheet>
           <DataSheetLink href="/ technical-sheets/snarler-at6-sx.pdf" download>
             <DataImage src={sx.src} width={250} />
@@ -144,7 +144,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
       </DataSheetContainer>
 
       <ImagesSectionContainer>
-        <h2>Galeria {productInfo?.name}</h2>
+        <h2>Galería {productInfo?.name}</h2>
         <ImagesGalleryContainer>
           {productInfo?.galleryImages?.map(({ src, width, height }, i) => (
             <ImagesGallery key={i} src={src} width={width} height={height} />

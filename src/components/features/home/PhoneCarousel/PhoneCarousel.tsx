@@ -39,8 +39,8 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
           </TitleAppContainer>
           <p>
             Revisa en tiempo real todos los datos del vehículo como la ubicación, kilometraje,
-            caballos de fuerza, curva de velocidad, estado de viaje, codigos de funcionamiento. con
-            la conectivad a redes 4G integradas*.
+            caballos de fuerza, curva de velocidad, estado de viaje, códigos de funcionamiento. Con
+            la conectividad a redes 4G integradas.
           </p>
         </AppContainer>
         <PhoneItemCarousel>

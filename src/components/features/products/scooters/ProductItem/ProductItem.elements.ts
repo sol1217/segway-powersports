@@ -85,7 +85,7 @@ export const SeeInformationButton = styled(Link)`
   }
 
   @media (max-width: 530px) {
-    width: 48%;
+    max-width: 130px;
   }
 `
 
@@ -112,9 +112,10 @@ export const ScooterContainer = styled.div`
 
   @media (max-width: 780px) {
     width: 100%;
+    height: 380px;
   }
 
   @media (max-width: 530px) {
-    height: 350px;
+    height: 340px;
   }
 `

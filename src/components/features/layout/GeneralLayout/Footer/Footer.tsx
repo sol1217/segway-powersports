@@ -2,7 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaWaze } from 'react-icons/fa'
 
+import { Box } from '@core'
 import facebook from '@assets/png/icons-facebook.png'
 import instagram from '@assets/png/icons-instagram.png'
 import whatsapp from '@assets/png/icons-whatsapp.png'
@@ -11,8 +13,10 @@ import {
   LinkSection,
   FooterContainer,
   LinkSectionWrap,
+  CreatorContainer,
   InformationContainer,
   TopFooterSectionContainer,
+  InformationFooterContainer,
 } from '@features/layout/GeneralLayout/Footer/Footer.elements'
 
 export default function Footer() {
@@ -35,13 +39,17 @@ export default function Footer() {
         <InformationContainer>
           <TitleText>CONTACTO</TitleText>
           <p>infoventasegwaycr@gmail.com</p>
-          <p>Atendimento: (506) 8846-6680 </p>
-          <p>Atendimento: (506) 83168462</p>
+          <p>Contacto: 8846-6680 </p>
+          <p>Contacto: 83168462</p>
         </InformationContainer>
 
         <InformationContainer>
           <TitleText>INFORMACIÓN</TitleText>
           <p>Parque Empresarial Lindora, Local G2</p>
+          <InformationFooterContainer href="https://www.waze.com/es-419/live-map/directions?to=ll.9.961574%2C-84.197309">
+            Dirección Waze:
+            <FaWaze style={{ fontSize: '30px' }} />
+          </InformationFooterContainer>
         </InformationContainer>
 
         <LinkSectionWrap>

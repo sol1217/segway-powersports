@@ -75,7 +75,7 @@ export const ChangeImage = styled.img`
   }
 
   @media (max-width: 630px) {
-    width: 80%;
+    width: 98%;
     height: 85%;
   }
 

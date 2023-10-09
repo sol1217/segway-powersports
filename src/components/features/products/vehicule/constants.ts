@@ -107,7 +107,7 @@ export const products: IProduct[] = [
       'Se distingue del modelo base gracias a un equipamiento de serie que te garantiza más confort y diversión.',
     alias: 'fugleman-ut10',
     completeDesciprtion:
-      'El UTV Fugleman es un vehículo todoterreno robusto y fácil de utilizar. Haciendo justicia a su nombre, el Fugleman será siempre lider en el desempeño de cualquier tarea, la cual te resultará fácil y muy divertida de hacer. ',
+      'El UTV Fugleman es un vehículo todoterreno robusto y fácil de utilizar. Haciendo justicia a su nombre, el Fugleman será siempre líder en el desempeño de cualquier tarea, la cual te resultará fácil y muy divertida de hacer. ',
     video: '/videos/fugleman.mp4',
     features: [
       'DIRECCIÓN ASISTIDA (EPS)',
@@ -115,7 +115,6 @@ export const products: IProduct[] = [
       'DEPÓSITO DE COMBUSTIBLE DE 45 LITROS',
       'TOUCH SCREEN 10.4',
       'LLANTAS DE ALUMINIO 14 CON BEADLOK',
-      'MEDIAS PUERTAS',
     ],
     panorama: 'https://powersports.segway.com/720/UTV/VR/index.html',
     logo: '',
@@ -123,7 +122,7 @@ export const products: IProduct[] = [
     featuresImage: [
       {
         src: purposeFugleman.src,
-        titleFeatures: 'UTV PARA CUALQUIER PROPOSITO',
+        titleFeatures: 'UTV PARA CUALQUIER FINALIDAD',
         featuresDescription:
           'Con su diseño futurista pasando por su comportamiento altamente capacitado, el Fugleman no es únicamente un gran compañero en cualquier tarea profesional.',
       },
@@ -202,9 +201,9 @@ export const products: IProduct[] = [
     featuresImage: [
       {
         src: engeniervillain.src,
-        titleFeatures: 'INGENIERIA A TODA PRUEBA',
+        titleFeatures: 'INGENIERÍA TODA PRUEBA',
         featuresDescription:
-          'Toda la carne en el asador! Su ingeniaría demuestra no solo una gran fiabilidad sino una perfecta adaptación a cualquier tarea o condición del terreno.',
+          'Toda la carne en el asador! Su ingeniaría demuestra no sólo una gran fiabilidad sino también una perfecta adaptación a cualquier tarea o condición del terreno.',
       },
       {
         src: comfortVillain.src,
@@ -356,7 +355,6 @@ export const products: IProduct[] = [
     features: [
       'DIRECCIÓN ASISTIDA ',
       'CABESTRANTE Y BOLA DE REMOL QUE',
-      'VERSIÓN LARGA',
       'PARRILLA DELANTERA Y TRASERA',
       'APLICACIÓN PARA SMARTPHONE «SMART MOVING»',
     ],
@@ -435,8 +433,8 @@ export const products: IProduct[] = [
     features: [
       '75 KM A 45 KM EN TERRENO PLANO',
       '3 MODOS DE MANEJO',
-      'FRENOS HIDRAULICOS',
-      'LLAVE INTEGRADA AL TELEFONO',
+      'FRENOS HIDRÁULICOS',
+      'LLAVE INTEGRADA AL TELÉFONO',
       'MOTOR HUB DC SIN ESCOBILLAS',
     ],
     panorama: '',
@@ -449,7 +447,7 @@ export const products: IProduct[] = [
       },
       {
         src: suspnesionScooter.src,
-        titleFeatures: 'SUSPENSION DELANTERA',
+        titleFeatures: 'SUSPENSIÓN DELANTERA',
         featuresDescription: 'Telescópica para tener el mayor confort posible en el día a día',
       },
       {
@@ -512,8 +510,7 @@ export const products: IProduct[] = [
       'ACELERACION DE 0 A 31 MPH EN SOLO 4.02 SEGUNDOS',
       'SUBE PENDIENTES DE HASTA 45 GRADOS',
       'RANGO DE 74.6 MILLAS',
-      'BATERIA TARDA SOLO 4 HORAS',
-      'CUERPO DE ALEACION DE ALUMINIO',
+      'BATERÍA TARDA SÓLO 4 HORAS',
     ],
     panorama: '',
     logo: '',
@@ -535,7 +532,7 @@ export const products: IProduct[] = [
         src: zonabike.src,
         titleFeatures: ' ALTO RENDIMIENTO ',
         featuresDescription:
-          'The Segway Dirt eBike’s superior performance in a compact body makes it possible for new riders to dive into the exciting off-road adventures.',
+          'El rendimiento superior de la Segway Dirt eBike en un cuerpo compacto hace posible que los nuevos usuarios se sumerjan en emocionantes aventuras todoterreno.',
       },
     ],
     galleryImages: [

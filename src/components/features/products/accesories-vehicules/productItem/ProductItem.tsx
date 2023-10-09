@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import { ProductItemProps } from '@features/products/accesories-vehicules/AccesoriesVehicules.types'
 import {
@@ -27,16 +28,18 @@ export const ProductItem = ({ product }: ProductItemProps) => {
         <h4>{product.name}</h4>
         <div>
           <PrevButton onClick={prevImage}>&lt;</PrevButton>
-          <ChangeImage
-            src={product.images[currentImage].src}
-            width={product.images[currentImage].width}
-          />
+          <Link href={`/products/accesoriesVehicules/${product.alias}`}>
+            <ChangeImage
+              src={product.images[currentImage].src}
+              width={product.images[currentImage].width}
+            />
+          </Link>
           <NextButton onClick={nextImage}>&gt;</NextButton>
         </div>
         <SeeInformationContainer>
-          <p>{product.images[currentImage].price}</p>
+          <p>{product.property}</p>
           <SeeInformationButton href={`/products/accesoriesVehicules/${product.alias}`}>
-            Ver Informacion
+            Ver Información
           </SeeInformationButton>
         </SeeInformationContainer>
       </AccesoriesContainer>

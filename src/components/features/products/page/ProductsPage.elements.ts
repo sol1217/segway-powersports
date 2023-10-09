@@ -16,7 +16,7 @@ export const NameVehiculeContainer = styled.div`
   background-color: black;
   color: white;
   height: 150px;
-  margin: 40px 0 50px 0;
+  margin: 20px 0 30px 0;
 `
 
 export const VideoContainer = styled.div`
@@ -132,6 +132,16 @@ export const ImagesContainer = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  @media (max-width: 500px) {
+    height: 250px;
+  }
+`
+
+export const SwitchImages = styled.img`
+  @media (max-width: 500px) {
+    height: 230px;
   }
 `
 

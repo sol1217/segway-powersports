@@ -77,7 +77,7 @@ import gt2three from '@assets/images/SEGWAY-VEHICULOS/SUPERSCOOTER-GT2/gt2-2.png
 
 export const products: Product[] = [
   {
-    name: 'Ninebot EkickScooter C20',
+    name: 'Ninebot ekickScooter ZING C20',
     alias: 'ekickscooter-c20',
     completeDesciprtion:
       '3 modos de conducción para adaptarse al nivel de cada niño, una estructura ligera, pero sobre todo, ¡hasta 20 km de pura diversión!',
@@ -112,6 +112,7 @@ export const products: Product[] = [
     ],
     logo: '',
     model: logoC20.src,
+    price: 425,
     galleryImages: [
       {
         src: c20Uno.src,
@@ -148,17 +149,15 @@ export const products: Product[] = [
       {
         src: zingc20.src,
         width: 185,
-        price: '$425',
       },
       {
         src: zingc20two.src,
         width: 220,
-        price: '$425',
       },
     ],
   },
   {
-    name: 'Ninebot EkickScooter Zing C8',
+    name: 'Ninebot ekickScooter ZING C8',
     alias: 'zing-c8',
     completeDesciprtion:
       'Kickscooter eléctrico diseñado para la emoción para niños de 6 a 12 años con una altura de (115 cm –145 cm)',
@@ -193,6 +192,7 @@ export const products: Product[] = [
     ],
     logo: '',
     model: logoC8.src,
+    price: 325,
     galleryImages: [
       {
         src: c8Uno.src,
@@ -229,12 +229,10 @@ export const products: Product[] = [
       {
         src: zingc8.src,
         width: 215,
-        price: '$325',
       },
       {
         src: zingc8two.src,
         width: 225,
-        price: '$325',
       },
     ],
   },
@@ -249,7 +247,7 @@ export const products: Product[] = [
       'Autonomía 70Km',
       'Batería alto rendimiento',
       'Suspensión trasera de brazo',
-      'Precio: $3.950',
+      'Precio: $3.985',
     ],
     featuresImage: [
       {
@@ -274,6 +272,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta1.src,
     picture: gt1Product.src,
+    price: 3.985,
     galleryImages: [
       {
         src: gt1Siete.src,
@@ -310,17 +309,15 @@ export const products: Product[] = [
       {
         src: gt2.src,
         width: 300,
-        price: '$3.950',
       },
       {
         src: gt2two.src,
         width: 220,
-        price: '$3.950',
       },
     ],
   },
   {
-    name: 'Ninebot EkickScooter Zing E8',
+    name: 'Ninebot ekickScooter ZING E8',
     alias: 'zing-e8',
     completeDesciprtion:
       ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior.',
@@ -354,6 +351,7 @@ export const products: Product[] = [
       },
     ],
     logo: '',
+    price: 395,
     model: logoE8.src,
     galleryImages: [
       {
@@ -391,17 +389,15 @@ export const products: Product[] = [
       {
         src: zinge8three.src,
         width: 190,
-        price: '$395',
       },
       {
         src: zinge8two.src,
         width: 190,
-        price: '$395',
       },
     ],
   },
   {
-    name: 'Ninebot EkickScooter Zing A6',
+    name: 'Ninebot ekickScooter ZING A6',
     alias: 'zing-a6',
     completeDesciprtion:
       'Segway-Ninebot A6. Una estructura ligera de un llamativo color verde, 3 modos de conducción para adaptarse al nivel de cada niño, pero sobre todo, ¡hasta 5 km de autonomía!',
@@ -435,6 +431,7 @@ export const products: Product[] = [
       },
     ],
     logo: '',
+    price: 210,
     model: logoA6.src,
     galleryImages: [
       {
@@ -472,12 +469,10 @@ export const products: Product[] = [
       {
         src: zinga6.src,
         width: 200,
-        price: '$210',
       },
       {
         src: zinga6two.src,
         width: 150,
-        price: '$210',
       },
     ],
   },
@@ -517,6 +512,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta2.src,
     picture: gt2Product.src,
+    price: 5.595,
     galleryImages: [
       {
         src: gt1Uno.src,
@@ -553,12 +549,10 @@ export const products: Product[] = [
       {
         src: gt2three.src,
         width: 200,
-        price: '$5.595',
       },
       {
         src: gt2.src,
         width: 300,
-        price: '$5.595',
       },
     ],
   },

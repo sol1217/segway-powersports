@@ -76,16 +76,15 @@ export const products: Product[] = [
   {
     name: 'FRONT CARGO BOX',
     alias: 'front-cargo-box',
+    property: '37.5 Litros',
     images: [
       {
         src: front.src,
         width: 310,
-        price: '37.5 Litros',
       },
       {
         src: frontTwo.src,
         width: 306,
-        price: '37.5 Litros',
       },
     ],
     logo: frontLogo.src,
@@ -136,16 +135,15 @@ export const products: Product[] = [
   {
     name: 'AT6 L SKID PLATES',
     alias: 'at6-l-skid-plates',
+    property: 'Peso 4.38Kg',
     images: [
       {
         src: ateL.src,
         width: 155,
-        price: 'Peso 4.38Kg',
       },
       {
         src: at6LTwo.src,
         width: 270,
-        price: 'Peso 4.38Kg',
       },
     ],
     logo: at6SkipLogo.src,
@@ -196,16 +194,15 @@ export const products: Product[] = [
   {
     name: 'AT6 S SKID PLATES',
     alias: 'at6-s-skip',
+    property: 'Peso 4.08Kg',
     images: [
       {
         src: at6STwo.src,
         width: 270,
-        price: 'Peso 4.08Kg',
       },
       {
         src: atesOne.src,
         width: 270,
-        price: 'Peso 4.08Kg',
       },
     ],
     logo: at6SLogo.src,
@@ -256,16 +253,15 @@ export const products: Product[] = [
   {
     name: 'ALUMINUM ARM GUARD ASSY',
     alias: 'aluminum-arm-guard',
+    property: 'Peso 1.33Kg',
     images: [
       {
         src: aluminiumTwo.src,
         width: 260,
-        price: 'Peso 1.33Kg',
       },
       {
         src: aluminium.src,
         width: 300,
-        price: 'Peso 1.33Kg',
       },
     ],
     logo: aluminumLogo.src,
@@ -316,16 +312,15 @@ export const products: Product[] = [
   {
     name: 'REAR CARGO BOX',
     alias: 'rear-cargo-box',
+    property: '104 Litros',
     images: [
       {
         src: rear.src,
         width: 236,
-        price: '104 Litros',
       },
       {
         src: rearTwo.src,
         width: 210,
-        price: '104 Litros',
       },
     ],
     logo: rearLogo.src,
@@ -375,21 +370,19 @@ export const products: Product[] = [
   {
     name: 'SNARLER FRONT BUMPER KIT',
     alias: 'front-bumper-kit',
+    property: 'Peso 6.13Kg',
     images: [
       {
         src: bumperRed.src,
         width: 290,
-        price: 'Peso 6.13Kg',
       },
       {
         src: bumperBlue.src,
         width: 290,
-        price: 'Electroforesis',
       },
       {
         src: bumperGreen.src,
         width: 290,
-        price: 'Peso 6.13Kg',
       },
     ],
     logo: bumperLogo.src,
@@ -438,18 +431,17 @@ export const products: Product[] = [
     ],
   },
   {
-    name: 'INVERTER GENERATOR SGW2700i',
+    name: 'GENERATOR SGW2700i',
     alias: 'generatot-sgw2700i',
+    property: 'Peso 19.5kg',
     images: [
       {
         src: generator.src,
         width: 200,
-        price: 'Peso 19.5kg',
       },
       {
         src: generatortwo.src,
         width: 200,
-        price: 'Peso 19.5kg',
       },
     ],
     logo: generatorLogo.src,

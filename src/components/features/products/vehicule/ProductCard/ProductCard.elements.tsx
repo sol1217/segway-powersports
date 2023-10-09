@@ -26,7 +26,7 @@ export const ImageProduct = styled.img`
   }
 
   @media (max-width: 430px) {
-    width: 88%;
+    width: 78%;
   }
 `
 

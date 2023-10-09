@@ -31,7 +31,6 @@ export type ButtonVariant = (disabled: boolean) => {
 export type ProductImage = {
   src: string
   width: number
-  price: string
 }
 
 export type Product = {
@@ -46,6 +45,9 @@ export type Product = {
   logo?: string
   model?: string
   galleryImages?: GalleryImages[]
+  price?: number
+  property?: string
+  quantity?: number
 }
 
 export interface FeaturesProduct {
