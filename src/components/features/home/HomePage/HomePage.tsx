@@ -72,25 +72,25 @@ export const HomePage = () => {
           <Link href="/products/vehicules/snarler-at6">
             <ImagesSection>
               <ImagesVehicules src={snarler.src} height={240} />
-              <NameVehicule>Snarler at6</NameVehicule>
+              <NameVehicule>Snarler</NameVehicule>
             </ImagesSection>
           </Link>
           <Link href="/products/vehicules/villain-sx10">
             <ImagesSection>
               <ImagesVehicules style={{ display: 'block' }} src={villaingreen.src} />
-              <NameVehicule style={{ display: 'block' }}>Villain sx10</NameVehicule>
+              <NameVehicule style={{ display: 'block' }}>Villain</NameVehicule>
             </ImagesSection>
           </Link>
           <Link href="/products/vehicules/fugleman-ut10">
             <ImagesSection>
               <ImagesVehicules style={{ display: 'block' }} src={fuglemanred.src} />
-              <NameVehicule style={{ display: 'block' }}>Fugleman ut10</NameVehicule>
+              <NameVehicule style={{ display: 'block' }}>Fugleman</NameVehicule>
             </ImagesSection>
           </Link>
           <Link href="/products/vehicules/scooter-e110s">
             <ImagesSection>
               <ImagesVehicules src={scooterred.src} height={240} />
-              <NameVehicule>Scooter e110s</NameVehicule>
+              <NameVehicule>Scooter</NameVehicule>
             </ImagesSection>
           </Link>
         </ImagesVehiculesContainer>

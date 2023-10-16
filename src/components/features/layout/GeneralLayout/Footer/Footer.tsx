@@ -39,16 +39,15 @@ export default function Footer() {
         <InformationContainer>
           <TitleText>CONTACTO</TitleText>
           <p>infoventasegwaycr@gmail.com</p>
-          <p>Contacto: 8846-6680 </p>
-          <p>Contacto: 83168462</p>
+          <p>Contacto-Asesor: 8989-5005 </p>
         </InformationContainer>
 
         <InformationContainer>
           <TitleText>INFORMACIÓN</TitleText>
           <p>Parque Empresarial Lindora, Local G2</p>
           <InformationFooterContainer href="https://www.waze.com/es-419/live-map/directions?to=ll.9.961574%2C-84.197309">
-            Dirección Waze:
-            <FaWaze style={{ fontSize: '30px' }} />
+            Dirección de Waze:
+            <FaWaze style={{ fontSize: '26px' }} />
           </InformationFooterContainer>
         </InformationContainer>
 

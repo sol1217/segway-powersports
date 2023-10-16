@@ -5,7 +5,6 @@ import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 
 import { Box } from '@core'
-import segway from '@assets/jpg/segway-powersports.jpg'
 import facebook from '@assets/png/facebook.png'
 import instagram from '@assets/png/instagram.png'
 import celular from '@assets/png/phone.png'

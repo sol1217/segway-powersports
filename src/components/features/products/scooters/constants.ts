@@ -1,4 +1,4 @@
-import { Product } from '@types'
+import { Product, ProductsColors } from '@types'
 import bateriaGt1 from '@assets/jpeg/batery-gta1.jpeg'
 import a6Uno from '@assets/jpeg/gallery-A6-1.jpeg'
 import a6Dos from '@assets/jpeg/gallery-A6-2.jpeg'
@@ -45,7 +45,6 @@ import neumaticosA6 from '@assets/jpg/pneumatic-a6.jpg'
 import seguridadE8 from '@assets/jpg/safety-e8.jpg'
 import seguridadGt1 from '@assets/jpg/safety-gta1.jpg'
 import acelerarE8 from '@assets/jpg/speed-up-e8.jpg'
-import suspensionGt2 from '@assets/jpg/suspension-gt2.jpg'
 import c8Product from '@assets/png/C8-Product.png'
 import e8Product from '@assets/png/e8-product.png'
 import a6Tres from '@assets/png/gallery-A6-new-3.png'
@@ -59,6 +58,7 @@ import logoC8 from '@assets/png/model-c8.png'
 import logoE8 from '@assets/png/model-e8.png'
 import logoGta1 from '@assets/png/model-gt1.png'
 import logoGta2 from '@assets/png/model-gt2.png'
+import suspensionGt2 from '@assets/png/suspension.png'
 import zinga6two from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-1.jpg'
 import zinga6 from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-2.jpg'
 import a6Product from '@assets/images/SEGWAY-VEHICULOS/ninebot-ekickscooter-zing-A6/a6-product.png'
@@ -84,10 +84,11 @@ export const products: Product[] = [
     video: '/videos/C20.mp4',
     picture: c20Product.src,
     features: [
-      'Velocidad máxima de hasta 10 km/h',
+      '20km/h-Autonomia 20km',
       'Freno de mano con energía EBS',
       'Ligero y fácil de transportar',
       'Diseñado para adolescentes',
+      '3 modos de velocidad',
       'Precio: $425',
     ],
     featuresImage: [
@@ -164,10 +165,11 @@ export const products: Product[] = [
     video: '/videos/C8.mp4',
     picture: c8Product.src,
     features: [
-      'Ergonómico diseñado para niños.',
+      '16km/h-Autonomia 10km',
       'Nuevo modo de crucero',
       'Marco de doble tubo',
       'Diseño de liberación rápida',
+      '3 modos de velocidad',
       'Precio: $325 ',
     ],
     featuresImage: [
@@ -243,10 +245,12 @@ export const products: Product[] = [
       'El scooter eléctrico de largo alcance Segway SuperScooter GT1 Electric Scooter te lleva a donde quieras con estilo y más rápido que nunca.',
     video: '/videos/gt1.mp4',
     features: [
-      'Velocidad Máxima 60km/h',
-      'Autonomía 70Km',
+      'Luces direccionales',
+      'Neumáticos sellables',
       'Batería alto rendimiento',
-      'Suspensión trasera de brazo',
+      'Suspensión trasera y delantera',
+      'Motor de potencia de 3000 W',
+      'Segway-Ninebot App',
       'Precio: $3.985',
     ],
     featuresImage: [
@@ -263,7 +267,7 @@ export const products: Product[] = [
           'Equipado con un faro LED de 900 lúmenes, luz diurna LED, luz de giro delantera y trasera y luces ambientales traseras. Los conductores pueden elegir entre 11 modos de iluminación. ',
       },
       {
-        src: comodidaGt1.src,
+        src: suspensionGt2.src,
         titleFeatures: 'Comodidda',
         featuresDescription:
           'La Serie GT está equipada con amortiguadores hidráulicos ajustables de amortiguación delantera y trasera de 15 niveles, que se pueden personalizar según el terreno. ',
@@ -322,12 +326,14 @@ export const products: Product[] = [
     completeDesciprtion:
       ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior.',
     video: '/videos/E8.mp4',
+    colorsAvailable: [ProductsColors.Pink, ProductsColors.Purple],
     picture: e8Product.src,
     features: [
-      'Velocidad Máxima 10km/h',
+      '14km/h-Autonomia 10km',
       'Equipado con un amortiguador delantero',
       'Ligero y plegable',
       'Altura de 10 cm (3,9 pulgadas)',
+      '3 modos de velocidad',
       'Precio: $395',
     ],
     featuresImage: [
@@ -483,10 +489,12 @@ export const products: Product[] = [
       'Segway SuperScooter GT, Patinete eléctrico GT2 6000 W (Ver.GT1 3000W), 55.9 millas de largo alcance y 43.5 MPH, suspensión doble, neumáticos de 11 pulgadas.',
     video: '/videos/gt2.mp4',
     features: [
-      'Frenos de disco delanteros y traseros',
-      'Neumáticos de 11 pulgadas',
-      '4 modos de velocidad',
-      'Motor de potencia de 3000 W',
+      '80km-90km Autonomia',
+      'Segway-Ninebot App',
+      'Neumáticos sellables',
+      'Display fulldigital',
+      'Modo Buster',
+      'Motor de potencia de 6000 W',
       'Precio: $5.595',
     ],
     featuresImage: [

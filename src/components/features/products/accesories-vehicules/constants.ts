@@ -1,4 +1,4 @@
-import { Product } from '@types'
+import { Product, ProductsColors } from '@types'
 import at6S from '@assets/jpeg/ate-s-skip.jpeg'
 import bumperBlack from '@assets/jpeg/front-Bumper-Black.jpeg'
 import aluminumFive from '@assets/jpeg/gallery-aluminum-3.jpeg'
@@ -74,9 +74,11 @@ import at6LTwo from '@assets/png/skip-plates.png'
 
 export const products: Product[] = [
   {
-    name: 'FRONT CARGO BOX',
-    alias: 'front-cargo-box',
+    name: 'Front Cooler',
+    alias: 'front-cooler',
     property: '37.5 Litros',
+    price: 510,
+    colorsAvailable: [ProductsColors.Black, ProductsColors.Gris],
     images: [
       {
         src: front.src,
@@ -136,6 +138,7 @@ export const products: Product[] = [
     name: 'AT6 L SKID PLATES',
     alias: 'at6-l-skid-plates',
     property: 'Peso 4.38Kg',
+    price: 655,
     images: [
       {
         src: ateL.src,
@@ -195,6 +198,7 @@ export const products: Product[] = [
     name: 'AT6 S SKID PLATES',
     alias: 'at6-s-skip',
     property: 'Peso 4.08Kg',
+    price: 598,
     images: [
       {
         src: at6STwo.src,
@@ -254,6 +258,7 @@ export const products: Product[] = [
     name: 'ALUMINUM ARM GUARD ASSY',
     alias: 'aluminum-arm-guard',
     property: 'Peso 1.33Kg',
+    price: 255,
     images: [
       {
         src: aluminiumTwo.src,
@@ -313,6 +318,7 @@ export const products: Product[] = [
     name: 'REAR CARGO BOX',
     alias: 'rear-cargo-box',
     property: '104 Litros',
+    price: 510,
     images: [
       {
         src: rear.src,
@@ -371,6 +377,13 @@ export const products: Product[] = [
     name: 'SNARLER FRONT BUMPER KIT',
     alias: 'front-bumper-kit',
     property: 'Peso 6.13Kg',
+    colorsAvailable: [
+      ProductsColors.Green,
+      ProductsColors.Blue,
+      ProductsColors.Red,
+      ProductsColors.Black,
+    ],
+    price: 147,
     images: [
       {
         src: bumperRed.src,
@@ -434,6 +447,7 @@ export const products: Product[] = [
     name: 'GENERATOR SGW2700i',
     alias: 'generatot-sgw2700i',
     property: 'Peso 19.5kg',
+    price: 1.465,
     images: [
       {
         src: generator.src,

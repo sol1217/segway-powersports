@@ -1,7 +1,7 @@
-import blue from '@assets/jpeg/blue.jpeg'
+import green from '@assets/jpeg/green.jpeg'
 import camo from '@assets/jpg/camouflaged.jpg'
+import blue from '@assets/png/blue.png'
 import gray from '@assets/png/gray.png'
-import green from '@assets/png/green.jpeg'
 import red from '@assets/png/red.png'
 
 export enum EColors {

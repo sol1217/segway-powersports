@@ -147,6 +147,18 @@ export const ContactSection = styled.div`
   padding-bottom: 30px;
 `
 
+export const ProductAdded = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(darkred, red);
+  border-radius: 20px;
+  color: white;
+  width: 195px;
+  height: 40px;
+`
+
 export const ContactContainer = styled.button`
   border-radius: 30px;
   width: 195px;

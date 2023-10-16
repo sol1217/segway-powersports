@@ -1,74 +1,82 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { BiPlus, BiMinus } from 'react-icons/bi'
-import { BsScooter } from 'react-icons/bs'
-import { GrLocation } from 'react-icons/gr'
-import { MdOutlineNavigateNext } from 'react-icons/md'
-import { MdOutlineProductionQuantityLimits } from 'react-icons/md'
-import { RiDeleteBinLine } from 'react-icons/ri'
-import { TbTruckDelivery } from 'react-icons/tb'
 
-import { Box } from '@core'
+import bancoNational from '@assets/jpeg/BN.jpeg'
+import bac from '@assets/png/bac.png'
+import bancoCostaRica from '@assets/png/bcr.png'
+import bancoPopular from '@assets/png/bp.png'
 import pay from '@assets/png/candado.png'
+import carts from '@assets/png/cart.png'
+import check from '@assets/png/cheque.png'
 import gray from '@assets/png/gray.png'
 import icono from '@assets/png/icono-segway.png'
+import useCart, { ProductData } from '@hooks/useCart/useCart'
 import {
+  IconoAdd,
   ItemText,
   CountItem,
-  TextTaxes,
-  TitleCart,
-  NotesInput,
-  RemoveIcon,
-  TitleNotes,
+  IconoNext,
+  IconoDelete,
   IconoSegway,
+  SelectColor,
   ChangeButton,
   DeleteButton,
-  ProductCount,
-  SubtotalName,
+  IconoScooter,
   CartContainer,
-  ProductButton,
-  CheckoutButton,
+  IconoDelivery,
+  IconoLocation,
+  PaymentButton,
+  TextTotalItem,
+  ColorAvailable,
   DecreaseButton,
   IncreaseButton,
-  NotesContainer,
-  OrderContainer,
-  NameProductCart,
-  ButtonsContainer,
+  TotalPriceItem,
+  BackProductText,
+  TarjetContainer,
   KeepShoppingWrap,
   PaymentContainer,
+  SummaryContainer,
   AllItemsContainer,
   CartPageContainer,
-  CheckoutContainer,
+  EmptyCarContainer,
   LocationContainer,
   QuantityContainer,
   SecurePaymentWrap,
-  SubTotalContainer,
   ViewItemContainer,
+  BackProductsButton,
   ChangeItemContainer,
-  AddQuantityContainer,
+  DeleteItemContainer,
+  ItemInformationCart,
+  TarjetIconContainer,
+  PaymentCartContainer,
   ProductCartContainer,
-  ViewProductContainer,
+  TitleColorsAvailable,
   DeliveryNoteContainer,
   NoteDeliveryContainer,
-  ProductOrderContainer,
-  InformationProductCart,
   ProductQuantityControl,
   InformationItemContainer,
   DeliveryLocationContainer,
 } from '@features/cart/CartPage/CartPage.elements'
-import { ProductCartProps } from '@features/cart/CartPage/CartPage.types'
-import scooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/segway-e110s.jpg'
 
-import { Product } from '../../../../types/app'
-
-export default function CartPage() {
-  const [cartItems, setCartItems] = useState([] as Product[])
+export default function CartPage({ product }: { product: ProductData }) {
+  const [cartItems, setCartItems] = useState([] as ProductData[])
   const [totalPrice, setTotalPrice] = useState<number>(0)
   const [quantity, setQuantity] = useState<number[]>([])
+  const { cart } = useCart()
+  const [productCount, setProductCount] = useState(cart.length)
+  const [selectedColors, setSelectedColors] = useState<Record<string, string>>({})
+  const [colorsSelected, setColorsSelected] = useState(false)
 
   useEffect(() => {
-    const cart: Product[] = JSON.parse(localStorage.getItem('cart') || '[]')
+    setProductCount(cart.length)
+  }, [cart])
+
+  useEffect(() => {
+    const cart: ProductData[] = JSON.parse(localStorage.getItem('cart') || '[]')
 
     setCartItems(cart)
   }, [])
@@ -104,6 +112,7 @@ export default function CartPage() {
     }
   }
 
+  console.log(cartItems)
   const handleDecrementQuantity = (index: number) => {
     const updatedCart = [...cartItems]
     const item = updatedCart[index]
@@ -121,131 +130,179 @@ export default function CartPage() {
     }
   }
 
+  const handleColorChange = (productId: string, color: string) => {
+    const updatedSelectedColors = { ...selectedColors }
+    updatedSelectedColors[productId] = color
+
+    const allColorsSelected = cartItems.every((item) => updatedSelectedColors[item.name])
+
+    setSelectedColors(updatedSelectedColors)
+
+    setColorsSelected(allColorsSelected)
+
+    localStorage.setItem('selectedColors', JSON.stringify(updatedSelectedColors))
+    localStorage.setItem('cart', JSON.stringify(cartItems))
+  }
+
+  useEffect(() => {
+    const allColorsSelected = cartItems.every((item) => selectedColors[item.name])
+    setColorsSelected(allColorsSelected)
+  }, [])
+
   return (
     <CartPageContainer>
       <LocationContainer>
         <DeliveryLocationContainer>
-          <GrLocation style={{ fontSize: '25px' }} />
-          <p>Envios solo a Costa Rica</p>
+          <IconoLocation />
+          <p>Envíos sólo a Costa Rica</p>
         </DeliveryLocationContainer>
         <PaymentContainer>
           <SecurePaymentWrap>
-            <img src={pay.src} width={35} height={35} />
+            <Image src={pay.src} width={35} height={35} alt="" />
             <h3>Pago seguro</h3>
           </SecurePaymentWrap>
           <KeepShoppingWrap>
-            <h3>Seguir Comprando</h3>
-            <MdOutlineNavigateNext style={{ fontSize: '30px' }} />
+            <Link href="./products">Seguir Comprando</Link>
+            <IconoNext />
           </KeepShoppingWrap>
         </PaymentContainer>
       </LocationContainer>
 
       <CartContainer>
-        <NoteDeliveryContainer>
-          <DeliveryNoteContainer>
-            <TbTruckDelivery style={{ fontSize: '25px' }} />
-            <h3>Nota: Entrega de pedido</h3>
-          </DeliveryNoteContainer>
-          <p>
-            Entrega dentro de la <b>ZONA</b> metropolitana es <b>GRATIS</b>
-          </p>
-        </NoteDeliveryContainer>
+        <ItemInformationCart>
+          <NoteDeliveryContainer>
+            <DeliveryNoteContainer>
+              <IconoDelivery />
+              <h3>Nota: Entrega de pedido</h3>
+            </DeliveryNoteContainer>
+            <p>
+              La entrega dentro del <b>ÁREA</b> metropolitana es <b>GRATIS</b>
+            </p>
+          </NoteDeliveryContainer>
 
-        <AllItemsContainer>
-          <BsScooter style={{ fontSize: '28px' }} />
-          <ItemText>
-            <h2> Todos los Artículos</h2>
-            <h2>(3)</h2>
-          </ItemText>
-        </AllItemsContainer>
+          <AllItemsContainer>
+            <IconoScooter />
+            <ItemText>
+              <h2> Todos los Artículos</h2>
+              <h2>({productCount || 0})</h2>
+            </ItemText>
+          </AllItemsContainer>
 
-        <ChangeItemContainer>
-          <div>
-            <h3>Añade articulos nuevo con descuento</h3>
-            <p>Válido para llevarte un artículo extra</p>
-          </div>
-          <ChangeButton>Elegir</ChangeButton>
-        </ChangeItemContainer>
+          <ChangeItemContainer>
+            <div>
+              <h3>¿Quieres Añadir más Artículos a tu carrito?</h3>
+              <p>Presione el botón para regresar al menú de los productos.</p>
+            </div>
+            <ChangeButton>
+              <Link href="./products">Volver</Link>
+            </ChangeButton>
+          </ChangeItemContainer>
 
-        <ProductCartContainer>
-          <IconoSegway>
-            <img src={icono.src} width={60} height={40} />
-            <h2>Segway Powersports</h2>
-          </IconoSegway>
+          {cartItems.length === 0 ? (
+            <EmptyCarContainer>
+              <Image width={150} height={150} src={carts.src} alt="" />
+              <h2>Tu carrito se encuentra vacío</h2>
+              <BackProductText href="./products">
+                <IconoAdd />
+                Volver al área de productos
+              </BackProductText>
+              <BackProductsButton>
+                <Link href="./products">Seguir Comprando</Link>
+              </BackProductsButton>
+            </EmptyCarContainer>
+          ) : (
+            cartItems.map((item, index) => (
+              <ProductCartContainer key={index}>
+                <IconoSegway>
+                  <Image src={check.src} width={30} height={30} alt="" />
+                  <Image src={icono.src} width={60} height={40} alt="" />
+                  <h2>Segway Powersports</h2>
+                </IconoSegway>
 
-          <ViewItemContainer>
-            <img src={scooterred.src} width={170} height={170} alt="" />
+                <ViewItemContainer>
+                  <img src={item.picture} width={170} height={170} alt="" />
+                  <InformationItemContainer>
+                    <div>
+                      <h3>{item.name}</h3>
 
-            <InformationItemContainer>
-              <div>
-                <h3>Ninebot ekickScooter ZING C8</h3>
-              </div>
-              <ProductQuantityControl>
-                <h3>$11.23</h3>
-                <QuantityContainer>
-                  <DecreaseButton>
-                    <BiMinus />
-                  </DecreaseButton>
-                  <CountItem>3</CountItem>
-                  <IncreaseButton>
-                    <BiPlus />
-                  </IncreaseButton>
-                </QuantityContainer>
-                <DeleteButton>
-                  <RiDeleteBinLine style={{ fontSize: '21px' }} />
-                </DeleteButton>
-              </ProductQuantityControl>
-            </InformationItemContainer>
-          </ViewItemContainer>
-        </ProductCartContainer>
+                      {item.colorsAvailable && item.colorsAvailable.length > 0 && (
+                        <ColorAvailable>
+                          {selectedColors[item.name] ? null : (
+                            <TitleColorsAvailable>Elegir un color:</TitleColorsAvailable>
+                          )}{' '}
+                          <SelectColor>
+                            {item.colorsAvailable.map((color) => (
+                              <label key={color}>
+                                <input
+                                  type="radio"
+                                  name={`color-${item.name}`}
+                                  value={color}
+                                  checked={selectedColors[item.name] === color}
+                                  onChange={() => handleColorChange(item.name, color)}
+                                />
+                                {color}
+                              </label>
+                            ))}
+                          </SelectColor>
+                        </ColorAvailable>
+                      )}
+                    </div>
+                    <ProductQuantityControl>
+                      <h3>${((item.price || 0) * Math.max(item.quantity || 1, 1)).toFixed(3)}</h3>
+                      <DeleteItemContainer>
+                        <QuantityContainer>
+                          <DecreaseButton onClick={() => handleDecrementQuantity(index)}>
+                            <BiMinus />
+                          </DecreaseButton>
+                          <CountItem>{Math.max(item.quantity || 1, 1)}</CountItem>
+                          <IncreaseButton onClick={() => handleIncrementQuantity(index)}>
+                            <BiPlus />
+                          </IncreaseButton>
+                        </QuantityContainer>
+                        <DeleteButton onClick={() => handleRemoveFromCart(item.name)}>
+                          <IconoDelete />
+                        </DeleteButton>
+                      </DeleteItemContainer>
+                    </ProductQuantityControl>
+                  </InformationItemContainer>
+                </ViewItemContainer>
+              </ProductCartContainer>
+            ))
+          )}
+        </ItemInformationCart>
+
+        <PaymentCartContainer>
+          <SummaryContainer>
+            <h1>Resumen Del Pedido</h1>
+            <TotalPriceItem>${totalPrice.toFixed(2)}</TotalPriceItem>
+            <TextTotalItem>Cantidad total</TextTotalItem>
+            {cartItems.length > 0 && (
+              <PaymentButton
+                className={
+                  cartItems.some(
+                    (item) => item.colorsAvailable && item.colorsAvailable.length > 0,
+                  ) && colorsSelected
+                    ? 'disabled-button'
+                    : ''
+                }>
+                <Link href="./checkout">Pagar ahora</Link>
+                <h4>({productCount || 0})</h4>
+              </PaymentButton>
+            )}
+            <p>Recuerda que el envío se coordina después de haber completado la compra.</p>
+          </SummaryContainer>
+
+          <TarjetContainer>
+            <h2>ACEPTAMOS</h2>
+            <TarjetIconContainer>
+              <Image src={bac.src} width={110} height={60} alt="" />
+              <Image src={bancoNational.src} width={100} height={60} alt="" />
+              <Image src={bancoCostaRica.src} width={100} height={60} alt="" />
+              <Image src={bancoPopular.src} width={100} height={60} alt="" />
+            </TarjetIconContainer>
+          </TarjetContainer>
+        </PaymentCartContainer>
       </CartContainer>
-      {/* <TitleCart>Carrito de Compras(3)</TitleCart>
-      <CartContainer>
-        {cartItems.map((item, index) => (
-          <ProductOrderContainer key={index}>
-            <ViewProductContainer>
-              <InformationProductCart>
-                <img src={item.picture} width={170} height={170} alt="" />
-                <NameProductCart>{item.name}</NameProductCart>
-                <h3>${((item.price || 0) * (item.quantity || 1)).toFixed(3)}</h3>
-              </InformationProductCart>
-              <ButtonsContainer>
-                <DeleteButton onClick={() => handleRemoveFromCart(item.name)}>
-                  <RemoveIcon />
-                  Eliminar
-                </DeleteButton>
-                <AddQuantityContainer>
-                  <Box justifyContent="space-between" width={120} margin="0 auto">
-                    <ProductButton onClick={() => handleDecrementQuantity(index)}>
-                      <BiMinus size={30} />
-                    </ProductButton>
-                    <ProductCount>{item.quantity || 1}</ProductCount>
-                    <ProductButton onClick={() => handleIncrementQuantity(index)}>
-                      <BiPlus size={30} />
-                    </ProductButton>
-                  </Box>
-                </AddQuantityContainer>
-              </ButtonsContainer>
-            </ViewProductContainer>
-          </ProductOrderContainer>
-        ))}
-        <OrderContainer>
-          <NotesContainer>
-            <TitleNotes>Notas de entrega/pedido</TitleNotes>
-            <NotesInput />
-          </NotesContainer>
-          <CheckoutContainer>
-            <SubTotalContainer>
-              <SubtotalName>Subtotal</SubtotalName>
-              <h3>${totalPrice.toFixed(2)}</h3>
-            </SubTotalContainer>
-            <TextTaxes>Sin incluir impuestos y envío</TextTaxes>
-            <CheckoutButton>
-              <Link href="/checkout">Verificar</Link>
-            </CheckoutButton>
-          </CheckoutContainer>
-        </OrderContainer>
-      </CartContainer>*/}
     </CartPageContainer>
   )
 }

@@ -1,4 +1,4 @@
-import { Product } from '@types'
+import { Product, ProductsColors } from '@types'
 import designChildren from '@assets/jpeg/design-children.jpeg'
 import designProtective from '@assets/jpeg/design-protective.jpeg'
 import detailProtective from '@assets/jpeg/detail-protective.jpeg'
@@ -161,6 +161,7 @@ export const products: Product[] = [
     name: 'NINEBOT HELMET',
     alias: 'ninebot-casco',
     picture: helmetImage.src,
+    colorsAvailable: [ProductsColors.Yellow, ProductsColors.Orange],
     price: 60,
     images: [
       {
@@ -493,6 +494,7 @@ export const products: Product[] = [
     picture: childrenProtectiveImage.src,
     logo: childrenLogo.src,
     video: '/videos/accesories.mp4',
+    colorsAvailable: [ProductsColors.Pink, ProductsColors.Yellow],
     features: [
       'Incluyen: rodilleras * 2 coderas * 2 palmas',
       'Color del producto: Amarillo y Rosa',

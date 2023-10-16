@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { FaCheck } from 'react-icons/fa'
 import { PiShoppingCartBold } from 'react-icons/pi'
 
 import useCart from '@hooks/useCart/useCart'
@@ -9,6 +10,7 @@ import {
   LogoImage,
   NameModel,
   ImageProduct,
+  ProductAdded,
   ImagesGallery,
   TitleFeatures,
   ContactSection,
@@ -34,20 +36,17 @@ import { ProductPageProps } from './ProductPage.types'
 
 export const ProductPageScooter = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
+  const [isProductAdded, setProductAdded] = useState(false)
   const { cart, addToCart } = useCart()
 
   const handleAddToCart = () => {
-    const firstImage = productInfo?.picture || ''
-    const productName = productInfo?.name || 'Product Name'
-    const productPrice = productInfo?.price || 0
+    if (!productInfo) return
+    const { picture, name, price, colorsAvailable } = productInfo
 
-    const productData = {
-      picture: firstImage,
-      name: productName,
-      price: productPrice,
-    }
+    const productData = { picture, name, price, colorsAvailable, quantity: 1 }
 
     addToCart(productData)
+    setProductAdded(true)
   }
 
   return (
@@ -76,10 +75,17 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         </FeaturesProductContainer>
 
         <ContactSection>
-          <ContactContainer onClick={handleAddToCart}>
-            <PiShoppingCartBold style={{ fontSize: '24px' }} />
-            Añadir al Carrito
-          </ContactContainer>
+          {isProductAdded ? (
+            <ProductAdded>
+              <FaCheck style={{ fontSize: '24px' }} />
+              <p>Producto añadido</p>
+            </ProductAdded>
+          ) : (
+            <ContactContainer onClick={handleAddToCart}>
+              <PiShoppingCartBold style={{ fontSize: '24px' }} />
+              Añadir al Carrito
+            </ContactContainer>
+          )}
         </ContactSection>
       </ViewProductContainer>
 

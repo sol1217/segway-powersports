@@ -15,12 +15,14 @@ export const CheckoutPageContainer = styled.div`
 
 export const PaymentContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
   width: 100%;
+
+  @media (min-width: 1700px) {
+    align-items: center;
+  }
 `
 
 export const PaymentCardContainer = styled.div`
@@ -64,11 +66,14 @@ export const IconCar = styled(TbTruckDelivery)`
 
 export const DeliveryMethodContainer = styled.div`
   border-radius: 10px;
-  width: 80%;
-  padding: 20px;
+  width: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  max-width: 1070px;
 `
 
 export const CheckDeliveryContainer = styled.div`
@@ -76,8 +81,23 @@ export const CheckDeliveryContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
-  height: 150px;
+  height: 200px;
   border: 1px solid #c7c5c5;
+  width: 100%;
+`
+
+export const MethodPaymentContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 23px;
+  height: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #c7c5c5;
+
+  &:nth-child(3) {
+    border-bottom: none;
+  }
 `
 
 export const TypeTripContainer = styled.div`
@@ -86,7 +106,6 @@ export const TypeTripContainer = styled.div`
   gap: 10px;
   font-size: 23px;
   height: 100%;
-  font-family: 'Roboto Thin';
   padding: 20px;
 
   &:first-child {
@@ -100,11 +119,17 @@ export const DataDeliveryContainer = styled.form`
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  width: 80%;
+
+  @media (min-width: 1750px) {
+    align-items: center;
+  }
 `
 
 export const DataDelivery = styled.input`
   height: 50px;
-  width: 570px;
+  max-width: 570px;
+  width: 100%;
   padding: 20px;
   border-radius: 15px;
   font-weight: bold;
@@ -117,11 +142,25 @@ export const DataDelivery = styled.input`
   }
 `
 
+export const SelectPyamentDelivery = styled.select`
+  height: 50px;
+  max-width: 570px;
+  width: 100%;
+  border-radius: 15px;
+  padding-left: 20px;
+  font-weight: bold;
+  border: 3px solid darkred;
+  background-color: transparent;
+  color: darkred;
+`
+
 export const NameClientContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  max-width: 570px;
+  width: 100%;
 `
 
 export const NameClient = styled.input`
@@ -148,7 +187,7 @@ export const SubmitContainer = styled.div`
 
 export const LocationContainer = styled.select`
   height: 55px;
-  width: 270px;
+  width: 120px;
   border-radius: 15px;
   font-weight: bold;
   border: 3px solid darkred;
@@ -166,7 +205,7 @@ export const SubmitButton = styled.input`
   width: 150px;
   font-size: 17px;
   border-radius: 15px;
-  background: linear-gradient(darkred, saddlebrown, rosybrown);
+  background-color: black;
   cursor: pointer;
 `
 
@@ -174,18 +213,10 @@ export const DeliverText = styled.p`
   color: #777474;
 `
 
-export const LocationDeliverContainer = styled.select`
-  height: 60px;
-  width: 280px;
-  border-radius: 15px;
+export const ColorProductContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: darkred;
-  padding: 10px;
-  font-weight: bold;
-  border: 3px solid darkred;
-  background-color: transparent;
+  gap: 5px;
+  flex-direction: column;
 `
 
 export const SendMessageButton = styled.button`
@@ -210,7 +241,11 @@ export const LocationDeliveryContainer = styled.div`
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  margin-right: 400px;
+  margin-left: 30px;
+
+  @media (min-width: 1700px) {
+    align-items: center;
+  }
 `
 
 export const ProductTotalContainer = styled.div`
@@ -220,14 +255,24 @@ export const ProductTotalContainer = styled.div`
   gap: 30px;
   padding: 40px;
   width: 50%;
+
+  @media (min-width: 2600px) {
+    align-items: center;
+  }
 `
 
 export const ProductToBuy = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 16px;
+`
+
+export const ProductInformationWrap = styled.div`
+  display: flex;
   position: relative;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 320px;
 `
 
 export const ProductToBuyContainer = styled.div`
@@ -235,6 +280,10 @@ export const ProductToBuyContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   margin-top: 20px;
+
+  @media (min-width: 2600px) {
+    width: 800px;
+  }
 `
 
 export const CountProduct = styled.h4`
@@ -252,22 +301,19 @@ export const CountProduct = styled.h4`
   font-size: 20px;
 `
 
-export const ImageProduct = styled(Image)`
-  background-color: rgba(87, 87, 87, 0.38);
-  border: 1px solid;
+export const ImageProduct = styled.img`
+  border: 1px solid rgba(169, 169, 169, 0.48);
   border-radius: 10px;
 `
 
-export const CommentText = styled.div`
+export const CommentText = styled.p`
   width: 250px;
   display: flex;
   justify-content: center;
   padding: 10px;
   align-items: center;
   border-radius: 5px;
-  font-weight: bold;
   background-color: transparent;
-  color: #c5c2c2;
 `
 
 export const ChangeButton = styled.button`
@@ -276,9 +322,8 @@ export const ChangeButton = styled.button`
   font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
-  border: 3px solid darkred;
-  background-color: transparent;
-  color: darkred;
+  background-color: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,12 +334,25 @@ export const CommentContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  background-color: #fff6f3;
+  padding: 10px;
+
+  @media (min-width: 2600px) {
+    width: 800px;
+  }
 `
 
 export const TotalContainer = styled.div`
   display: flex;
   gap: 15px;
   flex-direction: column;
+  padding: 10px;
+  background-color: rgba(223, 248, 237, 0.4);
+  border: 1px solid rgba(195, 234, 215, 0.84);
+
+  @media (min-width: 2600px) {
+    width: 800px;
+  }
 `
 
 export const CardTotalContainer = styled.div`

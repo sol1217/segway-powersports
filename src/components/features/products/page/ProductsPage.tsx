@@ -39,7 +39,7 @@ export const ProductsPage = () => {
     <ProductContainer>
       <img src={villainimg.src} width="100%" />
       <NameVehiculeContainer style={{ margin: '0 0 30px 0' }}>
-        <NameVehicule>Segway PowerSports Vehículos</NameVehicule>
+        <NameVehicule>Vehículos</NameVehicule>
       </NameVehiculeContainer>
 
       <VehiculeProducts />

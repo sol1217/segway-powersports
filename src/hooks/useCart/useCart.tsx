@@ -1,9 +1,14 @@
 import { useState } from 'react'
 
-interface ProductData {
+import { ProductsColors } from '@types'
+
+export interface ProductData {
   picture: string
   name: string
   price: number
+  quantity: number
+  colorsAvailable?: ProductsColors[]
+  selectedColor?: string
 }
 
 const useCart = () => {

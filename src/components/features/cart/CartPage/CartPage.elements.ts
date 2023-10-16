@@ -1,28 +1,24 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 import { AiTwotoneDelete } from 'react-icons/ai'
+import { BsScooter } from 'react-icons/bs'
+import { GrLocation } from 'react-icons/gr'
+import { MdOutlineNavigateNext } from 'react-icons/md'
+import { RiDeleteBinLine } from 'react-icons/ri'
+import { TbTruckDelivery } from 'react-icons/tb'
+import { VscEmptyWindow } from 'react-icons/vsc'
 
 export const CartPageContainer = styled.div`
   margin-top: 100px;
   background-color: #f3f1f1;
+  padding: 0 20px 40px 20px;
   color: black;
-  gap: 10px;
+  gap: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-`
-
-export const TitleCart = styled.h1`
-  border-bottom: 1px solid darkgrey;
-  width: 600px;
-  margin-left: 180px;
-  padding: 20px;
-  color: darkred;
-`
-
-export const NameProductCart = styled.h2`
-  color: darkred;
 `
 
 export const LocationContainer = styled.div`
@@ -32,12 +28,13 @@ export const LocationContainer = styled.div`
   padding: 40px;
   width: 100%;
   height: 60px;
+  margin-top: 20px;
 `
 
 export const PaymentContainer = styled.div`
   display: flex;
   padding: 10px;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 `
@@ -53,6 +50,7 @@ export const DeliveryLocationContainer = styled.div`
   background: #fff;
   border-radius: 23px;
   color: #666;
+  user-select: none;
 `
 
 export const SecurePaymentWrap = styled.div`
@@ -70,6 +68,15 @@ export const KeepShoppingWrap = styled.div`
   align-items: center;
   gap: 10px;
   text-transform: uppercase;
+  font-size: 18px;
+
+  &:hover {
+    border-bottom: 1px solid rgba(169, 169, 169, 0.46);
+  }
+
+  &:active {
+    color: #fc0004;
+  }
 `
 
 export const NoteDeliveryContainer = styled.div`
@@ -78,18 +85,29 @@ export const NoteDeliveryContainer = styled.div`
   flex-direction: column;
   padding: 15px;
   gap: 10px;
-  width: 80%;
+  width: 100%;
   background-color: rgba(223, 248, 237, 0.4);
 `
 
 export const CartContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 40px;
+  justify-content: center;
+  gap: 30px;
   width: 100%;
-  border: 1px solid;
 `
+
+export const ItemInformationCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  gap: 7px;
+
+  @media (min-width: 1800px) {
+    width: 1200px;
+  }
+`
+
 export const DeliveryNoteContainer = styled.div`
   display: flex;
   gap: 5px;
@@ -98,7 +116,7 @@ export const DeliveryNoteContainer = styled.div`
 
 export const AllItemsContainer = styled.div`
   background-color: white;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -119,7 +137,7 @@ export const ChangeItemContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 80%;
+  width: 100%;
 `
 
 export const ChangeButton = styled.button`
@@ -136,34 +154,34 @@ export const ChangeButton = styled.button`
 `
 
 export const ProductCartContainer = styled.div`
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
-  gap: 10px;
-  width: 80%;
+  padding: 10px 10px 10px 20px;
+  background-color: white;
+  gap: 5px;
+  width: 100%;
 `
 
 export const IconoSegway = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(169, 169, 169, 0.47);
 `
 
 export const ViewItemContainer = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid;
 `
 
 export const InformationItemContainer = styled.div`
-  border: 1px solid;
   padding: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 180px;
-  width: 70%;
+  width: 100%;
 `
 
 export const ProductQuantityControl = styled.div`
@@ -171,19 +189,25 @@ export const ProductQuantityControl = styled.div`
   align-items: center;
   gap: 10px;
   justify-content: space-between;
-  border: 1px solid;
-  width: 60%;
+  width: 100%;
   max-width: 600px;
 `
 
 export const QuantityContainer = styled.div`
   border-radius: 20px;
-  border: 1px solid darkgray;
+  border: 1px solid rgba(169, 169, 169, 0.45);
   display: flex;
-  width: 110px;
-  height: 40px;
+  width: 100px;
+  height: 36px;
   justify-content: center;
   align-items: center;
+`
+
+export const DeleteItemContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 `
 
 export const IncreaseButton = styled.button`
@@ -191,15 +215,23 @@ export const IncreaseButton = styled.button`
   height: 100%;
   border-radius: 0 20px 20px 0;
   background-color: transparent;
-  border: none;
+  border-left: 1px solid rgba(169, 169, 169, 0.45);
+  border-right: none;
+  border-bottom: none;
+  border-top: none;
+  cursor: pointer;
 `
 
 export const DecreaseButton = styled.button`
   width: 100%;
   height: 100%;
   border-radius: 20px 0 0 20px;
-  border: none;
   background-color: transparent;
+  border-right: 1px solid rgba(169, 169, 169, 0.45);
+  border-left: none;
+  border-bottom: none;
+  border-top: none;
+  cursor: pointer;
 `
 
 export const CountItem = styled.h3`
@@ -210,142 +242,135 @@ export const CountItem = styled.h3`
 export const DeleteButton = styled.div`
   border: none;
   background-color: transparent;
+  cursor: pointer;
 `
 
-export const ProductOrderContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border: 1px solid red;
-  align-items: center;
+export const IconoLocation = styled(GrLocation)`
+  font-size: 25px;
 `
 
-export const ViewProductContainer = styled.div`
-  border-bottom: 1px solid darkgrey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const IconoScooter = styled(BsScooter)`
+  font-size: 28px;
 `
 
-export const InformationProductCart = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 600px;
-  gap: 30px;
-  padding: 20px;
-  height: 200px;
+export const IconoDelete = styled(RiDeleteBinLine)`
+  font-size: 21px;
 `
 
-export const ButtonsContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 40px;
-  padding: 20px;
-  margin-bottom: 15px;
-
-  &:hover {
-    color: darkred;
-  }
+export const IconoDelivery = styled(TbTruckDelivery)`
+  font-size: 25px;
 `
 
-export const ProductButton = styled.div`
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #666;
-  transition: all 0.2s;
-  transform-origin: 50% 50%;
-  user-select: none;
-  border: 1px solid;
-
-  &:hover {
-    cursor: pointer;
-    color: #8f14da;
-    transform: scale(1.3);
-  }
-`
-
-export const ProductCount = styled.div`
-  font-size: 20px;
-  font-weight: 500;
-  width: 40px;
-  text-align: center;
-`
-
-export const RemoveIcon = styled(AiTwotoneDelete)`
+export const IconoNext = styled(MdOutlineNavigateNext)`
   font-size: 30px;
-
-  &:hover {
-    color: darkred;
-  }
 `
 
-export const AddQuantityContainer = styled.div`
+export const IconoAdd = styled(VscEmptyWindow)`
+  font-size: 20px;
+`
+
+export const EmptyCarContainer = styled.div`
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+`
+
+export const BackProductText = styled(Link)`
+  color: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 `
 
-export const OrderContainer = styled.div`
+export const BackProductsButton = styled.button`
+  padding: 15px;
+  width: 250px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+`
+
+export const PaymentCartContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-  width: 320px;
-  padding: 20px;
-  background-color: white;
+  gap: 10px;
 `
 
-export const NotesContainer = styled.div`
+export const SummaryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: white;
+  height: 250px;
+  width: 100%;
+  padding: 20px;
+`
+
+export const TotalPriceItem = styled.h2`
+  text-align: right;
+`
+
+export const TextTotalItem = styled.p`
+  text-align: right;
+`
+
+export const PaymentButton = styled.button`
+  border: none;
+  background-color: black;
+  width: 90%;
+  height: 100px;
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  &.disabled-button {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+`
+
+export const SelectColor = styled.div`
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 5px;
+`
+
+export const ColorAvailable = styled.div`
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`
+
+export const TitleColorsAvailable = styled.h4`
+  color: brown;
+`
+
+export const TarjetContainer = styled.div`
+  background-color: white;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
 `
 
-export const TitleNotes = styled.h2`
-  color: darkred;
-`
-
-export const SubtotalName = styled.h2`
-  color: darkred;
-`
-
-export const NotesInput = styled.textarea`
-  width: 280px;
-  height: 100px;
-  border-radius: 10px;
-  padding: 10px;
-`
-
-export const CheckoutContainer = styled.div`
+export const TarjetIconContainer = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 5px;
-`
-
-export const SubTotalContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-`
-
-export const TextTaxes = styled.h5`
-  color: darkgrey;
-`
-
-export const CheckoutButton = styled.button`
-  background: linear-gradient(darkred, saddlebrown, rosybrown);
-  height: 55px;
-  width: 170px;
-  border: none;
-  font-size: 22px;
-  border-radius: 25px;
-  color: white;
+  gap: 10px;
 `

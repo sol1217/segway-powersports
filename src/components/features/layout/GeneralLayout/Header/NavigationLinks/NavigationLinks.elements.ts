@@ -15,11 +15,21 @@ export const CountContainer = styled.div`
   font-size: 16px;
   background-color: darkred;
 
-  &:hover {
+  @media (max-width: 800px) {
+    position: static;
+    left: auto;
+    top: auto;
     color: white;
   }
 `
 
 export const CartLinkContainer = styled(Link)`
   position: relative;
+
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2px;
+  }
 `

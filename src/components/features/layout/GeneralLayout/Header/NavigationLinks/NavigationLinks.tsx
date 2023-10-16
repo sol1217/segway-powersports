@@ -24,7 +24,7 @@ export const NavigationLinks = () => {
       <Link href="/contacts">Contacto</Link>
       <CartLinkContainer href="/cart">
         <PiShoppingCartBold style={{ fontSize: '25px' }} />
-        <CountContainer>{productCount || ''}</CountContainer>
+        <CountContainer>{productCount || 0}</CountContainer>
       </CartLinkContainer>
     </>
   )

@@ -37,19 +37,13 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
   const { cart, addToCart } = useCart()
 
   const handleAddToCart = () => {
-    const firstImage = productInfo?.picture || ''
-    const productName = productInfo?.name || 'Product Name'
-    const productPrice = productInfo?.price || 0
+    if (!productInfo) return
+    const { picture, name, price, colorsAvailable } = productInfo
 
-    const productData = {
-      picture: firstImage,
-      name: productName,
-      price: productPrice,
-    }
+    const productData = { picture, name, price, colorsAvailable, quantity: 1 }
 
     addToCart(productData)
   }
-
   return (
     <ProductPageContainer>
       <div>

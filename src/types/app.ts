@@ -2,7 +2,6 @@ import { ReactNode, CSSProperties } from 'react'
 import { RuleSet } from 'styled-components'
 
 import { LoaderSize } from '@core/Loader/Loader.types'
-import { IProductImage } from '@features/products/vehicule/types'
 
 export type RootLayoutProps = {
   children: ReactNode
@@ -37,7 +36,7 @@ export type Product = {
   name: string
   alias: string
   images: ProductImage[]
-  picture?: string
+  picture: string
   completeDesciprtion?: string
   video?: string
   features?: string[]
@@ -45,9 +44,9 @@ export type Product = {
   logo?: string
   model?: string
   galleryImages?: GalleryImages[]
-  price?: number
+  price: number
   property?: string
-  quantity?: number
+  colorsAvailable?: ProductsColors[]
 }
 
 export interface FeaturesProduct {
@@ -60,6 +59,18 @@ export interface GalleryImages {
   src: string
   width?: number
   height?: number
+}
+
+export enum ProductsColors {
+  Pink = 'Rosa',
+  Purple = 'Morado',
+  Black = 'Negro',
+  Yellow = 'Amarillo',
+  Orange = 'Naranjado',
+  Green = 'Verde',
+  Blue = 'Azul',
+  Red = 'Rojo',
+  Gris = 'Gris',
 }
 
 export enum ProductEnum {
