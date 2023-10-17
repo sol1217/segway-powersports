@@ -2,12 +2,10 @@
 
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import emailjs from '@emailjs/browser'
 import { BsUpload } from 'react-icons/bs'
 import { FaWaze } from 'react-icons/fa'
-import { FaMoneyBillTransfer } from 'react-icons/fa6'
 
-import { Box } from '@core'
 import pay from '@assets/png/candado.png'
 import whatsapp from '@assets/png/whatsapp-black.png'
 import {
@@ -61,6 +59,29 @@ export const PaymentPage = () => {
     }
   }
 
+  const formMethod = useRef<HTMLFormElement | null>(null)
+
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!formMethod.current) {
+      console.log('Form is not available.')
+      return
+    }
+
+    await emailjs
+      .sendForm('service_fu04b3h', 'template_p2kbll8', formMethod.current, 'eVV5LaeW7q_SV6WCE')
+      .then(
+        (result) => {
+          console.log(result.text)
+          location.reload()
+        },
+        (error) => {
+          console.log(error.text)
+        },
+      )
+  }
+
   return (
     <PaymentPageContainer>
       <SecurePaymentWrap>
@@ -75,31 +96,29 @@ export const PaymentPage = () => {
             Al transferir el pago, recuerde guardar el recibo y subirlo al detalle de pago para que
             uno de los asesores pueda verificarlo.
           </p>
-          <DetailsContainer>
+          <DetailsContainer ref={formMethod} onSubmit={sendEmail}>
             <DetailsInput
               required
               type="text"
               placeholder="Nombre Completo"
               readOnly={isCashSelected}
-            />
-            <DetailsInput
-              required
-              type="text"
-              placeholder="Metodo de pago"
-              readOnly={isCashSelected}
+              name="from_name"
             />
             <DetailsInput
               required
               type="number"
               placeholder="Numero de Teléfono"
               readOnly={isCashSelected}
+              name="from_phone"
             />
             <DetailsInput
               required
               type="email"
               placeholder="Correo Electrónico"
               readOnly={isCashSelected}
+              name="from_email"
             />
+            <input type="hidden" name="from_pay" value={selectedImage || ''} />
             <VoucherContainer style={{ display: 'flex', alignItems: 'center' }}>
               <VoucherImage
                 required
@@ -108,8 +127,8 @@ export const PaymentPage = () => {
                 multiple
                 ref={uploadInputRef}
                 onChange={handleImageChange}
-                style={{ display: 'none' }}
                 disabled={isCashSelected}
+                style={{ display: 'none' }}
               />
               <VoucherLabel style={{ cursor: 'pointer' }} onClick={handleUploadClick}>
                 <BsUpload style={{ fontSize: '2rem', marginRight: '8px' }} />
@@ -119,9 +138,7 @@ export const PaymentPage = () => {
             {selectedImage && (
               <Image src={selectedImage} alt="Imagen seleccionada" width={400} height={600} />
             )}
-            <SendDetailsButton
-              onClick={() => !isCashSelected && handleSendDetails}
-              disabled={isCashSelected}>
+            <SendDetailsButton onClick={() => !isCashSelected && handleSendDetails} value="Send">
               Enviar Detalle de pago
             </SendDetailsButton>
           </DetailsContainer>
@@ -146,7 +163,7 @@ export const PaymentPage = () => {
               <h3>Comunicarte</h3>
               <CashButton style={{ pointerEvents: isCashSelected ? 'auto' : 'none' }}>
                 <a href="https://wa.link/u9ezfl">
-                  <Image src={whatsapp.src} width={25} height={25} alt="" />
+                  <img src={whatsapp.src} width={25} height={25} alt="" />
                 </a>
               </CashButton>
             </DataTransfer>

@@ -276,7 +276,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta1.src,
     picture: gt1Product.src,
-    price: 3.985,
+    price: 3985,
     galleryImages: [
       {
         src: gt1Siete.src,
@@ -326,7 +326,7 @@ export const products: Product[] = [
     completeDesciprtion:
       ' Ninebot eKickScooter ZING E8, con tecnología de Segway Colores vibrantes y divertidos en su exterior, seguridad y alta calidad en su interior.',
     video: '/videos/E8.mp4',
-    colorsAvailable: [ProductsColors.Pink, ProductsColors.Purple],
+    colorsAvailable: [ProductsColors.Pink],
     picture: e8Product.src,
     features: [
       '14km/h-Autonomia 10km',
@@ -520,7 +520,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta2.src,
     picture: gt2Product.src,
-    price: 5.595,
+    price: 5595,
     galleryImages: [
       {
         src: gt1Uno.src,

@@ -1,9 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
+import { FaCheck, FaCheckCircle } from 'react-icons/fa'
+import { PiShoppingCartBold } from 'react-icons/pi'
 
 import whatsapp from '@assets/png/icons-whatsapp.png'
 import useCart from '@hooks/useCart/useCart'
+import { ProductAdded } from '@features/products/product/ProductScooters/ProductPage.elements'
 
 import { ProductPageProps } from './ProductPageAccesorie.types'
 import {
@@ -34,6 +37,7 @@ import {
 
 export const ProductPageAccesories = ({ productName, productInfo }: ProductPageProps) => {
   const [currentImage, setCurrentImage] = useState<number>(0)
+  const [isProductAdded, setProductAdded] = useState(false)
   const { cart, addToCart } = useCart()
 
   const handleAddToCart = () => {
@@ -43,7 +47,9 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
     const productData = { picture, name, price, colorsAvailable, quantity: 1 }
 
     addToCart(productData)
+    setProductAdded(true)
   }
+
   return (
     <ProductPageContainer>
       <div>
@@ -78,10 +84,17 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
         </FeaturesProductContainer>
 
         <ContactSection>
-          <ContactContainer onClick={handleAddToCart}>
-            <img src={whatsapp.src} width={30} />
-            Añadir al Carrito
-          </ContactContainer>
+          {isProductAdded ? (
+            <ProductAdded>
+              <FaCheckCircle style={{ color: 'green' }} />
+              <p>Añadido correctamente</p>
+            </ProductAdded>
+          ) : (
+            <ContactContainer onClick={handleAddToCart}>
+              <PiShoppingCartBold style={{ fontSize: '24px' }} />
+              Añadir al Carrito
+            </ContactContainer>
+          )}
         </ContactSection>
       </ViewProductContainer>
 

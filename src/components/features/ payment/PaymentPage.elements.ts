@@ -15,7 +15,6 @@ export const SecurePaymentWrap = styled.div`
   gap: 10px;
   text-transform: uppercase;
   color: #fc0004;
-  width: 100%;
   padding: 20px;
 `
 

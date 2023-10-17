@@ -30,8 +30,10 @@ import {
   SubmitButton,
   IconContainer,
   LineContainer,
+  PaymentImages,
   CardsContainer,
   TotalContainer,
+  CompletePayment,
   SubmitContainer,
   CommentContainer,
   PaymentContainer,
@@ -64,6 +66,9 @@ export default function CheckoutPage() {
   const formDelivery = useRef<HTMLFormElement | null>(null)
   const [productDescription, setProductDescription] = useState('')
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({})
+  const [submitButtonText, setSubmitButtonText] = useState('Enviar')
+  const [totalCartPriceNumber, setTotalCartPriceNumber] = useState<number>(0)
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   useEffect(() => {
     const storedSelectedColors = JSON.parse(localStorage.getItem('selectedColors') || '{}')
@@ -91,15 +96,22 @@ export default function CheckoutPage() {
       return
     }
 
+    setSubmitButtonText('Enviando...')
+
     await emailjs
       .sendForm('service_fu04b3h', 'template_0repe1p', formDelivery.current, 'eVV5LaeW7q_SV6WCE')
       .then(
         (result) => {
           console.log(result.text)
-          location.reload()
+          setSubmitButtonText('Enviado')
+          setFormSubmitted(true)
+          {
+            /*location.reload() */
+          }
         },
         (error) => {
           console.log(error.text)
+          setSubmitButtonText('Enviar')
         },
       )
   }
@@ -131,27 +143,44 @@ export default function CheckoutPage() {
     }
   }
 
+  useEffect(() => {
+    const storedTotalCartPrice = localStorage.getItem('totalCartPrice')
+
+    const totalCartPriceNumber = storedTotalCartPrice
+      ? parseFloat(storedTotalCartPrice.replace(/,/g, ''))
+      : 0
+
+    setTotalCartPriceNumber(totalCartPriceNumber)
+  }, [])
+
   return (
     <CheckoutPageContainer>
       <PaymentContainer>
         <MethodsName>Metodos de Pago</MethodsName>
-        <PaymentCardContainer>
-          <CardsContainer $background="#f3ba35" href="./payment">
-            <Image src={sinpeMovil.src} width={120} height={70} alt="" />
-          </CardsContainer>
-          <CardsContainer $background="#f1e9e9" href="./payment">
-            <Image
-              style={{ borderRadius: '50%' }}
-              src={tranfers.src}
-              width={135}
-              height={75}
-              alt=""
-            />
-          </CardsContainer>
-          <CardsContainer $background="#EE1616FF" href="./payment">
-            <Image src={bill.src} width={100} height={55} alt="" />
-          </CardsContainer>
-        </PaymentCardContainer>
+        {formSubmitted ? (
+          <PaymentCardContainer>
+            <CardsContainer $background="#f3ba35" href="./payment">
+              <PaymentImages src={sinpeMovil.src} width={120} height={70} alt="" />
+            </CardsContainer>
+            <CardsContainer $background="#f1e9e9" href="./payment">
+              <PaymentImages
+                style={{ borderRadius: '50%' }}
+                src={tranfers.src}
+                width={135}
+                height={75}
+                alt=""
+              />
+            </CardsContainer>
+            <CardsContainer $background="#EE1616FF" href="./payment">
+              <PaymentImages src={bill.src} width={100} height={55} alt="" />
+            </CardsContainer>
+          </PaymentCardContainer>
+        ) : (
+          <CompletePayment>
+            Por favor, Completa el formulario para acceder a los métodos de pago.
+          </CompletePayment>
+        )}
+
         <IconContainer>
           <LineContainer />
           <Image src={icono.src} width={70} height={40} alt="" />
@@ -190,55 +219,6 @@ export default function CheckoutPage() {
             </TypeTripContainer>
           </CheckDeliveryContainer>
         </DeliveryMethodContainer>
-        {selectedMethod === 'retirar' && (
-          <DataDeliveryContainer ref={formDelivery} onSubmit={sendEmail}>
-            <div>
-              <h2>Datos de Entrega</h2>
-              <DeliverText>
-                Necesitamos esta información para coordinar la entrega en la tienda
-              </DeliverText>
-            </div>
-            <NameClientContainer>
-              <NameClient required placeholder="Nombre " type="text" name="from_name" />
-              <NameClient required placeholder="Apellidos" type="text" name="from_lastname" />
-            </NameClientContainer>
-            <DataDelivery placeholder="Email" type="email" name="from_email" />
-
-            <DataDelivery
-              required
-              maxLength={8}
-              placeholder="Teléfono"
-              type="number"
-              name="from_telephone"
-            />
-            <DataDelivery placeholder="Dirección" type="text" name="from_location" />
-            <label>Seleciona el Metodo de pago:</label>
-            <SelectPyamentDelivery
-              name="from_methodo"
-              value={selectedMethodPayment || ''}
-              onChange={(e) => handleMethodChangePayment(e.target.value)}>
-              <option value="transferencia">Transferencia Bancaria</option>
-              <option value="sinpe movil">Sinpe Movil</option>
-              <option value="efectivo">Efectivo</option>
-            </SelectPyamentDelivery>
-            <label>Descripción del Producto:</label>
-            {cartItems.map((product) => (
-              <DataDelivery
-                name="description"
-                key={product.name} // Assuming product.name is unique
-                readOnly
-                value={`${product.name}: ${
-                  (product.quantity !== undefined ? product.quantity : 1) === 1
-                    ? '1 unidad'
-                    : `${product.quantity} unidades`
-                }, Color: ${selectedColors[product.name] || 'Predeterminado'}`}
-                style={{ whiteSpace: 'pre-line' }}
-              />
-            ))}
-
-            <SubmitButton type="submit" value="Enviar" />
-          </DataDeliveryContainer>
-        )}
         {selectedMethod === 'enviar' && (
           <LocationDeliveryContainer>
             <h2>Entrega a Domicilio</h2>
@@ -249,6 +229,59 @@ export default function CheckoutPage() {
             </SendMessageButton>
           </LocationDeliveryContainer>
         )}
+
+        <DataDeliveryContainer ref={formDelivery} onSubmit={sendEmail}>
+          <div>
+            <h2>Datos de Entrega</h2>
+            <DeliverText>Necesitamos esta información para coordinar la entrega</DeliverText>
+          </div>
+          <NameClientContainer>
+            <NameClient required placeholder="Nombre " type="text" name="from_name" />
+            <NameClient required placeholder="Apellidos" type="text" name="from_lastname" />
+          </NameClientContainer>
+          <DataDelivery placeholder="Email" type="email" name="from_email" />
+          <DataDelivery
+            required
+            maxLength={9}
+            minLength={8}
+            placeholder="Teléfono"
+            type="text"
+            name="from_telephone"
+            inputMode="tel"
+          />
+          <DataDelivery placeholder="Dirección" type="text" name="from_location" />
+          <label>Seleciona el Metodo de pago:</label>
+          <SelectPyamentDelivery
+            name="from_methodo"
+            value={selectedMethodPayment || ''}
+            onChange={(e) => handleMethodChangePayment(e.target.value)}>
+            <option value="transferencia">Transferencia Bancaria</option>
+            <option value="sinpe movil">Sinpe Movil</option>
+            <option value="efectivo">Efectivo</option>
+          </SelectPyamentDelivery>
+          <label>Monto Total:</label>
+          <DataDelivery
+            readOnly
+            name="from_total"
+            value={totalCartPriceNumber.toLocaleString('en-US')}
+          />
+          <label>Descripción del Producto:</label>
+          {cartItems.map((product) => (
+            <DataDelivery
+              name="description"
+              key={product.name}
+              readOnly
+              value={`${product.name}: ${
+                (product.quantity !== undefined ? product.quantity : 1) === 1
+                  ? '1 unidad'
+                  : `${product.quantity} unidades`
+              }, Color: ${selectedColors[product.name] || 'Predeterminado'}`}
+              style={{ whiteSpace: 'pre-line' }}
+            />
+          ))}
+
+          <SubmitButton type="submit" value={submitButtonText} />
+        </DataDeliveryContainer>
       </PaymentContainer>
 
       <ProductTotalContainer>
@@ -264,7 +297,7 @@ export default function CheckoutPage() {
                   {selectedColors[product.name] && <p>Color: {selectedColors[product.name]}</p>}
                 </ColorProductContainer>
               </ProductInformationWrap>
-              <h3>${((product.price || 0) * (product.quantity || 1)).toFixed(3)}</h3>
+              <h3>${(product.price || 0) * (product.quantity || 1)}</h3>
             </ProductToBuy>
           ))}
         </ProductToBuyContainer>
@@ -292,7 +325,7 @@ export default function CheckoutPage() {
           </CardTotalContainer>
           <CardTotalContainer>
             <h2>Total</h2>
-            <h2>$3,049.97</h2>
+            <h2>${totalCartPriceNumber.toLocaleString('en-US')}</h2>
           </CardTotalContainer>
         </TotalContainer>
       </ProductTotalContainer>

@@ -150,6 +150,16 @@ export const ContactSection = styled.div`
   padding-bottom: 30px;
 `
 
+export const ProductAdded = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 15px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 10px whitesmoke;
+`
+
 export const ContactContainer = styled.button`
   border-radius: 30px;
   width: 195px;

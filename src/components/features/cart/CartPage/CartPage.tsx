@@ -19,6 +19,7 @@ import {
   IconoAdd,
   ItemText,
   CountItem,
+  IconCheck,
   IconoNext,
   IconoDelete,
   IconoSegway,
@@ -149,6 +150,21 @@ export default function CartPage({ product }: { product: ProductData }) {
     setColorsSelected(allColorsSelected)
   }, [])
 
+  const totalCartPrice = cartItems.reduce((total, item) => {
+    const itemPrice = (item.price || 0) * Math.max(item.quantity || 1, 1)
+    return total + itemPrice
+  }, 0)
+
+  const formattedTotalCartPrice = totalCartPrice.toLocaleString('en-US')
+
+  localStorage.setItem('totalCartPrice', formattedTotalCartPrice)
+
+  const storedTotalCartPrice = localStorage.getItem('totalCartPrice')
+
+  const totalCartPriceNumber = storedTotalCartPrice
+    ? parseFloat(storedTotalCartPrice.replace(/,/g, ''))
+    : 0
+
   return (
     <CartPageContainer>
       <LocationContainer>
@@ -214,7 +230,7 @@ export default function CartPage({ product }: { product: ProductData }) {
             cartItems.map((item, index) => (
               <ProductCartContainer key={index}>
                 <IconoSegway>
-                  <Image src={check.src} width={30} height={30} alt="" />
+                  <IconCheck src={check.src} width={30} height={30} alt="" />
                   <Image src={icono.src} width={60} height={40} alt="" />
                   <h2>Segway Powersports</h2>
                 </IconoSegway>
@@ -239,7 +255,7 @@ export default function CartPage({ product }: { product: ProductData }) {
                                   value={color}
                                   checked={selectedColors[item.name] === color}
                                   onChange={() => handleColorChange(item.name, color)}
-                                />
+                                />{' '}
                                 {color}
                               </label>
                             ))}
@@ -248,7 +264,7 @@ export default function CartPage({ product }: { product: ProductData }) {
                       )}
                     </div>
                     <ProductQuantityControl>
-                      <h3>${((item.price || 0) * Math.max(item.quantity || 1, 1)).toFixed(3)}</h3>
+                      <h3>${(item.price || 0) * Math.max(item.quantity || 1, 1)}</h3>
                       <DeleteItemContainer>
                         <QuantityContainer>
                           <DecreaseButton onClick={() => handleDecrementQuantity(index)}>
@@ -273,8 +289,8 @@ export default function CartPage({ product }: { product: ProductData }) {
 
         <PaymentCartContainer>
           <SummaryContainer>
-            <h1>Resumen Del Pedido</h1>
-            <TotalPriceItem>${totalPrice.toFixed(2)}</TotalPriceItem>
+            <h1>Resumen del Pedido</h1>
+            <TotalPriceItem>${totalCartPriceNumber.toLocaleString('en-US')}</TotalPriceItem>
             <TextTotalItem>Cantidad total</TextTotalItem>
             {cartItems.length > 0 && (
               <PaymentButton

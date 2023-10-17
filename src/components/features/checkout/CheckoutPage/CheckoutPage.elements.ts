@@ -11,6 +11,11 @@ export const CheckoutPageContainer = styled.div`
   justify-content: center;
   background-color: white;
   color: black;
+
+  @media (max-width: 1110px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `
 
 export const PaymentContainer = styled.div`
@@ -23,6 +28,11 @@ export const PaymentContainer = styled.div`
   @media (min-width: 1700px) {
     align-items: center;
   }
+
+  @media (max-width: 1110px) {
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 export const PaymentCardContainer = styled.div`
@@ -30,6 +40,13 @@ export const PaymentCardContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+`
+
+export const PaymentImages = styled(Image)`
+  @media (max-width: 1110px) {
+    width: 90px;
+    height: 50px;
+  }
 `
 
 export const CardsContainer = styled(Link)<{ $background?: string }>`
@@ -74,6 +91,14 @@ export const DeliveryMethodContainer = styled.div`
   align-items: center;
   gap: 5px;
   max-width: 1070px;
+
+  @media (max-width: 1110px) {
+    width: 86%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 export const CheckDeliveryContainer = styled.div`
@@ -259,12 +284,27 @@ export const ProductTotalContainer = styled.div`
   @media (min-width: 2600px) {
     align-items: center;
   }
+
+  @media (max-width: 1110px) {
+    border: none;
+    width: 85%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `
 
 export const ProductToBuy = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 16px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
 `
 
 export const ProductInformationWrap = styled.div`
@@ -340,6 +380,10 @@ export const CommentContainer = styled.div`
   @media (min-width: 2600px) {
     width: 800px;
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 export const TotalContainer = styled.div`
@@ -359,4 +403,18 @@ export const CardTotalContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 500px) {
+    justify-content: space-evenly;
+    font-size: 14px;
+    flex-direction: column;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+`
+
+export const CompletePayment = styled.h3`
+  text-align: center;
+  color: #db281c;
 `

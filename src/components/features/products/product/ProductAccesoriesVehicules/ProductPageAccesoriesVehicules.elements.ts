@@ -57,42 +57,6 @@ export const NameModel = styled.div`
   text-align: center;
 `
 
-export const InformationProductContainer = styled.div`
-  height: 300px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: black;
-  width: 100%;
-`
-
-export const InformationProduct = styled.div`
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  gap: 30px;
-
-  @media (max-width: 980px) {
-    width: 40%;
-  }
-
-  @media (max-width: 790px) {
-    width: 35%;
-  }
-
-  @media (max-width: 660px) {
-    width: 50%;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 16px;
-    width: 100%;
-  }
-`
-
 export const FeaturesProductContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -162,6 +126,16 @@ export const ContactSection = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
+`
+
+export const ProductAdded = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 15px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 10px whitesmoke;
 `
 
 export const ContactContainer = styled.button`
@@ -263,10 +237,6 @@ export const ImagesFeatures = styled.img`
   @media (max-width: 550px) {
     height: 250px;
   }
-`
-
-export const NameFeatures = styled.h2`
-  text-align: center;
 `
 
 export const TextInformation = styled.p`

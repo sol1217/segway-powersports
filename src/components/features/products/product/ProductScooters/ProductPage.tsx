@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { FaCheck } from 'react-icons/fa'
+import { FaCheckCircle } from 'react-icons/fa'
 import { PiShoppingCartBold } from 'react-icons/pi'
 
 import useCart from '@hooks/useCart/useCart'
@@ -77,8 +77,8 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
         <ContactSection>
           {isProductAdded ? (
             <ProductAdded>
-              <FaCheck style={{ fontSize: '24px' }} />
-              <p>Producto añadido</p>
+              <FaCheckCircle style={{ color: 'green' }} />
+              <p>Añadido correctamente</p>
             </ProductAdded>
           ) : (
             <ContactContainer onClick={handleAddToCart}>

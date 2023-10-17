@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { AiTwotoneDelete } from 'react-icons/ai'
 import { BsScooter } from 'react-icons/bs'
 import { GrLocation } from 'react-icons/gr'
 import { MdOutlineNavigateNext } from 'react-icons/md'
@@ -37,6 +37,10 @@ export const PaymentContainer = styled.div`
   gap: 30px;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 580px) {
+    font-size: 14px;
+  }
 `
 
 export const DeliveryLocationContainer = styled.div`
@@ -51,6 +55,10 @@ export const DeliveryLocationContainer = styled.div`
   border-radius: 23px;
   color: #666;
   user-select: none;
+
+  @media (max-width: 820px) {
+    display: none;
+  }
 `
 
 export const SecurePaymentWrap = styled.div`
@@ -77,6 +85,10 @@ export const KeepShoppingWrap = styled.div`
   &:active {
     color: #fc0004;
   }
+
+  @media (max-width: 580px) {
+    display: none;
+  }
 `
 
 export const NoteDeliveryContainer = styled.div`
@@ -87,6 +99,12 @@ export const NoteDeliveryContainer = styled.div`
   gap: 10px;
   width: 100%;
   background-color: rgba(223, 248, 237, 0.4);
+
+  @media (max-width: 580px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 export const CartContainer = styled.div`
@@ -94,6 +112,10 @@ export const CartContainer = styled.div`
   justify-content: center;
   gap: 30px;
   width: 100%;
+
+  @media (max-width: 1071px) {
+    flex-direction: column;
+  }
 `
 
 export const ItemInformationCart = styled.div`
@@ -122,6 +144,10 @@ export const AllItemsContainer = styled.div`
   gap: 10px;
   padding: 20px;
   font-size: 20px;
+
+  @media (max-width: 580px) {
+    justify-content: center;
+  }
 `
 
 export const ItemText = styled.div`
@@ -129,6 +155,10 @@ export const ItemText = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+  }
 `
 
 export const ChangeItemContainer = styled.div`
@@ -138,6 +168,13 @@ export const ChangeItemContainer = styled.div`
   align-items: center;
   padding: 20px;
   width: 100%;
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: 13px;
+  }
 `
 
 export const ChangeButton = styled.button`
@@ -170,9 +207,20 @@ export const IconoSegway = styled.div`
   border-bottom: 1px solid rgba(169, 169, 169, 0.47);
 `
 
+export const IconCheck = styled(Image)`
+  @media (max-width: 500px) {
+    display: none;
+  }
+`
+
 export const ViewItemContainer = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `
 
 export const InformationItemContainer = styled.div`
@@ -191,6 +239,9 @@ export const ProductQuantityControl = styled.div`
   justify-content: space-between;
   width: 100%;
   max-width: 600px;
+
+  @media (max-width: 500px) {
+  }
 `
 
 export const QuantityContainer = styled.div`
@@ -277,6 +328,9 @@ export const EmptyCarContainer = styled.div`
   flex-direction: column;
   gap: 15px;
   justify-content: center;
+
+  @media (max-width: 500px) {
+  }
 `
 
 export const BackProductText = styled(Link)`
@@ -311,14 +365,23 @@ export const SummaryContainer = styled.div`
   height: 250px;
   width: 100%;
   padding: 20px;
+  text-align: center;
 `
 
 export const TotalPriceItem = styled.h2`
   text-align: right;
+
+  @media (max-width: 1071px) {
+    text-align: center;
+  }
 `
 
 export const TextTotalItem = styled.p`
   text-align: right;
+
+  @media (max-width: 1071px) {
+    text-align: center;
+  }
 `
 
 export const PaymentButton = styled.button`
@@ -339,6 +402,15 @@ export const PaymentButton = styled.button`
     pointer-events: none;
     opacity: 0.6;
   }
+
+  @media (max-width: 1071px) {
+    width: 500px;
+  }
+
+  @media (max-width: 650px) {
+    width: 90%;
+    border-radius: 20px;
+  }
 `
 
 export const SelectColor = styled.div`
@@ -353,6 +425,12 @@ export const ColorAvailable = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @media (max-width: 500px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 export const TitleColorsAvailable = styled.h4`
@@ -366,6 +444,11 @@ export const TarjetContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  text-align: center;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `
 
 export const TarjetIconContainer = styled.div`

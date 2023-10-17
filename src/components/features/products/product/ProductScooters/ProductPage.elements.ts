@@ -151,12 +151,10 @@ export const ProductAdded = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  background: linear-gradient(darkred, red);
-  border-radius: 20px;
-  color: white;
-  width: 195px;
-  height: 40px;
+  gap: 6px;
+  padding: 15px;
+  font-size: 20px;
+  box-shadow: 0 0 10px 10px whitesmoke;
 `
 
 export const ContactContainer = styled.button`

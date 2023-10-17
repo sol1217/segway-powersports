@@ -322,11 +322,11 @@ export const products: Product[] = [
     price: 45,
     images: [
       {
-        src: storage.src,
+        src: storagetwo.src,
         width: 300,
       },
       {
-        src: storagetwo.src,
+        src: storage.src,
         width: 300,
       },
     ],
