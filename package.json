@@ -1,0 +1,51 @@
+{
+  "name": "next-startup-project-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "g": "plop",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@formspree/react": "^2.5.1",
+    "@react-icons/all-files": "^4.1.0",
+    "@trycourier/courier": "^5.5.0",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.14",
+    "@types/react-dom": "18.2.6",
+    "dotenv": "^16.3.1",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "express": "^4.18.2",
+    "next": "13.4.7",
+    "node-fetch": "^3.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-query": "^3.39.3",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.0.5",
+    "twilio": "^4.18.1",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10",
+    "autoprefixer": "^10.4.16",
+    "husky": "^8.0.3",
+    "inquirer-fuzzy-path": "^2.3.0",
+    "plop": "^3.1.2",
+    "postcss": "^8.4.31",
+    "prettier": "^2.8.8",
+    "prettier-plugin-sort-react-imports": "^0.5.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  }
+}
