@@ -154,7 +154,6 @@ export const ProductAdded = styled.div`
   gap: 6px;
   padding: 15px;
   font-size: 20px;
-  box-shadow: 0 0 10px 10px whitesmoke;
 `
 
 export const ContactContainer = styled.button`

@@ -59,6 +59,11 @@ export const CardsContainer = styled(Link)<{ $background?: string }>`
 export const MethodsName = styled.h2`
   text-align: center;
   margin-top: 40px;
+
+  @media (max-width: 500px) {
+    color: darkred;
+    font-size: 30px;
+  }
 `
 
 export const IconContainer = styled.div`
@@ -101,6 +106,10 @@ export const DeliveryMethodContainer = styled.div`
   }
 `
 
+export const SelectMethodPayment = styled.p`
+  color: grey;
+`
+
 export const CheckDeliveryContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -136,6 +145,10 @@ export const TypeTripContainer = styled.div`
   &:first-child {
     border-bottom: 1px solid #c7c5c5;
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 export const DataDeliveryContainer = styled.form`
@@ -148,6 +161,10 @@ export const DataDeliveryContainer = styled.form`
 
   @media (min-width: 1750px) {
     align-items: center;
+  }
+
+  @media (max-width: 610px) {
+    width: 100%;
   }
 `
 
@@ -201,6 +218,10 @@ export const NameClient = styled.input`
     color: darkred;
     font-weight: bold;
   }
+
+  @media (max-width: 610px) {
+    width: 50%;
+  }
 `
 
 export const SubmitContainer = styled.div`
@@ -219,7 +240,6 @@ export const LocationContainer = styled.select`
   background-color: transparent;
   padding: 10px;
   color: darkred;
-  font-weight: bold;
 `
 
 export const SubmitButton = styled.input`
@@ -230,8 +250,12 @@ export const SubmitButton = styled.input`
   width: 150px;
   font-size: 17px;
   border-radius: 15px;
-  background-color: black;
   cursor: pointer;
+  background-color: black;
+
+  @media (max-width: 610px) {
+    margin: 0 auto;
+  }
 `
 
 export const DeliverText = styled.p`
@@ -244,7 +268,7 @@ export const ColorProductContainer = styled.div`
   flex-direction: column;
 `
 
-export const SendMessageButton = styled.button`
+export const SendMessageButton = styled(Link)`
   border: none;
   height: 46px;
   width: 120px;
@@ -293,6 +317,10 @@ export const ProductTotalContainer = styled.div`
   @media (max-width: 700px) {
     width: 100%;
   }
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 `
 
 export const ProductToBuy = styled.div`
@@ -304,6 +332,7 @@ export const ProductToBuy = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 0;
+    font-size: 14px;
   }
 `
 
@@ -311,7 +340,7 @@ export const ProductInformationWrap = styled.div`
   display: flex;
   position: relative;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 15px;
   width: 320px;
 `
 
@@ -405,11 +434,17 @@ export const CardTotalContainer = styled.div`
   align-items: center;
 
   @media (max-width: 500px) {
-    justify-content: space-evenly;
-    font-size: 14px;
     flex-direction: column;
+    align-items: start;
+    font-size: 13px;
+
     &:nth-child(2) {
       display: none;
+    }
+
+    &:last-child {
+      font-size: 16px;
+      align-items: center;
     }
   }
 `
@@ -417,4 +452,25 @@ export const CardTotalContainer = styled.div`
 export const CompletePayment = styled.h3`
   text-align: center;
   color: #db281c;
+
+  @media (max-width: 500px) {
+    color: grey;
+    font-size: 16px;
+    font-weight: 300;
+  }
+`
+
+export const MenuCart = styled.h3`
+  @media (max-width: 500px) {
+    text-align: center;
+    font-size: 30px;
+    color: darkred;
+    margin-top: 30px;
+  }
+`
+
+export const ShopCart = styled.h1`
+  @media (max-width: 500px) {
+    color: darkred;
+  }
 `

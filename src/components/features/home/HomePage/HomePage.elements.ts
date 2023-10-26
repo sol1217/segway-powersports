@@ -203,14 +203,6 @@ export const ImagesSection = styled.div`
   @media (max-width: 1330px) {
     width: 100%;
   }
-
-  @media (max-width: 1070px) {
-    width: 700px;
-  }
-
-  @media (max-width: 1000px) {
-    width: 800px;
-  }
 `
 
 export const ImagesVehicules = styled.img`

@@ -5,19 +5,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import emailjs from '@emailjs/browser'
 import { BiMailSend } from 'react-icons/bi'
-import { BsCashCoin } from 'react-icons/bs'
-import { FaMoneyBillTransfer } from 'react-icons/fa6'
-import { TbBrandCashapp } from 'react-icons/tb'
 
-import { Product } from '@types'
-import tranfers from '@assets/jpeg/transfers.jpeg'
-import icono from '@assets/png/icono-segway.png'
+import icon from '@assets/png/icono-segway.png'
 import bill from '@assets/png/pago_efectivo.png'
 import sinpeMovil from '@assets/png/sinpe-movil.png'
+import tranfers from '@assets/png/transfers.png'
 import useCart, { ProductData } from '@hooks/useCart/useCart'
 import {
   IconCar,
   IconHome,
+  MenuCart,
+  ShopCart,
   NameClient,
   CommentText,
   DeliverText,
@@ -34,14 +32,13 @@ import {
   CardsContainer,
   TotalContainer,
   CompletePayment,
-  SubmitContainer,
   CommentContainer,
   PaymentContainer,
-  LocationContainer,
   SendMessageButton,
   TypeTripContainer,
   CardTotalContainer,
   NameClientContainer,
+  SelectMethodPayment,
   PaymentCardContainer,
   CheckoutPageContainer,
   ColorProductContainer,
@@ -50,7 +47,6 @@ import {
   ProductTotalContainer,
   SelectPyamentDelivery,
   CheckDeliveryContainer,
-  MethodPaymentContainer,
   ProductInformationWrap,
   DeliveryMethodContainer,
   LocationDeliveryContainer,
@@ -66,9 +62,18 @@ export default function CheckoutPage() {
   const formDelivery = useRef<HTMLFormElement | null>(null)
   const [productDescription, setProductDescription] = useState('')
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({})
-  const [submitButtonText, setSubmitButtonText] = useState('Enviar')
   const [totalCartPriceNumber, setTotalCartPriceNumber] = useState<number>(0)
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [inputValue, setInputValue] = useState('')
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string | null>(null)
+
+  const handleInputChange = (e: any) => {
+    const value = e.target.value
+
+    const numericValue = value.replace(/\D/g, '')
+
+    setInputValue(numericValue)
+  }
 
   useEffect(() => {
     const storedSelectedColors = JSON.parse(localStorage.getItem('selectedColors') || '{}')
@@ -88,34 +93,6 @@ export default function CheckoutPage() {
     setProductDescription(description)
   }, [cart])
 
-  const sendEmail = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!formDelivery.current) {
-      console.log('Form is not available.')
-      return
-    }
-
-    setSubmitButtonText('Enviando...')
-
-    await emailjs
-      .sendForm('service_fu04b3h', 'template_0repe1p', formDelivery.current, 'eVV5LaeW7q_SV6WCE')
-      .then(
-        (result) => {
-          console.log(result.text)
-          setSubmitButtonText('Enviado')
-          setFormSubmitted(true)
-          {
-            /*location.reload() */
-          }
-        },
-        (error) => {
-          console.log(error.text)
-          setSubmitButtonText('Enviar')
-        },
-      )
-  }
-
   useEffect(() => {
     // @ts-ignore
     setCartItems(cart)
@@ -134,30 +111,54 @@ export default function CheckoutPage() {
   const handleMethodChangePayment = (method: string) => {
     setSelectedMethodPayment(method)
 
-    if (method === 'sinpe movil') {
+    if (method === 'Sinpe movil') {
       setDeliveryMethodPayment('Sinpe Movil')
-    } else if (method === 'transferencia') {
+    } else if (method === 'Transferencia') {
       setDeliveryMethodPayment('Transferencia Bancaria')
-    } else if (method === 'efectivo') {
+    } else if (method === 'Efectivo') {
       setDeliveryMethodPayment('Efectivo')
     }
+    setSelectedPaymentMethod(method)
   }
 
   useEffect(() => {
     const storedTotalCartPrice = localStorage.getItem('totalCartPrice')
-
-    const totalCartPriceNumber = storedTotalCartPrice
+    const parsedTotalCartPrice = storedTotalCartPrice
       ? parseFloat(storedTotalCartPrice.replace(/,/g, ''))
       : 0
-
-    setTotalCartPriceNumber(totalCartPriceNumber)
+    setTotalCartPriceNumber(parsedTotalCartPrice)
   }, [])
+
+  const form = useRef(null)
+
+  const sendEmail = (e: any) => {
+    e.preventDefault()
+
+    if (form.current) {
+      emailjs
+        .sendForm('service_gcm5ude', 'template_0repe1p', form.current, 'eVV5LaeW7q_SV6WCE')
+        .then(
+          (result) => {
+            console.log(result.text)
+            setFormSubmitted(true)
+          },
+          (error) => {
+            console.log(error.text)
+          },
+        )
+    }
+  }
 
   return (
     <CheckoutPageContainer>
       <PaymentContainer>
         <MethodsName>Metodos de Pago</MethodsName>
-        {formSubmitted ? (
+        <CompletePayment>
+          {formSubmitted
+            ? 'Selecciona un método de pago:'
+            : 'Por favor, Completa el formulario para acceder a los métodos de pago.'}
+        </CompletePayment>
+        {formSubmitted && (
           <PaymentCardContainer>
             <CardsContainer $background="#f3ba35" href="./payment">
               <PaymentImages src={sinpeMovil.src} width={120} height={70} alt="" />
@@ -175,21 +176,17 @@ export default function CheckoutPage() {
               <PaymentImages src={bill.src} width={100} height={55} alt="" />
             </CardsContainer>
           </PaymentCardContainer>
-        ) : (
-          <CompletePayment>
-            Por favor, Completa el formulario para acceder a los métodos de pago.
-          </CompletePayment>
         )}
 
         <IconContainer>
           <LineContainer />
-          <Image src={icono.src} width={70} height={40} alt="" />
+          <Image src={icon.src} width={70} height={40} alt="" />
           <LineContainer />
         </IconContainer>
 
         <DeliveryMethodContainer>
           <h3>Metodo de Entrega</h3>
-          <p style={{ color: 'darkgray' }}>Selecciona un metodo de Entrega</p>
+          <SelectMethodPayment>Selecciona un metodo de Entrega</SelectMethodPayment>
           <CheckDeliveryContainer>
             <TypeTripContainer>
               <div>
@@ -222,15 +219,15 @@ export default function CheckoutPage() {
         {selectedMethod === 'enviar' && (
           <LocationDeliveryContainer>
             <h2>Entrega a Domicilio</h2>
-            <DeliverText>El envío se coordina después de la compra.</DeliverText>
-            <SendMessageButton>
+            <DeliverText>El envío se coordina luego de verificar la compra.</DeliverText>
+            <SendMessageButton href="https://wa.link/xjt48l">
               <BiMailSend style={{ fontSize: '23px' }} />
               Coordinar
             </SendMessageButton>
           </LocationDeliveryContainer>
         )}
 
-        <DataDeliveryContainer ref={formDelivery} onSubmit={sendEmail}>
+        <DataDeliveryContainer ref={form} onSubmit={sendEmail}>
           <div>
             <h2>Datos de Entrega</h2>
             <DeliverText>Necesitamos esta información para coordinar la entrega</DeliverText>
@@ -248,6 +245,8 @@ export default function CheckoutPage() {
             type="text"
             name="from_telephone"
             inputMode="tel"
+            value={inputValue}
+            onChange={handleInputChange}
           />
           <DataDelivery placeholder="Dirección" type="text" name="from_location" />
           <label>Seleciona el Metodo de pago:</label>
@@ -255,9 +254,9 @@ export default function CheckoutPage() {
             name="from_methodo"
             value={selectedMethodPayment || ''}
             onChange={(e) => handleMethodChangePayment(e.target.value)}>
-            <option value="transferencia">Transferencia Bancaria</option>
-            <option value="sinpe movil">Sinpe Movil</option>
-            <option value="efectivo">Efectivo</option>
+            <option value="Transferencia">Transferencia Bancaria</option>
+            <option value="Sinpe movil">Sinpe Movil</option>
+            <option value="Efectivo">Efectivo</option>
           </SelectPyamentDelivery>
           <label>Monto Total:</label>
           <DataDelivery
@@ -280,12 +279,12 @@ export default function CheckoutPage() {
             />
           ))}
 
-          <SubmitButton type="submit" value={submitButtonText} />
+          <SubmitButton type="submit" value={formSubmitted ? 'Enviado ✔' : 'Enviar'} />
         </DataDeliveryContainer>
       </PaymentContainer>
 
       <ProductTotalContainer>
-        <h1>Carrito de Compras</h1>
+        <ShopCart>Carrito de Compras</ShopCart>
         <ProductToBuyContainer>
           {cartItems.map((product, index) => (
             <ProductToBuy key={index}>
@@ -301,7 +300,7 @@ export default function CheckoutPage() {
             </ProductToBuy>
           ))}
         </ProductToBuyContainer>
-        <h3>Menú Cart</h3>
+        <MenuCart>Menú Cart</MenuCart>
 
         <CommentContainer>
           <CommentText>Presione el botón para regresar al Carrito de Compras.</CommentText>
@@ -312,7 +311,7 @@ export default function CheckoutPage() {
 
         <TotalContainer>
           <CardTotalContainer>
-            <h3>Metodo de Envio</h3>
+            <h3>Metodo de Envio:</h3>
             <h3>{deliveryMethodText}</h3>
           </CardTotalContainer>
           <CardTotalContainer>
@@ -320,7 +319,7 @@ export default function CheckoutPage() {
             <p>Se coordina después de la compra.</p>
           </CardTotalContainer>
           <CardTotalContainer>
-            <h3>Metodo de pago</h3>
+            <h3>Metodo de pago:</h3>
             <h3>{deliveryMethodPayment}</h3>
           </CardTotalContainer>
           <CardTotalContainer>

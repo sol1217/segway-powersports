@@ -1,7 +1,7 @@
 import comfortFugleman from '@assets/jpeg/comfort-fugleman.jpeg'
 import comfortVillain from '@assets/jpeg/comfort-sx10.jpeg'
-import iluminacion from '@assets/jpeg/design-snarler.jpeg'
-import bateriabike from '@assets/jpeg/dirtyebike-batery.jpeg'
+import lightning from '@assets/jpeg/design-snarler.jpeg'
+import baterybike from '@assets/jpeg/dirtyebike-batery.jpeg'
 import at6Cuatro from '@assets/jpeg/gallery-at6-4.jpeg'
 import at6Cinco from '@assets/jpeg/gallery-at6-5.jpeg'
 import at6Seis from '@assets/jpeg/gallery-at6-6.jpeg'
@@ -29,24 +29,24 @@ import villainDos from '@assets/jpeg/gallery-villain-2.jpeg'
 import villainTres from '@assets/jpeg/gallery-villain-3.jpeg'
 import villainCuatro from '@assets/jpeg/gallery-villain-4.jpeg'
 import villainCinco from '@assets/jpeg/gallery-villain-5.jpeg'
-import terrenobike from '@assets/jpeg/land-ebike.jpeg'
-import robusto from '@assets/jpeg/light-snarler.jpeg'
+import landbike from '@assets/jpeg/land-ebike.jpeg'
+import robust from '@assets/jpeg/light-snarler.jpeg'
 import purposeFugleman from '@assets/jpeg/purpose-fugleman.jpeg'
-import diseño from '@assets/jpeg/robust-snarler.jpeg'
+import desing from '@assets/jpeg/robust-snarler.jpeg'
 import epsVillain from '@assets/jpeg/smart-villain.jpeg'
 import glCinco from '@assets/jpeg/snarler-600gl.jpeg'
 import logoSnarler from '@assets/jpeg/snarler-logo.png'
-import versatilFugleman from '@assets/jpeg/versatil-ut10.jpeg'
+import versatileFugleman from '@assets/jpeg/versatile-ut10.jpeg'
+import forceScooter from '@assets/jpg/force-scooter.jpg'
 import at6Dos from '@assets/jpg/gallery-at6-2.jpg'
 import at6Tres from '@assets/jpg/gallery-at6-3.jpg'
 import bikeTres from '@assets/jpg/gallery-bike-3.jpg'
 import bikeCinco from '@assets/jpg/gallery-bike-5.jpg'
 import panelScooter from '@assets/jpg/panel-scooter-2.jpg'
-import potenciaScooter from '@assets/jpg/potencia-scooter.jpg'
 import glTres from '@assets/jpg/segway-snarler.jpg'
 import glUno from '@assets/jpg/snarler-600gl-2.jpg'
-import suspnesionScooter from '@assets/jpg/suspension-e110s.jpg'
-import engeniervillain from '@assets/jpg/villain-design2-900x579-1.jpg'
+import suspensionScooter from '@assets/jpg/suspension-e110s.jpg'
+import engineervillain from '@assets/jpg/villain-design2-900x579-1.jpg'
 import villainSeis from '@assets/jpg/villain-nature.jpg'
 import glSeis from '@assets/png/car.png'
 import generallogo from '@assets/png/general-logo.png'
@@ -57,7 +57,7 @@ import modelfugleman from '@assets/png/model-fugleman.png'
 import modelVillain from '@assets/png/model-viilain.png'
 import modelSnarler from '@assets/png/snarler-at6-le-logo.png'
 import logoVillain from '@assets/png/villain-logo.png'
-import zonabike from '@assets/png/zone-ebike.jpeg'
+import zonebike from '@assets/png/zone-ebike.jpeg'
 import { EColors, IProduct } from '@features/products/vehicule/types'
 import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS.jpg'
 import infoEscooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-gris.png'
@@ -133,7 +133,7 @@ export const products: IProduct[] = [
           'El volante y el asiento ajustables contribuyen directamente a la máxima comodidad del conductor. El respaldo central plegable también ofrece opciones más funcionales.',
       },
       {
-        src: versatilFugleman.src,
+        src: versatileFugleman.src,
         titleFeatures: 'VERSATILIDAD',
         featuresDescription:
           'La capacidad de almacenamiento y transporte del Fugleman se ve facilitada gracias a la caja de carga trasera y su sistema basculante. Con un peso máximo de 350kgs.',
@@ -200,7 +200,7 @@ export const products: IProduct[] = [
     model: modelVillain.src,
     featuresImage: [
       {
-        src: engeniervillain.src,
+        src: engineervillain.src,
         titleFeatures: 'INGENIERÍA TODA PRUEBA',
         featuresDescription:
           'Toda la carne en el asador! Su ingeniaría demuestra no sólo una gran fiabilidad sino también una perfecta adaptación a cualquier tarea o condición del terreno.',
@@ -283,19 +283,19 @@ export const products: IProduct[] = [
     panorama: '',
     featuresImage: [
       {
-        src: iluminacion.src,
+        src: lightning.src,
         titleFeatures: 'ILUMINACIÓN LED',
         featuresDescription:
           'Con un diseño osado y radicalmente diferente, el Snarler 600GL es una verdadera fiera preparada para dominar la oscuridad de los bosques.',
       },
       {
-        src: diseño.src,
+        src: desing.src,
         titleFeatures: 'DISEÑO AGRESIVO',
         featuresDescription:
           'Se caracteriza por sus líneas suaves y fluidas que le confieren una belleza extraordinaria, y al mismo tiempo nos recuerda una posición de ataque, típica de los felinos.',
       },
       {
-        src: robusto.src,
+        src: robust.src,
         titleFeatures: 'ROBUSTEZ',
         featuresDescription:
           'Carrocería robusta y de líneas modernas que permiten una excelente conducción. Proporciona una conducción suave incluso en los terrenos más exigentes.',
@@ -362,19 +362,19 @@ export const products: IProduct[] = [
     panorama: 'https://powersports.segway.com/720/AT6S-720/ATV_S_WHITE_XR/index.html',
     featuresImage: [
       {
-        src: iluminacion.src,
+        src: lightning.src,
         titleFeatures: 'ILUMINACIÓN LED',
         featuresDescription:
           'Con un diseño osado y radicalmente diferente, el Snarler AT6 LE es una verdadera fiera preparada para dominar la oscuridad de los bosques.',
       },
       {
-        src: robusto.src,
+        src: robust.src,
         titleFeatures: 'ROBUSTEZ',
         featuresDescription:
           'Carrocería robusta y de líneas modernas que permiten una excelente conducción.',
       },
       {
-        src: diseño.src,
+        src: desing.src,
         titleFeatures: 'DISEÑO AGRESIVO',
         featuresDescription:
           'El Snarler AT6 LE  sus líneas suaves y fluidas que le confieren una belleza extraordinaria, y nos recuerda una posición de ataque, típica de los felinos.',
@@ -441,13 +441,13 @@ export const products: IProduct[] = [
     panorama: '',
     featuresImage: [
       {
-        src: potenciaScooter.src,
+        src: forceScooter.src,
         titleFeatures: 'POTENCIA',
         featuresDescription:
           'Cuenta con una potencia de 1500w para recorrer la cuidad de una manera fácil y segura.',
       },
       {
-        src: suspnesionScooter.src,
+        src: suspensionScooter.src,
         titleFeatures: 'SUSPENSIÓN DELANTERA',
         featuresDescription: 'Telescópica para tener el mayor confort posible en el día a día',
       },
@@ -518,19 +518,19 @@ export const products: IProduct[] = [
     model: logoBike.src,
     featuresImage: [
       {
-        src: terrenobike.src,
+        src: landbike.src,
         titleFeatures: 'BICICLETA DE TIERRA ELÉCTRICA',
         featuresDescription:
           'Presenta un rendimiento todoterreno superior en una carrocería compacta y ecológica. La Dirt eBike se sienta cómodamente entre las bicicletas de montaña.',
       },
       {
-        src: bateriabike.src,
+        src: baterybike.src,
         titleFeatures: 'BATERÍA DE CARGA RÁPIDA',
         featuresDescription:
           'La batería de carga rápida tarda solo 4 horas en cargarse por completo y ofrece un alcance de 74,6 millas con una sola carga. Las baterías llevarán tu aventura aún más lejos.',
       },
       {
-        src: zonabike.src,
+        src: zonebike.src,
         titleFeatures: ' ALTO RENDIMIENTO ',
         featuresDescription:
           'El rendimiento superior de la Segway Dirt eBike en un cuerpo compacto hace posible que los nuevos usuarios se sumerjan en emocionantes aventuras todoterreno.',

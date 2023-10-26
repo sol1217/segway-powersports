@@ -1,17 +1,17 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 
 import { Box } from '@core'
 import facebook from '@assets/png/facebook.png'
 import instagram from '@assets/png/instagram.png'
-import celular from '@assets/png/phone.png'
-import enviar from '@assets/png/send.png'
+import phone from '@assets/png/phone.png'
+import send from '@assets/png/send.png'
 import whatsapp from '@assets/png/whatsapp.png'
 import youtube from '@assets/png/youtube.png'
-import motorcicleta from '@assets/svg/segway-seeklogo.svg'
+import motorcycle from '@assets/svg/segway-seeklogo.svg'
 
 import {
   InfoName,
@@ -30,38 +30,59 @@ import {
 } from './Contact.elements'
 
 export default function ContactsPage() {
-  const form = useRef<HTMLFormElement | null>(null)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [inputValue, setInputValue] = useState('')
+  const [buttonText, setButtonText] = useState('Enviar')
 
-  const sendEmail = async (e: React.FormEvent) => {
+  const handleInputChange = (e: any) => {
+    const value = e.target.value
+    const numericValue = value.replace(/\D/g, '')
+    setInputValue(numericValue)
+  }
+
+  const formMessage = useRef(null)
+
+  const sendEmail = (e: any) => {
     e.preventDefault()
 
-    if (!form.current) {
-      console.log('Form is not available.')
-      return
+    if (formMessage.current) {
+      emailjs
+        .sendForm('service_fu04b3h', 'template_5b6oxzn', formMessage.current, 'eVV5LaeW7q_SV6WCE')
+        .then(
+          (result) => {
+            console.log(result.text)
+            setFormSubmitted(true)
+            setButtonText('Enviado')
+            setTimeout(() => {
+              window.location.reload()
+            }, 2000)
+          },
+          (error) => {
+            console.log(error.text)
+          },
+        )
     }
-
-    await emailjs
-      .sendForm('service_et7hfpy', 'template_97zjhuj', form.current, 'eVV5LaeW7q_SV6WCE')
-      .then(
-        (result) => {
-          console.log(result.text)
-          location.reload()
-        },
-        (error) => {
-          console.log(error.text)
-        },
-      )
   }
 
   return (
     <ContactMainContainer>
       <ContactContainer>
-        <FormSection ref={form} onSubmit={sendEmail}>
+        <FormSection ref={formMessage} onSubmit={sendEmail}>
           <SendMessage>Envía un mensaje</SendMessage>
 
-          <ContactInput required placeholder="Nombre" type="text" name="user_name" />
-          <ContactInput placeholder="Apellidos" type="text" name="user_last" />
-          <ContactInput placeholder="Teléfono" type="number" name="user_phone" />
+          <ContactInput required placeholder="Nombre Completo" type="text" name="user_name" />
+          <ContactInput placeholder="Asunto" type="text" name="user_issue" />
+          <ContactInput
+            required
+            maxLength={9}
+            minLength={8}
+            placeholder="Teléfono"
+            type="text"
+            inputMode="tel"
+            name="user_cellphone"
+            value={inputValue}
+            onChange={handleInputChange}
+          />
           <ContactInput required placeholder="Email" type="email" name="user_email" />
 
           <MessageText
@@ -71,9 +92,9 @@ export default function ContactsPage() {
             name="user_message"
           />
 
-          <SendButton value="Send">
-            <Image src={enviar.src} width={20} height={20} alt="" />
-            Enviar
+          <SendButton type="submit" value="Send">
+            <Image src={send.src} width={20} height={20} alt="" />
+            {buttonText}
           </SendButton>
         </FormSection>
 
@@ -83,7 +104,7 @@ export default function ContactsPage() {
               <InfoName>Información de Contacto</InfoName>
 
               <InfoSpan>
-                <Image alt="" src={celular.src} width={50} height={50} />
+                <Image alt="" src={phone.src} width={50} height={50} />
                 <p>+506 8846-6680 </p>
               </InfoSpan>
 
@@ -101,7 +122,7 @@ export default function ContactsPage() {
                   </a>
                 </SocialMedias>
                 <SocialMedias>
-                  <a href="https://wa.link/u2iq52">
+                  <a href="https://wa.link/s2ryli">
                     <Image src={whatsapp.src} width={40} height={40} alt="" />
                   </a>
                 </SocialMedias>
@@ -114,7 +135,7 @@ export default function ContactsPage() {
             </Box>
 
             <Box>
-              <IconMotorcicle src={motorcicleta.src} width={220} height={220} />
+              <IconMotorcicle src={motorcycle.src} width={220} height={220} />
             </Box>
           </InfoSection>
         </Box>

@@ -91,7 +91,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
             </ColorSection>
             <ContactContainer>
               <img src={whatsapp.src} width={20} />
-              <a href="https://wa.link/u2iq52">Cotizar</a>
+              <a href="https://wa.link/j1y335">Cotizar</a>
             </ContactContainer>
           </ColorsContainer>
           <DisplayProductContainer>

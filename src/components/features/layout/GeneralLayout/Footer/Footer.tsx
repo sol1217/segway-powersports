@@ -66,7 +66,7 @@ export default function Footer() {
 
           <LinkSection>
             <Image src={whatsapp.src} width={20} height={20} alt="" />
-            <a href="https://wa.link/u2iq52">WHATSAPP</a>
+            <a href="https://wa.link/s2ryli">WHATSAPP</a>
           </LinkSection>
         </LinkSectionWrap>
       </TopFooterSectionContainer>

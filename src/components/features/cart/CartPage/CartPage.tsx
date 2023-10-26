@@ -305,7 +305,7 @@ export default function CartPage({ product }: { product: ProductData }) {
                 <h4>({productCount || 0})</h4>
               </PaymentButton>
             )}
-            <p>Recuerda que el envío se coordina después de haber completado la compra.</p>
+            <p>Recuerda que el envío se coordina después de verificar la compra.</p>
           </SummaryContainer>
 
           <TarjetContainer>

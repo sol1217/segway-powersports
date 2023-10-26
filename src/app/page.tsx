@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Segway Powersports Costa Rica',
   description:
     'Descubre todos nuestros ATVs, UTVs y SSVs y toma el control para afrontar cualquier desafío. ¡FEAR NO PLACE!',
-  keywords: ['Powersports', 'Segway', 'Snarler'],
+  keywords: ['Motos eléctricas', 'Segway', 'Scooters', 'Cuadraciclos'],
 }
 
 export default function Home() {

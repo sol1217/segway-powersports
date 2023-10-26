@@ -1,5 +1,5 @@
 import { Product, ProductsColors } from '@types'
-import bateriaGt1 from '@assets/jpeg/batery-gta1.jpeg'
+import bateryGt1 from '@assets/jpeg/batery-gta1.jpeg'
 import a6Uno from '@assets/jpeg/gallery-A6-1.jpeg'
 import a6Dos from '@assets/jpeg/gallery-A6-2.jpeg'
 import sensorA6 from '@assets/jpeg/gallery-A6-3.jpeg'
@@ -25,26 +25,26 @@ import gt1Uno from '@assets/jpeg/gallery-gta1-1.jpeg'
 import gtTres from '@assets/jpeg/gallery-gta1-3.jpeg'
 import gt1Seis from '@assets/jpeg/gallery-gta2-3.jpeg'
 import gt1Cinco from '@assets/jpeg/gallery-gta2-4.jpeg'
-import modosE8 from '@assets/jpeg/mode-e8.jpeg'
-import estructuraC8 from '@assets/jpeg/structure-c8.jpeg'
-import aspectoC8 from '@assets/jpg/aspect-c8.jpg'
-import bateriaA6 from '@assets/jpg/batery-a6.jpg'
-import bateriaC20 from '@assets/jpg/batery-c20.jpg'
-import palancaC20 from '@assets/jpg/c20- lever.jpg'
-import neumaticosC20 from '@assets/jpg/c20-tires.jpg'
-import frenadoC8 from '@assets/jpg/c8-braking.jpg'
+import modesE8 from '@assets/jpeg/mode-e8.jpeg'
+import structureC8 from '@assets/jpeg/structure-c8.jpeg'
+import aspectC8 from '@assets/jpg/aspect-c8.jpg'
+import bateryA6 from '@assets/jpg/batery-a6.jpg'
+import bateryC20 from '@assets/jpg/batery-c20.jpg'
+import leverC20 from '@assets/jpg/c20- lever.jpg'
+import tiresC20 from '@assets/jpg/c20-tires.jpg'
+import brakingC8 from '@assets/jpg/c8-braking.jpg'
 import comodidaGt1 from '@assets/jpg/comfort-gta1.jpg'
-import funcionGt2 from '@assets/jpg/function-gta2.jpg'
+import engineGt2 from '@assets/jpg/engine-gta2.jpg'
+import functionGt2 from '@assets/jpg/function-gta2.jpg'
 import c20Tres from '@assets/jpg/gallery-C20-3.jpg'
 import c20Cuatro from '@assets/jpg/gallery-C20-4.jpg'
 import c20Seis from '@assets/jpg/gallery-c20-6.jpg'
 import c8Uno from '@assets/jpg/gallery-C8-1.jpg'
 import gt1Siete from '@assets/jpg/gallery-gt2-6.jpg'
-import motorGt2 from '@assets/jpg/motor-gta2.jpg'
-import neumaticosA6 from '@assets/jpg/pneumatic-a6.jpg'
-import seguridadE8 from '@assets/jpg/safety-e8.jpg'
-import seguridadGt1 from '@assets/jpg/safety-gta1.jpg'
-import acelerarE8 from '@assets/jpg/speed-up-e8.jpg'
+import tiresA6 from '@assets/jpg/pneumatic-a6.jpg'
+import securityE8 from '@assets/jpg/safety-e8.jpg'
+import securityGt1 from '@assets/jpg/safety-gta1.jpg'
+import speedUpE8 from '@assets/jpg/speed-up-e8.jpg'
 import c8Product from '@assets/png/C8-Product.png'
 import e8Product from '@assets/png/e8-product.png'
 import a6Tres from '@assets/png/gallery-A6-new-3.png'
@@ -93,19 +93,19 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: bateriaC20.src,
+        src: bateryC20.src,
         titleFeatures: 'Alto rendimiento de la batería',
         featuresDescription:
           'El paquete de baterías de iones de litio, el controlador y el BMS,Con un tiempo de carga de hasta 5 horas, ZING tiene una autonomía de hasta 20 km. ',
       },
       {
-        src: neumaticosC20.src,
+        src: tiresC20.src,
         titleFeatures: 'Neumáticos de caucho macizo ',
         featuresDescription:
           'Los neumáticos de goma de alta elasticidad están diseñados para ser resistentes al desgaste y la banda de rodadura para mejorar el agarre.',
       },
       {
-        src: palancaC20.src,
+        src: leverC20.src,
         titleFeatures: 'Palancas de goma termoplástica (TPR)',
         featuresDescription:
           'Las palancas están hechas de material TPR (caucho termoplástico) fáciles de limpiar y mantener, cómodos y antideslizantes. ',
@@ -174,19 +174,19 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: frenadoC8.src,
+        src: brakingC8.src,
         titleFeatures: 'Sistema de frenado mecánico',
         featuresDescription:
           'Utilizando un sistema de frenado mecánico duradero y confiable con sensor incorporado, el scooter puede cortar la energía inmediatamente cuando se detecta la acción de frenado. ',
       },
       {
-        src: aspectoC8.src,
+        src: aspectC8.src,
         titleFeatures: 'Aspecto impresionante y ligero',
         featuresDescription:
           'Carrocería ligera, combinaciones de colores moderna y un diseño dinámico. los niños de 6 a 12 años con una altura de entre 115-145 cm pueden montar la C8, (resistencia al agua).',
       },
       {
-        src: estructuraC8.src,
+        src: structureC8.src,
         titleFeatures: 'Una estructura triangular y estable',
         featuresDescription:
           'Hecho de acero de alta resistencia, el marco es estable y duradero con una carga estática de hasta 661, 4 libras (300 kg). El cuadro ha superado una rigurosa prueba de durabilidad.',
@@ -255,13 +255,13 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: seguridadGt1.src,
+        src: securityGt1.src,
         titleFeatures: 'Bateria',
         featuresDescription:
           'Segway diseñó una batería de alto rendimiento de 1008 Wh con un sistema de enfriamiento multicapa Heat Flux para equilibrar el calor.',
       },
       {
-        src: bateriaGt1.src,
+        src: bateryGt1.src,
         titleFeatures: 'Seguridad',
         featuresDescription:
           'Equipado con un faro LED de 900 lúmenes, luz diurna LED, luz de giro delantera y trasera y luces ambientales traseras. Los conductores pueden elegir entre 11 modos de iluminación. ',
@@ -338,19 +338,19 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: acelerarE8.src,
+        src: speedUpE8.src,
         titleFeatures: 'Aceleración sensible (Acelerador de pulgar)',
         featuresDescription:
           'El acelerador de pulgar tiene una resistencia y capacidad de respuesta moderadas, según el modo de conducción. Esto hace que el control de la velocidad de conducción sea cómodo para los usuarios',
       },
       {
-        src: modosE8.src,
+        src: modesE8.src,
         titleFeatures: 'Fácil conmutador con un clic',
         featuresDescription:
           'El botón de energía también tiene la función de conmutar entre los tres modos de conducción: turbo, crucero y seguro*. Después de arrancar, el conductor solo tiene que hacer clic en el botón.',
       },
       {
-        src: seguridadE8.src,
+        src: securityE8.src,
         titleFeatures: 'Conducir con seguridad con el Adhesivo',
         featuresDescription:
           'El adhesivo reflectante 3M está instalado sobre el guardabarros. Posee una elevada reflectancia, un amplio ángulo de reflexión y una fuerte adherencia, para proveer seguridad y protección.',
@@ -418,13 +418,13 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: bateriaA6.src,
+        src: bateryA6.src,
         titleFeatures: 'Diseño de batería compacta',
         featuresDescription:
           'Con una sola carga de aproximadamente 3 horas, el ZING A6 puede durar hasta 5 km. El ZING A6 contiene indicadores de batería, permitirán saber cuándo es el momento de recargar',
       },
       {
-        src: neumaticosA6.src,
+        src: tiresA6.src,
         titleFeatures: 'Neumáticos resistentes al desgaste',
         featuresDescription:
           'El patinete ZING A6 viene con 2 tipos diferentes de neumáticos: un neumático delantero de poliuretano de 5 pulgadas y un neumático trasero de goma sólida de 4 pulgadas. ',
@@ -499,13 +499,13 @@ export const products: Product[] = [
     ],
     featuresImage: [
       {
-        src: funcionGt2.src,
+        src: functionGt2.src,
         titleFeatures: 'Funcionalidad extraordinaria',
         featuresDescription:
           'Segway diseñó una batería de alto rendimiento de 1008 Wh con un sistema de enfriamiento multicapa Heat Flux para equilibrar el calor',
       },
       {
-        src: motorGt2.src,
+        src: engineGt2.src,
         titleFeatures: 'Nuevos GT Super Scooters',
         featuresDescription:
           'Motor de potencia de 3000 y 6000 W puede alcanzar una velocidad máxima de 37.3 mph y acelerar de 0 a 30 mph en 7.5 segundos alcance de hasta 43.5 millas carga máxima de 331 libras.',

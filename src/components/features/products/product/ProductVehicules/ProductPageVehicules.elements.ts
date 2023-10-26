@@ -145,6 +145,11 @@ export const ColorImages = styled.img`
   &:active {
     transform: scale(0.01);
   }
+
+  @media (max-width: 500px) {
+    width: 26px;
+    height: 26px;
+  }
 `
 
 export const ProductImage = styled.img`
@@ -177,7 +182,7 @@ export const ProductImage = styled.img`
 
   @media (max-width: 470px) {
     top: 49%;
-    left: 46%;
+    left: 50%;
   }
 `
 

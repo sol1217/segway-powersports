@@ -308,11 +308,13 @@ export const ContactSectionWrap = styled.div`
 `
 
 export const ContactButton = styled.button`
-  background-color: transparent;
+  background-color: white;
   height: 60px;
   width: 230px;
-  color: white;
   font-size: 22px;
-  box-shadow: 0 0 6px 0;
   cursor: pointer;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 6px 0 whitesmoke;
 `

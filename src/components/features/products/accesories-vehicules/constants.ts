@@ -100,6 +100,7 @@ export const products: Product[] = [
       'Fuerte y duradero.',
       'Color: Negro y Gris.',
       'Material: plástico.',
+      'Precio: $510',
     ],
     galleryImages: [
       {
@@ -137,7 +138,7 @@ export const products: Product[] = [
   {
     name: 'AT6 L SKID PLATES',
     alias: 'at6-l-skid-plates',
-    property: 'Peso 4.38Kg',
+    property: '4.38Kg',
     price: 655,
     images: [
       {
@@ -160,6 +161,7 @@ export const products: Product[] = [
       'Aluminum material.',
       'Superficie anodizada.',
       'Peso 4,38Kg.',
+      'Precio: $655',
     ],
     galleryImages: [
       {
@@ -197,7 +199,7 @@ export const products: Product[] = [
   {
     name: 'AT6 S SKID PLATES',
     alias: 'at6-s-skip',
-    property: 'Peso 4.08Kg',
+    property: '4.08Kg',
     price: 598,
     images: [
       {
@@ -220,6 +222,7 @@ export const products: Product[] = [
       'Aluminum material.',
       'Superficie anodizada.',
       'Peso 4,08Kg.',
+      'Precio: $598',
     ],
     galleryImages: [
       {
@@ -257,7 +260,7 @@ export const products: Product[] = [
   {
     name: 'ALUMINUM ARM GUARD ASSY',
     alias: 'aluminum-arm-guard',
-    property: 'Peso 1.33Kg',
+    property: '1.33Kg',
     price: 255,
     images: [
       {
@@ -280,6 +283,7 @@ export const products: Product[] = [
       'Aluminum material.',
       'Superficie anodizada.',
       'Peso 1,33Kg.',
+      'Precio: $255',
     ],
     galleryImages: [
       {
@@ -339,6 +343,7 @@ export const products: Product[] = [
       'Aluminum material.',
       'Superficie anodizada.',
       '104 Litros.',
+      'Precio: $510',
     ],
     galleryImages: [
       {
@@ -376,7 +381,7 @@ export const products: Product[] = [
   {
     name: 'SNARLER FRONT BUMPER KIT',
     alias: 'front-bumper-kit',
-    property: 'Peso 6.13Kg',
+    property: '6.13Kg',
     colorsAvailable: [
       ProductsColors.Green,
       ProductsColors.Blue,
@@ -409,6 +414,7 @@ export const products: Product[] = [
       'Superficie recubierta de pintura.',
       'Peso 6,13Kg.',
       'Colores: Azul, Rojo, Negro, Verde.',
+      'Precio: $147',
     ],
     galleryImages: [
       {
@@ -446,7 +452,7 @@ export const products: Product[] = [
   {
     name: 'GENERATOR SGW2700i',
     alias: 'generatot-sgw2700i',
-    property: 'Peso 19.5kg',
+    property: '19.5kg',
     price: 1.465,
     images: [
       {
@@ -469,6 +475,7 @@ export const products: Product[] = [
       'Función de reinicio',
       'Menores emisiones',
       'Capó para una mejor refrigeración',
+      'Precio: $1.465',
     ],
     galleryImages: [
       {

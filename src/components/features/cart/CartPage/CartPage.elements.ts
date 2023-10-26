@@ -178,7 +178,6 @@ export const ChangeItemContainer = styled.div`
 `
 
 export const ChangeButton = styled.button`
-  border-color: #000;
   background-color: #000;
   color: white;
   width: 90px;
@@ -188,6 +187,7 @@ export const ChangeButton = styled.button`
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  border: none;
 `
 
 export const ProductCartContainer = styled.div`
@@ -330,6 +330,7 @@ export const EmptyCarContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 500px) {
+    text-align: center;
   }
 `
 
@@ -348,6 +349,7 @@ export const BackProductsButton = styled.button`
   color: white;
   font-size: 20px;
   cursor: pointer;
+  border: none;
 `
 
 export const PaymentCartContainer = styled.div`
@@ -388,7 +390,7 @@ export const PaymentButton = styled.button`
   border: none;
   background-color: black;
   width: 90%;
-  height: 100px;
+  padding: 15px;
   font-size: 20px;
   color: white;
   margin: 0 auto;
@@ -396,6 +398,7 @@ export const PaymentButton = styled.button`
   justify-content: center;
   align-items: center;
   gap: 6px;
+  border-radius: 5px;
 
   &.disabled-button {
     cursor: not-allowed;
@@ -416,7 +419,7 @@ export const PaymentButton = styled.button`
 export const SelectColor = styled.div`
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 80px);
+  grid-template-columns: repeat(2, 100px);
   gap: 5px;
 `
 
