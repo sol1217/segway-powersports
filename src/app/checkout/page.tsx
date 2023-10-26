@@ -4,6 +4,6 @@ export const metadata = {
   title: 'Segway Powersports Checkout',
   description: 'Segway Powersports Checkout',
 }
-export default function Contacts() {
+export default function Checkout() {
   return <CheckoutPage />
 }

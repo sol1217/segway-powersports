@@ -16,17 +16,14 @@ export const VehiculeContainer = styled.div`
 export const ImageProduct = styled.img`
   transform: translateY(0);
   transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease;
+  width: 250px;
 
-  @media (max-width: 780px) {
-    width: 80%;
+  @media (max-width: 570px) {
+    width: 220px;
   }
 
   @media (max-width: 530px) {
-    width: 70%;
-  }
-
-  @media (max-width: 430px) {
-    width: 78%;
+    width: 250px;
   }
 `
 

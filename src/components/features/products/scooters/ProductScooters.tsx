@@ -6,12 +6,10 @@ import { ProductScootersContainer } from './ProductScooters.elements'
 
 export const ProductScooters = () => {
   return (
-    <>
-      <ProductScootersContainer>
-        {products.map((product, index) => (
-          <ProductItem product={product} key={index} />
-        ))}
-      </ProductScootersContainer>
-    </>
+    <ProductScootersContainer>
+      {products.map((product, index) => (
+        <ProductItem product={product} key={index} />
+      ))}
+    </ProductScootersContainer>
   )
 }

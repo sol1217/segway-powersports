@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import styled from 'styled-components'
 
 export const ProductPageContainer = styled.div`
@@ -92,7 +91,7 @@ export const FeaturesProductContainer = styled.div`
     padding: 20px;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 720px) {
     font-size: 15px;
   }
 `
@@ -180,6 +179,12 @@ export const ProductImage = styled.img`
     left: 46%;
   }
 
+  @media (max-width: 500px) {
+    width: 50%;
+    top: 40%;
+    left: 50%;
+  }
+
   @media (max-width: 470px) {
     top: 49%;
     left: 50%;
@@ -265,7 +270,9 @@ export const DesignFeatures = styled.div`
 `
 
 export const ImageFeatures = styled.img`
-  border-radius: 20px;
+  @media (max-width: 750px) {
+    width: 70%;
+  }
 `
 
 export const DesignFeaturesItems = styled.div`
@@ -283,9 +290,12 @@ export const DesignFeaturesItems = styled.div`
     width: 50%;
   }
 
-  @media (max-width: 550px) {
-    width: 70%;
-    height: 400px;
+  @media (max-width: 750px) {
+    width: 60%;
+  }
+
+  @media (max-width: 580px) {
+    width: 80%;
   }
 `
 
@@ -294,6 +304,10 @@ export const TextInformation = styled.p`
 
   @media (max-width: 555px) {
     font-size: 18px;
+  }
+
+  @media (max-width: 555px) {
+    font-size: 15px;
   }
 `
 export const TitleFeatures = styled.h2`

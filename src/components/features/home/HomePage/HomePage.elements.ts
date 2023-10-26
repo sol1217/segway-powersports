@@ -10,29 +10,34 @@ export const VideoContainer = styled.div`
   position: relative;
 `
 
-export const MechanicsMainConatiner = styled.div`
+export const MechanicsMainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 800px;
 `
 
 export const MechanicsContainer = styled.div`
   background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  width: 60%;
+  height: 800px;
   padding: 30px;
-  gap: 30px;
 
   @media (min-width: 1800px) {
     max-width: 55%;
     padding: 10px;
   }
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    height: 800px;
+  @media (max-width: 1100px) {
+    width: 80%;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
   }
 `
 
@@ -43,12 +48,8 @@ export const TitleMechanicsContainer = styled.div`
   flex-direction: column;
   gap: 20px;
   height: 70%;
-  width: 30%;
-
-  @media (max-width: 1000px) {
-    width: 80%;
-    text-align: center;
-  }
+  width: 80%;
+  text-align: center;
 `
 
 export const TitleContainer = styled.div`

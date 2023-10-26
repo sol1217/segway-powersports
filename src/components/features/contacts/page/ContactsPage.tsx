@@ -2,9 +2,9 @@
 
 import React, { useRef, useState } from 'react'
 import Image from 'next/image'
-import emailjs from '@emailjs/browser'
 
 import { Box } from '@core'
+import emailjs from '@emailjs/browser'
 import facebook from '@assets/png/facebook.png'
 import instagram from '@assets/png/instagram.png'
 import phone from '@assets/png/phone.png'
@@ -26,7 +26,6 @@ import {
   IconMotorcicle,
   ContactContainer,
   ContactMainContainer,
-  FormSectionContainer,
 } from './Contact.elements'
 
 export default function ContactsPage() {

@@ -15,7 +15,6 @@ import {
   CashText,
   CashButton,
   CommentText,
-  DetailsText,
   SendPayment,
   ChangeButton,
   ChooseMethod,

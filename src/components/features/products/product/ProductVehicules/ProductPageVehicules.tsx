@@ -20,6 +20,7 @@ import {
   ColorSection,
   ProductImage,
   DataSheetLink,
+  ImageFeatures,
   ImagesGallery,
   TitleFeatures,
   DesignFeatures,
@@ -109,7 +110,7 @@ export const ProductPageVehicules = ({ productName, productInfo }: ProductPagePr
         <DesignFeatures>
           {productInfo?.featuresImage?.map(({ src, titleFeatures, featuresDescription }, i) => (
             <DesignFeaturesItems key={i}>
-              <img src={src} width="100%" />
+              <ImageFeatures src={src} width="100%" />
               <TitleFeatures>{titleFeatures}</TitleFeatures>
               <TextInformation>{featuresDescription}</TextInformation>
             </DesignFeaturesItems>

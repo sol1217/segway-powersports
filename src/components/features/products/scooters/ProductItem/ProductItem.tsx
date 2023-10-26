@@ -23,26 +23,24 @@ export const ProductItem = ({ product }: ProductScooterProps) => {
     setCurrentImage((prevImage) => (prevImage - 1 + product.images.length) % product.images.length)
   }
   return (
-    <>
-      <ScooterContainer>
-        <h4>{product.name}</h4>
-        <ImagesContainer>
-          <PrevButton onClick={prevImage}>&lt;</PrevButton>
-          <Link href={`/products/scooters/${product.alias}`}>
-            <ChangeImage
-              src={product.images[currentImage].src}
-              width={product.images[currentImage].width}
-            />
-          </Link>
-          <NextButton onClick={nextImage}>&gt;</NextButton>
-        </ImagesContainer>
-        <SeeInformationContainer>
-          <p>${product.price}</p>
-          <SeeInformationButton href={`/products/scooters/${product.alias}`}>
-            Ver Información
-          </SeeInformationButton>
-        </SeeInformationContainer>
-      </ScooterContainer>
-    </>
+    <ScooterContainer>
+      <h4>{product.name}</h4>
+      <ImagesContainer>
+        <PrevButton onClick={prevImage}>&lt;</PrevButton>
+        <Link href={`/products/scooters/${product.alias}`}>
+          <ChangeImage
+            src={product.images[currentImage].src}
+            width={product.images[currentImage].width}
+          />
+        </Link>
+        <NextButton onClick={nextImage}>&gt;</NextButton>
+      </ImagesContainer>
+      <SeeInformationContainer>
+        <p>${product.price}</p>
+        <SeeInformationButton href={`/products/scooters/${product.alias}`}>
+          Ver Información
+        </SeeInformationButton>
+      </SeeInformationContainer>
+    </ScooterContainer>
   )
 }

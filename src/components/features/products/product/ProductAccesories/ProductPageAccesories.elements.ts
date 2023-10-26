@@ -30,14 +30,14 @@ export const NameProduct = styled.h1`
   }
 `
 
-export const ViewProductContainer = styled.div`
+export const ViewContainer = styled.div`
   height: 80%;
   width: 100%;
   background: white;
   color: black;
 `
 
-export const NameModel = styled.div`
+export const NameModelProduct = styled.div`
   background: black;
   width: 100%;
   text-align: center;

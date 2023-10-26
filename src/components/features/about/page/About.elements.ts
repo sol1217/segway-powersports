@@ -39,11 +39,18 @@ export const LogoNameContainer = styled.div`
   @media (max-width: 820px) {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+  }
 `
 
 export const TextName = styled.h1`
   @media (max-width: 470px) {
     font-size: 25px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 18px;
   }
 `
 
@@ -65,6 +72,10 @@ export const LogoImage = styled(Image)`
   @media (max-width: 820px) {
     width: 85%;
   }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 export const InformationCompanyContainer = styled.div`
@@ -77,6 +88,10 @@ export const InformationCompanyContainer = styled.div`
 
   @media (min-width: 1800px) {
     width: 50%;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 18px;
   }
 `
 
@@ -115,18 +130,19 @@ export const ImageInformation = styled(Image)`
     transform: scale(1.05);
   }
 
-  @media (max-width: 995px) {
+  @media (max-width: 1100px) {
     width: 500px;
     height: 400px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 580px) {
     height: 300px;
-    width: 100%;
+    width: 400px;
   }
 
-  @media (max-width: 400px) {
-    height: 220px;
+  @media (max-width: 450px) {
+    width: 300px;
+    height: 250px;
   }
 `
 
@@ -148,8 +164,12 @@ export const InformationCompany = styled.div`
   align-items: center;
   gap: 30px;
 
-  @media (max-width: 900px) {
+  @media (max-width: 960px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 500px) {
+    gap: 0;
   }
 `
 
@@ -162,10 +182,16 @@ export const InformationCompanyText = styled.div`
   border-radius: 10px;
   border: 1px solid;
 
+  @media (max-width: 960px) {
+    width: 500px;
+  }
+
   @media (max-width: 630px) {
-    height: 60%;
-    width: 100%;
-    min-width: 300px;
+    width: 95%;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 14px;
   }
 `
 
@@ -173,19 +199,34 @@ export const TitleContainer = styled.div`
   border-bottom: 2px solid darkred;
   padding: 0px 0px 15px 0px;
   font-size: 18px;
-  font-family: Fjalla One;
   text-align: center;
   line-height: 35px;
   letter-spacing: 15px;
   font-weight: 500 !important;
   font-style: normal;
   text-transform: uppercase;
+
+  @media (max-width: 500px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 13px;
+  }
 `
 
 export const InformationText = styled.p`
   text-align: center;
   font-size: 18px;
   padding-top: 20px;
+
+  @media (max-width: 1100px) {
+    text-align: left;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
 `
 
 export const SloganContainer = styled.div`
@@ -286,6 +327,10 @@ export const ContactText = styled.div`
   @media (max-width: 400px) {
     font-size: 14px;
   }
+
+  @media (max-width: 1100px) {
+    width: 60%;
+  }
 `
 
 export const ContactSectionWrap = styled.div`
@@ -298,12 +343,13 @@ export const ContactSectionWrap = styled.div`
   padding: 20px;
   font-size: 20px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     flex-direction: column;
+    gap: 20px;
   }
 
-  @media (max-width: 800px) {
-    gap: 20px;
+  @media (max-width: 630px) {
+    height: 200px;
   }
 `
 
@@ -315,6 +361,5 @@ export const ContactButton = styled.button`
   cursor: pointer;
   color: black;
   border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 6px 0 whitesmoke;
+  border-radius: 15px;
 `

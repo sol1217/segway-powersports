@@ -29,12 +29,6 @@ export const ContactContainer = styled.div`
   }
 `
 
-export const FormSectionContainer = styled.div`
-  border: 1px solid;
-  flex: 1 1 0;
-  border-radius: 20px 0 0 20px;
-`
-
 export const FormSection = styled.form`
   display: flex;
   flex-direction: column;

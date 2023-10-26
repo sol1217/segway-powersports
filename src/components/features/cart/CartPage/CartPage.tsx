@@ -12,7 +12,6 @@ import bancoPopular from '@assets/png/bp.png'
 import pay from '@assets/png/candado.png'
 import carts from '@assets/png/cart.png'
 import check from '@assets/png/cheque.png'
-import gray from '@assets/png/gray.png'
 import icono from '@assets/png/icono-segway.png'
 import useCart, { ProductData } from '@hooks/useCart/useCart'
 import {
@@ -63,7 +62,7 @@ import {
   DeliveryLocationContainer,
 } from '@features/cart/CartPage/CartPage.elements'
 
-export default function CartPage({ product }: { product: ProductData }) {
+export default function CartPage({ product }: { product?: ProductData }) {
   const [cartItems, setCartItems] = useState([] as ProductData[])
   const [totalPrice, setTotalPrice] = useState<number>(0)
   const [quantity, setQuantity] = useState<number[]>([])

@@ -4,17 +4,16 @@ import React, { useState } from 'react'
 import { FaCheck, FaCheckCircle } from 'react-icons/fa'
 import { PiShoppingCartBold } from 'react-icons/pi'
 
-import whatsapp from '@assets/png/icons-whatsapp.png'
 import useCart from '@hooks/useCart/useCart'
 import { ProductAdded } from '@features/products/product/ProductScooters/ProductPage.elements'
 
 import { ProductPageProps } from './ProductPageAccesorie.types'
 import {
-  NameModel,
   NameProduct,
   ImageProduct,
   ImagesGallery,
   TitleFeatures,
+  ViewContainer,
   ContactSection,
   DesignFeatures,
   ImagesFeatures,
@@ -22,11 +21,11 @@ import {
   TextInformation,
   CatalogueSection,
   ContactContainer,
+  NameModelProduct,
   CatalogueContainer,
   DescriptionSection,
   DesignFeaturesItems,
   ProductPageContainer,
-  ViewProductContainer,
   FeaturesTextContainer,
   ImagesGalleryContainer,
   ImagesSectionContainer,
@@ -65,10 +64,10 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
         />
       </div>
 
-      <ViewProductContainer>
-        <NameModel>
+      <ViewContainer>
+        <NameModelProduct>
           <img src={productInfo?.logo} />
-        </NameModel>
+        </NameModelProduct>
 
         <FeaturesProductContainer>
           <ImageProduct src={productInfo?.picture} />
@@ -96,7 +95,7 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
             </ContactContainer>
           )}
         </ContactSection>
-      </ViewProductContainer>
+      </ViewContainer>
 
       <DesignFeaturesContainer>
         <TitleFeaturesContainer>Características de Diseño</TitleFeaturesContainer>

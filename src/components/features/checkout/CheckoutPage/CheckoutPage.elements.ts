@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { AiTwotoneDelete } from 'react-icons/ai'
 import { TbHomeCheck } from 'react-icons/tb'
 import { TbTruckDelivery } from 'react-icons/tb'
 
@@ -120,20 +119,6 @@ export const CheckDeliveryContainer = styled.div`
   width: 100%;
 `
 
-export const MethodPaymentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 23px;
-  height: 100%;
-  padding: 20px;
-  border-bottom: 1px solid #c7c5c5;
-
-  &:nth-child(3) {
-    border-bottom: none;
-  }
-`
-
 export const TypeTripContainer = styled.div`
   display: flex;
   align-items: center;
@@ -222,24 +207,6 @@ export const NameClient = styled.input`
   @media (max-width: 610px) {
     width: 50%;
   }
-`
-
-export const SubmitContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-`
-
-export const LocationContainer = styled.select`
-  height: 55px;
-  width: 120px;
-  border-radius: 15px;
-  font-weight: bold;
-  border: 3px solid darkred;
-  background-color: transparent;
-  padding: 10px;
-  color: darkred;
 `
 
 export const SubmitButton = styled.input`

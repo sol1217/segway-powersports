@@ -26,13 +26,6 @@ export const TopFooterSectionContainer = styled.div`
   }
 `
 
-export const CreatorContainer = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-`
-
 export const TitleText = styled.h5`
   color: red;
 `

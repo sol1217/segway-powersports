@@ -29,39 +29,37 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
     setCurrentImage((prevIndex) => (prevIndex === 0 ? imagesPhone.length - 1 : prevIndex - 1))
   }
   return (
-    <>
-      <PhoneCarouselContainer>
-        <AppContainer>
-          <TitleAppContainer>
-            <h4>
-              POR MEDIO DE LA APLICACIÓN PODRÁS ACTIVAR Y DESBLOQUEAR EL VEHÍCULO DE FORMA REMOTA.
-            </h4>
-          </TitleAppContainer>
-          <p>
-            Revisa en tiempo real todos los datos del vehículo como la ubicación, kilometraje,
-            caballos de fuerza, curva de velocidad, estado de viaje, códigos de funcionamiento. Con
-            la conectividad a redes 4G integradas.
-          </p>
-        </AppContainer>
-        <PhoneItemCarousel>
-          <VillainImage src={screenvillain.src} width={400} height={300} />
-          <PhoneItemsContainer>
-            <NextPhoneButton onClick={nextSlide}>
-              <img src={back.src} />
-            </NextPhoneButton>
-            <img
-              src={imagesPhone[currentImage]}
-              alt={`Image ${currentImage}`}
-              width="89%"
-              height="95%"
-              style={{ borderRadius: '20px' }}
-            />
-            <PrevPhoneButton onClick={prevSlide}>
-              <img src={next.src} />
-            </PrevPhoneButton>
-          </PhoneItemsContainer>
-        </PhoneItemCarousel>
-      </PhoneCarouselContainer>
-    </>
+    <PhoneCarouselContainer>
+      <AppContainer>
+        <TitleAppContainer>
+          <h4>
+            POR MEDIO DE LA APLICACIÓN PODRÁS ACTIVAR Y DESBLOQUEAR EL VEHÍCULO DE FORMA REMOTA.
+          </h4>
+        </TitleAppContainer>
+        <p>
+          Revisa en tiempo real todos los datos del vehículo como la ubicación, kilometraje,
+          caballos de fuerza, curva de velocidad, estado de viaje, códigos de funcionamiento. Con la
+          conectividad a redes 4G integradas.
+        </p>
+      </AppContainer>
+      <PhoneItemCarousel>
+        <VillainImage src={screenvillain.src} width={400} height={300} />
+        <PhoneItemsContainer>
+          <NextPhoneButton onClick={nextSlide}>
+            <img src={back.src} />
+          </NextPhoneButton>
+          <img
+            src={imagesPhone[currentImage]}
+            alt={`Image ${currentImage}`}
+            width="89%"
+            height="95%"
+            style={{ borderRadius: '20px' }}
+          />
+          <PrevPhoneButton onClick={prevSlide}>
+            <img src={next.src} />
+          </PrevPhoneButton>
+        </PhoneItemsContainer>
+      </PhoneItemCarousel>
+    </PhoneCarouselContainer>
   )
 }

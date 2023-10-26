@@ -4,13 +4,9 @@ import React from 'react'
 import Link from 'next/link'
 
 import vehiculeadd from '@assets/jpeg/add-vehicule.jpeg'
-import villain from '@assets/jpeg/atv-gale-4.jpg'
-import fuglew from '@assets/jpeg/fugleman-w.jpeg'
 import smartmoving from '@assets/jpeg/noving-smart.jpeg'
 import phonesmart from '@assets/jpeg/phone-smart.jpeg'
-import snarleratv from '@assets/jpeg/product.jpeg'
 import riding from '@assets/jpeg/riding.jpeg'
-import villainatv from '@assets/jpeg/vl.jpeg'
 import codes from '@assets/jpg/codes.jpg'
 import fearlogo from '@assets/png/fear-no-place-blanco.png'
 import { PhoneCarousel } from '@features/home/PhoneCarousel/PhoneCarousel'
@@ -23,30 +19,26 @@ import {
   SloganImg,
   Namevideos,
   SLoganText,
-  VisionItem,
   TitleVideos,
   NameVehicule,
   VideoSection,
   ImagesSection,
-  VisionSection,
   TitleContainer,
   VideoContainer,
   ImagesVehicules,
   VideosContainer,
-  VisionContainer,
   HomePageContainer,
   SeeProductsButton,
   TitleSomeProducts,
   MechanicsContainer,
   VehiculesContainer,
   InformationMechanics,
-  MechanicsMainConatiner,
+  MechanicsMainContainer,
   TitleMechanicsContainer,
   ImagesVehiculesContainer,
 } from './HomePage.elements'
 
 export const HomePage = () => {
-  const carouselImages = [snarleratv, villain, fuglew, villainatv].map((image) => image.src)
   const PhoneImages = [codes, riding, smartmoving, vehiculeadd, phonesmart].map(
     (imagePhone) => imagePhone.src,
   )
@@ -99,7 +91,7 @@ export const HomePage = () => {
         </SeeProductsButton>
       </VehiculesContainer>
 
-      <MechanicsMainConatiner>
+      <MechanicsMainContainer>
         <MechanicsContainer>
           <TitleMechanicsContainer>
             <TitleContainer>SON BESTIAS MECÁNICAS INDOMABLES.</TitleContainer>
@@ -114,9 +106,10 @@ export const HomePage = () => {
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen></iframe>
+            allowFullScreen
+          />
         </MechanicsContainer>
-      </MechanicsMainConatiner>
+      </MechanicsMainContainer>
 
       <PhoneCarousel imagesPhone={PhoneImages} />
 

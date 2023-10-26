@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaWaze } from 'react-icons/fa'
 
-import { Box } from '@core'
 import facebook from '@assets/png/icons-facebook.png'
 import instagram from '@assets/png/icons-instagram.png'
 import whatsapp from '@assets/png/icons-whatsapp.png'
@@ -13,7 +12,6 @@ import {
   LinkSection,
   FooterContainer,
   LinkSectionWrap,
-  CreatorContainer,
   InformationContainer,
   TopFooterSectionContainer,
   InformationFooterContainer,
