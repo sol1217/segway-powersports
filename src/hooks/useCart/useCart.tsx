@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 
 import { ProductsColors } from '@types'
 
@@ -12,10 +12,13 @@ export interface ProductData {
 }
 
 const useCart = () => {
-  const [cart, setCart] = useState<ProductData[]>(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart') || '[]') as ProductData[]
-    return storedCart
-  })
+  const [cart, setCart] = useState<ProductData[]>([])
+
+  useEffect(() => {
+    const savedCartData = JSON.parse(localStorage.getItem('cart') ?? '[]') as ProductData[]
+
+    setCart(savedCartData)
+  }, [])
 
   const addToCart = (productData: ProductData) => {
     const productAlreadyInCart = cart.some((item) => item.name === productData.name)

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 import next from '@assets/png/icons-adelante.png'
 import back from '@assets/png/icons-atrás.png'
@@ -46,7 +47,7 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
         <VillainImage src={screenvillain.src} width={400} height={300} />
         <PhoneItemsContainer>
           <NextPhoneButton onClick={nextSlide}>
-            <img src={back.src} />
+            <Image src={back.src} alt="" width={50} height={50} />
           </NextPhoneButton>
           <img
             src={imagesPhone[currentImage]}
@@ -56,7 +57,7 @@ export const PhoneCarousel: React.FC<CarouselPhoneProps> = ({ imagesPhone }) => 
             style={{ borderRadius: '20px' }}
           />
           <PrevPhoneButton onClick={prevSlide}>
-            <img src={next.src} />
+            <Image src={next.src} alt="" width={50} height={50} />
           </PrevPhoneButton>
         </PhoneItemsContainer>
       </PhoneItemCarousel>

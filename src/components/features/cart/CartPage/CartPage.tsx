@@ -70,6 +70,13 @@ export default function CartPage({ product }: { product?: ProductData }) {
   const [productCount, setProductCount] = useState(cart.length)
   const [selectedColors, setSelectedColors] = useState<Record<string, string>>({})
   const [colorsSelected, setColorsSelected] = useState(false)
+  const [totalProductPrice, setTotalProductPrice] = useState(0)
+
+  const saveToLocalStorage = (key: string, data: any) => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem(key, JSON.stringify(data))
+    }
+  }
 
   useEffect(() => {
     setProductCount(cart.length)
@@ -77,7 +84,6 @@ export default function CartPage({ product }: { product?: ProductData }) {
 
   useEffect(() => {
     const cart: ProductData[] = JSON.parse(localStorage.getItem('cart') || '[]')
-
     setCartItems(cart)
   }, [])
 
@@ -92,8 +98,11 @@ export default function CartPage({ product }: { product?: ProductData }) {
   const handleRemoveFromCart = (productName: string) => {
     const updatedCart = cartItems.filter((item) => item.name !== productName)
     setCartItems(updatedCart)
-    localStorage.setItem('cart', JSON.stringify(updatedCart))
   }
+
+  useEffect(() => {
+    saveToLocalStorage('cart', cartItems)
+  }, [cartItems])
 
   const handleIncrementQuantity = (index: number) => {
     const updatedCart = [...cartItems]
@@ -107,12 +116,9 @@ export default function CartPage({ product }: { product?: ProductData }) {
         return total + (cartItem.price || 0) * (cartItem.quantity || 0)
       }, 0)
       setTotalPrice(newTotalPrice)
-
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
     }
   }
 
-  console.log(cartItems)
   const handleDecrementQuantity = (index: number) => {
     const updatedCart = [...cartItems]
     const item = updatedCart[index]
@@ -125,8 +131,6 @@ export default function CartPage({ product }: { product?: ProductData }) {
         return total + (cartItem.price || 0) * (cartItem.quantity || 0)
       }, 0)
       setTotalPrice(newTotalPrice)
-
-      localStorage.setItem('cart', JSON.stringify(updatedCart))
     }
   }
 
@@ -139,9 +143,6 @@ export default function CartPage({ product }: { product?: ProductData }) {
     setSelectedColors(updatedSelectedColors)
 
     setColorsSelected(allColorsSelected)
-
-    localStorage.setItem('selectedColors', JSON.stringify(updatedSelectedColors))
-    localStorage.setItem('cart', JSON.stringify(cartItems))
   }
 
   useEffect(() => {
@@ -154,15 +155,22 @@ export default function CartPage({ product }: { product?: ProductData }) {
     return total + itemPrice
   }, 0)
 
+  useEffect(() => {
+    saveToLocalStorage('cart', cartItems)
+    saveToLocalStorage('selectedColors', selectedColors)
+  }, [cartItems, selectedColors])
+
   const formattedTotalCartPrice = totalCartPrice.toLocaleString('en-US')
 
-  localStorage.setItem('totalCartPrice', formattedTotalCartPrice)
+  saveToLocalStorage('totalCartPrice', totalCartPrice)
 
-  const storedTotalCartPrice = localStorage.getItem('totalCartPrice')
-
-  const totalCartPriceNumber = storedTotalCartPrice
-    ? parseFloat(storedTotalCartPrice.replace(/,/g, ''))
-    : 0
+  useEffect(() => {
+    const storedTotalCartPrice = localStorage.getItem('totalCartPrice')
+    if (storedTotalCartPrice) {
+      const totalCartPriceNumber = parseFloat(storedTotalCartPrice.replace(/,/g, ''))
+      setTotalProductPrice(totalCartPriceNumber)
+    }
+  }, [])
 
   return (
     <CartPageContainer>
@@ -235,7 +243,7 @@ export default function CartPage({ product }: { product?: ProductData }) {
                 </IconoSegway>
 
                 <ViewItemContainer>
-                  <img src={item.picture} width={170} height={170} alt="" />
+                  <Image src={item.picture} width={170} height={170} alt="" />
                   <InformationItemContainer>
                     <div>
                       <h3>{item.name}</h3>
@@ -289,7 +297,7 @@ export default function CartPage({ product }: { product?: ProductData }) {
         <PaymentCartContainer>
           <SummaryContainer>
             <h1>Resumen del Pedido</h1>
-            <TotalPriceItem>${totalCartPriceNumber.toLocaleString('en-US')}</TotalPriceItem>
+            <TotalPriceItem>${totalCartPrice.toLocaleString('en-US')}</TotalPriceItem>
             <TextTotalItem>Cantidad total</TextTotalItem>
             {cartItems.length > 0 && (
               <PaymentButton
@@ -304,7 +312,7 @@ export default function CartPage({ product }: { product?: ProductData }) {
                 <h4>({productCount || 0})</h4>
               </PaymentButton>
             )}
-            <p>Recuerda que el envío se coordina después de verificar la compra.</p>
+            <p>Recuerda que el envío se coordina después de haber completado la compra.</p>
           </SummaryContainer>
 
           <TarjetContainer>

@@ -39,7 +39,7 @@ import {
   ImagesSectionContainer,
   InformationCompanyText,
   InformationCompanyContainer,
-} from '@features/about/page/About.elements'
+} from '@features/about/Aboutpage/About.elements'
 
 export default function AboutUsPage() {
   return (

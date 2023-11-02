@@ -80,10 +80,10 @@ export const TitleAppContainer = styled.div`
 
 export const NextPhoneButton = styled.div`
   position: absolute;
-  left: 0;
+  left: 1%;
 `
 
 export const PrevPhoneButton = styled.div`
   position: absolute;
-  right: 0;
+  right: 1%;
 `

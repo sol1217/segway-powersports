@@ -1,4 +1,4 @@
-import ContactsPage from '@features/contacts/page/ContactsPage'
+import ContactsPage from '@features/contacts/Contactspage/ContactsPage'
 
 export const metadata = {
   title: 'Segway Powersports Costa Rica Contact',

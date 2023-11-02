@@ -37,7 +37,7 @@ import {
   ProofPaymentContainer,
   TransferDataContainer,
   DetailsPaymentContainer,
-} from '@features/payment/PaymentPage.elements'
+} from '@features/payment/PaymentPage/PaymentPage.elements'
 
 export const PaymentPage = () => {
   const [isCashSelected, setIsCashSelected] = useState(false)
@@ -140,7 +140,7 @@ export const PaymentPage = () => {
               <h3>Comunicarte</h3>
               <CashButton style={{ pointerEvents: isCashSelected ? 'auto' : 'none' }}>
                 <a href="https://wa.link/at84vp">
-                  <img src={whatsapp.src} width={25} height={25} alt="" />
+                  <Image src={whatsapp.src} width={25} height={25} alt="" />
                 </a>
               </CashButton>
             </DataTransfer>

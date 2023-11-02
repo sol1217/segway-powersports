@@ -1,4 +1,4 @@
-import { PaymentPage } from '@features/payment'
+import { PaymentPage } from '@features'
 
 export const metadata = {
   title: 'Segway Powersports Costa Rica payment',
