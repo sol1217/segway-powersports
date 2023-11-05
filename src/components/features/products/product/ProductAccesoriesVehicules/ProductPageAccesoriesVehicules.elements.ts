@@ -12,7 +12,7 @@ export const VideoContainer = styled.div`
 export const MadeLogo = styled.img`
   position: absolute;
   top: 50%;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
   text-align: center;
@@ -20,27 +20,9 @@ export const MadeLogo = styled.img`
   text-transform: uppercase;
 `
 
-export const NameProduct = styled.h1`
-  position: absolute;
-  top: 16%;
-  text-align: center;
-  font-size: 40px;
-  font-family: fantasy;
-
-  @media (max-width: 870px) {
-    top: 8%;
-  }
-
-  @media (max-width: 765px) {
-    top: 6%;
-  }
-
+export const NameProduct = styled.img`
   @media (max-width: 500px) {
-    top: 5%;
-  }
-
-  @media (max-width: 380px) {
-    font-size: 30px;
+    width: 300px;
   }
 `
 
@@ -306,26 +288,18 @@ export const ImagesGalleryContainer = styled.div`
   gap: 20px;
 
   @media (max-width: 960px) {
-    width: 90%;
-    height: 90%;
     grid-template-columns: repeat(3, 240px);
   }
 
   @media (max-width: 800px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(3, 200px);
   }
 
   @media (max-width: 690px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(2, 200px);
   }
 
   @media (max-width: 450px) {
-    width: 100%;
-    height: 90%;
     grid-template-columns: repeat(2, 160px);
   }
 `

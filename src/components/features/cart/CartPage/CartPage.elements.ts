@@ -370,6 +370,12 @@ export const SummaryContainer = styled.div`
   text-align: center;
 `
 
+export const DeliveryNote = styled.p`
+  @media (max-width: 500px) {
+    color: red;
+  }
+`
+
 export const TotalPriceItem = styled.h2`
   text-align: right;
 

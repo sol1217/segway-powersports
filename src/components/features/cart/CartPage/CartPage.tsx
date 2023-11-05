@@ -25,6 +25,7 @@ import {
   SelectColor,
   ChangeButton,
   DeleteButton,
+  DeliveryNote,
   IconoScooter,
   CartContainer,
   IconoDelivery,
@@ -312,7 +313,9 @@ export default function CartPage({ product }: { product?: ProductData }) {
                 <h4>({productCount || 0})</h4>
               </PaymentButton>
             )}
-            <p>Recuerda que el envío se coordina después de haber completado la compra.</p>
+            <DeliveryNote>
+              Recuerda que el envío se coordina después de haber completado la compra.
+            </DeliveryNote>
           </SummaryContainer>
 
           <TarjetContainer>

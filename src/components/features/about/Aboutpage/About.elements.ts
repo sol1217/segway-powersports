@@ -76,6 +76,11 @@ export const LogoImage = styled(Image)`
   @media (max-width: 500px) {
     width: 100%;
   }
+
+  @media (max-width: 400px) {
+    width: 80%;
+    height: 100px;
+  }
 `
 
 export const InformationCompanyContainer = styled.div`
@@ -92,6 +97,7 @@ export const InformationCompanyContainer = styled.div`
 
   @media (max-width: 400px) {
     font-size: 18px;
+    text-align: center;
   }
 `
 

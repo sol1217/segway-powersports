@@ -233,6 +233,7 @@ export const ChangeButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 `
 
 export const PaymentCardContainer = styled.div`

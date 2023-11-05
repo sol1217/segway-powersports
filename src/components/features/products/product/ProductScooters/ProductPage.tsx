@@ -9,8 +9,10 @@ import useCart from '@hooks/useCart/useCart'
 import {
   LogoImage,
   NameModel,
+  NameProduct,
   ImageProduct,
   ProductAdded,
+  TitleGallery,
   ImagesGallery,
   TitleFeatures,
   ContactSection,
@@ -58,7 +60,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
 
       <ViewProductContainer>
         <NameModel>
-          <img src={productInfo?.model} />
+          <NameProduct src={productInfo?.model} />
         </NameModel>
 
         <FeaturesProductContainer>
@@ -111,7 +113,7 @@ export const ProductPageScooter = ({ productName, productInfo }: ProductPageProp
       </CatalogueContainer>
 
       <ImagesSectionContainer>
-        <h2>Galería {productInfo?.name}</h2>
+        <TitleGallery>Galería {productInfo?.name}</TitleGallery>
         <ImagesGalleryContainer>
           {productInfo?.galleryImages?.map(({ src, width, height }, i) => (
             <ImagesGallery key={i} src={src} width={width} height={height} />

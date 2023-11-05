@@ -39,13 +39,10 @@ export const NameModel = styled.div`
   text-align: center;
 `
 
-export const InformationProductContainer = styled.div`
-  height: 300px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: black;
-  width: 100%;
+export const NameProduct = styled.img`
+  @media (max-width: 500px) {
+    width: 300px;
+  }
 `
 
 export const InformationProduct = styled.div`
@@ -221,7 +218,6 @@ export const DesignFeatures = styled.div`
 
 export const DesignFeaturesItems = styled.div`
   width: 320px;
-  height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -236,8 +232,8 @@ export const DesignFeaturesItems = styled.div`
 
   @media (max-width: 765px) {
     width: 60%;
-    box-shadow: 0 0 10px 0;
-    border-radius: 20px;
+    box-shadow: 0 0 5px 0;
+    border-radius: 10px;
   }
 
   @media (max-width: 550px) {
@@ -313,6 +309,12 @@ export const ImagesSectionContainer = styled.div`
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+`
+
+export const TitleGallery = styled.h2`
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `
 
 export const ImagesGalleryContainer = styled.div`

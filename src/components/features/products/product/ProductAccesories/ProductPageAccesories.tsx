@@ -22,6 +22,7 @@ import {
   CatalogueSection,
   ContactContainer,
   NameModelProduct,
+  TitleNameProduct,
   CatalogueContainer,
   DescriptionSection,
   DesignFeaturesItems,
@@ -66,7 +67,7 @@ export const ProductPageAccesories = ({ productName, productInfo }: ProductPageP
 
       <ViewContainer>
         <NameModelProduct>
-          <img src={productInfo?.logo} />
+          <TitleNameProduct src={productInfo?.logo} />
         </NameModelProduct>
 
         <FeaturesProductContainer>

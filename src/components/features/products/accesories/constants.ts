@@ -19,7 +19,6 @@ import helmetSeis from '@assets/jpeg/gallery-helmet-6.jpeg'
 import phoneHolderSeis from '@assets/jpeg/gallery-phone-6.jpeg'
 import protectiveUno from '@assets/jpeg/gallery-protective-1.jpeg'
 import protectiveDos from '@assets/jpeg/gallery-protective-2.jpeg'
-import protectiveTres from '@assets/jpeg/gallery-protective-3.jpeg'
 import protectiveCuatro from '@assets/jpeg/gallery-protective-4.jpeg'
 import protectiveCinco from '@assets/jpeg/gallery-protective-5.jpeg'
 import storageUno from '@assets/jpeg/gallery-storage-1.jpeg'
@@ -53,6 +52,7 @@ import comfortHelmet from '@assets/png/comfort-helmet.png'
 import coverHelmet from '@assets/png/cover-helmet.png'
 import fabricHelmet from '@assets/png/fabric-helmet.png'
 import phoneHolderCuatro from '@assets/png/gallery-phone-4.png'
+import protectiveTres from '@assets/png/gallery-protective-3.png'
 import helmetImage from '@assets/png/helmet-image.png'
 import bagLogo from '@assets/png/logo-bag.png'
 import childrenLogo from '@assets/png/logo-CHILDREN-PROTECTIVE-GEAR-SET.png'
@@ -72,7 +72,7 @@ import helmet from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-helmet.pn
 import phoneholdertwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/ninebot-phone-holder.jpg'
 import phoneholder from '@assets/images/SEGWAY-VEHICULOS/accesorios/phone-holder.jpeg'
 import childrenGear from '@assets/images/SEGWAY-VEHICULOS/accesorios/pink-protective.jpg'
-import storage from '@assets/images/SEGWAY-VEHICULOS/accesorios/scooter-storage-bag.jpg'
+import storage from '@assets/images/SEGWAY-VEHICULOS/accesorios/scooter-storage-bag.png'
 import setTwo from '@assets/images/SEGWAY-VEHICULOS/accesorios/segway-ninebot-protective-kit.jpg'
 import set from '@assets/images/SEGWAY-VEHICULOS/accesorios/set.jpg'
 import childrenyellow from '@assets/images/SEGWAY-VEHICULOS/accesorios/yellow-protective.jpg'
@@ -161,7 +161,7 @@ export const products: Product[] = [
     name: 'NINEBOT HELMET',
     alias: 'ninebot-casco',
     picture: helmetImage.src,
-    colorsAvailable: [ProductsColors.Yellow, ProductsColors.Orange],
+    colorsAvailable: [ProductsColors.Yellow, ProductsColors.Orange, ProductsColors.Gris],
     price: 60,
     images: [
       {

@@ -9,9 +9,9 @@ export const NameProduct = styled.h1`
   position: absolute;
   top: 16%;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: #ffffff;
-  font-family: cursive;
+  font-family: 'Kaiti TC';
 
   @media (max-width: 870px) {
     top: 8%;
@@ -43,39 +43,9 @@ export const NameModelProduct = styled.div`
   text-align: center;
 `
 
-export const InformationProductContainer = styled.div`
-  height: 300px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: black;
-  width: 100%;
-`
-
-export const InformationProduct = styled.div`
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  gap: 30px;
-
-  @media (max-width: 980px) {
-    width: 40%;
-  }
-
-  @media (max-width: 790px) {
-    width: 35%;
-  }
-
-  @media (max-width: 660px) {
-    width: 50%;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 16px;
-    width: 100%;
+export const TitleNameProduct = styled.img`
+  @media (max-width: 500px) {
+    width: 300px;
   }
 `
 

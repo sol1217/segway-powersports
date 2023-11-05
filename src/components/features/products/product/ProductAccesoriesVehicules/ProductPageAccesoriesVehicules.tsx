@@ -13,6 +13,7 @@ import { ProductAdded } from '@features/products/product/ProductScooters/Product
 import {
   MadeLogo,
   NameModel,
+  NameProduct,
   ImageProduct,
   ImagesGallery,
   ContactSection,
@@ -63,7 +64,7 @@ export const ProductPageAccesoriesVehicules = ({ productName, productInfo }: Pro
 
       <ViewProductContainer>
         <NameModel>
-          <img src={productInfo?.logo} />
+          <NameProduct src={productInfo?.logo} />
         </NameModel>
 
         <FeaturesProductContainer>

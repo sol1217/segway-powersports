@@ -269,6 +269,7 @@ export const products: IProduct[] = [
     alias: 'snarler-gl',
     logo: logoSnarler.src,
     model: modelGl.src,
+    panorama: 'https://powersports.segway.com/720/AT6S-720/ATV_S_WHITE_XR/index.html',
     completeDesciprtion:
       'Una parte importante de la experiencia de conducción que ofrece el Snarler 600 GL es el sistema Smart Moving & Smart Fun a través de una aplicación móvil, que permite a los conductores acceder a los datos del vehículo en tiempo real.',
     video: '/videos/600gl.mp4',
@@ -279,7 +280,6 @@ export const products: IProduct[] = [
       'VERSIÓN LARGA',
       'PARRILLA DELANTERA Y TRASERA',
     ],
-    panorama: '',
     featuresImage: [
       {
         src: lightning.src,
