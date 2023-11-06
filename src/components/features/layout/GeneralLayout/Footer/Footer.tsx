@@ -36,7 +36,7 @@ export default function Footer() {
 
         <InformationContainer>
           <TitleText>CONTACTO</TitleText>
-          <p>infoventasegwaycr@gmail.com</p>
+          <p>ventas@segwaypowersportscr.com</p>
           <p>Contacto-Asesor: 8989-5005 </p>
         </InformationContainer>
 
