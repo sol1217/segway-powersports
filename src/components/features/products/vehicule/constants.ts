@@ -1,5 +1,8 @@
 import comfortFugleman from '@assets/jpeg/comfort-fugleman.jpeg'
 import comfortVillain from '@assets/jpeg/comfort-sx10.jpeg'
+import crewPCamo from '@assets/jpeg/crew-p-camo.png'
+import crewPGreen from '@assets/jpeg/crew-p-green.png'
+import crewPRed from '@assets/jpeg/crew-p-red.png'
 import lightning from '@assets/jpeg/design-snarler.jpeg'
 import baterybike from '@assets/jpeg/dirtyebike-batery.jpeg'
 import at6Cinco from '@assets/jpeg/gallery-at6-5.jpeg'
@@ -48,7 +51,6 @@ import suspensionScooter from '@assets/jpg/suspension-e110s.jpg'
 import engineervillain from '@assets/jpg/villain-design2-900x579-1.jpg'
 import villainSeis from '@assets/jpg/villain-nature.jpg'
 import glSeis from '@assets/png/car.png'
-import generallogo from '@assets/png/general-logo.png'
 import modelGl from '@assets/png/logo-600gl.png'
 import logoBike from '@assets/png/logo-bike.png'
 import logoE110s from '@assets/png/logo-e110s.png'
@@ -58,6 +60,17 @@ import modelSnarler from '@assets/png/snarler-at6-le-logo.png'
 import logoVillain from '@assets/png/villain-logo.png'
 import zonebike from '@assets/png/zone-ebike.jpeg'
 import { EColors, IProduct } from '@features/products/vehicule/types'
+import at5LOne from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-1.jpeg'
+import at5LTwo from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-2.jpeg'
+import at5LThree from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-3.jpeg'
+import at5LFour from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-4.jpeg'
+import at5LFive from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-5.jpeg'
+import at5LSix from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-6.jpeg'
+import at5LBlack from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-black.png'
+import at5LBlue from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-blue.png'
+import at5LGreen from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-green.png'
+import at5LModes from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-modes.jpg'
+import at5LSuspension from '@assets/images/SEGWAY-VEHICULOS/at5-l/at5-l-suspension.jpeg'
 import scooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-GRIS.jpg'
 import infoEscooterblack from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-gris.png'
 import infoEscooterred from '@assets/images/SEGWAY-VEHICULOS/escooter-e110s/E110S-roja.png'
@@ -66,8 +79,6 @@ import infoFuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/b
 import fuglemanblack from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/black-small.jpg'
 import infoFuglemanGreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/fugleman-green.png'
 import fuglemangreen from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/green-small.jpg'
-import infoFuglemanRed from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-fugleman.png'
-import fuglemanred from '@assets/images/SEGWAY-VEHICULOS/FUGLEMAN-UT10 X/white-small.jpg'
 import bikeblack from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/black-bike.jpg'
 import infoBikeGray from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/black-bike.png'
 import infoBikeRed from '@assets/images/SEGWAY-VEHICULOS/Segway-Dirt-eBike-X160/segway-ebike-x160.png'
@@ -84,9 +95,15 @@ import at6gray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/gray-snarler
 import infoSnarlerGray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-gray.png'
 import infoSnarlerRed from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-red.png'
 import at6 from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/white-snarler.jpg'
-import infoVillainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/black-villain.png'
+import crewPConfort from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-confort.jpeg'
+import crewPTwo from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-02.jpeg'
+import crewPThree from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-03.jpeg'
+import crewPFour from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-04.jpeg'
+import crewPFive from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-05.jpeg'
+import crewPSix from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-06.jpeg'
+import crewPOne from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/crew-p-gallery-1.jpeg'
+import crewPLogo from '@assets/images/SEGWAY-VEHICULOS/ut10-crew-p/logo-crew-p.png'
 import infoVillaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/green-villain.png'
-import villainblack from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-black-villain.jpg'
 import villaingreen from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-green-villain.jpg'
 import villainred from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/small-white-villain.jpg'
 import infoVillainred from '@assets/images/SEGWAY-VEHICULOS/VILLAIN-SX10/white-villain.png'
@@ -563,6 +580,166 @@ export const products: IProduct[] = [
       },
       {
         src: bikeSeis.src,
+        width: 300,
+        height: 200,
+      },
+    ],
+  },
+  {
+    images: [
+      { color: EColors.Red, url: crewPRed.src },
+      { color: EColors.Camouflaged, url: crewPCamo.src },
+      { color: EColors.Greeen, url: crewPGreen.src },
+    ],
+    imagesInfo: [
+      { color: EColors.Red, url: crewPRed.src },
+      { color: EColors.Camouflaged, url: crewPCamo.src },
+      { color: EColors.Greeen, url: crewPGreen.src },
+    ],
+    name: 'UT10 CREW P',
+    description:
+      'Fugleman UT10 Crew p es un UTV potente y de alta capacidad que cuenta con una cabina de 3 a 6 pasajeros.',
+    alias: 'Ut10-crew-p',
+    completeDesciprtion:
+      'Sus excelentes capacidades de remolque y transporte hacen que cualquier trabajo sea más fácil y eficiente.Equipado con un motor DOHC de 1000 cc, el UT10 Crew tiene la capacidad de transportar pasajeros y grandes cargas útiles.',
+    video: '/videos/segway-tiger.mp4',
+    features: [
+      'RECORDATORIO DE CINTURON DE SEGURIDAD ',
+      'CENTRO DE INFORMACIÓN DE TABLERO DIGITAL ',
+      '2 CARGAS USB',
+      'PUERTAS FULL',
+    ],
+    panorama: '',
+    logo: '',
+    model: crewPLogo.src,
+    featuresImage: [
+      {
+        src: crewPThree.src,
+        titleFeatures: 'Seguridad En Asientos',
+        featuresDescription:
+          'Asientos cosidos de primera calidad con fondo reforzado y respaldos contorneados con la marca Segway.',
+      },
+      {
+        src: crewPConfort.src,
+        titleFeatures: 'Detalles Interiores',
+        featuresDescription:
+          'Volante y detalles interiores de primera calidad, sistema de seguridad de 3 puntos, 6 portavasos.',
+      },
+      {
+        src: crewPFive.src,
+        titleFeatures: ' ALTO RENDIMIENTO ',
+        featuresDescription:
+          'Indicador de marcha, indicador de combustible, temperatura del refrigerante, voltímetro, indicador y códigos de servicio.',
+      },
+    ],
+    galleryImages: [
+      {
+        src: crewPOne.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: crewPTwo.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: crewPThree.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: crewPFour.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: crewPFive.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: crewPSix.src,
+        width: 300,
+        height: 200,
+      },
+    ],
+  },
+  {
+    images: [
+      { color: EColors.Gray, url: at5LBlack.src },
+      { color: EColors.Blue, url: at5LBlue.src },
+      { color: EColors.Greeen, url: at5LGreen.src },
+    ],
+    imagesInfo: [
+      { color: EColors.Gray, url: at5LBlack.src },
+      { color: EColors.Blue, url: at5LBlue.src },
+      { color: EColors.Greeen, url: at5LGreen.src },
+    ],
+    name: 'Snarler AT5 L',
+    description:
+      'El AT5 L es el ATV de batalla corta más versátil de nuestra gama AT5 y ofrece la combinación perfecta de rendimiento y utilidad. ',
+    alias: 'Snarler-AT5-L',
+    completeDesciprtion:
+      'El AT5 L es su opción ideal para cualquier trabajo en la granja.Es el ATV de batalla corta más versátil de nuestra gama AT5 y ofrece la combinación perfecta de rendimiento y utilidad.',
+    video: '/videos/snarler.mp4',
+    features: [
+      'DIRECCIÓN ASISTIDA ELÉCTRICA',
+      '3 MODOS DISTINTOS (Comfort, Standard, and Sport)  ',
+      'POTENTE CABRESTANTE DE 1134 kg',
+      'MANILLAR PARA MEJOR SEGURIDAD',
+    ],
+    panorama: 'https://powersports.segway.com/720/AT6S-720/ATV_S_WHITE_XR/index.html',
+    logo: '',
+    model: logoSnarler.src,
+    featuresImage: [
+      {
+        src: at5LSuspension.src,
+        titleFeatures: 'Modos de Conducción',
+        featuresDescription:
+          'Permite elegir entre tres modos diferentes, estándar, confort y deportivo, para diferentes condiciones de tracción.',
+      },
+      {
+        src: at5LFour.src,
+        titleFeatures: 'Suspensiones',
+        featuresDescription:
+          'La suspensión delantera es de doblenen A con 180 mm de recorrido.La suspensión trasera tiene 210 mm de recorrido.',
+      },
+      {
+        src: at5LModes.src,
+        titleFeatures: ' ALTO RENDIMIENTO ',
+        featuresDescription:
+          'Con la adición de un sistema de inyección electrónica de combustible, el tren motriz se adapta a temperaturas altas y bajas.',
+      },
+    ],
+    galleryImages: [
+      {
+        src: at5LOne.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LSix.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LThree.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LFour.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LFive.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LTwo.src,
         width: 300,
         height: 200,
       },
