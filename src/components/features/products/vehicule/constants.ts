@@ -91,6 +91,11 @@ import glblue from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-blue-sn
 import glcamo from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-camo-sn.jpg'
 import glgreen from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-green-sn.jpg'
 import glgred from '@assets/images/SEGWAY-VEHICULOS/SNARLER-600-GL/small-red-sn.jpg'
+import at5SOne from '@assets/images/SEGWAY-VEHICULOS/snarler-at5-s/at5-s-1.jpeg'
+import at5STwo from '@assets/images/SEGWAY-VEHICULOS/snarler-at5-s/at5-s-2.jpeg'
+import at5SFive from '@assets/images/SEGWAY-VEHICULOS/snarler-at5-s/at5-s-6.jpeg'
+import at5SBlack from '@assets/images/SEGWAY-VEHICULOS/snarler-at5-s/at5-s-black.png'
+import at5STwoPlaza from '@assets/images/SEGWAY-VEHICULOS/snarler-at5-s/at5-s-green-2.plaza.png'
 import at6gray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/gray-snarler.jpg'
 import infoSnarlerGray from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-gray.png'
 import infoSnarlerRed from '@assets/images/SEGWAY-VEHICULOS/SNARLER-AT6-LE/snarler-color-red.png'
@@ -601,7 +606,7 @@ export const products: IProduct[] = [
       'Fugleman UT10 Crew p es un UTV potente y de alta capacidad que cuenta con una cabina de 3 a 6 pasajeros.',
     alias: 'Ut10-crew-p',
     completeDesciprtion:
-      'Sus excelentes capacidades de remolque y transporte hacen que cualquier trabajo sea más fácil y eficiente.Equipado con un motor DOHC de 1000 cc, el UT10 Crew tiene la capacidad de transportar pasajeros y grandes cargas útiles.',
+      'Sus excelentes capacidades de remolque y transporte hacen que cualquier trabajo sea más fácil y eficiente.Equipado con un motor DOHC de 1000 cc, el UT10 Crew P tiene la capacidad de transportar pasajeros y grandes cargas útiles.',
     video: '/videos/segway-tiger.mp4',
     features: [
       'RECORDATORIO DE CINTURON DE SEGURIDAD ',
@@ -740,6 +745,78 @@ export const products: IProduct[] = [
       },
       {
         src: at5LTwo.src,
+        width: 300,
+        height: 200,
+      },
+    ],
+  },
+  {
+    images: [{ color: EColors.Gray, url: at5SBlack.src }],
+    imagesInfo: [{ color: EColors.Gray, url: at5SBlack.src }],
+    name: 'Snarler AT5 S',
+    description:
+      'El AT5 S experiencia de conducción perfecta. Caballos de fuerza 39.0-60 km/h Aceleración 4,6 s.   ',
+    alias: 'Snarler-AT5-S',
+    completeDesciprtion:
+      'El AT5 S El EPS de batalla corta es el ATV más versátil de nuestra gama AT5 y ofrece la combinación perfecta de rendimiento y utilidad.diseñado para el cliente agrícola/pequeñas explotaciones. Equipado con ruedas de acero y rejillas metálicas.',
+    video: '/videos/600gl.mp4',
+    features: [
+      'RUEDAS DE ACERO',
+      'CAPACIDAD 88%',
+      '0-60KM/H ACELERACIÓN 4.6S',
+      'FAROLES LED (CONFIANZA Y SEGURIDAD)',
+    ],
+    panorama: '',
+    logo: '',
+    model: logoSnarler.src,
+    featuresImage: [
+      {
+        src: at5LSuspension.src,
+        titleFeatures: 'DESATA TU PRACTICALIDAD',
+        featuresDescription:
+          ' Todo tipo de caminos incluso en campos con hierba suave o caminos de grava accidentados.',
+      },
+      {
+        src: at5LOne.src,
+        titleFeatures: 'AJUSTABLE',
+        featuresDescription:
+          'Siempre está listo para llevar suministros y equipo para tus aventuras. Con la adición de cajas de almacenamiento.',
+      },
+      {
+        src: at5SFive.src,
+        titleFeatures: ' CAPACIDAD POTENTE ',
+        featuresDescription:
+          'El potente motor y los resistentes ganchos le permiten remolcar sin esfuerzo cargas más pesadas.',
+      },
+    ],
+    galleryImages: [
+      {
+        src: at5SOne.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LSix.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LTwo.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5STwo.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5SFive.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: at5LThree.src,
         width: 300,
         height: 200,
       },
