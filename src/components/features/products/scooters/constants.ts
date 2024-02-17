@@ -18,6 +18,20 @@ import p65uMain from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-main.png
 import p65uSecond from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-secundary.png'
 import p65uLogo from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/logo-p65u.png'
 
+import goKartUno from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-1.jpeg'
+import goKartDos from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-2.jpeg'
+import goKartTres from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-3.jpeg'
+import goKartCuatro from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart4.jpeg'
+import goKartCinco from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-5.jpeg'
+import goKartSeis from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-6.jpeg'
+import goKart from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart.jpeg'
+import goKartSegundo from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-second.jpg'
+import goKartSistem from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-sistem.jpeg'
+import goKartTecnology from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-tecnology.jpeg'
+import goKartCarry from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-carry.jpeg'
+import goKartLogo from '@assets/images/SEGWAY-VEHICULOS/goKart/logo-gokart.png'
+import goKartMain from '@assets/images/SEGWAY-VEHICULOS/goKart/goKart-main.png'
+
 
 import p65uUno from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-1.png'
 import p65uDos from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-2.png'
@@ -617,7 +631,7 @@ export const products: Product[] = [
     logo: '',
     model: p65uLogo.src,
     picture: p65u.src,
-    price: 5595,
+    price: 1450,
     galleryImages: [
       {
         src: p65uUno.src,
@@ -657,6 +671,88 @@ export const products: Product[] = [
       },
       {
         src: p65uSecond.src,
+        width: 300,
+      },
+    ],
+  },
+  {
+    name: 'Ninebot Gokart',
+    alias: 'ninebot-gokart',
+    completeDesciprtion:
+      'El Segway KickScooter P-Series está diseñado para brindar la mejor experiencia de conducción. La energía de la batería premium,los agarres ergonómicos, neumáticos y un sistema de iluminación integral.',
+    video: '/videos/ninebot-gokart.mp4',
+    features: [
+      'Sistema de asistencia a la deriva',
+      'Altavoz Bluetooth incluido',
+      '1,02G Máx. Aceleración',
+      'Potencia máxima de 4800 W',
+      'Autonomía de hasta 25 km',
+      '4 modos de conducción',
+      'Transportador de autoequilibrio',
+    ],
+    featuresImage: [
+      {
+        src: goKartTecnology.src,
+        titleFeatures: 'Tecnología de comunicación dual',
+        featuresDescription:
+          'El sistema de transmisión de doble canal, que consta de transmisión por cable y Bluetooth, garantiza una comunicación estable.',
+      },
+      {
+        src: goKartSistem.src,
+        titleFeatures: 'Sistema de retención automática',
+        featuresDescription:
+          'El sistema de retención automática puede evitar el deslizamiento cuando el Gokart PRO está aparcado en una pendiente.',
+      },
+      {
+        src: goKartCarry.src,
+        titleFeatures: 'Llévalo a todas partes y en todo momento',
+        featuresDescription:
+          'Gracias a su estructura compacta, el Segway-Ninebot Gokart PRO es plegable para caber en la mayoría de maleteros de vehículos.',
+      },
+    ],
+    logo: '',
+    model: goKartLogo.src,
+    picture: goKartMain.src,
+    price: 2450,
+    galleryImages: [
+      {
+        src: goKartUno.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: goKartDos.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: goKartTres.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: goKartCuatro.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: goKartCinco.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: goKartSeis.src,
+        width: 300,
+        height: 200,
+      },
+    ],
+    images: [
+      {
+        src: goKart.src,
+        width: 200,
+      },
+      {
+        src: goKartSegundo.src,
         width: 300,
       },
     ],
