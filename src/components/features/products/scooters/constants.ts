@@ -13,6 +13,23 @@ import c8Dos from '@assets/jpeg/gallery-C8-2.jpeg'
 import c8Cuatro from '@assets/jpeg/gallery-c8-4.jpeg'
 import c8Cinco from '@assets/jpeg/gallery-c8-5.jpeg'
 import e8Uno from '@assets/jpeg/gallery-E8-1.jpeg'
+import p65u from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u.png'
+import p65uMain from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-main.png'
+import p65uSecond from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-secundary.png'
+import p65uLogo from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/logo-p65u.png'
+
+
+import p65uUno from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-1.png'
+import p65uDos from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-2.png'
+import p65uTres from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-3.png'
+import p65uCuatro from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-4.png'
+import p65uSeis from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-6.png'
+import p65uCinco from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-5.jpg'
+import p65uCharge from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/P65U-charge.png'
+import p65uSuspension from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-suspension.png'
+import p65uLigth from '@assets/images/SEGWAY-VEHICULOS/p65u-scooter/p65u-ligth.jpg'
+
+
 import e8Dos from '@assets/jpeg/gallery-E8-2.jpeg'
 import e8Tres from '@assets/jpeg/gallery-E8-3.jpeg'
 import e8cino from '@assets/jpeg/gallery-E8-5.jpeg'
@@ -558,6 +575,88 @@ export const products: Product[] = [
       },
       {
         src: gt2.src,
+        width: 300,
+      },
+    ],
+  },
+  {
+    name: 'Scooter P65U',
+    alias: 'scooter-p65u',
+    completeDesciprtion:
+      'El Segway KickScooter P-Series está diseñado para brindar la mejor experiencia de conducción. La energía de la batería premium,los agarres ergonómicos, neumáticos y un sistema de iluminación integral.',
+    video: '/videos/p65u.mp4',
+    features: [
+      'Máxima velocidad 40 km/h',
+      'Autonomía 65 km/carga',
+      'Batería de iones de litio 12 Ah 46,8 V',
+      'Potencia máxima del motor 1080W',
+      'Sistema de frenado',
+      'Sistema de iluminación',
+      '4 modos de conducción',
+    ],
+    featuresImage: [
+      {
+        src: p65uSuspension.src,
+        titleFeatures: 'Suspensión hecha para la exploración',
+        featuresDescription:
+          'Con suspensión de torsión de doble horquilla, prepárate para disfrutar de paseos divertidos con excelente estabilidad.',
+      },
+      {
+        src: p65uCharge.src,
+        titleFeatures: 'Cargue en cualquier momento',
+        featuresDescription:
+          'Con un puerto de carga incorporado, solo necesita llevar un cable de carga para mantener su scooter listo para funcionar.',
+      },
+      {
+        src: p65uLigth.src,
+        titleFeatures: 'Iluminación integrada para máxima seguridad',
+        featuresDescription:
+          'La luz de circulación diurna, las luces de señalización delanteras y traseras y la luz de freno mayor seguridad.',
+      },
+    ],
+    logo: '',
+    model: p65uLogo.src,
+    picture: p65u.src,
+    price: 5595,
+    galleryImages: [
+      {
+        src: p65uUno.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: p65uDos.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: p65uTres.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: p65uCuatro.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: p65uCinco.src,
+        width: 300,
+        height: 200,
+      },
+      {
+        src: p65uSeis.src,
+        width: 300,
+        height: 200,
+      },
+    ],
+    images: [
+      {
+        src: p65uMain.src,
+        width: 200,
+      },
+      {
+        src: p65uSecond.src,
         width: 300,
       },
     ],
