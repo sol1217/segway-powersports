@@ -607,7 +607,7 @@ export const products: IProduct[] = [
     alias: 'Ut10-crew-p',
     completeDesciprtion:
       'Sus excelentes capacidades de remolque y transporte hacen que cualquier trabajo sea más fácil y eficiente.Equipado con un motor DOHC de 1000 cc, el UT10 Crew P tiene la capacidad de transportar pasajeros y grandes cargas útiles.',
-    video: '/videos/segway-tiger.mp4',
+    video: '/videos/fugleman-crew.mp4',
     features: [
       'RECORDATORIO DE CINTURON DE SEGURIDAD ',
       'CENTRO DE INFORMACIÓN DE TABLERO DIGITAL ',
@@ -687,7 +687,7 @@ export const products: IProduct[] = [
     alias: 'Snarler-AT5-L',
     completeDesciprtion:
       'El AT5 L es su opción ideal para cualquier trabajo en la granja.Es el ATV de batalla corta más versátil de nuestra gama AT5 y ofrece la combinación perfecta de rendimiento y utilidad.',
-    video: '/videos/snarler.mp4',
+    video: '/videos/at5.mp4',
     features: [
       'DIRECCIÓN ASISTIDA ELÉCTRICA',
       '3 MODOS DISTINTOS (Comfort, Standard, and Sport)  ',
@@ -759,7 +759,7 @@ export const products: IProduct[] = [
     alias: 'Snarler-AT5-S',
     completeDesciprtion:
       'El AT5 S El EPS de batalla corta es el ATV más versátil de nuestra gama AT5 y ofrece la combinación perfecta de rendimiento y utilidad.diseñado para el cliente agrícola/pequeñas explotaciones. Equipado con ruedas de acero y rejillas metálicas.',
-    video: '/videos/600gl.mp4',
+    video: '/videos/at5.mp4',
     features: [
       'RUEDAS DE ACERO',
       'CAPACIDAD 88%',

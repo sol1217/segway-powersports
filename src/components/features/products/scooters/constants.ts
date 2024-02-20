@@ -280,7 +280,7 @@ export const products: Product[] = [
       'Suspensión trasera y delantera',
       'Motor de potencia de 3000 W',
       'Segway-Ninebot App',
-      'Precio: $3.985',
+      'Precio: $3.500',
     ],
     featuresImage: [
       {
@@ -305,7 +305,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta1.src,
     picture: gt1Product.src,
-    price: 3985,
+    price: 3500,
     galleryImages: [
       {
         src: gt1Siete.src,
@@ -524,7 +524,7 @@ export const products: Product[] = [
       'Display fulldigital',
       'Modo Buster',
       'Motor de potencia de 6000 W',
-      'Precio: $5.595',
+      'Precio: $4.950',
     ],
     featuresImage: [
       {
@@ -549,7 +549,7 @@ export const products: Product[] = [
     logo: '',
     model: logoGta2.src,
     picture: gt2Product.src,
-    price: 5595,
+    price: 4950,
     galleryImages: [
       {
         src: gt1Uno.src,
@@ -676,10 +676,10 @@ export const products: Product[] = [
     ],
   },
   {
-    name: 'Ninebot Gokart',
-    alias: 'ninebot-gokart',
+    name: 'Ninebot Gokart Pro',
+    alias: 'ninebot-gokart-pro',
     completeDesciprtion:
-      'El Segway KickScooter P-Series está diseñado para brindar la mejor experiencia de conducción. La energía de la batería premium,los agarres ergonómicos, neumáticos y un sistema de iluminación integral.',
+      'El Gokart PRO alcanza nuevos niveles de rendimiento y refinamiento al ser probado durante 2 años con un corredor profesional de Gokart, la durabilidad para lograr el máximo rendimiento.',
     video: '/videos/ninebot-gokart.mp4',
     features: [
       'Sistema de asistencia a la deriva',
